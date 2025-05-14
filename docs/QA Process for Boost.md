@@ -102,7 +102,7 @@ The QA process integrates automated testing at key stages of the CI/CD pipeline 
 **Trigger**: Successful CI stage and merge to main branch.
 
 **Tests**:
-- Automated E2E tests (Cypress or Playwright, TBD) in staging environment.
+- Automated E2E tests ( or Playwright, TBD) in staging environment.
 - Smoke tests to verify core functionality post-deployment.
 
 **Process**:
@@ -114,8 +114,7 @@ The QA process integrates automated testing at key stages of the CI/CD pipeline 
 
 **Tools**:
 - GitHub Actions
-- Cypress (TBD)
-- Playwright (TBD)
+- Playwright
 
 ## 5. Current Testing Points in CI/CD Workflows with Potential QA Integration Points
 
