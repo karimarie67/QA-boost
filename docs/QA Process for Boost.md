@@ -274,7 +274,7 @@ The QA process integrates automated testing at key stages of the CI/CD pipeline 
 ## 7. Execution Guidelines
 
 - **Tools**:
-  - Use Playwright or Cypress (TBD) for automated testing of navigation, search, and downloads.
+  - Use Playwright for automated testing of navigation, search, and downloads.
   - Use BrowserStack for cross-browser testing.
   - Use Chrome DevTools for performance testing.
 - **Manual Testing**: Recommended for visual checks (e.g., mobile responsiveness) and accessibility (e.g., screen reader tests).
