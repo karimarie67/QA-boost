@@ -23,11 +23,11 @@ Let's use PR #1768 (`julioest:fix-anchor-links` into `boostorg:develop`) as an e
     ```
 
 2.  **Ensure Your Local `develop` Branch is Up-to-Date:**
-    ```bash
+   ```bash
    git checkout develop
    git fetch upstream develop
    git rebase upstream/develop
-    ```
+   ```
 
 3.  **Fetch and Checkout the PR:**
     This command fetches the PR's changes from the main `boostorg` repository (referred to as `upstream`) and creates a new local branch for it.
