@@ -71,11 +71,9 @@
 
 **Tools**:
 - GitHub Actions (CI/CD)
-- Cypress (TBD)
-- Playwright (TBD)
+- Playwright
 
 **Examples**:
-- Automated unit tests for login functionality in CI.
 - E2E tests for library download flow in staging.
 
 ## 4. Integration into CI/CD Pipeline
@@ -87,9 +85,8 @@ The QA process integrates automated testing at key stages of the CI/CD pipeline 
 **Trigger**: Code commit to repository (e.g., GitHub).
 
 **Tests**:
-- Automated unit tests (Jest) for individual components.
-- Automated integration tests (Postman) for API endpoints.
-
+- Automated unit tests for individual components.
+  
 **Process**:
 1. Commit triggers GitHub Actions workflow.
 2. Tests run in local-like Docker containers.
@@ -99,8 +96,6 @@ The QA process integrates automated testing at key stages of the CI/CD pipeline 
 
 **Tools**:
 - GitHub Actions
-- Jest
-- Postman
 
 ### 4.2 Continuous Delivery (CD)
 
