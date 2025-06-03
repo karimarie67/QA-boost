@@ -177,7 +177,7 @@ This guide helps new QA team members get started with testing the boost.org webs
 
 ### Step 2: Understand the Testing Process
 - **Manual Testing**:
-  - Review test cases in TestRail or GitHub Wiki.
+  - Review test cases in GitHub Wiki.
   - Focus on documentation flows (browsing, search, version switching).
   - Log results and file bugs in GitHub Issues.
 - **Automated Testing**:
