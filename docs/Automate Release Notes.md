@@ -19,17 +19,32 @@ GitHub provides a feature to automatically generate release notes based on pull 
 Here’s an example .github/release.yml to categorize issues:
 
 GitHub Release Notes Configuration  
-yaml  
-Show inline
 
-This configuration groups issues by labels, which you can apply in GitHub Projects to categorize work (e.g., label issues as "feature" or "bug"). When drafting a release, GitHub will generate notes based on closed issues with these labels.
+```changelog:
+  categories:
+    - title: Features
+      labels:
+        - feature
+        - enhancement
+    - title: Bug Fixes
+      labels:
+        - bug
+    - title: Other Changes
+      labels:
+        - '*'
+      exclude:
+        labels:
+          - dependencies
+```
+
+This configuration groups issues by labels, which we can apply in GitHub Projects to categorize work (e.g., label issues as "feature" or "bug"). When drafting a release, GitHub will generate notes based on closed issues with these labels.
 
 #### **Step 2: Set Up Slack Integration**
 
-Use the slackapi/slack-github-action to send release notes to a Slack channel. You’ll need a Slack Incoming Webhook URL, which can be created in your Slack workspace.
+Use the slackapi/slack-github-action to send release notes to a Slack channel. You’ll need a Slack Incoming Webhook URL, which can be created in the Slack workspace.
 
 * **Create a Slack App**: Go to [https://api.slack.com/apps](https://api.slack.com/apps), create an app, and enable Incoming Webhooks. Select the target channel (e.g., \#boost-releases) and copy the webhook URL.  
-* **Store the Webhook**: Add the Slack webhook URL as a secret in your GitHub repository (e.g., SLACK\_WEBHOOK\_URL).
+* **Store the Webhook**: Add the Slack webhook URL as a secret in the GitHub repository (e.g., SLACK\_WEBHOOK\_URL).
 
 #### **Step 3: Set Up Email for Mailing List**
 
@@ -41,13 +56,62 @@ To send release notes to the boost.org mailing list, use an SMTP server or an em
 
 #### **Step 4: Create a GitHub Actions Workflow**
 
-Combine the above steps into a GitHub Actions workflow that triggers on a new release, generates release notes, posts to Slack, and sends an email.
-
-Here’s the workflow file:
-
 GitHub Actions Workflow for Release Notes  
-yaml  
-Show inline
+
+```name: Publish Release Notes
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  generate-and-publish-release-notes:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout the repository
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Generate release notes using GitHub API
+      - name: Generate Release Notes
+        id: release-notes
+        run: |
+          RELEASE_NOTES=$(gh release view ${{ github.event.release.tag_name }} --json body --jq '.body')
+          echo "RELEASE_NOTES<<EOF" >> $GITHUB_ENV
+          echo "$RELEASE_NOTES" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # Post to Slack
+      - name: Send to Slack
+        uses: slackapi/slack-github-action@v2.0.0
+        with:
+          webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
+          webhook-type: webhook-trigger
+          payload: |
+            {
+              "text": "New Release: ${{ github.event.release.tag_name }}\n\n${{ env.RELEASE_NOTES }}"
+            }
+
+      # Send email to mailing list
+      - name: Send Email
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: ${{ secrets.SMTP_SERVER }}
+          server_port: ${{ secrets.SMTP_PORT }}
+          username: ${{ secrets.SMTP_USERNAME }}
+          password: ${{ secrets.SMTP_PASSWORD }}
+          subject: "Boost.org Release Notes: ${{ github.event.release.tag_name }}"
+          body: |
+            New Release: ${{ github.event.release.tag_name }}
+
+            ${{ env.RELEASE_NOTES }}
+
+            View the release on GitHub: ${{ github.event.release.html_url }}
+          to: boost@lists.boost.org
+          from: "Boost.org Releases <no-reply@boost.org>"
+```
 
 #### **How It Works**
 
@@ -58,22 +122,44 @@ Show inline
 
 #### **Setup Instructions**
 
-1. **Enable GitHub Actions**: Ensure GitHub Actions is enabled in your boost.org repository.  
+1. **Enable GitHub Actions**: Ensure GitHub Actions is enabled in the proper repository.  
 2. **Configure Secrets**:  
-   * In your GitHub repository, go to Settings \> Secrets and variables \> Actions.  
+   * In the GitHub repository, go to Settings \> Secrets and variables \> Actions.  
    * Add SLACK\_WEBHOOK\_URL (from Slack).  
-   * Add SMTP\_SERVER, SMTP\_PORT, SMTP\_USERNAME, SMTP\_PASSWORD (from your email provider).  
+   * Add SMTP\_SERVER, SMTP\_PORT, SMTP\_USERNAME, SMTP\_PASSWORD (from our email provider).  
 3. **Add Workflow File**: Place the above YAML in .github/workflows/publish-release-notes.yml.  
 4. **Label Issues**: Ensure issues in GitHub Projects are labeled appropriately (e.g., "feature," "bug") to match the release.yml configuration.  
 5. **Test the Workflow**: Create a test release in GitHub to verify that the notes are generated, posted to Slack, and emailed to the mailing list.
 
 #### **Alternative: Custom Script for Release Notes**
 
-If GitHub’s automated release notes don’t meet your needs (e.g., you need specific formatting for the mailing list), you can write a Python script to query the GitHub API for closed issues and format them. Here’s an example script:
+If GitHub’s automated release notes don’t meet our needs, we can use a Python script to query the GitHub API for closed issues and format them. Here’s an example script:
 
 Generate Release Notes Script  
-python  
-Show inline
+
+```python import requests
+import requests
+import os
+
+def generate_release_notes(repo, token, project_id):
+    headers = {"Authorization": f"Bearer {token}", "Accept": "application/vnd.github+json"}
+    # Get issues from a specific project
+    query = f"https://api.github.com/repos/{repo}/issues?state=closed&labels=release"
+    response = requests.get(query, headers=headers)
+    issues = response.json()
+
+    notes = f"# Release Notes for {repo}\n\n"
+    for issue in issues:
+        notes += f"- {issue['title']} (#{issue['number']})\n"
+    return notes
+
+if __name__ == "__main__":
+    repo = "boostorg/boost"  # Replace with proper repo if incorrect
+    token = os.getenv("GITHUB_TOKEN")
+    project_id = "our-project-id"  # Replace with GitHub Project ID
+    release_notes = generate_release_notes(repo, token, project_id)
+    print(release_notes)
+```
 
 * **Run the Script**: Add this script to the GitHub Actions workflow, replacing the gh release view step, and store the output in RELEASE\_NOTES.  
 * **Dependencies**: Install requests in the workflow using pip install requests.
@@ -81,7 +167,7 @@ Show inline
 #### **Additional Considerations**
 
 * **Formatting for Mailing List**: Ensure the release notes are plain text or lightly formatted (e.g., Markdown) for email compatibility. Test the email output to ensure readability.  
-* **Rate Limits**: Be mindful of GitHub API rate limits when querying issues. Use pagination if dealing with many issues.  
+* **Rate Limits**: Be mindful of rate limits when querying issues. Use pagination if dealing with many issues.  
 * **Slack Customization**: Use Slack’s block kit for richer message formatting if desired.  
 * **Security**: Keep SMTP credentials and Slack webhook URLs secure in GitHub Secrets.  
 * **Testing**: Test the workflow with a draft release to avoid spamming the mailing list or Slack channel.
@@ -92,126 +178,3 @@ Show inline
 * Slack GitHub Action: [https://github.com/slackapi/slack-github-action\[](https://github.com/slackapi/slack-github-action%5B)\]([https://github.com/slackapi/slack-github-action](https://github.com/slackapi/slack-github-action))  
 * Send Mail Action: [https://github.com/dawidd6/action-send-mail](https://github.com/dawidd6/action-send-mail)  
 * Boost.org Mailing List: Ensure the mailing list accepts automated emails or configure an approved sender.
-
-### **Additional Steps for Categorizing Release Notes**
-
-#### **1\. Ensure Issues Are Labeled Correctly in GitHub Projects**
-
-To categorize release notes into "Features," "Bug Fixes," and "Enhancements," issues in your GitHub Projects must have the appropriate labels applied.
-
-* **Action**: Review and update issues in your GitHub Project to include labels:  
-  * feature for new features.  
-  * bug for bug fixes.  
-  * enhancement for improvements to existing functionality.  
-* **How to Apply Labels**:  
-  * In your GitHub Project, go to the issue view and add labels manually or via automation.  
-  * Alternatively, use GitHub’s issue templates or automation rules to prompt contributors to add these labels when creating issues. For example, add a .github/ISSUE\_TEMPLATE file to suggest labels:
-
-GitHub Issue Template  
-yaml  
-Show inline
-
-* **Automation for Labels**: Use a GitHub Action like actions/labeler to automatically apply labels based on issue content or project columns. For example, if issues in a "Done" column are closed, apply the relevant label.
-
-#### **2\. Refine the .github/release.yml Configuration**
-
-The .github/release.yml file from the previous response is already set up to categorize by "feature," "bug," and "enhancement." However, let’s ensure it’s explicit and optimized for boost.org:
-
-GitHub Release Notes Configuration  
-yaml  
-Show inline
-
-* **Additional Steps**:  
-  * Place this file in the .github/ directory of your boost.org repository (e.g., boostorg/boost).  
-  * Ensure all issues intended for release notes have one of the labels (feature, enhancement, bug). Issues without these labels will fall into "Other Changes" unless excluded (e.g., dependencies).  
-  * Test the configuration by creating a draft release in GitHub. Go to the repository’s Releases page, click "Draft a new release," and select "Generate release notes" to preview how issues are categorized.
-
-#### **3\. Update the GitHub Actions Workflow**
-
-The workflow from the previous response extracts release notes and sends them to Slack and the mailing list. However, to ensure compatibility with the categorized format and handle plain-text formatting for the mailing list, we’ll refine it slightly. We’ll also add a step to validate that the release notes aren’t empty.
-
-Here’s the updated workflow:
-
-GitHub Actions Workflow for Release Notes  
-yaml  
-Show inline
-
-* **Additional Steps**:  
-  * **Install Pandoc**: The workflow now uses pandoc to convert Markdown release notes to plain text for the mailing list, ensuring readability. The ubuntu-latest runner includes pandoc, so no additional setup is needed.  
-  * **Validate Release Notes**: The workflow checks if RELEASE\_NOTES is empty and fails if it is, preventing empty notifications.  
-  * **Secrets**: Ensure SLACK\_WEBHOOK\_URL, SMTP\_SERVER, SMTP\_PORT, SMTP\_USERNAME, and SMTP\_PASSWORD are set in GitHub Secrets (Settings \> Secrets and variables \> Actions).  
-  * **Test the Workflow**: Create a test release with a few labeled issues (e.g., one feature, one bug, one enhancement) to verify the categorization and delivery to Slack and email.
-
-#### **4\. Format Release Notes for Readability**
-
-* **Slack**: The release notes are sent as Markdown, which Slack supports. The .github/release.yml configuration ensures categories like "Features," "Enhancements," and "Bug Fixes" appear as headings (e.g., \#\# Features).  
-* **Mailing List**: The pandoc conversion ensures the email is plain text, converting Markdown headings to plain text (e.g., Features followed by a list of issues). Test the email output to ensure the mailing list accepts the format and it’s readable.
-
-**Example Output** (for email):  
- text  
-Copy  
-`New Boost.org Release: v1.85.0`
-
-`Features`  
-`- Add new algorithm for sorting (Issue #123)`  
-`- Implement parallel processing (Issue #124)`
-
-`Enhancements`  
-`- Improve memory usage in core library (Issue #125)`
-
-`Bug Fixes`  
-`- Fix crash in parser (Issue #126)`
-
-* `View the release on GitHub: https://github.com/boostorg/boost/releases/tag/v1.85.0`
-
-#### **5\. Optional: Filter Issues by Project**
-
-If you want to include only issues from a specific GitHub Project (e.g., a project board for a release), you may need a custom script, as GitHub’s automated release notes don’t directly filter by project. Here’s how to modify the workflow to query issues from a specific project:
-
-* **Get Project ID**: Find your GitHub Project ID by navigating to the project in GitHub, checking the URL (e.g., https://github.com/orgs/boostorg/projects/123 → ID is 123), or using the GitHub API.  
-* **Update Workflow**: Replace the Generate Release Notes step with a script to query project issues.
-
-Generate Release Notes Script  
-python  
-Show inline
-
-* **Update Workflow Step**: Add this script to the workflow and install Python dependencies:
-
-yaml  
-Copy  
-`- name: Generate Release Notes`  
-  `id: release-notes`  
-  `run: |`  
-    `pip install requests`  
-    `python generate_release_notes.py`  
-    `RELEASE_NOTES=$(cat release_notes.md)`  
-    `PLAIN_TEXT_NOTES=$(pandoc -f markdown -t plain release_notes.md)`  
-    `echo "RELEASE_NOTES<<EOF" >> $GITHUB_ENV`  
-    `echo "$RELEASE_NOTES" >> $GITHUB_ENV`  
-    `echo "EOF" >> $GITHUB_ENV`  
-    `echo "PLAIN_TEXT_NOTES<<EOF" >> $GITHUB_ENV`  
-    `echo "$PLAIN_TEXT_NOTES" >> $GITHUB_ENV`  
-    `echo "EOF" >> $GITHUB_ENV`  
-  `env:`  
-    `GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}`  
-    `PROJECT_ID: "your-project-id"  # Replace with your project ID`
-
-* **Note**: This script queries all closed issues and categorizes them by labels. To filter by a specific GitHub Project, you’d need to use the GraphQL API to query project-specific issues, which is more complex. If this is needed, let me know, and I can provide a GraphQL-based solution.
-
-#### **6\. Test and Validate**
-
-* **Test Labels**: Create a few test issues in your GitHub Project with feature, enhancement, and bug labels, close them, and draft a release to verify the categorization.  
-* **Test Slack**: Post a test message to a private Slack channel to ensure the Markdown format displays correctly.  
-* **Test Email**: Send a test email to a personal address before using boost@lists.boost.org to avoid spamming the mailing list. Verify that the plain-text format is readable.  
-* **Dry Run**: Use a draft release to test the entire workflow without publishing.
-
-#### **Summary of Additional Steps**
-
-1. **Label Issues**: Ensure all relevant issues in GitHub Projects have feature, enhancement, or bug labels, using issue templates or automation if needed.  
-2. **Use release.yml**: Deploy the provided .github/release.yml to categorize release notes.  
-3. **Update Workflow**: Use the refined GitHub Actions workflow with pandoc for plain-text email conversion and an empty notes check.  
-4. **Optional Script**: If you need project-specific filtering, use the custom Python script and update the workflow.  
-5. **Test**: Validate the output in GitHub Releases, Slack, and email.
-
-This should give you nicely categorized release notes (Features, Enhancements, Bug Fixes) sent to both Slack and the boost.org mailing list. If you need help with specific setup (e.g., SMTP configuration, project filtering, or Slack formatting), just let me know\!
-
