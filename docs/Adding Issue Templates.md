@@ -21,7 +21,7 @@ Templates can be added in two ways:
 Create a file called bug\_report.md in .github/ISSUE\_TEMPLATE/ with content like:
 
 ```
---
+---
 name: Bug Report
 about: Report a bug to help us improve the project
 title: "[Bug]: "
