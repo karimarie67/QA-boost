@@ -4,7 +4,7 @@ In the repository root, create a folder called .github. We do not already have t
 
 Inside .github, create a folder named ISSUE\_TEMPLATE.
 
-Your structure should look like:
+Structure should look like:
 
 ```
 .github/
@@ -93,7 +93,7 @@ body:
       description: Any other details?
 ```
 
-Add, commit, and push the new files to your repository:
+Add, commit, and push the new files to the proper repository:
 
 ```
 git add .github/ISSUE_TEMPLATE/bug_report.md
@@ -103,7 +103,7 @@ git push
 
 (or use the GitHub web UI to create and commit these files)
 
-Go to the Issues tab and click “New Issue.” You should now see your new templates as options.
+Go to the Issues tab and click “New Issue.” You should now see the new templates as options.
 
 Follow the steps above to create/add the following feature request template (markdown).
 
