@@ -1,0 +1,5 @@
+git switch develop
+git branch -D gk/stale-news-link-fix
+git fetch
+git fetch upstream
+git switch gk/stale-news-link-fix
