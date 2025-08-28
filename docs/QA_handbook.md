@@ -36,7 +36,7 @@ This QA Handbook outlines the Quality Assurance processes, tools, and test cover
 **Tools**: GitHub Issues.
 
 ### 2. Test Execution
- segmentationfault **Purpose**: Validate website functionality and documentation accuracy through manual and automated testing.  
+**Purpose**: Validate website functionality and documentation accuracy through manual and automated testing.  
 **Process**:
 - **Manual Testing**:
   - Execute test cases stored in TestRail or GitHub Wiki.
