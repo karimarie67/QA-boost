@@ -564,6 +564,152 @@ Required Secrets:
 
 ---
 
+## QA Integration Points in CI/CD Pipeline
+
+### **QA Positioning Strategy**
+
+Our QA approach strategically positions testing at **multiple critical gates** throughout the CI/CD pipeline to ensure quality while maintaining development velocity.
+
+#### **Pre-Merge Validation (Quality Gates)**
+```yaml
+Pull Request Quality Gates:
+  Required (Blocks Merge):
+    - Smoke tests on staging environment
+    - Core functionality validation
+    - Cross-browser compatibility (Chromium + Firefox)
+    - Performance regression checks
+    - Integration with existing documentation
+  
+  Advisory (Warns but doesn't block):
+    - Full functional test suite
+    - WebKit compatibility testing
+    - Accessibility compliance checks
+    - Visual regression testing
+    
+  Trigger Conditions:
+    - All PRs to main/develop branches
+    - Changes to critical files (routing, core components)
+    - Documentation updates affecting user workflows
+    
+  Bypass Conditions:
+    - Hotfix deployments (with post-deploy validation required)
+    - Emergency security patches
+    - Admin override with justification
+```
+
+#### **Post-Deploy Validation (Deployment Gates)**
+```yaml
+Staging Deployment Gates:
+  Required Before Production:
+    - Complete functional test suite passes
+    - Performance benchmarks met
+    - Integration tests across all components
+    - Documentation accuracy validation
+    - Cross-repository coordination verified
+  
+  Deployment Rollback Triggers:
+    - >10% test failure rate
+    - Performance degradation >30%
+    - Critical user journey failures
+    - Cross-repository integration breaks
+
+Production Deployment Gates:
+  Required After Deployment:
+    - Smoke test validation within 5 minutes
+    - Performance monitoring baseline
+    - Critical path verification
+    - Health check validation
+  
+  Production Rollback Triggers:
+    - Any smoke test failure
+    - Performance degradation >20%
+    - User-reported critical issues
+    - Monitoring alert escalation
+```
+
+#### **QA Decision Matrix**
+```yaml
+Development Phase → QA Integration:
+
+Code Development:
+  - Pre-commit hooks (local quality checks)
+  - IDE integration with test feedback
+  - Developer-run local test suites
+
+Pull Request:
+  - Automated smoke tests (required)
+  - Integration preview environment
+  - Code review with test coverage analysis
+  - Performance impact assessment
+
+Staging Deployment:
+  - Full test suite execution
+  - Cross-repository integration validation
+  - Performance regression testing
+  - User acceptance testing preparation
+
+Production Deployment:
+  - Go/no-go decision based on staging results
+  - Immediate post-deploy validation
+  - Gradual rollout with monitoring
+  - Rollback capability with test validation
+
+Post-Production:
+  - Continuous monitoring and alerting
+  - Performance baseline maintenance
+  - User feedback integration
+  - Regression test updates
+```
+
+### **Quality Gate Implementation**
+
+#### **GitHub Branch Protection Rules**
+```yaml
+# Required for main/develop branches
+Branch Protection Configuration:
+  required_status_checks:
+    - "Playwright Smoke Tests (staging)"
+    - "Cross-Browser Compatibility"
+    - "Performance Regression Check"
+    - "Integration Validation"
+  
+  required_pull_request_reviews: 1
+  dismiss_stale_reviews: true
+  require_code_owner_reviews: true
+  
+  restrictions:
+    - QA team approval for test configuration changes
+    - Admin override available for emergencies
+```
+
+#### **Deployment Pipeline Gates**
+```yaml
+Staging Pipeline:
+  Pre-Deployment:
+    - Build validation
+    - Security scan completion
+    - Dependency vulnerability check
+  
+  Post-Deployment:
+    - Health check validation (required)
+    - Smoke test execution (required)
+    - Performance baseline verification (required)
+    - Full test suite execution (blocks production)
+
+Production Pipeline:
+  Pre-Deployment:
+    - Staging test results validation (required)
+    - Performance benchmark approval (required)
+    - Security clearance confirmation (required)
+    - Stakeholder approval for high-risk changes
+  
+  Post-Deployment:
+    - Immediate smoke test validation (auto-rollback on failure)
+    - Performance monitoring activation
+    - User experience validation
+    - Business metric monitoring
+```
+
 ## Testing Pipeline Design
 
 ### **Test Categorization Strategy**
