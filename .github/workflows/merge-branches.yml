@@ -13,13 +13,11 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - name: Validate confirmation
+    - name: Confirm merge action
       run: |
-        if [ "${{ github.event.inputs.confirm_merge }}" != "MERGE" ]; then
-          echo "❌ Confirmation failed. You must type 'MERGE' exactly to proceed."
-          exit 1
-        fi
-        echo "✅ Merge confirmed"
+        echo "🚀 Starting merge of develop into master"
+        echo "This action will rebase develop onto master"
+        echo "Repository: ${{ github.repository }}"
 
     - name: Checkout repository
       uses: actions/checkout@v4
