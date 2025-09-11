@@ -111,8 +111,8 @@ Accomplished Lead Quality Assurance Analyst with 24+ years of comprehensive soft
 
 ## Key Achievements
 
-• **24+ years of proven QA leadership** across healthcare, finance, insurance, education, and defense industries
-• **Successfully managed teams of 15+ analysts** including complex offshore/onshore coordination
-• **Reduced defect rates by average of 40%** through implementation of comprehensive testing strategies
-• **Led critical system migrations** with zero production downtime for major insurance and financial clients
-• **Established QA programs** from inception for multiple organizations, setting quality standards still in use today
+- **24+ years of proven QA leadership** across healthcare, finance, insurance, education, and defense industries
+- **Successfully managed teams of 15+ analysts** including complex offshore/onshore coordination
+- **Reduced defect rates by average of 40%** through implementation of comprehensive testing strategies
+- **Led critical system migrations** with zero production downtime for major insurance and financial clients
+- **Established QA programs** from inception for multiple organizations, setting quality standards still in use today
