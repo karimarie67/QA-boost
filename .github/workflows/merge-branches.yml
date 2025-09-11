@@ -38,6 +38,7 @@ jobs:
       run: |
         echo "🚀 Merging develop to master for Boost.org repository"
         echo "Repository: ${{ github.repository }}"
+        echo "Note: Workflow file should exist on develop branch for this to work"
         
         # Check if this is a boost.org repository
         if [[ "${{ github.repository }}" == boostorg/* ]]; then
