@@ -1,5 +1,3 @@
-# Create the file with this content
-cat > package.json << 'EOF'
 {
   "name": "qa-documentation",
   "version": "1.0.0",
@@ -20,4 +18,3 @@ cat > package.json << 'EOF'
     "@playwright/test": "^1.40.0"
   }
 }
-EOF
