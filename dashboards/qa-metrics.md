@@ -2,10 +2,6 @@
 
 > **Live automated testing metrics for Boost C++ Libraries**
 
-**Last Updated:** Tuesday, September 23, 2025 at 10:22:43 AM EDT  
-**Environment:** STAGING  
-**Branch:** main  
-**Run:** [#7](https://github.com/karimarie67/QA-documentation/actions/runs/17949255906)
 
 ---
 
@@ -50,7 +46,6 @@
 |------|-------|--------|--------|-----------|
 | Sep 23 | 0 | 0 | 0 | 0.0% |
 | Sep 23 | 0 | 0 | 0 | 0.0% |
-| Sep 23 | 0 | 0 | 0 | 0.0% |
 
 ---
 
@@ -69,7 +64,6 @@
 
 ### 📚 Resources
 - [QA Handbook](../docs/QA_handbook.md)
-- [View Full Report](https://github.com/karimarie67/QA-documentation/actions/runs/17949255906)
 
 ---
 
