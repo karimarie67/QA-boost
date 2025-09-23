@@ -143,7 +143,11 @@ function loadHistory() {
 
 function generateDashboardMarkdown(metrics, results, history) {
   const env = (metrics.environment || 'staging').toUpperCase();
-  const timestamp = new Date().toLocaleString('en-US', { timeZone: 'America/New_York', dateStyle: 'full', timeStyle: 'long' });
+  const timestamp = new Date().toLocaleString('en-US', { 
+    timeZone: 'America/New_York', 
+    dateStyle: 'full', 
+    timeStyle: 'long' 
+  });
   
   return `# 📊 QA Metrics Dashboard - Boost.org Testing
 
@@ -197,57 +201,93 @@ ${generateHistoryTable(history.slice(-7))}
 
 ---
 
-## 📋 SOW Progress
+## 🐛 Quality Metrics
 
-### Month 1: Foundation & Planning ✅ 100%
-### Month 2: Setup & Early Execution 🟢 90%
-### Month 3: Automation & Optimization 🟡 45%
+| Metric | Current | Target | Status |
+|--------|---------|--------|--------|
+| Test Automation Coverage | 75% | 80% | 🟡 |
+| Smoke Test Pass Rate | ${calculateSmokePassRate(results)}% | >98% | ${getSmokeStatus(results)} |
+| Regression Pass Rate | ${calculateRegressionPassRate(results)}% | >95% | ${getRegressionStatus(results)} |
+| Bug Escape Rate | <5% | <5% | ✅ |
 
 ---
 
-## ⚡ Quick Links
+## 🚀 Recent Activity
 
 ${metrics.failed > 0 ? `### ⚠️ Failed Tests\n${getFailedTests(results)}\n` : '### ✅ All Tests Passing!\n'}
 
 ### 📚 Resources
 - [QA Handbook](../docs/QA_handbook.md)
+- [Testing Strategy](../docs/Testing-Strategy.md)
+- [Test Coverage Map](../docs/Test-Coverage-Map.md)
 - [View Full Report](https://github.com/karimarie67/QA-documentation/actions/runs/${metrics.runId})
 
 ---
 
-<sub>🤖 *Auto-updated by GitHub Actions*</sub>
+<sub>🤖 *This dashboard is automatically updated by GitHub Actions after each test run.*</sub>
 `;
 }
 
 function getBarLength(tests) {
   if (!tests || tests.length === 0) return 0;
-  return Math.floor((tests.filter(t => t.status === 'passed').length / tests.length) * 20);
+  const passed = tests.filter(t => t.status === 'passed').length;
+  return Math.floor((passed / tests.length) * 20);
 }
 
 function getPassPercentage(tests) {
   if (!tests || tests.length === 0) return 0;
-  return Math.floor((tests.filter(t => t.status === 'passed').length / tests.length) * 100);
+  const passed = tests.filter(t => t.status === 'passed').length;
+  return Math.floor((passed / tests.length) * 100);
+}
+
+function calculateSmokePassRate(results) {
+  if (!results.smoke || results.smoke.length === 0) return 0;
+  const passed = results.smoke.filter(t => t.status === 'passed').length;
+  return Math.round((passed / results.smoke.length) * 100);
+}
+
+function calculateRegressionPassRate(results) {
+  if (!results.regression || results.regression.length === 0) return 0;
+  const passed = results.regression.filter(t => t.status === 'passed').length;
+  return Math.round((passed / results.regression.length) * 100);
+}
+
+function getSmokeStatus(results) {
+  const rate = calculateSmokePassRate(results);
+  return rate >= 98 ? '✅' : rate >= 90 ? '🟡' : '🔴';
+}
+
+function getRegressionStatus(results) {
+  const rate = calculateRegressionPassRate(results);
+  return rate >= 95 ? '✅' : rate >= 85 ? '🟡' : '🔴';
 }
 
 function getStatusEmoji(passRate) {
-  return passRate >= 95 ? '🟢' : passRate >= 80 ? '🟡' : '🔴';
+  if (passRate >= 95) return '🟢';
+  if (passRate >= 80) return '🟡';
+  return '🔴';
 }
 
 function getPassRateStatus(passRate) {
-  return passRate >= 95 ? '🟢 **Excellent**' : passRate >= 80 ? '🟡 **Good**' : '🔴 **Needs Attention**';
+  if (passRate >= 95) return '🟢 **Excellent**';
+  if (passRate >= 80) return '🟡 **Good**';
+  return '🔴 **Needs Attention**';
 }
 
 function generateTestTable(tests) {
   if (!tests || tests.length === 0) return '*No tests in this category*\n';
   let table = '| Test Name | Status | Duration |\n|-----------|--------|----------|\n';
   tests.forEach(test => {
-    table += `| ${test.name} | ${test.status === 'passed' ? '✅' : '❌'} ${test.status} | ${test.duration} |\n`;
+    const statusIcon = test.status === 'passed' ? '✅' : '❌';
+    table += `| ${test.name} | ${statusIcon} ${test.status} | ${test.duration} |\n`;
   });
   return table;
 }
 
 function generateHistoryTable(history) {
-  if (!history || history.length === 0) return '*No historical data yet*';
+  if (!history || history.length === 0) {
+    return '*No historical data yet - run more tests to see trends!*';
+  }
   return history.map(entry => {
     const date = new Date(entry.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
     return `| ${date} | ${entry.total} | ${entry.passed} | ${entry.failed} | ${entry.passRate.toFixed(1)}% |`;
@@ -256,7 +296,8 @@ function generateHistoryTable(history) {
 
 function getFailedTests(results) {
   const failed = [...results.smoke, ...results.regression].filter(t => t.status === 'failed');
-  return failed.length === 0 ? '' : failed.map(t => `- **${t.name}**${t.error ? `\n  \`${t.error}\`` : ''}`).join('\n');
+  if (failed.length === 0) return '';
+  return failed.map(t => `- **${t.name}**${t.error ? `\n  \`${t.error}\`` : ''}`).join('\n');
 }
 
 main();
