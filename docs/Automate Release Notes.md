@@ -1,59 +1,324 @@
-To automate release notes for boost.org using GitHub Projects and send them to the boost.org mailing list while posting to Slack, we can leverage GitHub Actions, existing integrations, and scripts to streamline the process. Below, I outline a solution that generates release notes from GitHub issues, posts them to Slack using a GitHub Action, and sends them to the boost.org mailing list via email. Since boost.org uses GitHub Projects for issue tracking, we’ll focus on pulling issue data to create release notes and integrate with Slack and email services.
+# Automate Release Notes for Boost.org Website
 
-### **Solution Overview**
+To automate release notes for boost.org website updates using GitHub Actions and send them to Slack and the boost.org mailing list. This solution focuses specifically on the **website-v2** and **website-v2-docs** repositories, which handle the main website and documentation updates respectively.
 
-1. **Generate Release Notes**: Use GitHub’s built-in automated release notes feature or a custom script to generate release notes based on closed issues in GitHub Projects.  
-2. **Post to Slack**: Utilize the slackapi/slack-github-action to send the generated release notes to a designated Slack channel.  
-3. **Send to Mailing List**: Use a GitHub Action to send an email with the release notes to the boost.org mailing list, leveraging an SMTP server or an email service like SendGrid.  
-4. **Automate the Workflow**: Trigger the process on a new release event in GitHub using GitHub Actions.
+## Solution Overview
 
-### **Detailed Solution**
+1. **Generate Release Notes**: Use GitHub's automated release notes feature to generate notes based on closed issues and PRs in website-v2 and website-v2-docs repositories
+2. **Post to Slack**: Send generated release notes to designated Slack channel for immediate team notification
+3. **Send to Mailing List**: Email release notes to boost.org mailing list for broader community notification
+4. **Automate the Workflow**: Trigger on new release events in either repository using GitHub Actions
 
-#### **Step 1: Generate Release Notes**
+## Scope and Repositories
 
-GitHub provides a feature to automatically generate release notes based on pull requests and issues. Since boost.org uses GitHub Projects with issues, we can customize this to include closed issues as release notes.
+**Target Repositories:**
+- **boostorg/website-v2**: Main website functionality, UI changes, feature updates
+- **boostorg/website-v2-docs**: Documentation updates, content changes, library documentation
 
-* **Configure GitHub Release Notes**: Create a .github/release.yml file to define how release notes are generated. For example, categorize issues by labels like "feature," "bug," or "enhancement."  
-* **Alternative**: If more customization is needed, write a script to query the GitHub API for closed issues in a specific project, format them into release notes, and store them as an artifact.
+**Why This Scope:**
+- Focused on user-facing changes that the community cares about
+- Manageable scope for testing and iteration
+- Clear ownership and release cycles
+- Avoids complexity of coordinating across dozens of boost repositories
 
-Here’s an example .github/release.yml to categorize issues:
+## Implementation Strategy
 
-GitHub Release Notes Configuration  
+### Phase 1: Website-v2 Only (Proof of Concept)
+Start with the main website repository to validate the approach:
+- Set up GitHub Action in website-v2
+- Test Slack integration
+- Validate release note generation
 
-```changelog:
+### Phase 2: Add Documentation Repository
+Extend to include documentation updates:
+- Add workflow to website-v2-docs
+- Coordinate release notes from both repositories
+- Test combined messaging
+
+### Phase 3: Mailing List Integration
+Add email functionality after Slack is proven:
+- Implement email automation with approval gates
+- Test formatting for mailing list compatibility
+- Consider digest vs. immediate notification options
+
+## Detailed Implementation
+
+### Step 1: Configure Release Notes Generation
+
+Create `.github/release.yml` in both repositories to categorize issues and PRs:
+
+```yaml
+changelog:
   categories:
-    - title: Features
+    - title: Website Features
       labels:
         - feature
         - enhancement
+        - ui-improvement
     - title: Bug Fixes
       labels:
         - bug
+        - hotfix
+    - title: Documentation Updates
+      labels:
+        - documentation
+        - content-update
+    - title: Performance & Infrastructure
+      labels:
+        - performance
+        - infrastructure
+        - security
     - title: Other Changes
       labels:
         - '*'
       exclude:
         labels:
           - dependencies
+          - internal
 ```
 
-This configuration groups issues by labels, which we can apply in GitHub Projects to categorize work (e.g., label issues as "feature" or "bug"). When drafting a release, GitHub will generate notes based on closed issues with these labels.
+**Repository-Specific Customization:**
+- **website-v2**: Focus on UI, features, performance
+- **website-v2-docs**: Focus on documentation, content, library updates
 
-#### **Step 2: Set Up Slack Integration**
+### Step 2: Slack Integration Setup
 
-Use the slackapi/slack-github-action to send release notes to a Slack channel. You’ll need a Slack Incoming Webhook URL, which can be created in the Slack workspace.
+**Prerequisites:**
+- Create Slack App at https://api.slack.com/apps
+- Enable Incoming Webhooks for target channel (e.g., #boost-website-releases)
+- Store webhook URL as repository secret: `SLACK_WEBHOOK_URL`
 
-* **Create a Slack App**: Go to [https://api.slack.com/apps](https://api.slack.com/apps), create an app, and enable Incoming Webhooks. Select the target channel (e.g., \#boost-releases) and copy the webhook URL.  
-* **Store the Webhook**: Add the Slack webhook URL as a secret in the GitHub repository (e.g., SLACK\_WEBHOOK\_URL).
+### Step 3: Email Configuration
 
-#### **Step 3: Set Up Email for Mailing List**
+**SMTP Setup Options:**
+- Use existing boost.org email infrastructure
+- Alternative: SendGrid or similar service for reliability
+- Store credentials as repository secrets:
+  - `SMTP_SERVER`
+  - `SMTP_PORT` 
+  - `SMTP_USERNAME`
+  - `SMTP_PASSWORD`
 
-To send release notes to the boost.org mailing list, use an SMTP server or an email service like SendGrid. For simplicity, we’ll use the dawidd6/action-send-mail GitHub Action to send emails via SMTP.
+**Mailing List Considerations:**
+- Verify boost.org mailing list accepts automated emails
+- Consider using dedicated sender address (e.g., website-releases@boost.org)
+- Test email formatting for plain text compatibility
 
-* **SMTP Setup**: Configure an SMTP server (e.g., Gmail, SendGrid, or a custom mail server). For example, if using Gmail, create an App Password for security.  
-* **Store Credentials**: Store SMTP credentials (server, port, username, password) as GitHub secrets (e.g., SMTP\_SERVER, SMTP\_PORT, SMTP\_USERNAME, SMTP\_PASSWORD).  
-* **Mailing List Address**: Use the boost.org mailing list address (e.g., boost@lists.boost.org).
+### Step 4: GitHub Actions Workflow
 
+Create `.github/workflows/publish-release-notes.yml` in both repositories:
+
+```yaml
+name: Publish Website Release Notes
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  publish-release-notes:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Generate Release Notes
+        id: release-notes
+        run: |
+          # Get release details
+          RELEASE_TAG="${{ github.event.release.tag_name }}"
+          RELEASE_NAME="${{ github.event.release.name }}"
+          RELEASE_BODY="${{ github.event.release.body }}"
+          RELEASE_URL="${{ github.event.release.html_url }}"
+          REPO_NAME="${{ github.repository }}"
+          
+          # Format for different outputs
+          echo "RELEASE_TAG=$RELEASE_TAG" >> $GITHUB_ENV
+          echo "RELEASE_NAME=$RELEASE_NAME" >> $GITHUB_ENV  
+          echo "RELEASE_URL=$RELEASE_URL" >> $GITHUB_ENV
+          echo "REPO_NAME=$REPO_NAME" >> $GITHUB_ENV
+          
+          # Store formatted release body
+          echo "RELEASE_BODY<<EOF" >> $GITHUB_ENV
+          echo "$RELEASE_BODY" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+
+      - name: Post to Slack
+        uses: slackapi/slack-github-action@v2.0.0
+        with:
+          webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
+          webhook-type: webhook-trigger
+          payload: |
+            {
+              "text": "🚀 New Boost.org Website Release",
+              "blocks": [
+                {
+                  "type": "header",
+                  "text": {
+                    "type": "plain_text",
+                    "text": "🚀 ${{ env.REPO_NAME }} Release: ${{ env.RELEASE_TAG }}"
+                  }
+                },
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": "*Release:* ${{ env.RELEASE_NAME }}\n*Repository:* ${{ env.REPO_NAME }}\n*Tag:* ${{ env.RELEASE_TAG }}"
+                  },
+                  "accessory": {
+                    "type": "button",
+                    "text": {
+                      "type": "plain_text",
+                      "text": "View Release"
+                    },
+                    "url": "${{ env.RELEASE_URL }}"
+                  }
+                },
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn", 
+                    "text": "${{ env.RELEASE_BODY }}"
+                  }
+                }
+              ]
+            }
+
+      - name: Send Email to Mailing List
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: ${{ secrets.SMTP_SERVER }}
+          server_port: ${{ secrets.SMTP_PORT }}
+          username: ${{ secrets.SMTP_USERNAME }}
+          password: ${{ secrets.SMTP_PASSWORD }}
+          subject: "Boost.org Website Update: ${{ env.RELEASE_TAG }} (${{ env.REPO_NAME }})"
+          body: |
+            Boost.org Website Release Notification
+            =====================================
+            
+            Repository: ${{ env.REPO_NAME }}
+            Release: ${{ env.RELEASE_NAME }}
+            Tag: ${{ env.RELEASE_TAG }}
+            
+            Release Notes:
+            --------------
+            ${{ env.RELEASE_BODY }}
+            
+            View full release details: ${{ env.RELEASE_URL }}
+            
+            ---
+            This is an automated notification from the Boost.org website release system.
+            To modify notification preferences, contact the website team.
+          to: boost@lists.boost.org
+          from: "Boost Website Releases <website-releases@boost.org>"
+          content_type: text/plain
+
+      - name: Create Deployment Record
+        run: |
+          echo "Release ${{ env.RELEASE_TAG }} published successfully" >> deployment.log
+          echo "Slack notification: Sent"
+          echo "Email notification: Sent to boost@lists.boost.org"
+          echo "Timestamp: $(date -u)"
+```
+
+## Repository-Specific Workflows
+
+### Website-v2 Releases
+**Typical Content:**
+- New features and UI improvements
+- Bug fixes and performance optimizations
+- Security updates
+- Infrastructure changes
+
+**Release Frequency:** Monthly or as needed for critical updates
+
+### Website-v2-docs Releases
+**Typical Content:**
+- Documentation updates and corrections
+- New library documentation
+- Content reorganization
+- Search and navigation improvements
+
+**Release Frequency:** Weekly or as content is updated
+
+## Setup Instructions
+
+### 1. Repository Configuration
+For both website-v2 and website-v2-docs repositories:
+
+**GitHub Secrets (Settings > Secrets and variables > Actions):**
+- `SLACK_WEBHOOK_URL`: Slack incoming webhook URL
+- `SMTP_SERVER`: Email server address
+- `SMTP_PORT`: Email server port (usually 587 or 465)
+- `SMTP_USERNAME`: Email authentication username
+- `SMTP_PASSWORD`: Email authentication password
+
+### 2. Slack Workspace Setup
+- Create dedicated channel: #boost-website-releases
+- Configure Slack app with incoming webhook
+- Test webhook with sample payload
+
+### 3. Email Configuration
+- Verify boost.org mailing list accepts automated emails
+- Configure sender authentication (SPF, DKIM if needed)
+- Test email delivery with sample message
+
+### 4. Testing Protocol
+**Before Production:**
+1. Create test release in repository
+2. Verify Slack message formatting
+3. Test email delivery and formatting
+4. Confirm all links and references work
+5. Validate with small test group
+
+**Production Rollout:**
+1. Deploy to website-v2 first
+2. Monitor for 1-2 releases
+3. Extend to website-v2-docs
+4. Gather feedback and iterate
+
+## Alternative: Manual Approval Gate
+
+For additional control, add manual approval before sending emails:
+
+```yaml
+- name: Request Approval for Email
+  uses: trstringer/manual-approval@v1
+  with:
+    secret: ${{ github.TOKEN }}
+    approvers: website-team-leads
+    minimum-approvals: 1
+    issue-title: "Approve release notification for ${{ env.RELEASE_TAG }}"
+```
+
+## Monitoring and Maintenance
+
+**Success Metrics:**
+- Slack notifications delivered successfully
+- Email delivery confirmation
+- Community engagement with release notifications
+- Reduced manual communication overhead
+
+**Ongoing Maintenance:**
+- Monitor email deliverability
+- Update notification formatting based on feedback
+- Adjust release note categorization as needed
+- Review and update mailing list recipients
+
+## Security Considerations
+
+- Store all credentials in GitHub Secrets, never in code
+- Use least-privilege access for SMTP credentials
+- Regularly rotate webhook URLs and passwords
+- Monitor for unauthorized access to notification systems
+- Consider rate limiting for high-frequency releases
+
+## Resources
+
+- [GitHub Automatic Release Notes](https://docs.github.com/en/repositories/releasing-projects-on-github/automatically-generated-release-notes)
+- [Slack GitHub Action](https://github.com/slackapi/slack-github-action)
+- [Send Mail Action](https://github.com/dawidd6/action-send-mail)
+- [Manual Approval Action](https://github.com/trstringer/manual-approval)
 #### **Step 4: Create a GitHub Actions Workflow**
 
 GitHub Actions Workflow for Release Notes  
