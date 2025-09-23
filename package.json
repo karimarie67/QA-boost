@@ -1,1 +1,23 @@
-
+# Create the file with this content
+cat > package.json << 'EOF'
+{
+  "name": "qa-documentation",
+  "version": "1.0.0",
+  "description": "QA automation framework for Boost.org testing",
+  "scripts": {
+    "test": "playwright test",
+    "test:smoke": "playwright test smoke_tests.spec.js",
+    "test:regression": "playwright test boost_io_tests.spec.js boost_version_tests.spec.js",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "dashboard": "node dashboards/scripts/generate-dashboard.js",
+    "report": "playwright show-report"
+  },
+  "keywords": ["qa", "testing", "playwright", "automation", "boost"],
+  "author": "karimarie67",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0"
+  }
+}
+EOF
