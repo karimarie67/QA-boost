@@ -52,7 +52,7 @@ jobs:
         run: npx playwright install --with-deps chromium
         
       - name: Run Smoke Tests
-        run: npx playwright test smoke_tests.spec.js --reporter=json,html > smoke-results.json || true
+        run: npx playwright test smoke_tests.spec.js --reporter=json --reporter=html || true
         continue-on-error: true
         
       - name: Upload Smoke Test Results
