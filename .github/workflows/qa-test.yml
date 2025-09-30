@@ -52,7 +52,7 @@ jobs:
         run: npx playwright install --with-deps chromium
         
       - name: Run Smoke Tests
-        run: npx playwright test smoke_tests.spec.js --reporter=json,html > smoke-results.json || true
+        run: npx playwright test tests/smoke_tests.spec.js --reporter=json --reporter=html
         continue-on-error: true
         
       - name: Upload Smoke Test Results
@@ -61,9 +61,8 @@ jobs:
         with:
           name: smoke-test-results
           path: |
-            smoke-results.json
-            playwright-report/
             test-results/
+            playwright-report/
           retention-days: 30
 
   regression-tests:
@@ -90,7 +89,7 @@ jobs:
         run: npx playwright install --with-deps
         
       - name: Run Boost.io Regression Tests
-        run: npx playwright test boost_io_tests.spec.js --reporter=json,html > boost-io-results.json || true
+        run: npx playwright test tests/boost_io_tests.spec.js --reporter=json --reporter=html
         continue-on-error: true
         
       - name: Upload Boost.io Test Results
@@ -99,9 +98,8 @@ jobs:
         with:
           name: boost-io-test-results
           path: |
-            boost-io-results.json
-            playwright-report/
             test-results/
+            playwright-report/
           retention-days: 30
 
   version-regression-tests:
@@ -128,7 +126,7 @@ jobs:
         run: npx playwright install --with-deps
         
       - name: Run Version Tests
-        run: npx playwright test boost_version_tests.spec.js --reporter=json,html > version-results.json || true
+        run: npx playwright test tests/boost_version_tests.spec.js --reporter=json --reporter=html
         continue-on-error: true
         
       - name: Upload Version Test Results
@@ -137,9 +135,8 @@ jobs:
         with:
           name: version-test-results
           path: |
-            version-results.json
-            playwright-report/
             test-results/
+            playwright-report/
           retention-days: 30
 
   update-dashboard:

@@ -1,63 +1,239 @@
 # Boost.org QA Handbook
 
 ## Overview
-This QA Handbook outlines the Quality Assurance processes, tools, and test coverage for the boost.org website, including the boostorg/website-v2, boostorg/website-v2-docs, and boostorg/boostlook repositories. It serves as a reference for QA team members to ensure consistent testing, bug reporting, and release validation, with a strong focus on the critical library documentation. The handbook is designed to be simple, maintainable, and useful for both new and experienced team members.
+This QA Handbook outlines the Quality Assurance processes for automated testing of boost.org. The QA framework uses end-to-end testing with Playwright, integrated into GitHub Actions CI/CD pipeline, following a shift-left testing strategy. Tests are maintained in the karimarie67/QA-documentation repository and execute against the live boost.org website and staging environments.
 
 ### Objectives
-- Catch critical bugs before production, especially in library documentation.
-- Ensure stable and predictable deployments.
-- Maintain high test coverage for core user flows and documentation.
-- Streamline onboarding for new QA team members.
+- Catch critical bugs before production through automated testing
+- Ensure stable and predictable deployments via pre/post deployment validation
+- Maintain high test coverage for core user flows and library documentation
+- Provide fast feedback to developers through shift-left testing approach
+
+---
+
+## Testing Strategy - Shift-Left Approach
+
+### Overview
+We implement a shift-left testing strategy that provides fast feedback early in the development cycle while ensuring comprehensive validation before deployment.
+
+### Branch-Based Testing
+**Main Branch (Production-Ready Code):**
+- Triggers: Every push to main, every PR targeting main
+- Tests: Smoke tests only (5-10 minutes)
+- Purpose: Fast feedback for developers, pre-merge quality gate
+- Regression tests are skipped to maintain speed
+
+**Develop Branch (Integration Testing):**
+- Triggers: Every push to develop (after PR merges)
+- Tests: Smoke tests + Full regression suite (30-45 minutes)
+- Purpose: Comprehensive validation after code integration
+- Full test coverage before staging deployment
+
+### Why This Works
+- Developers get feedback in under 10 minutes on main branch
+- Comprehensive testing happens after integration on develop
+- No wasted resources running hour-long tests on every commit
+- Industry standard approach used by major tech companies
 
 ---
 
 ## QA Processes
 
-### 1. Bug Reporting & Triage
-**Purpose**: Identify and prioritize issues to maintain website quality.  
+### 1. Automated Test Execution
+**Purpose**: Validate website functionality and documentation through automated end-to-end testing.
+
+**Test Types**:
+- **Smoke Tests**: Critical path validation (homepage loads, navigation works, basic functionality)
+- **Regression Tests**: Comprehensive functionality testing (boost_io_tests.spec.js, boost_version_tests.spec.js)
+- **Documentation Tests**: Library documentation accessibility and search functionality
+
+**Execution**:
+- Tests run automatically via GitHub Actions on code changes
+- Test against live boost.org website and staging environments
+- Results appear in live dashboard at dashboards/qa-metrics.md
+- Failed tests trigger notifications and dashboard updates
+
+**Tools**: Playwright, GitHub Actions
+
+### 2. Bug Reporting & Triage
+**Purpose**: Identify and prioritize issues found during testing.
+
+**Definition**:
+- **Bug**: A defect that breaks functionality (broken links, login failure, documentation inaccessible)
+- **Enhancement**: A new feature or improvement (improved search, UI enhancements)
+
 **Process**:
-- **Definition**:
-  - **Bug**: A defect that breaks functionality (e.g., broken documentation links, login failure).
-  - **Enhancement**: A new feature or improvement (e.g., improved search filters).
-- **Reporting**:
-  - File bugs in GitHub Issues using the bug template:
-    - **Fields**: Description, Steps to Reproduce, Expected vs. Actual Behavior, Severity (Critical, High, Medium, Low).
-    - **Severity Examples**:
-      - Critical: Documentation inaccessible, website crashes.
-      - High: Search returns incorrect results.
-      - Medium: UI misalignment in documentation.
-      - Low: Minor typo in text.
-  - Assign labels: `bug`, `documentation`, `severity-critical`, etc.
-- **Triage**:
-  - QA Lead reviews and prioritizes bugs weekly.
-  - Dev team acknowledges and assigns bugs within 48 hours.
-  - Bugs are prioritized based on severity and impact (e.g., documentation bugs take precedence).
+- File bugs in GitHub Issues using bug templates
+- Severity levels: Critical, High, Medium, Low
+- Labels: bug, documentation, severity-critical, automated-test-failure
+- QA reviews and prioritizes weekly
+- Documentation bugs take precedence due to high user impact
 
-**Tools**: GitHub Issues.
+**Tools**: GitHub Issues
 
-### 2. Test Execution
-**Purpose**: Validate website functionality and documentation accuracy through manual and automated testing.  
-**Process**:
-- **Manual Testing**:
-  - Execute test cases stored in TestRail or GitHub Wiki.
-  - Focus on core user flows:
-    - Website: Homepage navigation, login/signup, search.
-    - Documentation: Library browsing, version switching, search, link validation.
-    - Boostlook: Theme consistency, accessibility.
-  - Record results in TestRail or Wiki, noting pass/fail and any defects.
-- **Automated Testing**:
-  - Run Playwright tests in the CI/CD pipeline (GitHub Actions).
-  - Types of tests:
-    - **Smoke**: Homepage loads, login works, documentation renders.
-    - **Regression**: Validate existing features after updates (e.g., new boost releases).
-    - **Functional**: Test specific features (e.g., documentation search accuracy).
-  - Tests run on every commit and pull request; builds fail if critical tests fail.
-- **Frequency**:
-  - Manual tests: Before major releases or when automation is incomplete.
-  - Automated tests: On every code change (push or pull request).
+### 3. Release Management & Deployment
+**Purpose**: Ensure stable deployments through QA validation and deployment execution.
 
-**Tools**: Playwright, TestRail or GitHub Wiki.
+**Pre-Deployment Process**:
+- Verify all regression tests passing on develop branch (>95% pass rate)
+- Review QA dashboard for test trends and critical failures
+- Confirm no critical bugs open
+- Notify stakeholders of planned deployment
 
+**Deployment Process**:
+- Execute deployment via scripts/deploy-website.sh in website-v2 repository
+- Monitor deployment process for errors
+- Document deployment time and any issues
+
+**Post-Deployment Validation**:
+- Run smoke tests against production environment
+- Verify critical user flows (documentation access, search, navigation)
+- Monitor error rates for first 15 minutes
+- Update QA dashboard with deployment status
+
+**Rollback Criteria**:
+- Error rate >5%
+- Critical functionality broken
+- Documentation inaccessible
+- Security issues detected
+
+### 4. Metrics & Reporting
+**Purpose**: Track QA performance and system reliability.
+
+**Key Metrics**:
+- Test Automation Coverage: 75% (target: 80%)
+- Smoke Test Pass Rate: >98% target
+- Regression Test Pass Rate: >95% target
+- Bug Escape Rate: <5%
+
+**Reporting**:
+- Live dashboard auto-updates after each test run
+- Historical trends tracked over 30-day periods
+- Weekly review of metrics and trends
+- Dashboard accessible at dashboards/qa-metrics.md
+
+**Tools**: Custom GitHub Actions dashboard, GitHub Issues
+
+---
+
+## Tools & Environments
+
+### Core Tools
+- **Playwright**: End-to-end testing framework (JavaScript/Node.js)
+- **GitHub Actions**: CI/CD pipeline for automated test execution
+- **GitHub Issues**: Bug tracking and project management
+- **Custom Dashboard**: Real-time metrics and test results (auto-generated)
+
+### Test Environments
+- **Production**: https://www.boost.org (smoke tests only for monitoring)
+- **Staging**: Staging environment URL (comprehensive testing)
+- **Test Configuration**: Configurable via environment variables in CI/CD
+
+### Repository Structure
+- **QA Repository**: karimarie67/QA-documentation (test code and documentation)
+- **Target Repositories**: Tests execute against deployed boost.org website
+- **Test Files**: smoke_tests.spec.js, boost_io_tests.spec.js, boost_version_tests.spec.js
+
+---
+
+## Test Coverage Map
+
+### Current Coverage
+| Feature | Test Type | Priority | Status |
+|---------|-----------|----------|--------|
+| Homepage Navigation | Automated (Smoke) | P1 | ✅ Automated |
+| Library Documentation | Automated (Regression) | P1 | ✅ Automated |
+| Search Functionality | Automated (Regression) | P1 | ✅ Automated |
+| Version Navigation | Automated (Regression) | P2 | ✅ Automated |
+| Download Links | Manual | P2 | 📋 Manual Process |
+
+### Coverage Goals
+- **Current**: 75% automation coverage
+- **Target**: 80% automation coverage
+- **Priority**: Focus on high-impact documentation and navigation features
+
+### Test Documentation
+- Manual test cases documented in CSV files (Functional-Table, Regression-Table)
+- Automated test cases linked to corresponding manual test case IDs
+- Test coverage tracked in docs/Test-Coverage-Map.md
+
+---
+
+## Operational Procedures
+
+### Daily Operations
+- Monitor GitHub Actions for test failures
+- Review QA dashboard for trends and issues
+- Respond to critical test failures within 2 hours
+- Update bug status based on test results
+
+### Weekly Operations
+- Review and triage open bugs in GitHub Issues
+- Analyze test metrics and trends
+- Update test coverage documentation
+- Plan test automation expansion
+
+### Release Operations
+- Execute pre-deployment checklist
+- Perform deployment when approved
+- Conduct post-deployment validation
+- Document deployment outcomes
+
+### Maintenance
+- Update handbook monthly
+- Review and optimize test suite quarterly
+- Refresh test data and environments as needed
+
+---
+
+## Getting Started
+
+### For New Team Members
+1. **Repository Access**: Clone karimarie67/QA-documentation repository
+2. **Environment Setup**: Install Node.js, npm, and Playwright (`npm install`)
+3. **Run Tests Locally**: `npm test` to execute full suite
+4. **Review Documentation**: Read Testing-Strategy.md and this handbook
+5. **Access Dashboard**: View live metrics at dashboards/qa-metrics.md
+
+### For Developers
+1. **Understanding Test Impact**: Tests run automatically on PR creation and merge
+2. **Test Results**: Check GitHub Actions tab for test status
+3. **Dashboard Access**: Monitor quality metrics at dashboards/qa-metrics.md
+4. **Bug Reports**: Review GitHub Issues for QA-identified bugs
+
+### Quick Commands
+```bash
+# Run all tests
+npm test
+
+# Run smoke tests only
+npm run test:smoke
+
+# Run regression tests only  
+npm run test:regression
+
+# Generate dashboard locally
+npm run dashboard
+```
+
+---
+
+## Contact & Support
+
+### QA Lead
+- Responsible for test strategy, bug triage, and deployment coordination
+- Point of contact for test failures and quality issues
+
+### Process Updates
+- Handbook updates tracked in GitHub
+- Process changes discussed in team meetings
+- Tool updates documented in repository README
+
+---
+
+*Last Updated: [Date]*  
+*Maintained by: QA Team*  
+*Repository: karimarie67/QA-documentation*
 ### 3. CI/CD Integration
 **Purpose**: Embed QA into the development pipeline for fast feedback.  
 **Process**:
