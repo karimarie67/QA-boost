@@ -56,16 +56,15 @@ jobs:
         continue-on-error: true
         
       - name: Upload Smoke Test Results
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: smoke-test-results
-          path: |
-            smoke-results.json
-            playwright-report/
-            test-results/
-          retention-days: 30
-
+  if: always()
+  uses: actions/upload-artifact@v4
+  with:
+    name: smoke-test-results
+    path: |
+      test-results/
+      playwright-report/
+    retention-days: 30
+    
   regression-tests:
     runs-on: ubuntu-latest
     timeout-minutes: 60
