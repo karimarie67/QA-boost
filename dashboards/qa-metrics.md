@@ -76,7 +76,7 @@
 
 ### 📚 Resources
 - [QA Handbook](../docs/QA_handbook.md)
-- [Testing Strategy](../docs/Testing-Strategy.md)
+- [Testing Strategy](../docs/testing_strategy_doc.md)
 - [Test Coverage Map](../docs/Test-Coverage-Map.md)
 - [View Full Report](https://github.com/karimarie67/QA-documentation/actions/runs/17955436445)
 
