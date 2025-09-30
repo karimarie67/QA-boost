@@ -1,20 +1,47 @@
 {
-  "timestamp": "2025-09-30T18:01:40.569Z",
+  "timestamp": "2025-09-30T19:52:07.939Z",
   "metrics": {
-    "totalTests": 0,
-    "passed": 0,
+    "totalTests": 5,
+    "passed": 5,
     "failed": 0,
-    "passRate": 0,
-    "smokeCount": 0,
-    "regressionCount": 0,
-    "timestamp": "2025-09-30T18:01:40.307Z",
+    "passRate": 100,
+    "smokeCount": 2,
+    "regressionCount": 3,
+    "timestamp": "2025-09-30T19:52:07.614Z",
     "environment": "staging",
-    "runId": "18138709677",
-    "runNumber": "33",
+    "runId": "18141728060",
+    "runNumber": "34",
     "branch": "main"
   },
   "testResults": {
-    "smoke": [],
-    "regression": []
+    "smoke": [
+      {
+        "name": "Homepage loads",
+        "status": "passed",
+        "duration": "1.2s"
+      },
+      {
+        "name": "Navigation works",
+        "status": "passed",
+        "duration": "0.8s"
+      }
+    ],
+    "regression": [
+      {
+        "name": "Boost.io accessible",
+        "status": "passed",
+        "duration": "1.5s"
+      },
+      {
+        "name": "Library docs load",
+        "status": "passed",
+        "duration": "2.1s"
+      },
+      {
+        "name": "Version page loads",
+        "status": "passed",
+        "duration": "1.3s"
+      }
+    ]
   }
 }
