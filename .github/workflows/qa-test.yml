@@ -55,19 +55,27 @@ jobs:
         run: npx playwright test tests/smoke_tests.spec.js --reporter=html --reporter=json
         continue-on-error: true
         
-      - name: Rename results for dashboard
+      - name: Organize results for dashboard
         if: always()
+        shell: bash
         run: |
           mkdir -p artifacts/smoke-test-results
           if [ -f "test-results.json" ]; then
+            echo "Found test-results.json, copying to smoke-results.json"
             cp test-results.json artifacts/smoke-test-results/smoke-results.json
+          else
+            echo "Warning: test-results.json not found"
           fi
           if [ -d "playwright-report" ]; then
+            echo "Copying playwright-report"
             cp -r playwright-report artifacts/smoke-test-results/
           fi
           if [ -d "test-results" ]; then
+            echo "Copying test-results directory"
             cp -r test-results artifacts/smoke-test-results/
           fi
+          echo "Contents of artifacts/smoke-test-results:"
+          ls -la artifacts/smoke-test-results/ || echo "Directory is empty"
         
       - name: Upload Smoke Test Results
         if: always()
@@ -76,6 +84,7 @@ jobs:
           name: smoke-test-results
           path: artifacts/smoke-test-results/
           retention-days: 30
+          if-no-files-found: warn
 
   regression-tests:
     runs-on: ubuntu-latest
@@ -104,19 +113,27 @@ jobs:
         run: npx playwright test tests/boost_io_tests.spec.js --reporter=html --reporter=json
         continue-on-error: true
         
-      - name: Rename results for dashboard
+      - name: Organize results for dashboard
         if: always()
+        shell: bash
         run: |
           mkdir -p artifacts/boost-io-test-results
           if [ -f "test-results.json" ]; then
+            echo "Found test-results.json, copying to boost-io-results.json"
             cp test-results.json artifacts/boost-io-test-results/boost-io-results.json
+          else
+            echo "Warning: test-results.json not found"
           fi
           if [ -d "playwright-report" ]; then
+            echo "Copying playwright-report"
             cp -r playwright-report artifacts/boost-io-test-results/
           fi
           if [ -d "test-results" ]; then
+            echo "Copying test-results directory"
             cp -r test-results artifacts/boost-io-test-results/
           fi
+          echo "Contents of artifacts/boost-io-test-results:"
+          ls -la artifacts/boost-io-test-results/ || echo "Directory is empty"
         
       - name: Upload Boost.io Test Results
         if: always()
@@ -125,6 +142,7 @@ jobs:
           name: boost-io-test-results
           path: artifacts/boost-io-test-results/
           retention-days: 30
+          if-no-files-found: warn
 
   version-regression-tests:
     runs-on: ubuntu-latest
@@ -153,19 +171,27 @@ jobs:
         run: npx playwright test tests/boost_version_tests.spec.js --reporter=html --reporter=json
         continue-on-error: true
         
-      - name: Rename results for dashboard
+      - name: Organize results for dashboard
         if: always()
+        shell: bash
         run: |
           mkdir -p artifacts/version-test-results
           if [ -f "test-results.json" ]; then
+            echo "Found test-results.json, copying to version-results.json"
             cp test-results.json artifacts/version-test-results/version-results.json
+          else
+            echo "Warning: test-results.json not found"
           fi
           if [ -d "playwright-report" ]; then
+            echo "Copying playwright-report"
             cp -r playwright-report artifacts/version-test-results/
           fi
           if [ -d "test-results" ]; then
+            echo "Copying test-results directory"
             cp -r test-results artifacts/version-test-results/
           fi
+          echo "Contents of artifacts/version-test-results:"
+          ls -la artifacts/version-test-results/ || echo "Directory is empty"
         
       - name: Upload Version Test Results
         if: always()
@@ -174,6 +200,7 @@ jobs:
           name: version-test-results
           path: artifacts/version-test-results/
           retention-days: 30
+          if-no-files-found: warn
 
   update-dashboard:
     runs-on: ubuntu-latest
@@ -200,8 +227,12 @@ jobs:
           
       - name: List downloaded artifacts for debugging
         run: |
-          echo "Artifacts structure:"
-          ls -R ./artifacts || echo "No artifacts found"
+          echo "=== Artifacts structure ==="
+          ls -R ./artifacts 2>/dev/null || echo "No artifacts directory found"
+          echo "=== Checking for specific result files ==="
+          [ -f "./artifacts/smoke-test-results/smoke-results.json" ] && echo "✓ Found smoke-results.json" || echo "✗ Missing smoke-results.json"
+          [ -f "./artifacts/boost-io-test-results/boost-io-results.json" ] && echo "✓ Found boost-io-results.json" || echo "✗ Missing boost-io-results.json"
+          [ -f "./artifacts/version-test-results/version-results.json" ] && echo "✓ Found version-results.json" || echo "✗ Missing version-results.json"
           
       - name: Generate Dashboard
         run: |
