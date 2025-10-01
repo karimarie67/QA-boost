@@ -8,6 +8,7 @@ const HISTORY_FILE = path.join(RESULTS_DIR, 'history.json');
 
 function main() {
   console.log('🔄 Generating QA Dashboard...');
+  console.log(`Looking for artifacts in: ${ARTIFACTS_DIR}`);
   
   if (!fs.existsSync(RESULTS_DIR)) {
     fs.mkdirSync(RESULTS_DIR, { recursive: true });
@@ -15,6 +16,10 @@ function main() {
   
   const testResults = collectTestResults();
   const metrics = calculateMetrics(testResults);
+  
+  console.log(`Collected ${metrics.totalTests} total tests`);
+  console.log(`Smoke: ${metrics.smokeCount}, Regression: ${metrics.regressionCount}`);
+  
   updateHistory(metrics);
   const history = loadHistory();
   const dashboard = generateDashboardMarkdown(metrics, testResults, history);
@@ -26,37 +31,52 @@ function main() {
   );
   
   console.log('✅ Dashboard generated successfully!');
-  console.log(`📊 Total Tests: ${metrics.totalTests} | Passed: ${metrics.passed} | Failed: ${metrics.failed} | Pass Rate: ${metrics.passRate.toFixed(1)}%`);
+  console.log(`📊 Total: ${metrics.totalTests} | Passed: ${metrics.passed} | Failed: ${metrics.failed} | Pass Rate: ${metrics.passRate.toFixed(1)}%`);
 }
 
 function collectTestResults() {
   const results = { smoke: [], regression: [] };
   
   if (!fs.existsSync(ARTIFACTS_DIR)) {
-    console.warn('⚠️  No artifacts found, using sample data');
+    console.warn('⚠️  No artifacts directory found');
     return getSampleResults();
   }
   
-  const smokeFile = findFile(ARTIFACTS_DIR, 'smoke-results.json');
-  if (smokeFile) results.smoke = parsePlaywrightJson(smokeFile);
+  // Parse smoke test results
+  const smokeFile = path.join(ARTIFACTS_DIR, 'smoke-test-results/smoke-results.json');
+  if (fs.existsSync(smokeFile)) {
+    console.log(`Found smoke results: ${smokeFile}`);
+    results.smoke = parsePlaywrightJson(smokeFile);
+  } else {
+    console.log('No smoke results found');
+  }
   
-  const boostFile = findFile(ARTIFACTS_DIR, 'boost-io-results.json');
-  if (boostFile) results.regression = results.regression.concat(parsePlaywrightJson(boostFile));
+  // Parse boost.io regression results
+  const boostFile = path.join(ARTIFACTS_DIR, 'boost-io-test-results/boost-io-results.json');
+  if (fs.existsSync(boostFile)) {
+    console.log(`Found boost-io results: ${boostFile}`);
+    const boostTests = parsePlaywrightJson(boostFile);
+    results.regression = results.regression.concat(boostTests);
+  } else {
+    console.log('No boost-io results found');
+  }
   
-  const versionFile = findFile(ARTIFACTS_DIR, 'version-results.json');
-  if (versionFile) results.regression = results.regression.concat(parsePlaywrightJson(versionFile));
+  // Parse version regression results
+  const versionFile = path.join(ARTIFACTS_DIR, 'version-test-results/version-results.json');
+  if (fs.existsSync(versionFile)) {
+    console.log(`Found version results: ${versionFile}`);
+    const versionTests = parsePlaywrightJson(versionFile);
+    results.regression = results.regression.concat(versionTests);
+  } else {
+    console.log('No version results found');
+  }
+  
+  if (results.smoke.length === 0 && results.regression.length === 0) {
+    console.warn('⚠️  No test results found, using sample data');
+    return getSampleResults();
+  }
   
   return results;
-}
-
-function findFile(dir, filename) {
-  try {
-    const files = fs.readdirSync(dir, { recursive: true, withFileTypes: true });
-    const file = files.find(f => f.name === filename);
-    return file ? path.join(file.path, file.name) : null;
-  } catch (e) {
-    return null;
-  }
 }
 
 function parsePlaywrightJson(filepath) {
@@ -64,21 +84,32 @@ function parsePlaywrightJson(filepath) {
     const data = JSON.parse(fs.readFileSync(filepath, 'utf8'));
     const tests = [];
     
-    if (data.suites) {
+    // Playwright JSON structure: suites -> specs -> tests -> results
+    if (data.suites && Array.isArray(data.suites)) {
       data.suites.forEach(suite => {
-        if (suite.specs) {
+        if (suite.specs && Array.isArray(suite.specs)) {
           suite.specs.forEach(spec => {
-            const result = spec.tests?.[0]?.results?.[0];
-            tests.push({
-              name: spec.title || 'Unknown Test',
-              status: spec.ok ? 'passed' : 'failed',
-              duration: ((result?.duration || 0) / 1000).toFixed(2) + 's',
-              error: result?.error?.message || null
-            });
+            if (spec.tests && Array.isArray(spec.tests)) {
+              spec.tests.forEach(test => {
+                // Each test has results array
+                if (test.results && Array.isArray(test.results)) {
+                  test.results.forEach(result => {
+                    tests.push({
+                      name: spec.title || test.title || 'Unknown Test',
+                      status: result.status === 'passed' ? 'passed' : 'failed',
+                      duration: ((result.duration || 0) / 1000).toFixed(2) + 's',
+                      error: result.error?.message || null
+                    });
+                  });
+                }
+              });
+            }
           });
         }
       });
     }
+    
+    console.log(`Parsed ${tests.length} tests from ${filepath}`);
     return tests;
   } catch (e) {
     console.error(`Error parsing ${filepath}:`, e.message);
@@ -276,11 +307,21 @@ function getPassRateStatus(passRate) {
 
 function generateTestTable(tests) {
   if (!tests || tests.length === 0) return '*No tests in this category*\n';
+  
+  // Limit to first 10 tests for readability
+  const displayTests = tests.slice(0, 10);
+  const remaining = tests.length - displayTests.length;
+  
   let table = '| Test Name | Status | Duration |\n|-----------|--------|----------|\n';
-  tests.forEach(test => {
+  displayTests.forEach(test => {
     const statusIcon = test.status === 'passed' ? '✅' : '❌';
     table += `| ${test.name} | ${statusIcon} ${test.status} | ${test.duration} |\n`;
   });
+  
+  if (remaining > 0) {
+    table += `\n*... and ${remaining} more tests*\n`;
+  }
+  
   return table;
 }
 
