@@ -228,5 +228,13 @@
     "passed": 5,
     "failed": 0,
     "passRate": 100
+  },
+  {
+    "date": "2025-10-01",
+    "time": "2025-10-01T16:25:16.691Z",
+    "total": 5,
+    "passed": 5,
+    "failed": 0,
+    "passRate": 100
   }
 ]
