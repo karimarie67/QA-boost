@@ -18,7 +18,7 @@ function main() {
   const metrics = calculateMetrics(testResults);
   
   console.log(`Collected ${metrics.totalTests} total tests`);
-  console.log(`Smoke: ${metrics.smokeCount}, Regression: ${metrics.regressionCount}`);
+  console.log(`Smoke: ${metrics.smokeCount}, Regression: ${metrics.regressionCount}, Version: ${metrics.versionCount}`);
   
   updateHistory(metrics);
   const history = loadHistory();
@@ -35,7 +35,7 @@ function main() {
 }
 
 function collectTestResults() {
-  const results = { smoke: [], regression: [] };
+  const results = { smoke: [], regression: [], version: [] };
   
   if (!fs.existsSync(ARTIFACTS_DIR)) {
     console.warn('⚠️  No artifacts directory found');
@@ -61,17 +61,17 @@ function collectTestResults() {
     console.log('No boost-io results found');
   }
   
-  // Parse version regression results
+  // Parse version regression results - NOW IN SEPARATE CATEGORY
   const versionFile = path.join(ARTIFACTS_DIR, 'version-test-results/version-results.json');
   if (fs.existsSync(versionFile)) {
     console.log(`Found version results: ${versionFile}`);
     const versionTests = parsePlaywrightJson(versionFile);
-    results.regression = results.regression.concat(versionTests);
+    results.version = versionTests;  // Changed from regression to version
   } else {
     console.log('No version results found');
   }
   
-  if (results.smoke.length === 0 && results.regression.length === 0) {
+  if (results.smoke.length === 0 && results.regression.length === 0 && results.version.length === 0) {
     console.warn('⚠️  No test results found, using sample data');
     return getSampleResults();
   }
@@ -127,12 +127,15 @@ function getSampleResults() {
       { name: 'Boost.io accessible', status: 'passed', duration: '1.5s' },
       { name: 'Library docs load', status: 'passed', duration: '2.1s' },
       { name: 'Version page loads', status: 'passed', duration: '1.3s' }
+    ],
+    version: [
+      { name: 'Version compatibility check', status: 'passed', duration: '1.0s' }
     ]
   };
 }
 
 function calculateMetrics(results) {
-  const allTests = [...results.smoke, ...results.regression];
+  const allTests = [...results.smoke, ...results.regression, ...results.version];
   const passed = allTests.filter(t => t.status === 'passed').length;
   const failed = allTests.filter(t => t.status === 'failed').length;
   
@@ -143,6 +146,7 @@ function calculateMetrics(results) {
     passRate: allTests.length > 0 ? (passed / allTests.length) * 100 : 0,
     smokeCount: results.smoke.length,
     regressionCount: results.regression.length,
+    versionCount: results.version.length,  // Added version count
     timestamp: new Date().toISOString(),
     environment: process.env.TEST_ENV || 'staging',
     runId: process.env.GITHUB_RUN_ID || 'local',
@@ -210,6 +214,9 @@ function generateDashboardMarkdown(metrics, results, history) {
 
 🔄 Regression Tests:   ${'█'.repeat(getBarLength(results.regression))}${'░'.repeat(20 - getBarLength(results.regression))} ${getPassPercentage(results.regression)}% (${results.regression.length} tests)
    ↳ Runs on: Develop branch merges (comprehensive validation)
+
+📦 Version Tests:      ${'█'.repeat(getBarLength(results.version))}${'░'.repeat(20 - getBarLength(results.version))} ${getPassPercentage(results.version)}% (${results.version.length} tests)
+   ↳ Runs on: Develop branch merges (version compatibility checks)
 \`\`\`
 
 ---
@@ -221,6 +228,9 @@ ${generateTestTable(results.smoke)}
 
 ### 🔄 Regression Tests (Post-Merge on Develop)
 ${generateTestTable(results.regression)}
+
+### 📦 Version Tests (Compatibility Checks)
+${generateTestTable(results.version)}
 
 ---
 
@@ -239,6 +249,7 @@ ${generateHistoryTable(history.slice(-7))}
 | Test Automation Coverage | 75% | 80% | 🟡 |
 | Smoke Test Pass Rate | ${calculateSmokePassRate(results)}% | >98% | ${getSmokeStatus(results)} |
 | Regression Pass Rate | ${calculateRegressionPassRate(results)}% | >95% | ${getRegressionStatus(results)} |
+| Version Test Pass Rate | ${calculateVersionPassRate(results)}% | >98% | ${getVersionStatus(results)} |
 | Bug Escape Rate | <5% | <5% | ✅ |
 
 ---
@@ -283,6 +294,12 @@ function calculateRegressionPassRate(results) {
   return Math.round((passed / results.regression.length) * 100);
 }
 
+function calculateVersionPassRate(results) {
+  if (!results.version || results.version.length === 0) return 0;
+  const passed = results.version.filter(t => t.status === 'passed').length;
+  return Math.round((passed / results.version.length) * 100);
+}
+
 function getSmokeStatus(results) {
   const rate = calculateSmokePassRate(results);
   return rate >= 98 ? '✅' : rate >= 90 ? '🟡' : '🔴';
@@ -291,6 +308,11 @@ function getSmokeStatus(results) {
 function getRegressionStatus(results) {
   const rate = calculateRegressionPassRate(results);
   return rate >= 95 ? '✅' : rate >= 85 ? '🟡' : '🔴';
+}
+
+function getVersionStatus(results) {
+  const rate = calculateVersionPassRate(results);
+  return rate >= 98 ? '✅' : rate >= 90 ? '🟡' : '🔴';
 }
 
 function getStatusEmoji(passRate) {
@@ -336,7 +358,7 @@ function generateHistoryTable(history) {
 }
 
 function getFailedTests(results) {
-  const failed = [...results.smoke, ...results.regression].filter(t => t.status === 'failed');
+  const failed = [...results.smoke, ...results.regression, ...results.version].filter(t => t.status === 'failed');
   if (failed.length === 0) return '';
   return failed.map(t => `- **${t.name}**${t.error ? `\n  \`${t.error}\`` : ''}`).join('\n');
 }
