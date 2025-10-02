@@ -84,35 +84,43 @@ function parsePlaywrightJson(filepath) {
     const data = JSON.parse(fs.readFileSync(filepath, 'utf8'));
     const tests = [];
     
-    // Playwright JSON structure: suites -> specs -> tests -> results
-    if (data.suites && Array.isArray(data.suites)) {
-      data.suites.forEach(suite => {
-        if (suite.specs && Array.isArray(suite.specs)) {
-          suite.specs.forEach(spec => {
-            if (spec.tests && Array.isArray(spec.tests)) {
-              spec.tests.forEach(test => {
-                // Each test has results array
-                if (test.results && Array.isArray(test.results)) {
-                  test.results.forEach(result => {
-                    tests.push({
-                      name: spec.title || test.title || 'Unknown Test',
-                      status: result.status === 'passed' ? 'passed' : 'failed',
-                      duration: ((result.duration || 0) / 1000).toFixed(2) + 's',
-                      error: result.error?.message || null
-                    });
-                  });
-                }
-              });
-            }
-          });
-        }
-      });
+    console.log(`Parsing ${filepath}...`);
+    
+    // Recursive function to traverse the entire test tree
+    function traverse(node) {
+      // If this node has specs, extract tests from them
+      if (node.specs && Array.isArray(node.specs)) {
+        node.specs.forEach(spec => {
+          if (spec.tests && Array.isArray(spec.tests)) {
+            spec.tests.forEach(test => {
+              if (test.results && test.results.length > 0) {
+                const result = test.results[0]; // Take first result (retries would be additional results)
+                tests.push({
+                  name: spec.title || test.title || 'Unknown Test',
+                  status: result.status === 'passed' ? 'passed' : 'failed',
+                  duration: ((result.duration || 0) / 1000).toFixed(2) + 's',
+                  error: result.errors && result.errors.length > 0 ? result.errors[0].message : null
+                });
+              }
+            });
+          }
+        });
+      }
+      
+      // If this node has nested suites, recurse into them
+      if (node.suites && Array.isArray(node.suites)) {
+        node.suites.forEach(suite => traverse(suite));
+      }
     }
     
-    console.log(`Parsed ${tests.length} tests from ${filepath}`);
+    // Start traversal from root
+    traverse(data);
+    
+    console.log(`✓ Parsed ${tests.length} tests from ${path.basename(filepath)}`);
+    
     return tests;
   } catch (e) {
-    console.error(`Error parsing ${filepath}:`, e.message);
+    console.error(`✗ Error parsing ${filepath}:`, e.message);
     return [];
   }
 }
