@@ -2,10 +2,10 @@
 
 > **Live automated testing metrics for Boost C++ Libraries**
 
-**Last Updated:** Friday, October 3, 2025 at 9:37:59 AM EDT  
+**Last Updated:** Friday, October 3, 2025 at 9:43:55 AM EDT  
 **Environment:** STAGING  
 **Branch:** main  
-**Run:** [#53](https://github.com/karimarie67/QA-documentation/actions/runs/18223803325)
+**Run:** [#55](https://github.com/karimarie67/QA-documentation/actions/runs/18223960292)
 
 ---
 
@@ -40,12 +40,12 @@
 ### 🔥 Smoke Tests (Pre-Merge Validation)
 | Test Name | Status | Duration |
 |-----------|--------|----------|
-| Homepage loads with key elements | ✅ passed | 2.15s |
-| Navigation menu links work correctly | ✅ passed | 5.46s |
-| Libraries page displays and links to documentation | ✅ passed | 9.79s |
-| Download section works correctly | ✅ passed | 3.16s |
-| Search bar works with basic query | ✅ passed | 7.49s |
-| Homepage is responsive on mobile | ✅ passed | 2.17s |
+| Homepage loads with key elements | ✅ passed | 5.58s |
+| Navigation menu links work correctly | ✅ passed | 11.21s |
+| Libraries page displays and links to documentation | ✅ passed | 21.37s |
+| Download section works correctly | ✅ passed | 7.84s |
+| Search bar works with basic query | ✅ passed | 7.05s |
+| Homepage is responsive on mobile | ✅ passed | 4.95s |
 
 
 ### 🔄 Regression Tests (Post-Merge on Develop)
@@ -63,11 +63,11 @@
 | Date | Total | Passed | Failed | Pass Rate |
 |------|-------|--------|--------|-----------|
 | Oct 1 | 5 | 5 | 0 | 100.0% |
-| Oct 1 | 5 | 5 | 0 | 100.0% |
 | Oct 2 | 6 | 6 | 0 | 100.0% |
 | Oct 2 | 6 | 6 | 0 | 100.0% |
 | Oct 2 | 6 | 6 | 0 | 100.0% |
 | Oct 2 | 22 | 22 | 0 | 100.0% |
+| Oct 3 | 6 | 6 | 0 | 100.0% |
 | Oct 3 | 6 | 6 | 0 | 100.0% |
 
 ---
@@ -93,7 +93,7 @@
 - [QA Handbook](../docs/QA_handbook.md)
 - [Testing Strategy](../docs/Testing-Strategy.md)
 - [Test Coverage Map](../docs/Test-Coverage-Map.md)
-- [View Full Report](https://github.com/karimarie67/QA-documentation/actions/runs/18223803325)
+- [View Full Report](https://github.com/karimarie67/QA-documentation/actions/runs/18223960292)
 
 ---
 
