@@ -143,7 +143,7 @@ test_url "$BASE_URL/doc/libs/1_89_0/doc/html/boost_asio/examples.html" "asio" "B
 
 test_url "$BASE_URL/doc/libs/1_89_0/libs/json/doc/html" "json" "Boost.JSON documentation (missing final slash test)"
 
-# A few randomly selected library docs (you can rotate these or add more)
+# Randomly selected library docs
 test_url "$BASE_URL/doc/libs/1_89_0/libs/filesystem/doc/index.htm" "filesystem" "Boost.Filesystem documentation"
 
 test_url "$BASE_URL/doc/libs/1_89_0/libs/thread/doc/index.html" "thread" "Boost.Thread documentation"
