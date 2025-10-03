@@ -4,13 +4,14 @@
 # Script to verify boost.org deployment by checking a set of URLs
 #
 # Usage:
-#   ./boost-verify.sh stage          # Check stage environment
-#   ./boost-verify.sh production     # Check production environment
-#   ./boost-verify.sh stage bypass   # Check stage, bypassing CDN
-#   ./boost-verify.sh production bypass   # Check production, bypassing CDN
+#   ./verify-deployment.sh stage          # Check stage environment
+#   ./verify-deployment.sh production     # Check production environment
+#   ./verify-deployment.sh stage bypass   # Check stage, bypassing CDN
+#   ./verify-deployment.sh production bypass   # Check production, bypassing CDN
 #
 
-set -e
+# Don't exit on errors - we want to run all tests
+set +e
 
 ENVIRONMENT=$1
 BYPASS=$2
@@ -53,7 +54,7 @@ test_url() {
     echo "URL: $url"
     
     # Build curl command
-    local curl_cmd="curl -s -w '\n%{http_code}' -o /tmp/boost_verify_body.txt"
+    local curl_cmd="curl -L -s -w '\n%{http_code}' -o /tmp/boost_verify_body.txt"
     
     # Add bypass logic if requested
     if [ "$BYPASS" = "bypass" ]; then
@@ -143,7 +144,7 @@ test_url "$BASE_URL/doc/libs/1_89_0/doc/html/boost_asio/examples.html" "asio" "B
 
 test_url "$BASE_URL/doc/libs/1_89_0/libs/json/doc/html" "json" "Boost.JSON documentation (missing final slash test)"
 
-# Randomly selected library docs
+# A few randomly selected library docs (you can rotate these or add more)
 test_url "$BASE_URL/doc/libs/1_89_0/libs/filesystem/doc/index.htm" "filesystem" "Boost.Filesystem documentation"
 
 test_url "$BASE_URL/doc/libs/1_89_0/libs/thread/doc/index.html" "thread" "Boost.Thread documentation"
