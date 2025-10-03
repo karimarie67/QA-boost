@@ -4,10 +4,10 @@
 # Script to verify boost.org deployment by checking a set of URLs
 #
 # Usage:
-#   ./verify-deployment.sh stage          # Check stage environment
-#   ./verify-deployment.sh production     # Check production environment
-#   ./verify-deployment.sh stage bypass   # Check stage, bypassing CDN
-#   ./verify-deployment.sh production bypass   # Check production, bypassing CDN
+#   ./boost-verify.sh stage          # Check stage environment
+#   ./boost-verify.sh production     # Check production environment
+#   ./boost-verify.sh stage bypass   # Check stage, bypassing CDN
+#   ./boost-verify.sh production bypass   # Check production, bypassing CDN
 #
 
 # Don't exit on errors - we want to run all tests
@@ -144,7 +144,7 @@ test_url "$BASE_URL/doc/libs/1_89_0/doc/html/boost_asio/examples.html" "asio" "B
 
 test_url "$BASE_URL/doc/libs/1_89_0/libs/json/doc/html" "json" "Boost.JSON documentation (missing final slash test)"
 
-# A few randomly selected library docs (you can rotate these or add more)
+# Randomly selected library docs 
 test_url "$BASE_URL/doc/libs/1_89_0/libs/filesystem/doc/index.htm" "filesystem" "Boost.Filesystem documentation"
 
 test_url "$BASE_URL/doc/libs/1_89_0/libs/thread/doc/index.html" "thread" "Boost.Thread documentation"
