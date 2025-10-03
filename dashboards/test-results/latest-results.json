@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-10-03T13:43:56.270Z",
+  "timestamp": "2025-10-03T19:03:35.050Z",
   "metrics": {
     "totalTests": 6,
     "passed": 6,
@@ -8,10 +8,10 @@
     "smokeCount": 6,
     "regressionCount": 0,
     "versionCount": 0,
-    "timestamp": "2025-10-03T13:43:55.904Z",
+    "timestamp": "2025-10-03T19:03:34.729Z",
     "environment": "staging",
-    "runId": "18223960292",
-    "runNumber": "55",
+    "runId": "18231258085",
+    "runNumber": "56",
     "branch": "main"
   },
   "testResults": {
@@ -19,37 +19,37 @@
       {
         "name": "Homepage loads with key elements",
         "status": "passed",
-        "duration": "5.58s",
+        "duration": "1.57s",
         "error": null
       },
       {
         "name": "Navigation menu links work correctly",
         "status": "passed",
-        "duration": "11.21s",
+        "duration": "6.74s",
         "error": null
       },
       {
         "name": "Libraries page displays and links to documentation",
         "status": "passed",
-        "duration": "21.37s",
+        "duration": "7.63s",
         "error": null
       },
       {
         "name": "Download section works correctly",
         "status": "passed",
-        "duration": "7.84s",
+        "duration": "2.68s",
         "error": null
       },
       {
         "name": "Search bar works with basic query",
         "status": "passed",
-        "duration": "7.05s",
+        "duration": "3.66s",
         "error": null
       },
       {
         "name": "Homepage is responsive on mobile",
         "status": "passed",
-        "duration": "4.95s",
+        "duration": "1.15s",
         "error": null
       }
     ],
