@@ -4,10 +4,10 @@
 # Script to verify boost.org deployment by checking a set of URLs
 #
 # Usage:
-#   ./verify-deployment.sh stage          # Check stage environment
-#   ./verify-deployment.sh production     # Check production environment
-#   ./verify-deployment.sh stage bypass   # Check stage, bypassing CDN
-#   ./verify-deployment.sh production bypass   # Check production, bypassing CDN
+#   ./boost-verify.sh stage          # Check stage environment
+#   ./boost-verify.sh production     # Check production environment
+#   ./boost-verify.sh stage bypass   # Check stage, bypassing CDN
+#   ./boost-verify.sh production bypass   # Check production, bypassing CDN
 #
 
 set -e
