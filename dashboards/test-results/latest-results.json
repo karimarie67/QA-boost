@@ -1,59 +1,55 @@
 {
-  "timestamp": "2025-10-14T15:28:29.264Z",
+  "timestamp": "2025-10-14T21:35:57.830Z",
   "metrics": {
     "totalTests": 6,
     "passed": 6,
     "failed": 0,
     "passRate": 100,
-    "smokeCount": 6,
-    "regressionCount": 0,
-    "versionCount": 0,
-    "timestamp": "2025-10-14T15:28:29.230Z",
+    "smokeCount": 2,
+    "regressionCount": 3,
+    "versionCount": 1,
+    "timestamp": "2025-10-14T21:35:57.541Z",
     "environment": "staging",
-    "runId": "18501616172",
-    "runNumber": "65",
+    "runId": "18510765705",
+    "runNumber": "66",
     "branch": "main"
   },
   "testResults": {
     "smoke": [
       {
-        "name": "Homepage loads with key elements",
+        "name": "Homepage loads",
         "status": "passed",
-        "duration": "3.02s",
-        "error": null
+        "duration": "1.2s"
       },
       {
-        "name": "Navigation menu links work correctly",
+        "name": "Navigation works",
         "status": "passed",
-        "duration": "5.32s",
-        "error": null
-      },
-      {
-        "name": "Libraries page displays and links to documentation",
-        "status": "passed",
-        "duration": "7.63s",
-        "error": null
-      },
-      {
-        "name": "Download section works correctly",
-        "status": "passed",
-        "duration": "3.22s",
-        "error": null
-      },
-      {
-        "name": "Search bar works with basic query",
-        "status": "passed",
-        "duration": "4.02s",
-        "error": null
-      },
-      {
-        "name": "Homepage is responsive on mobile",
-        "status": "passed",
-        "duration": "1.48s",
-        "error": null
+        "duration": "0.8s"
       }
     ],
-    "regression": [],
-    "version": []
+    "regression": [
+      {
+        "name": "Boost.io accessible",
+        "status": "passed",
+        "duration": "1.5s"
+      },
+      {
+        "name": "Library docs load",
+        "status": "passed",
+        "duration": "2.1s"
+      },
+      {
+        "name": "Version page loads",
+        "status": "passed",
+        "duration": "1.3s"
+      }
+    ],
+    "version": [
+      {
+        "name": "Version compatibility check",
+        "status": "passed",
+        "duration": "1.0s"
+      }
+    ]
   }
 }

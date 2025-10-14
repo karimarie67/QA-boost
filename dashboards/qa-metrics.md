@@ -2,10 +2,10 @@
 
 > **Live automated testing metrics for Boost C++ Libraries**
 
-**Last Updated:** Tuesday, October 14, 2025 at 11:28:29 AM EDT  
+**Last Updated:** Tuesday, October 14, 2025 at 5:35:57 PM EDT  
 **Environment:** STAGING  
 **Branch:** main  
-**Run:** [#65](https://github.com/karimarie67/QA-documentation/actions/runs/18501616172)
+**Run:** [#66](https://github.com/karimarie67/QA-documentation/actions/runs/18510765705)
 
 ---
 
@@ -23,13 +23,13 @@
 ## 📈 Test Coverage by Suite
 
 ```
-🔥 Smoke Tests:        ████████████████████ 100% (6 tests)
+🔥 Smoke Tests:        ████████████████████ 100% (2 tests)
    ↳ Runs on: Every PR/commit (pre-merge validation)
 
-🔄 Regression Tests:   ░░░░░░░░░░░░░░░░░░░░ 0% (0 tests)
+🔄 Regression Tests:   ████████████████████ 100% (3 tests)
    ↳ Runs on: Develop branch merges (comprehensive validation)
 
-📦 Version Tests:      ░░░░░░░░░░░░░░░░░░░░ 0% (0 tests)
+📦 Version Tests:      ████████████████████ 100% (1 tests)
    ↳ Runs on: Develop branch merges (version compatibility checks)
 ```
 
@@ -40,20 +40,22 @@
 ### 🔥 Smoke Tests (Pre-Merge Validation)
 | Test Name | Status | Duration |
 |-----------|--------|----------|
-| Homepage loads with key elements | ✅ passed | 3.02s |
-| Navigation menu links work correctly | ✅ passed | 5.32s |
-| Libraries page displays and links to documentation | ✅ passed | 7.63s |
-| Download section works correctly | ✅ passed | 3.22s |
-| Search bar works with basic query | ✅ passed | 4.02s |
-| Homepage is responsive on mobile | ✅ passed | 1.48s |
+| Homepage loads | ✅ passed | 1.2s |
+| Navigation works | ✅ passed | 0.8s |
 
 
 ### 🔄 Regression Tests (Post-Merge on Develop)
-*No tests in this category*
+| Test Name | Status | Duration |
+|-----------|--------|----------|
+| Boost.io accessible | ✅ passed | 1.5s |
+| Library docs load | ✅ passed | 2.1s |
+| Version page loads | ✅ passed | 1.3s |
 
 
 ### 📦 Version Tests (Compatibility Checks)
-*No tests in this category*
+| Test Name | Status | Duration |
+|-----------|--------|----------|
+| Version compatibility check | ✅ passed | 1.0s |
 
 
 ---
@@ -66,8 +68,8 @@
 | Oct 3 | 6 | 6 | 0 | 100.0% |
 | Oct 3 | 6 | 6 | 0 | 100.0% |
 | Oct 3 | 6 | 6 | 0 | 100.0% |
-| Oct 3 | 6 | 6 | 0 | 100.0% |
 | Oct 14 | 22 | 22 | 0 | 100.0% |
+| Oct 14 | 6 | 6 | 0 | 100.0% |
 | Oct 14 | 6 | 6 | 0 | 100.0% |
 
 ---
@@ -78,8 +80,8 @@
 |--------|---------|--------|--------|
 | Test Automation Coverage | 75% | 80% | 🟡 |
 | Smoke Test Pass Rate | 100% | >98% | ✅ |
-| Regression Pass Rate | 0% | >95% | 🔴 |
-| Version Test Pass Rate | 0% | >98% | 🔴 |
+| Regression Pass Rate | 100% | >95% | ✅ |
+| Version Test Pass Rate | 100% | >98% | ✅ |
 | Bug Escape Rate | <5% | <5% | ✅ |
 
 ---
@@ -93,7 +95,7 @@
 - [QA Handbook](../docs/QA_handbook.md)
 - [Testing Strategy](../docs/Testing-Strategy.md)
 - [Test Coverage Map](../docs/Test-Coverage-Map.md)
-- [View Full Report](https://github.com/karimarie67/QA-documentation/actions/runs/18501616172)
+- [View Full Report](https://github.com/karimarie67/QA-documentation/actions/runs/18510765705)
 
 ---
 
