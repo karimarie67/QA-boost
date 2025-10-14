@@ -7,6 +7,17 @@ export default defineConfig({
   ],
   projects: [
     {
+      name: 'local',
+      use: {
+        baseURL: 'http://localhost:8000',
+        browserName: 'chromium',
+        headless: true,
+        viewport: { width: 1280, height: 720 },
+        trace: 'on-first-retry',
+      },
+    },
+    
+    {
       name: 'staging',
       use: {
         baseURL: 'https://www.stage.boost.org',
