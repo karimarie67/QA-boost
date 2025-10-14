@@ -74,7 +74,7 @@
 
 ---
 
-## 📅 7-Day Trend
+## 📅 Last 7 Runs
 
 | Date | Total | Passed | Failed | Pass Rate |
 |------|-------|--------|--------|-----------|
