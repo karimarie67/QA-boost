@@ -1,0 +1,1852 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - heading "FileNotFoundError at /" [level=1] [ref=e3]
+    - generic [ref=e4]: "[Errno 2] No such file or directory: '/code/media/profile-images/profile-497_3gh3Pit.png'"
+    - table [ref=e5]:
+      - rowgroup [ref=e6]:
+        - 'row "Request Method: GET" [ref=e7]':
+          - rowheader "Request Method:" [ref=e8]
+          - cell "GET" [ref=e9]
+        - 'row "Request URL: http://localhost:8000/?cachebust=1760457069075" [ref=e10]':
+          - rowheader "Request URL:" [ref=e11]
+          - cell "http://localhost:8000/?cachebust=1760457069075" [ref=e12]
+        - 'row "Django Version: 5.2.6" [ref=e13]':
+          - rowheader "Django Version:" [ref=e14]
+          - cell "5.2.6" [ref=e15]
+        - 'row "Exception Type: FileNotFoundError" [ref=e16]':
+          - rowheader "Exception Type:" [ref=e17]
+          - cell "FileNotFoundError" [ref=e18]
+        - 'row "Exception Value: [Errno 2] No such file or directory: ''/code/media/profile-images/profile-497_3gh3Pit.png''" [ref=e19]':
+          - rowheader "Exception Value:" [ref=e20]
+          - 'cell "[Errno 2] No such file or directory: ''/code/media/profile-images/profile-497_3gh3Pit.png''" [ref=e21]':
+            - generic [ref=e22]: "[Errno 2] No such file or directory: '/code/media/profile-images/profile-497_3gh3Pit.png'"
+        - 'row "Exception Location: /venv/lib/python3.13/site-packages/django/core/files/storage/filesystem.py, line 81, in _open" [ref=e23]':
+          - rowheader "Exception Location:" [ref=e24]
+          - cell "/venv/lib/python3.13/site-packages/django/core/files/storage/filesystem.py, line 81, in _open" [ref=e25]:
+            - generic [ref=e26]: /venv/lib/python3.13/site-packages/django/core/files/storage/filesystem.py
+            - text: ", line 81, in _open"
+        - 'row "Raised during: ak.views.HomepageView" [ref=e27]':
+          - rowheader "Raised during:" [ref=e28]
+          - cell "ak.views.HomepageView" [ref=e29]
+        - 'row "Python Executable: /venv/bin/python" [ref=e30]':
+          - rowheader "Python Executable:" [ref=e31]
+          - cell "/venv/bin/python" [ref=e32]
+        - 'row "Python Version: 3.13.8" [ref=e33]':
+          - rowheader "Python Version:" [ref=e34]
+          - cell "3.13.8" [ref=e35]
+        - 'row "Python Path: [''/code'', ''/code'', ''/code'', ''/usr/local/lib/python313.zip'', ''/usr/local/lib/python3.13'', ''/usr/local/lib/python3.13/lib-dynload'', ''/venv/lib/python3.13/site-packages'']" [ref=e36]':
+          - rowheader "Python Path:" [ref=e37]
+          - cell "['/code', '/code', '/code', '/usr/local/lib/python313.zip', '/usr/local/lib/python3.13', '/usr/local/lib/python3.13/lib-dynload', '/venv/lib/python3.13/site-packages']" [ref=e38]:
+            - code [ref=e40]: "['/code', '/code', '/code', '/usr/local/lib/python313.zip', '/usr/local/lib/python3.13', '/usr/local/lib/python3.13/lib-dynload', '/venv/lib/python3.13/site-packages']"
+        - 'row "Server time: Tue, 14 Oct 2025 15:51:09 +0000" [ref=e41]':
+          - rowheader "Server time:" [ref=e42]
+          - cell "Tue, 14 Oct 2025 15:51:09 +0000" [ref=e43]
+  - main [ref=e44]:
+    - generic [ref=e45]:
+      - heading "Error during template rendering" [level=2] [ref=e46]
+      - paragraph [ref=e47]:
+        - text: In template
+        - code [ref=e48]: /code/templates/homepage.html
+        - text: ", error at line"
+        - strong [ref=e49]: "206"
+      - heading "2" [level=3] [ref=e50]
+      - table [ref=e51]:
+        - rowgroup [ref=e52]:
+          - row "196 <div class=\"absolute top-6 right-8 p-2 group\">" [ref=e53]:
+            - rowheader "196" [ref=e54]
+            - cell "<div class=\"absolute top-6 right-8 p-2 group\">" [ref=e55]
+          - 'row "197 <a href=\"{% url ''news'' %}\"" [ref=e56]':
+            - rowheader "197" [ref=e57]
+            - 'cell "<a href=\"{% url ''news'' %}\"" [ref=e58]'
+          - row "198 class=\"text-sm font-medium md:text-base text-sky-600 dark:text-sky-300 group-hover:text-orange dark:group-hover:text-orange\">" [ref=e59]:
+            - rowheader "198" [ref=e60]
+            - cell "class=\"text-sm font-medium md:text-base text-sky-600 dark:text-sky-300 group-hover:text-orange dark:group-hover:text-orange\">" [ref=e61]
+          - row "199 All News&nbsp;<i class=\"fas fa-chevron-right text-sky-600 dark:text-sky-300 group-hover:text-orange dark:group-hover:text-orange\"></i>" [ref=e62]:
+            - rowheader "199" [ref=e63]
+            - cell "All News&nbsp;<i class=\"fas fa-chevron-right text-sky-600 dark:text-sky-300 group-hover:text-orange dark:group-hover:text-orange\"></i>" [ref=e64]
+          - row "200 </a>" [ref=e65]:
+            - rowheader "200" [ref=e66]
+            - cell "</a>" [ref=e67]
+          - row "201 </div>" [ref=e68]:
+            - rowheader "201" [ref=e69]
+            - cell "</div>" [ref=e70]
+          - row "202 <div class=\"space-y-4\">" [ref=e71]:
+            - rowheader "202" [ref=e72]
+            - cell "<div class=\"space-y-4\">" [ref=e73]
+          - 'row "203 {% for entry in entries %}" [ref=e74]':
+            - rowheader "203" [ref=e75]
+            - 'cell "{% for entry in entries %}" [ref=e76]'
+          - row "204 <div class=\"pt-0\">" [ref=e77]:
+            - rowheader "204" [ref=e78]
+            - cell "<div class=\"pt-0\">" [ref=e79]
+          - row "205 <h2 class=\"flex items-center pb-2 mb-3 text-lg md:text-2xl lg:text-2xl font-semibold mr-4 border-b border-gray-400 dark:border-slate\">" [ref=e80]:
+            - rowheader "205" [ref=e81]
+            - cell "<h2 class=\"flex items-center pb-2 mb-3 text-lg md:text-2xl lg:text-2xl font-semibold mr-4 border-b border-gray-400 dark:border-slate\">" [ref=e82]
+          - 'row "206 {% avatar user=entry.author %}" [ref=e83]':
+            - rowheader "206" [ref=e84]
+            - 'cell "{% avatar user=entry.author %}" [ref=e85]':
+              - generic [ref=e86]: "{% avatar user=entry.author %}"
+          - row "207 <span class=\"text-sm ml-5 bg-white rounded-full dark:text-gray-300 w-[30px] dark:bg-charcoal\">" [ref=e87]:
+            - rowheader "207" [ref=e88]
+            - cell "<span class=\"text-sm ml-5 bg-white rounded-full dark:text-gray-300 w-[30px] dark:bg-charcoal\">" [ref=e89]
+          - 'row "208 {% if entry.tag == \"link\" %}" [ref=e90]':
+            - rowheader "208" [ref=e91]
+            - 'cell "{% if entry.tag == \"link\" %}" [ref=e92]'
+          - row "209 <i class=\"fas fa-link\"></i>" [ref=e93]:
+            - rowheader "209" [ref=e94]
+            - cell "<i class=\"fas fa-link\"></i>" [ref=e95]
+          - 'row "210 {% elif entry.tag == \"news\" %}" [ref=e96]':
+            - rowheader "210" [ref=e97]
+            - 'cell "{% elif entry.tag == \"news\" %}" [ref=e98]'
+          - row "211 <i class=\"fas fa-newspaper\"></i>" [ref=e99]:
+            - rowheader "211" [ref=e100]
+            - cell "<i class=\"fas fa-newspaper\"></i>" [ref=e101]
+          - 'row "212 {% elif entry.tag == \"blogpost\" %}" [ref=e102]':
+            - rowheader "212" [ref=e103]
+            - 'cell "{% elif entry.tag == \"blogpost\" %}" [ref=e104]'
+          - row "213 <i class=\"fas fa-comment\"></i>" [ref=e105]:
+            - rowheader "213" [ref=e106]
+            - cell "<i class=\"fas fa-comment\"></i>" [ref=e107]
+          - 'row "214 {% elif entry.tag == \"poll\" %}" [ref=e108]':
+            - rowheader "214" [ref=e109]
+            - 'cell "{% elif entry.tag == \"poll\" %}" [ref=e110]'
+          - row "215 <i class=\"fas fa-poll\"></i>" [ref=e111]:
+            - rowheader "215" [ref=e112]
+            - cell "<i class=\"fas fa-poll\"></i>" [ref=e113]
+          - 'row "216 {% elif entry.tag == \"video\" %}" [ref=e114]':
+            - rowheader "216" [ref=e115]
+            - 'cell "{% elif entry.tag == \"video\" %}" [ref=e116]'
+    - generic [ref=e117]:
+      - heading "Traceback Switch to copy-and-paste view" [level=2] [ref=e118]:
+        - text: Traceback
+        - button "Switch to copy-and-paste view" [ref=e120] [cursor=pointer]
+      - list [ref=e122]:
+        - listitem [ref=e123]:
+          - code [ref=e124]: /venv/lib/python3.13/site-packages/django/core/handlers/exception.py
+          - text: ", line 55, in inner"
+          - list [ref=e126]:
+            - listitem [ref=e127] [cursor=pointer]:
+              - generic [ref=e128] [cursor=pointer]: response = get_response(request) ^^^^^^^^^^^^^^^^^^^^^
+              - generic [ref=e129] [cursor=pointer]: …
+          - group [ref=e130]
+        - listitem [ref=e132]:
+          - code [ref=e133]: /venv/lib/python3.13/site-packages/django/core/handlers/base.py
+          - text: ", line 220, in _get_response"
+          - list [ref=e135]:
+            - listitem [ref=e136] [cursor=pointer]:
+              - generic [ref=e137] [cursor=pointer]: response = response.render() ^^^^^^^^^^^^^^^^^
+              - generic [ref=e138] [cursor=pointer]: …
+          - group [ref=e139]
+        - listitem [ref=e141]:
+          - code [ref=e142]: /venv/lib/python3.13/site-packages/django/template/response.py
+          - text: ", line 114, in render"
+          - list [ref=e144]:
+            - listitem [ref=e145] [cursor=pointer]:
+              - generic [ref=e146] [cursor=pointer]: self.content = self.rendered_content ^^^^^^^^^^^^^^^^^^^^^
+              - generic [ref=e147] [cursor=pointer]: …
+          - group [ref=e148]
+        - listitem [ref=e150]:
+          - code [ref=e151]: /venv/lib/python3.13/site-packages/django/template/response.py
+          - text: ", line 92, in rendered_content"
+          - list [ref=e153]:
+            - listitem [ref=e154] [cursor=pointer]:
+              - generic [ref=e155] [cursor=pointer]: return template.render(context, self._request) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+              - generic [ref=e156] [cursor=pointer]: …
+          - group [ref=e157]
+        - listitem [ref=e159]:
+          - code [ref=e160]: /venv/lib/python3.13/site-packages/django/template/backends/django.py
+          - text: ", line 107, in render"
+          - list [ref=e162]:
+            - listitem [ref=e163] [cursor=pointer]:
+              - generic [ref=e164] [cursor=pointer]: return self.template.render(context) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+              - generic [ref=e165] [cursor=pointer]: …
+          - group [ref=e166]
+        - listitem [ref=e168]:
+          - code [ref=e169]: /venv/lib/python3.13/site-packages/django/template/base.py
+          - text: ", line 171, in render"
+          - list [ref=e171]:
+            - listitem [ref=e172] [cursor=pointer]:
+              - generic [ref=e173] [cursor=pointer]: return self._render(context) ^^^^^^^^^^^^^^^^^^^^^
+              - generic [ref=e174] [cursor=pointer]: …
+          - group [ref=e175]
+        - listitem [ref=e177]:
+          - code [ref=e178]: /venv/lib/python3.13/site-packages/django/template/base.py
+          - text: ", line 163, in _render"
+          - list [ref=e180]:
+            - listitem [ref=e181] [cursor=pointer]:
+              - generic [ref=e182] [cursor=pointer]: return self.nodelist.render(context) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+              - generic [ref=e183] [cursor=pointer]: …
+          - group [ref=e184]
+        - listitem [ref=e186]:
+          - code [ref=e187]: /venv/lib/python3.13/site-packages/django/template/base.py
+          - text: ", line 1016, in render"
+          - list [ref=e189]:
+            - listitem [ref=e190] [cursor=pointer]:
+              - generic [ref=e191] [cursor=pointer]: return SafeString("".join([node.render_annotated(context) for node in self])) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+              - generic [ref=e192] [cursor=pointer]: …
+          - group [ref=e193]
+        - listitem [ref=e195]:
+          - code [ref=e196]: /venv/lib/python3.13/site-packages/django/template/base.py
+          - text: ", line 977, in render_annotated"
+          - list [ref=e198]:
+            - listitem [ref=e199] [cursor=pointer]:
+              - generic [ref=e200] [cursor=pointer]: return self.render(context) ^^^^^^^^^^^^^^^^^^^^
+              - generic [ref=e201] [cursor=pointer]: …
+          - group [ref=e202]
+        - listitem [ref=e204]:
+          - code [ref=e205]: /venv/lib/python3.13/site-packages/django/template/loader_tags.py
+          - text: ", line 159, in render"
+          - list [ref=e207]:
+            - listitem [ref=e208] [cursor=pointer]:
+              - generic [ref=e209] [cursor=pointer]: return compiled_parent._render(context) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+              - generic [ref=e210] [cursor=pointer]: …
+          - group [ref=e211]
+        - listitem [ref=e213]:
+          - code [ref=e214]: /venv/lib/python3.13/site-packages/django/template/base.py
+          - text: ", line 163, in _render"
+          - list [ref=e216]:
+            - listitem [ref=e217] [cursor=pointer]:
+              - generic [ref=e218] [cursor=pointer]: return self.nodelist.render(context) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+              - generic [ref=e219] [cursor=pointer]: …
+          - group [ref=e220]
+        - listitem [ref=e222]:
+          - code [ref=e223]: /venv/lib/python3.13/site-packages/django/template/base.py
+          - text: ", line 1016, in render"
+          - list [ref=e225]:
+            - listitem [ref=e226] [cursor=pointer]:
+              - generic [ref=e227] [cursor=pointer]: return SafeString("".join([node.render_annotated(context) for node in self])) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+              - generic [ref=e228] [cursor=pointer]: …
+          - group [ref=e229]
+        - listitem [ref=e231]:
+          - code [ref=e232]: /venv/lib/python3.13/site-packages/django/template/base.py
+          - text: ", line 977, in render_annotated"
+          - list [ref=e234]:
+            - listitem [ref=e235] [cursor=pointer]:
+              - generic [ref=e236] [cursor=pointer]: return self.render(context) ^^^^^^^^^^^^^^^^^^^^
+              - generic [ref=e237] [cursor=pointer]: …
+          - group [ref=e238]
+        - listitem [ref=e240]:
+          - code [ref=e241]: /venv/lib/python3.13/site-packages/django/template/loader_tags.py
+          - text: ", line 65, in render"
+          - list [ref=e243]:
+            - listitem [ref=e244] [cursor=pointer]:
+              - generic [ref=e245] [cursor=pointer]: result = block.nodelist.render(context) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+              - generic [ref=e246] [cursor=pointer]: …
+          - group [ref=e247]
+        - listitem [ref=e249]:
+          - code [ref=e250]: /venv/lib/python3.13/site-packages/django/template/base.py
+          - text: ", line 1016, in render"
+          - list [ref=e252]:
+            - listitem [ref=e253] [cursor=pointer]:
+              - generic [ref=e254] [cursor=pointer]: return SafeString("".join([node.render_annotated(context) for node in self])) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+              - generic [ref=e255] [cursor=pointer]: …
+          - group [ref=e256]
+        - listitem [ref=e258]:
+          - code [ref=e259]: /venv/lib/python3.13/site-packages/django/template/base.py
+          - text: ", line 977, in render_annotated"
+          - list [ref=e261]:
+            - listitem [ref=e262] [cursor=pointer]:
+              - generic [ref=e263] [cursor=pointer]: return self.render(context) ^^^^^^^^^^^^^^^^^^^^
+              - generic [ref=e264] [cursor=pointer]: …
+          - group [ref=e265]
+        - listitem [ref=e267]:
+          - code [ref=e268]: /venv/lib/python3.13/site-packages/django/template/loader_tags.py
+          - text: ", line 65, in render"
+          - list [ref=e270]:
+            - listitem [ref=e271] [cursor=pointer]:
+              - generic [ref=e272] [cursor=pointer]: result = block.nodelist.render(context) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+              - generic [ref=e273] [cursor=pointer]: …
+          - group [ref=e274]
+        - listitem [ref=e276]:
+          - code [ref=e277]: /venv/lib/python3.13/site-packages/django/template/base.py
+          - text: ", line 1016, in render"
+          - list [ref=e279]:
+            - listitem [ref=e280] [cursor=pointer]:
+              - generic [ref=e281] [cursor=pointer]: return SafeString("".join([node.render_annotated(context) for node in self])) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+              - generic [ref=e282] [cursor=pointer]: …
+          - group [ref=e283]
+        - listitem [ref=e285]:
+          - code [ref=e286]: /venv/lib/python3.13/site-packages/django/template/base.py
+          - text: ", line 977, in render_annotated"
+          - list [ref=e288]:
+            - listitem [ref=e289] [cursor=pointer]:
+              - generic [ref=e290] [cursor=pointer]: return self.render(context) ^^^^^^^^^^^^^^^^^^^^
+              - generic [ref=e291] [cursor=pointer]: …
+          - group [ref=e292]
+        - listitem [ref=e294]:
+          - code [ref=e295]: /venv/lib/python3.13/site-packages/django/template/defaulttags.py
+          - text: ", line 243, in render"
+          - list [ref=e297]:
+            - listitem [ref=e298] [cursor=pointer]:
+              - generic [ref=e299] [cursor=pointer]: nodelist.append(node.render_annotated(context)) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+              - generic [ref=e300] [cursor=pointer]: …
+          - group [ref=e301]
+        - listitem [ref=e303]:
+          - code [ref=e304]: /venv/lib/python3.13/site-packages/django/template/base.py
+          - text: ", line 977, in render_annotated"
+          - list [ref=e306]:
+            - listitem [ref=e307] [cursor=pointer]:
+              - generic [ref=e308] [cursor=pointer]: return self.render(context) ^^^^^^^^^^^^^^^^^^^^
+              - generic [ref=e309] [cursor=pointer]: …
+          - group [ref=e310]
+        - listitem [ref=e312]:
+          - code [ref=e313]: /venv/lib/python3.13/site-packages/django/template/library.py
+          - text: ", line 321, in render"
+          - list [ref=e315]:
+            - listitem [ref=e316] [cursor=pointer]:
+              - generic [ref=e317] [cursor=pointer]: output = self.func(*resolved_args, **resolved_kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+              - generic [ref=e318] [cursor=pointer]: …
+          - group [ref=e319]
+        - listitem [ref=e321]:
+          - code [ref=e322]: /code/users/templatetags/avatar_tags.py
+          - text: ", line 83, in avatar"
+          - list [ref=e324]:
+            - listitem [ref=e325] [cursor=pointer]:
+              - generic [ref=e326] [cursor=pointer]: std_image = user.get_thumbnail_url() ^^^^^^^^^^^^^^^^^^^^^^^^
+              - generic [ref=e327] [cursor=pointer]: …
+          - group [ref=e328]
+        - listitem [ref=e330]:
+          - code [ref=e331]: /code/users/models.py
+          - text: ", line 291, in get_thumbnail_url"
+          - list [ref=e333]:
+            - listitem [ref=e334] [cursor=pointer]:
+              - generic [ref=e335] [cursor=pointer]: "if self.image and self.image_thumbnail: ^^^^^^^^^^^^^^^^^^^^"
+              - generic [ref=e336] [cursor=pointer]: …
+          - group [ref=e337]
+        - listitem [ref=e339]:
+          - code [ref=e340]: /venv/lib/python3.13/site-packages/imagekit/cachefiles/__init__.py
+          - text: ", line 142, in __bool__"
+          - list [ref=e342]:
+            - listitem [ref=e343] [cursor=pointer]:
+              - generic [ref=e344] [cursor=pointer]: existence_required.send(sender=self, file=self) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+              - generic [ref=e345] [cursor=pointer]: …
+          - group [ref=e346]
+        - listitem [ref=e348]:
+          - code [ref=e349]: /venv/lib/python3.13/site-packages/django/dispatch/dispatcher.py
+          - text: ", line 189, in send"
+          - list [ref=e351]:
+            - listitem [ref=e352] [cursor=pointer]:
+              - generic [ref=e353] [cursor=pointer]: response = receiver(signal=self, sender=sender, **named) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+              - generic [ref=e354] [cursor=pointer]: …
+          - group [ref=e355]
+        - listitem [ref=e357]:
+          - code [ref=e358]: /venv/lib/python3.13/site-packages/imagekit/registry.py
+          - text: ", line 53, in existence_required_receiver"
+          - list [ref=e360]:
+            - listitem [ref=e361] [cursor=pointer]:
+              - generic [ref=e362] [cursor=pointer]: self._receive(file, 'on_existence_required') ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+              - generic [ref=e363] [cursor=pointer]: …
+          - group [ref=e364]
+        - listitem [ref=e366]:
+          - code [ref=e367]: /venv/lib/python3.13/site-packages/imagekit/registry.py
+          - text: ", line 61, in _receive"
+          - list [ref=e369]:
+            - listitem [ref=e370] [cursor=pointer]:
+              - generic [ref=e371] [cursor=pointer]: call_strategy_method(file, callback) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+              - generic [ref=e372] [cursor=pointer]: …
+          - group [ref=e373]
+        - listitem [ref=e375]:
+          - code [ref=e376]: /venv/lib/python3.13/site-packages/imagekit/utils.py
+          - text: ", line 119, in call_strategy_method"
+          - list [ref=e378]:
+            - listitem [ref=e379] [cursor=pointer]:
+              - generic [ref=e380] [cursor=pointer]: fn(file) ^^^^^^^^
+              - generic [ref=e381] [cursor=pointer]: …
+          - group [ref=e382]
+        - listitem [ref=e384]:
+          - code [ref=e385]: /venv/lib/python3.13/site-packages/imagekit/cachefiles/strategies.py
+          - text: ", line 11, in on_existence_required"
+          - list [ref=e387]:
+            - listitem [ref=e388] [cursor=pointer]:
+              - generic [ref=e389] [cursor=pointer]: file.generate() ^^^^^^^^^^^^^^^
+              - generic [ref=e390] [cursor=pointer]: …
+          - group [ref=e391]
+        - listitem [ref=e393]:
+          - code [ref=e394]: /venv/lib/python3.13/site-packages/imagekit/cachefiles/__init__.py
+          - text: ", line 98, in generate"
+          - list [ref=e396]:
+            - listitem [ref=e397] [cursor=pointer]:
+              - generic [ref=e398] [cursor=pointer]: self.cachefile_backend.generate(self, force) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+              - generic [ref=e399] [cursor=pointer]: …
+          - group [ref=e400]
+        - listitem [ref=e402]:
+          - code [ref=e403]: /venv/lib/python3.13/site-packages/imagekit/cachefiles/backends.py
+          - text: ", line 111, in generate"
+          - list [ref=e405]:
+            - listitem [ref=e406] [cursor=pointer]:
+              - generic [ref=e407] [cursor=pointer]: self.generate_now(file, force=force) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+              - generic [ref=e408] [cursor=pointer]: …
+          - group [ref=e409]
+        - listitem [ref=e411]:
+          - code [ref=e412]: /venv/lib/python3.13/site-packages/imagekit/cachefiles/backends.py
+          - text: ", line 98, in generate_now"
+          - list [ref=e414]:
+            - listitem [ref=e415] [cursor=pointer]:
+              - generic [ref=e416] [cursor=pointer]: file._generate() ^^^^^^^^^^^^^^^^
+              - generic [ref=e417] [cursor=pointer]: …
+          - group [ref=e418]
+        - listitem [ref=e420]:
+          - code [ref=e421]: /venv/lib/python3.13/site-packages/imagekit/cachefiles/__init__.py
+          - text: ", line 102, in _generate"
+          - list [ref=e423]:
+            - listitem [ref=e424] [cursor=pointer]:
+              - generic [ref=e425] [cursor=pointer]: content = generate(self.generator) ^^^^^^^^^^^^^^^^^^^^^^^^
+              - generic [ref=e426] [cursor=pointer]: …
+          - group [ref=e427]
+        - listitem [ref=e429]:
+          - code [ref=e430]: /venv/lib/python3.13/site-packages/imagekit/utils.py
+          - text: ", line 105, in generate"
+          - list [ref=e432]:
+            - listitem [ref=e433] [cursor=pointer]:
+              - generic [ref=e434] [cursor=pointer]: content = generator.generate() ^^^^^^^^^^^^^^^^^^^^
+              - generic [ref=e435] [cursor=pointer]: …
+          - group [ref=e436]
+        - listitem [ref=e438]:
+          - code [ref=e439]: /venv/lib/python3.13/site-packages/imagekit/specs/__init__.py
+          - text: ", line 156, in generate"
+          - list [ref=e441]:
+            - listitem [ref=e442] [cursor=pointer]:
+              - generic [ref=e443] [cursor=pointer]: self.source.open() ^^^^^^^^^^^^^^^^^^
+              - generic [ref=e444] [cursor=pointer]: …
+          - group [ref=e445]
+        - listitem [ref=e447]:
+          - code [ref=e448]: /venv/lib/python3.13/site-packages/django/db/models/fields/files.py
+          - text: ", line 82, in open"
+          - list [ref=e450]:
+            - listitem [ref=e451] [cursor=pointer]:
+              - generic [ref=e452] [cursor=pointer]: self.file = self.storage.open(self.name, mode) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+              - generic [ref=e453] [cursor=pointer]: …
+          - group [ref=e454]
+        - listitem [ref=e456]:
+          - code [ref=e457]: /venv/lib/python3.13/site-packages/django/core/files/storage/base.py
+          - text: ", line 22, in open"
+          - list [ref=e459]:
+            - listitem [ref=e460] [cursor=pointer]:
+              - generic [ref=e461] [cursor=pointer]: return self._open(name, mode) ^^^^^^^^^^^^^^^^^^^^^^
+              - generic [ref=e462] [cursor=pointer]: …
+          - group [ref=e463]
+        - listitem [ref=e465]:
+          - code [ref=e466]: /venv/lib/python3.13/site-packages/django/core/files/storage/filesystem.py
+          - text: ", line 81, in _open"
+          - list [ref=e468]:
+            - listitem [ref=e469] [cursor=pointer]:
+              - generic [ref=e470] [cursor=pointer]: return File(open(self.path(name), mode)) ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+              - generic [ref=e471] [cursor=pointer]: …
+          - group [ref=e472]
+    - generic [ref=e474]:
+      - heading "Request information" [level=2] [ref=e475]
+      - heading "USER" [level=3] [ref=e476]
+      - paragraph [ref=e477]: AnonymousUser
+      - heading "GET" [level=3] [ref=e478]
+      - table [ref=e479]:
+        - rowgroup [ref=e480]:
+          - row "Variable Value" [ref=e481]:
+            - columnheader "Variable" [ref=e482]
+            - columnheader "Value" [ref=e483]
+        - rowgroup [ref=e484]:
+          - row "cachebust '1760457069075'" [ref=e485]:
+            - cell "cachebust" [ref=e486]
+            - cell "'1760457069075'" [ref=e487]:
+              - generic [ref=e488]: "'1760457069075'"
+      - heading "POST" [level=3] [ref=e489]
+      - paragraph [ref=e490]: No POST data
+      - heading "FILES" [level=3] [ref=e491]
+      - paragraph [ref=e492]: No FILES data
+      - heading "COOKIES" [level=3] [ref=e493]
+      - paragraph [ref=e494]: No cookie data
+      - heading "META" [level=3] [ref=e495]
+      - table [ref=e496]:
+        - rowgroup [ref=e497]:
+          - row "Variable Value" [ref=e498]:
+            - columnheader "Variable" [ref=e499]
+            - columnheader "Value" [ref=e500]
+        - rowgroup [ref=e501]:
+          - row "ALGOLIA_API_KEY '********************'" [ref=e502]:
+            - cell "ALGOLIA_API_KEY" [ref=e503]
+            - cell "'********************'" [ref=e504]:
+              - generic [ref=e505]: "'********************'"
+          - row "ALGOLIA_APP_ID 'D7O1MLLTAF'" [ref=e506]:
+            - cell "ALGOLIA_APP_ID" [ref=e507]
+            - cell "'D7O1MLLTAF'" [ref=e508]:
+              - generic [ref=e509]: "'D7O1MLLTAF'"
+          - row "ALLOWED_HOSTS 'localhost,192.168.1.189'" [ref=e510]:
+            - cell "ALLOWED_HOSTS" [ref=e511]
+            - cell "'localhost,192.168.1.189'" [ref=e512]:
+              - generic [ref=e513]: "'localhost,192.168.1.189'"
+          - row "AWS_ACCESS_KEY_ID '********************'" [ref=e514]:
+            - cell "AWS_ACCESS_KEY_ID" [ref=e515]
+            - cell "'********************'" [ref=e516]:
+              - generic [ref=e517]: "'********************'"
+          - row "AWS_S3_ENDPOINT_URL 'https://s3.us-east-2.amazonaws.com'" [ref=e518]:
+            - cell "AWS_S3_ENDPOINT_URL" [ref=e519]
+            - cell "'https://s3.us-east-2.amazonaws.com'" [ref=e520]:
+              - generic [ref=e521]: "'https://s3.us-east-2.amazonaws.com'"
+          - row "AWS_S3_REGION_NAME 'us-east-2'" [ref=e522]:
+            - cell "AWS_S3_REGION_NAME" [ref=e523]
+            - cell "'us-east-2'" [ref=e524]:
+              - generic [ref=e525]: "'us-east-2'"
+          - row "AWS_SECRET_ACCESS_KEY '********************'" [ref=e526]:
+            - cell "AWS_SECRET_ACCESS_KEY" [ref=e527]
+            - cell "'********************'" [ref=e528]:
+              - generic [ref=e529]: "'********************'"
+          - row "BUCKET_NAME 'stage.boost.org.v2'" [ref=e530]:
+            - cell "BUCKET_NAME" [ref=e531]
+            - cell "'stage.boost.org.v2'" [ref=e532]:
+              - generic [ref=e533]: "'stage.boost.org.v2'"
+          - row "CALENDAR_API_KEY '********************'" [ref=e534]:
+            - cell "CALENDAR_API_KEY" [ref=e535]
+            - cell "'********************'" [ref=e536]:
+              - generic [ref=e537]: "'********************'"
+          - row "CELERY_BACKEND 'redis://redis:6379/0'" [ref=e538]:
+            - cell "CELERY_BACKEND" [ref=e539]
+            - cell "'redis://redis:6379/0'" [ref=e540]:
+              - generic [ref=e541]: "'redis://redis:6379/0'"
+          - row "CELERY_BROKER 'redis://redis:6379/0'" [ref=e542]:
+            - cell "CELERY_BROKER" [ref=e543]
+            - cell "'redis://redis:6379/0'" [ref=e544]:
+              - generic [ref=e545]: "'redis://redis:6379/0'"
+          - row "CONTENT_LENGTH ''" [ref=e546]:
+            - cell "CONTENT_LENGTH" [ref=e547]
+            - cell "''" [ref=e548]:
+              - generic [ref=e549]: "''"
+          - row "CONTENT_TYPE 'text/plain'" [ref=e550]:
+            - cell "CONTENT_TYPE" [ref=e551]
+            - cell "'text/plain'" [ref=e552]:
+              - generic [ref=e553]: "'text/plain'"
+          - row [ref=e554]:
+            - cell "CONTEXT_GITHUB" [ref=e555]
+            - cell [ref=e556]:
+              - generic [ref=e557]: "('{\\n' ' \"token\": \"***\",\\n' ' \"job\": \"build\",\\n' ' \"ref\": \"refs/heads/master\",\\n' ' \"sha\": \"4bd52759a74c8173301c39a45b9f7dbc3aa5a30c\",\\n' ' \"repository\": \"fastai/hugo-mathjax\",\\n' ' \"repository_owner\": \"fastai\",\\n' ' \"repositoryUrl\": \"git://github.com/fastai/hugo-mathjax.git\",\\n' ' \"run_id\": \"390437408\",\\n' ' \"run_number\": \"3\",\\n' ' \"retention_days\": \"90\",\\n' ' \"actor\": \"jph00\",\\n' ' \"workflow\": \"Python\",\\n' ' \"head_ref\": \"\",\\n' ' \"base_ref\": \"\",\\n' ' \"event_name\": \"workflow_dispatch\",\\n' ' \"event\": {\\n' ' \"inputs\": null,\\n' ' \"organization\": {\\n' ' \"avatar_url\": ' '\"https://avatars3.githubusercontent.com/u/20547620?v=4\",\\n' ' \"description\": null,\\n' ' \"events_url\": \"https://api.github.com/orgs/fastai/events\",\\n' ' \"hooks_url\": \"https://api.github.com/orgs/fastai/hooks\",\\n' ' \"id\": 20547620,\\n' ' \"issues_url\": \"https://api.github.com/orgs/fastai/issues\",\\n' ' \"login\": \"fastai\",\\n' ' \"members_url\": \"https://api.github.com/orgs/fastai/members{/member}\",\\n' ' \"node_id\": \"MDEyOk9yZ2FuaXphdGlvbjIwNTQ3NjIw\",\\n' ' \"public_members_url\": ' '\"https://api.github.com/orgs/fastai/public_members{/member}\",\\n' ' \"repos_url\": \"https://api.github.com/orgs/fastai/repos\",\\n' ' \"url\": \"https://api.github.com/orgs/fastai\"\\n' ' },\\n' ' \"ref\": \"refs/heads/master\",\\n' ' \"repository\": {\\n' ' \"archive_url\": ' '\"https://api.github.com/repos/fastai/hugo-mathjax/{archive_format}{/ref}\",\\n' ' \"archived\": false,\\n' ' \"assignees_url\": ' '\"https://api.github.com/repos/fastai/hugo-mathjax/assignees{/user}\",\\n' ' \"blobs_url\": ' '\"https://api.github.com/repos/fastai/hugo-mathjax/git/blobs{/sha}\",\\n' ' \"branches_url\": ' '\"https://api.github.com/repos/fastai/hugo-mathjax/branches{/branch}\",\\n' ' \"clone_url\": \"https://github.com/fastai/hugo-mathjax.git\",\\n' ' \"collaborators_url\": ' '\"https://api.github.com/repos/fastai/hugo-mathjax/collaborators{/collaborator}\",\\n' ' \"comments_url\": ' '\"https://api.github.com/repos/fastai/hugo-mathjax/comments{/number}\",\\n' ' \"commits_url\": ' '\"https://api.github.com/repos/fastai/hugo-mathjax/commits{/sha}\",\\n' ' \"compare_url\": ' '\"https://api.github.com/repos/fastai/hugo-mathjax/compare/{base}...{head}\",\\n' ' \"contents_url\": ' '\"https://api.github.com/repos/fastai/hugo-mathjax/contents/{+path}\",\\n' ' \"contributors_url\": ' '\"https://api.github.com/repos/fastai/hugo-mathjax/contributors\",\\n' ' \"created_at\": \"2020-11-11T18:59:57Z\",\\n' ' \"default_branch\": \"master\",\\n' ' \"deployments_url\": ' '\"https://api.github.com/repos/fastai/hugo-mathjax/deployments\",\\n' ' \"description\": \"Hugo with goldmark-mathjax\",\\n' ' \"disabled\": false,\\n' ' \"downloads_url\": ' '\"https://api.github.com/repos/fastai/hugo-mathjax/downloads\",\\n' ' \"events_url\": ' '\"https://api.github.com/repos/fastai/hugo-mathjax/events\",\\n' ' \"fork\": false,\\n' ' \"forks\": 0,\\n' ' \"forks_count\": 0,\\n' ' \"forks_url\": ' '\"https://api.github.com/repos/fastai/hugo-mathjax/forks\",\\n' ' \"full_name\": \"fastai/hugo-mathjax\",\\n' ' \"git_commits_url\": ' '\"https://api.github.com/repos/fastai/hugo-mathjax/git/commits{/sha}\",\\n' ' \"git_refs_url\": ' '\"https://api.github.com/repos/fastai/hugo-mathjax/git/refs{/sha}\",\\n' ' \"git_tags_url\": ' '\"https://api.github.com/repos/fastai/hugo-mathjax/git/tags{/sha}\",\\n' ' \"git_url\": \"git://github.com/fastai/hugo-mathjax.git\",\\n' ' \"has_downloads\": true,\\n' ' \"has_issues\": true,\\n' ' \"has_pages\": false,\\n' ' \"has_projects\": true,\\n' ' \"has_wiki\": true,\\n' ' \"homepage\": null,\\n' ' \"hooks_url\": ' '\"https://api.github.com/repos/fastai/hugo-mathjax/hooks\",\\n' ' \"html_url\": \"https://github.com/fastai/hugo-mathjax\",\\n' ' \"id\": 312063075,\\n' ' \"issue_comment_url\": ' '\"https://api.github.com/repos/fastai/hugo-mathjax/issues/comments{/number}\",\\n' ' \"issue_events_url\": ' '\"https://api.github.com/repos/fastai/hugo-mathjax/issues/events{/number}\",\\n' ' \"issues_url\": ' '\"https://api.github.com/repos/fastai/hugo-mathjax/issues{/number}\",\\n' ' \"keys_url\": ' '\"https://api.github.com/repos/fastai/hugo-mathjax/keys{/key_id}\",\\n' ' \"labels_url\": ' '\"https://api.github.com/repos/fastai/hugo-mathjax/labels{/name}\",\\n' ' \"language\": \"Shell\",\\n' ' \"languages_url\": ' '\"https://api.github.com/repos/fastai/hugo-mathjax/languages\",\\n' ' \"license\": {\\n' ' \"key\": \"apache-2.0\",\\n' ' \"name\": \"Apache License 2.0\",\\n' ' \"node_id\": \"MDc6TGljZW5zZTI=\",\\n' ' \"spdx_id\": \"Apache-2.0\",\\n' ' \"url\": \"https://api.github.com/licenses/apache-2.0\"\\n' ' },\\n' ' \"merges_url\": ' '\"https://api.github.com/repos/fastai/hugo-mathjax/merges\",\\n' ' \"milestones_url\": ' '\"https://api.github.com/repos/fastai/hugo-mathjax/milestones{/number}\",\\n' ' \"mirror_url\": null,\\n' ' \"name\": \"hugo-mathjax\",\\n' ' \"node_id\": \"MDEwOlJlcG9zaXRvcnkzMTIwNjMwNzU=\",\\n' ' \"notifications_url\": ' '\"https://api.github.com/repos/fastai/hugo-mathjax/notifications{?since,all,participating}\",\\n' ' \"open_issues\": 0,\\n' ' \"open_issues_count\": 0,\\n' ' \"owner\": {\\n' ' \"avatar_url\": ' '\"https://avatars3.githubusercontent.com/u/20547620?v=4\",\\n' ' \"events_url\": ' '\"https://api.github.com/users/fastai/events{/privacy}\",\\n' ' \"followers_url\": \"https://api.github.com/users/fastai/followers\",\\n' ' \"following_url\": ' '\"https://api.github.com/users/fastai/following{/other_user}\",\\n' ' \"gists_url\": \"https://api.github.com/users/fastai/gists{/gist_id}\",\\n' ' \"gravatar_id\": \"\",\\n' ' \"html_url\": \"https://github.com/fastai\",\\n' ' \"id\": 20547620,\\n' ' \"login\": \"fastai\",\\n' ' \"node_id\": \"MDEyOk9yZ2FuaXphdGlvbjIwNTQ3NjIw\",\\n' ' \"organizations_url\": \"https://api.github.com/users/fastai/orgs\",\\n' ' \"received_events_url\": ' '\"https://api.github.com/users/fastai/received_events\",\\n' ' \"repos_url\": \"https://api.github.com/users/fastai/repos\",\\n' ' \"site_admin\": false,\\n' ' \"starred_url\": ' '\"https://api.github.com/users/fastai/starred{/owner}{/repo}\",\\n' ' \"subscriptions_url\": ' '\"https://api.github.com/users/fastai/subscriptions\",\\n' ' \"type\": \"Organization\",\\n' ' \"url\": \"https://api.github.com/users/fastai\"\\n' ' },\\n' ' \"private\": false,\\n' ' \"pulls_url\": ' '\"https://api.github.com/repos/fastai/hugo-mathjax/pulls{/number}\",\\n' ' \"pushed_at\": \"2020-11-29T21:59:38Z\",\\n' ' \"releases_url\": ' '\"https://api.github.com/repos/fastai/hugo-mathjax/releases{/id}\",\\n' ' \"size\": 69,\\n' ' \"ssh_url\": \"git@github.com:fastai/hugo-mathjax.git\",\\n' ' \"stargazers_count\": 1,\\n' ' \"stargazers_url\": ' '\"https://api.github.com/repos/fastai/hugo-mathjax/stargazers\",\\n' ' \"statuses_url\": ' '\"https://api.github.com/repos/fastai/hugo-mathjax/statuses/{sha}\",\\n' ' \"subscribers_url\": ' '\"https://api.github.com/repos/fastai/hugo-mathjax/subscribers\",\\n' ' \"subscription_url\": ' '\"https://api.github.com/repos/fastai/hugo-mathjax/subscription\",\\n' ' \"svn_url\": \"https://github.com/fastai/hugo-mathjax\",\\n' ' \"tags_url\": \"https://api.github.com/repos/fastai/hugo-mathjax/tags\",\\n' ' \"teams_url\": ' '\"https://api.github.com/repos/fastai/hugo-mathjax/teams\",\\n' ' \"trees_url\": ' '\"https://api.github.com/repos/fastai/hugo-mathjax/git/trees{/sha}\",\\n' ' \"updated_at\": \"2020-11-29T21:59:40Z\",\\n' ' \"url\": \"https://api.github.com/repos/fastai/hugo-mathjax\",\\n' ' \"watchers\": 1,\\n' ' \"watchers_count\": 1\\n' ' },\\n' ' \"sender\": {\\n' ' \"avatar_url\": \"https://avatars1.githubusercontent.com/u/346999?v=4\",\\n' ' \"events_url\": \"https://api.github.com/users/jph00/events{/privacy}\",\\n' ' \"followers_url\": \"https://api.github.com/users/jph00/followers\",\\n' ' \"following_url\": ' '\"https://api.github.com/users/jph00/following{/other_user}\",\\n' ' \"gists_url\": \"https://api.github.com/users/jph00/gists{/gist_id}\",\\n' ' \"gravatar_id\": \"\",\\n' ' \"html_url\": \"https://github.com/jph00\",\\n' ' \"id\": 346999,\\n' ' \"login\": \"jph00\",\\n' ' \"node_id\": \"MDQ6VXNlcjM0Njk5OQ==\",\\n' ' \"organizations_url\": \"https://api.github.com/users/jph00/orgs\",\\n' ' \"received_events_url\": ' '\"https://api.github.com/users/jph00/received_events\",\\n' ' \"repos_url\": \"https://api.github.com/users/jph00/repos\",\\n' ' \"site_admin\": false,\\n' ' \"starred_url\": ' '\"https://api.github.com/users/jph00/starred{/owner}{/repo}\",\\n' ' \"subscriptions_url\": ' '\"https://api.github.com/users/jph00/subscriptions\",\\n' ' \"type\": \"User\",\\n' ' \"url\": \"https://api.github.com/users/jph00\"\\n' ' },\\n' ' \"workflow\": \".github/workflows/python.yml\"\\n' ' },\\n' ' \"server_url\": \"https://github.com\",\\n' ' \"api_url\": \"https://api.github.com\",\\n' ' \"graphql_url\": \"https://api.github.com/graphql\",\\n' ' \"workspace\": \"/home/runner/work/hugo-mathjax/hugo-mathjax\",\\n' ' \"action\": \"run\",\\n' ' \"event_path\": \"/home/runner/work/_temp/_github_workflow/event.json\",\\n' ' \"action_repository\": \"actions/setup-python\",\\n' ' \"action_ref\": \"v2\",\\n' ' \"path\": ' '\"/home/runner/work/_temp/_runner_file_commands/add_path_d8387f6c-8c1b-44df-8a07-0c815679dd81\",\\n' ' \"env\": ' '\"/home/runner/work/_temp/_runner_file_commands/set_env_d8387f6c-8c1b-44df-8a07-0c815679dd81\"\\n' '}')"
+          - 'row "CONTEXT_NEEDS (''{\\n'' '' \"prebuild\": {\\n'' '' \"result\": \"success\",\\n'' '' \"outputs\": {\\n'' '' \"out\": \"{ \\\\\"step1\\\\\": { \\\\\"outputs\\\\\": { \\\\\"tag\\\\\": '' ''\\\\\"v0.79.0\\\\\" }, \\\\\"outcome\\\\\": \\\\\"success\\\\\", \\\\\"conclusion\\\\\": '' ''\\\\\"success\\\\\" }}\"\\n'' '' }\\n'' '' }\\n'' ''}'')" [ref=e558]':
+            - cell "CONTEXT_NEEDS" [ref=e559]
+            - 'cell "(''{\\n'' '' \"prebuild\": {\\n'' '' \"result\": \"success\",\\n'' '' \"outputs\": {\\n'' '' \"out\": \"{ \\\\\"step1\\\\\": { \\\\\"outputs\\\\\": { \\\\\"tag\\\\\": '' ''\\\\\"v0.79.0\\\\\" }, \\\\\"outcome\\\\\": \\\\\"success\\\\\", \\\\\"conclusion\\\\\": '' ''\\\\\"success\\\\\" }}\"\\n'' '' }\\n'' '' }\\n'' ''}'')" [ref=e560]':
+              - generic [ref=e561]: "('{\\n' ' \"prebuild\": {\\n' ' \"result\": \"success\",\\n' ' \"outputs\": {\\n' ' \"out\": \"{ \\\\\"step1\\\\\": { \\\\\"outputs\\\\\": { \\\\\"tag\\\\\": ' '\\\\\"v0.79.0\\\\\" }, \\\\\"outcome\\\\\": \\\\\"success\\\\\", \\\\\"conclusion\\\\\": ' '\\\\\"success\\\\\" }}\"\\n' ' }\\n' ' }\\n' '}')"
+          - row "CSRF_COOKIE 'S9Vac6TlPFdLHbqAcmk2bAlDASnCwf15'" [ref=e562]:
+            - cell "CSRF_COOKIE" [ref=e563]
+            - cell "'S9Vac6TlPFdLHbqAcmk2bAlDASnCwf15'" [ref=e564]:
+              - generic [ref=e565]: "'S9Vac6TlPFdLHbqAcmk2bAlDASnCwf15'"
+          - row "CSRF_COOKIE_NEEDS_UPDATE True" [ref=e566]:
+            - cell "CSRF_COOKIE_NEEDS_UPDATE" [ref=e567]
+            - cell "True" [ref=e568]:
+              - generic [ref=e569]: "True"
+          - row "DATABASE_CLASS 'mailman.database.postgresql.PostgreSQLDatabase'" [ref=e570]:
+            - cell "DATABASE_CLASS" [ref=e571]
+            - cell "'mailman.database.postgresql.PostgreSQLDatabase'" [ref=e572]:
+              - generic [ref=e573]: "'mailman.database.postgresql.PostgreSQLDatabase'"
+          - row "DATABASE_TYPE 'postgres'" [ref=e574]:
+            - cell "DATABASE_TYPE" [ref=e575]
+            - cell "'postgres'" [ref=e576]:
+              - generic [ref=e577]: "'postgres'"
+          - row "DATABASE_URL 'postgresql://postgres@db:5432/postgres'" [ref=e578]:
+            - cell "DATABASE_URL" [ref=e579]
+            - cell "'postgresql://postgres@db:5432/postgres'" [ref=e580]:
+              - generic [ref=e581]: "'postgresql://postgres@db:5432/postgres'"
+          - row "DJANGO_DEBUG '1'" [ref=e582]:
+            - cell "DJANGO_DEBUG" [ref=e583]
+            - cell "'1'" [ref=e584]:
+              - generic [ref=e585]: "'1'"
+          - row "DJANGO_SETTINGS_MODULE 'config.settings'" [ref=e586]:
+            - cell "DJANGO_SETTINGS_MODULE" [ref=e587]
+            - cell "'config.settings'" [ref=e588]:
+              - generic [ref=e589]: "'config.settings'"
+          - row "DOCKER_DIR '/code/docker'" [ref=e590]:
+            - cell "DOCKER_DIR" [ref=e591]
+            - cell "'/code/docker'" [ref=e592]:
+              - generic [ref=e593]: "'/code/docker'"
+          - row "ENABLE_DB_CACHE 'True'" [ref=e594]:
+            - cell "ENABLE_DB_CACHE" [ref=e595]
+            - cell "'True'" [ref=e596]:
+              - generic [ref=e597]: "'True'"
+          - row "GATEWAY_INTERFACE 'CGI/1.1'" [ref=e598]:
+            - cell "GATEWAY_INTERFACE" [ref=e599]
+            - cell "'CGI/1.1'" [ref=e600]:
+              - generic [ref=e601]: "'CGI/1.1'"
+          - row "GITHUB_OAUTH_CLIENT_ID '********************'" [ref=e602]:
+            - cell "GITHUB_OAUTH_CLIENT_ID" [ref=e603]
+            - cell "'********************'" [ref=e604]:
+              - generic [ref=e605]: "'********************'"
+          - row "GITHUB_OAUTH_CLIENT_SECRET '********************'" [ref=e606]:
+            - cell "GITHUB_OAUTH_CLIENT_SECRET" [ref=e607]
+            - cell "'********************'" [ref=e608]:
+              - generic [ref=e609]: "'********************'"
+          - row "GITHUB_REPOSITORY 'octocat/Hello-World'" [ref=e610]:
+            - cell "GITHUB_REPOSITORY" [ref=e611]
+            - cell "'octocat/Hello-World'" [ref=e612]:
+              - generic [ref=e613]: "'octocat/Hello-World'"
+          - row "GITHUB_TOKEN '********************'" [ref=e614]:
+            - cell "GITHUB_TOKEN" [ref=e615]
+            - cell "'********************'" [ref=e616]:
+              - generic [ref=e617]: "'********************'"
+          - row "GPG_KEY '********************'" [ref=e618]:
+            - cell "GPG_KEY" [ref=e619]
+            - cell "'********************'" [ref=e620]:
+              - generic [ref=e621]: "'********************'"
+          - row "HOME '/root'" [ref=e622]:
+            - cell "HOME" [ref=e623]
+            - cell "'/root'" [ref=e624]:
+              - generic [ref=e625]: "'/root'"
+          - row "HOSTNAME '3265d55f9bd2'" [ref=e626]:
+            - cell "HOSTNAME" [ref=e627]
+            - cell "'3265d55f9bd2'" [ref=e628]:
+              - generic [ref=e629]: "'3265d55f9bd2'"
+          - row "HTTP_ACCEPT 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'" [ref=e630]:
+            - cell "HTTP_ACCEPT" [ref=e631]
+            - cell "'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'" [ref=e632]:
+              - generic [ref=e633]: "'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'"
+          - row "HTTP_ACCEPT_ENCODING 'gzip, deflate, br, zstd'" [ref=e634]:
+            - cell "HTTP_ACCEPT_ENCODING" [ref=e635]
+            - cell "'gzip, deflate, br, zstd'" [ref=e636]:
+              - generic [ref=e637]: "'gzip, deflate, br, zstd'"
+          - row "HTTP_ACCEPT_LANGUAGE 'en-US'" [ref=e638]:
+            - cell "HTTP_ACCEPT_LANGUAGE" [ref=e639]
+            - cell "'en-US'" [ref=e640]:
+              - generic [ref=e641]: "'en-US'"
+          - row "HTTP_CACHE_CONTROL 'no-cache'" [ref=e642]:
+            - cell "HTTP_CACHE_CONTROL" [ref=e643]
+            - cell "'no-cache'" [ref=e644]:
+              - generic [ref=e645]: "'no-cache'"
+          - row "HTTP_CONNECTION 'keep-alive'" [ref=e646]:
+            - cell "HTTP_CONNECTION" [ref=e647]
+            - cell "'keep-alive'" [ref=e648]:
+              - generic [ref=e649]: "'keep-alive'"
+          - row "HTTP_HOST 'localhost:8000'" [ref=e650]:
+            - cell "HTTP_HOST" [ref=e651]
+            - cell "'localhost:8000'" [ref=e652]:
+              - generic [ref=e653]: "'localhost:8000'"
+          - row "HTTP_PRAGMA 'no-cache'" [ref=e654]:
+            - cell "HTTP_PRAGMA" [ref=e655]
+            - cell "'no-cache'" [ref=e656]:
+              - generic [ref=e657]: "'no-cache'"
+          - row "HTTP_SEC_CH_UA '\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"HeadlessChrome\";v=\"140\"'" [ref=e658]:
+            - cell "HTTP_SEC_CH_UA" [ref=e659]
+            - cell "'\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"HeadlessChrome\";v=\"140\"'" [ref=e660]:
+              - generic [ref=e661]: "'\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"HeadlessChrome\";v=\"140\"'"
+          - row "HTTP_SEC_CH_UA_MOBILE '?0'" [ref=e662]:
+            - cell "HTTP_SEC_CH_UA_MOBILE" [ref=e663]
+            - cell "'?0'" [ref=e664]:
+              - generic [ref=e665]: "'?0'"
+          - row "HTTP_SEC_CH_UA_PLATFORM '\"macOS\"'" [ref=e666]:
+            - cell "HTTP_SEC_CH_UA_PLATFORM" [ref=e667]
+            - cell "'\"macOS\"'" [ref=e668]:
+              - generic [ref=e669]: "'\"macOS\"'"
+          - row "HTTP_SEC_FETCH_DEST 'document'" [ref=e670]:
+            - cell "HTTP_SEC_FETCH_DEST" [ref=e671]
+            - cell "'document'" [ref=e672]:
+              - generic [ref=e673]: "'document'"
+          - row "HTTP_SEC_FETCH_MODE 'navigate'" [ref=e674]:
+            - cell "HTTP_SEC_FETCH_MODE" [ref=e675]
+            - cell "'navigate'" [ref=e676]:
+              - generic [ref=e677]: "'navigate'"
+          - row "HTTP_SEC_FETCH_SITE 'none'" [ref=e678]:
+            - cell "HTTP_SEC_FETCH_SITE" [ref=e679]
+            - cell "'none'" [ref=e680]:
+              - generic [ref=e681]: "'none'"
+          - row "HTTP_SEC_FETCH_USER '?1'" [ref=e682]:
+            - cell "HTTP_SEC_FETCH_USER" [ref=e683]
+            - cell "'?1'" [ref=e684]:
+              - generic [ref=e685]: "'?1'"
+          - row "HTTP_UPGRADE_INSECURE_REQUESTS '1'" [ref=e686]:
+            - cell "HTTP_UPGRADE_INSECURE_REQUESTS" [ref=e687]
+            - cell "'1'" [ref=e688]:
+              - generic [ref=e689]: "'1'"
+          - row "HTTP_USER_AGENT ('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, ' 'like Gecko) HeadlessChrome/140.0.7339.186 Safari/537.36')" [ref=e690]:
+            - cell "HTTP_USER_AGENT" [ref=e691]
+            - cell "('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, ' 'like Gecko) HeadlessChrome/140.0.7339.186 Safari/537.36')" [ref=e692]:
+              - generic [ref=e693]: ('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, ' 'like Gecko) HeadlessChrome/140.0.7339.186 Safari/537.36')
+          - row "HYPERKITTY_API_KEY '********************'" [ref=e694]:
+            - cell "HYPERKITTY_API_KEY" [ref=e695]
+            - cell "'********************'" [ref=e696]:
+              - generic [ref=e697]: "'********************'"
+          - row "IMAGE_TAG ''" [ref=e698]:
+            - cell "IMAGE_TAG" [ref=e699]
+            - cell "''" [ref=e700]:
+              - generic [ref=e701]: "''"
+          - row "LC_CTYPE 'C.UTF-8'" [ref=e702]:
+            - cell "LC_CTYPE" [ref=e703]
+            - cell "'C.UTF-8'" [ref=e704]:
+              - generic [ref=e705]: "'C.UTF-8'"
+          - row "LOCAL_DEVELOPMENT 'true'" [ref=e706]:
+            - cell "LOCAL_DEVELOPMENT" [ref=e707]
+            - cell "'true'" [ref=e708]:
+              - generic [ref=e709]: "'true'"
+          - row "MAILMAN_ADMIN_EMAIL ''" [ref=e710]:
+            - cell "MAILMAN_ADMIN_EMAIL" [ref=e711]
+            - cell "''" [ref=e712]:
+              - generic [ref=e713]: "''"
+          - row "MAILMAN_ADMIN_USER ''" [ref=e714]:
+            - cell "MAILMAN_ADMIN_USER" [ref=e715]
+            - cell "''" [ref=e716]:
+              - generic [ref=e717]: "''"
+          - row "OPENROUTER_API_KEY '********************'" [ref=e718]:
+            - cell "OPENROUTER_API_KEY" [ref=e719]
+            - cell "'********************'" [ref=e720]:
+              - generic [ref=e721]: "'********************'"
+          - row "PATH '/venv/bin:/bin:/usr/bin:/usr/local/bin'" [ref=e722]:
+            - cell "PATH" [ref=e723]
+            - cell "'/venv/bin:/bin:/usr/bin:/usr/local/bin'" [ref=e724]:
+              - generic [ref=e725]: "'/venv/bin:/bin:/usr/bin:/usr/local/bin'"
+          - row "PATH_INFO '/'" [ref=e726]:
+            - cell "PATH_INFO" [ref=e727]
+            - cell "'/'" [ref=e728]:
+              - generic [ref=e729]: "'/'"
+          - row "PGDATABASE 'postgres'" [ref=e730]:
+            - cell "PGDATABASE" [ref=e731]
+            - cell "'postgres'" [ref=e732]:
+              - generic [ref=e733]: "'postgres'"
+          - row "PGHOST 'db'" [ref=e734]:
+            - cell "PGHOST" [ref=e735]
+            - cell "'db'" [ref=e736]:
+              - generic [ref=e737]: "'db'"
+          - row "PGPASSWORD '********************'" [ref=e738]:
+            - cell "PGPASSWORD" [ref=e739]
+            - cell "'********************'" [ref=e740]:
+              - generic [ref=e741]: "'********************'"
+          - row "PGPORT '5432'" [ref=e742]:
+            - cell "PGPORT" [ref=e743]
+            - cell "'5432'" [ref=e744]:
+              - generic [ref=e745]: "'5432'"
+          - row "PGUSER 'postgres'" [ref=e746]:
+            - cell "PGUSER" [ref=e747]
+            - cell "'postgres'" [ref=e748]:
+              - generic [ref=e749]: "'postgres'"
+          - row "PROD_DB_DUMP_FILE_WILDCARD 'boost_production.db1*'" [ref=e750]:
+            - cell "PROD_DB_DUMP_FILE_WILDCARD" [ref=e751]
+            - cell "'boost_production.db1*'" [ref=e752]:
+              - generic [ref=e753]: "'boost_production.db1*'"
+          - row "PROD_DB_DUMP_URL 'gs://boostbackups/db1/daily/'" [ref=e754]:
+            - cell "PROD_DB_DUMP_URL" [ref=e755]
+            - cell "'gs://boostbackups/db1/daily/'" [ref=e756]:
+              - generic [ref=e757]: "'gs://boostbackups/db1/daily/'"
+          - row "PROD_MEDIA_CONTENT_AWS_ACCESS_KEY_ID '********************'" [ref=e758]:
+            - cell "PROD_MEDIA_CONTENT_AWS_ACCESS_KEY_ID" [ref=e759]
+            - cell "'********************'" [ref=e760]:
+              - generic [ref=e761]: "'********************'"
+          - row "PROD_MEDIA_CONTENT_AWS_S3_ENDPOINT_URL 'https://s3.us-east-2.amazonaws.com'" [ref=e762]:
+            - cell "PROD_MEDIA_CONTENT_AWS_S3_ENDPOINT_URL" [ref=e763]
+            - cell "'https://s3.us-east-2.amazonaws.com'" [ref=e764]:
+              - generic [ref=e765]: "'https://s3.us-east-2.amazonaws.com'"
+          - row "PROD_MEDIA_CONTENT_AWS_SECRET_ACCESS_KEY '********************'" [ref=e766]:
+            - cell "PROD_MEDIA_CONTENT_AWS_SECRET_ACCESS_KEY" [ref=e767]
+            - cell "'********************'" [ref=e768]:
+              - generic [ref=e769]: "'********************'"
+          - row "PROD_MEDIA_CONTENT_BUCKET_NAME 'boost.org.media'" [ref=e770]:
+            - cell "PROD_MEDIA_CONTENT_BUCKET_NAME" [ref=e771]
+            - cell "'boost.org.media'" [ref=e772]:
+              - generic [ref=e773]: "'boost.org.media'"
+          - row "PROD_MEDIA_CONTENT_REGION 'us-east-2'" [ref=e774]:
+            - cell "PROD_MEDIA_CONTENT_REGION" [ref=e775]
+            - cell "'us-east-2'" [ref=e776]:
+              - generic [ref=e777]: "'us-east-2'"
+          - row "PWD '/code'" [ref=e778]:
+            - cell "PWD" [ref=e779]
+            - cell "'/code'" [ref=e780]:
+              - generic [ref=e781]: "'/code'"
+          - row "PYTHON 'python'" [ref=e782]:
+            - cell "PYTHON" [ref=e783]
+            - cell "'python'" [ref=e784]:
+              - generic [ref=e785]: "'python'"
+          - row "PYTHONDONTWRITEBYTECODE 'true'" [ref=e786]:
+            - cell "PYTHONDONTWRITEBYTECODE" [ref=e787]
+            - cell "'true'" [ref=e788]:
+              - generic [ref=e789]: "'true'"
+          - row "PYTHONPATH '/code'" [ref=e790]:
+            - cell "PYTHONPATH" [ref=e791]
+            - cell "'/code'" [ref=e792]:
+              - generic [ref=e793]: "'/code'"
+          - row "PYTHONUNBUFFERED '1'" [ref=e794]:
+            - cell "PYTHONUNBUFFERED" [ref=e795]
+            - cell "'1'" [ref=e796]:
+              - generic [ref=e797]: "'1'"
+          - row "PYTHONWARNINGS 'ignore'" [ref=e798]:
+            - cell "PYTHONWARNINGS" [ref=e799]
+            - cell "'ignore'" [ref=e800]:
+              - generic [ref=e801]: "'ignore'"
+          - row "PYTHON_SHA256 'b9910730526b298299b46b35595ced9055722df60c06ad6301f6a4e2c728a252'" [ref=e802]:
+            - cell "PYTHON_SHA256" [ref=e803]
+            - cell "'b9910730526b298299b46b35595ced9055722df60c06ad6301f6a4e2c728a252'" [ref=e804]:
+              - generic [ref=e805]: "'b9910730526b298299b46b35595ced9055722df60c06ad6301f6a4e2c728a252'"
+          - row "PYTHON_VERSION '3.13.8'" [ref=e806]:
+            - cell "PYTHON_VERSION" [ref=e807]
+            - cell "'3.13.8'" [ref=e808]:
+              - generic [ref=e809]: "'3.13.8'"
+          - row "QUERY_STRING 'cachebust=1760457069075'" [ref=e810]:
+            - cell "QUERY_STRING" [ref=e811]
+            - cell "'cachebust=1760457069075'" [ref=e812]:
+              - generic [ref=e813]: "'cachebust=1760457069075'"
+          - row "REMOTE_ADDR '185.199.109.133'" [ref=e814]:
+            - cell "REMOTE_ADDR" [ref=e815]
+            - cell "'185.199.109.133'" [ref=e816]:
+              - generic [ref=e817]: "'185.199.109.133'"
+          - row "REMOTE_HOST ''" [ref=e818]:
+            - cell "REMOTE_HOST" [ref=e819]
+            - cell "''" [ref=e820]:
+              - generic [ref=e821]: "''"
+          - row "REQUEST_METHOD 'GET'" [ref=e822]:
+            - cell "REQUEST_METHOD" [ref=e823]
+            - cell "'GET'" [ref=e824]:
+              - generic [ref=e825]: "'GET'"
+          - row "RUN_MAIN 'true'" [ref=e826]:
+            - cell "RUN_MAIN" [ref=e827]
+            - cell "'true'" [ref=e828]:
+              - generic [ref=e829]: "'true'"
+          - row "SCRIPT_NAME ''" [ref=e830]:
+            - cell "SCRIPT_NAME" [ref=e831]
+            - cell "''" [ref=e832]:
+              - generic [ref=e833]: "''"
+          - row "SECRET_KEY '********************'" [ref=e834]:
+            - cell "SECRET_KEY" [ref=e835]
+            - cell "'********************'" [ref=e836]:
+              - generic [ref=e837]: "'********************'"
+          - row "SERVER_NAME '3265d55f9bd2'" [ref=e838]:
+            - cell "SERVER_NAME" [ref=e839]
+            - cell "'3265d55f9bd2'" [ref=e840]:
+              - generic [ref=e841]: "'3265d55f9bd2'"
+          - row "SERVER_PORT '8000'" [ref=e842]:
+            - cell "SERVER_PORT" [ref=e843]
+            - cell "'8000'" [ref=e844]:
+              - generic [ref=e845]: "'8000'"
+          - row "SERVER_PROTOCOL 'HTTP/1.1'" [ref=e846]:
+            - cell "SERVER_PROTOCOL" [ref=e847]
+            - cell "'HTTP/1.1'" [ref=e848]:
+              - generic [ref=e849]: "'HTTP/1.1'"
+          - row "SERVER_SOFTWARE 'WSGIServer/0.2'" [ref=e850]:
+            - cell "SERVER_SOFTWARE" [ref=e851]
+            - cell "'WSGIServer/0.2'" [ref=e852]:
+              - generic [ref=e853]: "'WSGIServer/0.2'"
+          - row "SERVE_FROM_DOMAIN 'localhost'" [ref=e854]:
+            - cell "SERVE_FROM_DOMAIN" [ref=e855]
+            - cell "'localhost'" [ref=e856]:
+              - generic [ref=e857]: "'localhost'"
+          - row "SHLVL '1'" [ref=e858]:
+            - cell "SHLVL" [ref=e859]
+            - cell "'1'" [ref=e860]:
+              - generic [ref=e861]: "'1'"
+          - row "SLACK_BOT_TOKEN '********************'" [ref=e862]:
+            - cell "SLACK_BOT_TOKEN" [ref=e863]
+            - cell "'********************'" [ref=e864]:
+              - generic [ref=e865]: "'********************'"
+          - row "STATIC_CONTENT_AWS_ACCESS_KEY_ID '********************'" [ref=e866]:
+            - cell "STATIC_CONTENT_AWS_ACCESS_KEY_ID" [ref=e867]
+            - cell "'********************'" [ref=e868]:
+              - generic [ref=e869]: "'********************'"
+          - row "STATIC_CONTENT_AWS_S3_ENDPOINT_URL 'https://s3.us-east-2.amazonaws.com'" [ref=e870]:
+            - cell "STATIC_CONTENT_AWS_S3_ENDPOINT_URL" [ref=e871]
+            - cell "'https://s3.us-east-2.amazonaws.com'" [ref=e872]:
+              - generic [ref=e873]: "'https://s3.us-east-2.amazonaws.com'"
+          - row "STATIC_CONTENT_AWS_SECRET_ACCESS_KEY '********************'" [ref=e874]:
+            - cell "STATIC_CONTENT_AWS_SECRET_ACCESS_KEY" [ref=e875]
+            - cell "'********************'" [ref=e876]:
+              - generic [ref=e877]: "'********************'"
+          - row "STATIC_CONTENT_BUCKET_NAME 'stage.boost.org.v2'" [ref=e878]:
+            - cell "STATIC_CONTENT_BUCKET_NAME" [ref=e879]
+            - cell "'stage.boost.org.v2'" [ref=e880]:
+              - generic [ref=e881]: "'stage.boost.org.v2'"
+          - row "STATIC_CONTENT_REGION 'us-east-2'" [ref=e882]:
+            - cell "STATIC_CONTENT_REGION" [ref=e883]
+            - cell "'us-east-2'" [ref=e884]:
+              - generic [ref=e885]: "'us-east-2'"
+          - row "TZ 'UTC'" [ref=e886]:
+            - cell "TZ" [ref=e887]
+            - cell "'UTC'" [ref=e888]:
+              - generic [ref=e889]: "'UTC'"
+          - row "WEB_PORT '8000'" [ref=e890]:
+            - cell "WEB_PORT" [ref=e891]
+            - cell "'8000'" [ref=e892]:
+              - generic [ref=e893]: "'8000'"
+          - row "_ '/venv/bin/python'" [ref=e894]:
+            - cell "_" [ref=e895]
+            - cell "'/venv/bin/python'" [ref=e896]:
+              - generic [ref=e897]: "'/venv/bin/python'"
+          - row "wsgi.errors <_io.TextIOWrapper name='<stderr>' mode='w' encoding='utf-8'>" [ref=e898]:
+            - cell "wsgi.errors" [ref=e899]
+            - cell "<_io.TextIOWrapper name='<stderr>' mode='w' encoding='utf-8'>" [ref=e900]:
+              - generic [ref=e901]: <_io.TextIOWrapper name='<stderr>' mode='w' encoding='utf-8'>
+          - row "wsgi.file_wrapper <class 'wsgiref.util.FileWrapper'>" [ref=e902]:
+            - cell "wsgi.file_wrapper" [ref=e903]
+            - cell "<class 'wsgiref.util.FileWrapper'>" [ref=e904]:
+              - generic [ref=e905]: <class 'wsgiref.util.FileWrapper'>
+          - row "wsgi.input <django.core.handlers.wsgi.LimitedStream object at 0x7f9d0ce2bdc0>" [ref=e906]:
+            - cell "wsgi.input" [ref=e907]
+            - cell "<django.core.handlers.wsgi.LimitedStream object at 0x7f9d0ce2bdc0>" [ref=e908]:
+              - generic [ref=e909]: <django.core.handlers.wsgi.LimitedStream object at 0x7f9d0ce2bdc0>
+          - row "wsgi.multiprocess False" [ref=e910]:
+            - cell "wsgi.multiprocess" [ref=e911]
+            - cell "False" [ref=e912]:
+              - generic [ref=e913]: "False"
+          - row "wsgi.multithread True" [ref=e914]:
+            - cell "wsgi.multithread" [ref=e915]
+            - cell "True" [ref=e916]:
+              - generic [ref=e917]: "True"
+          - row "wsgi.run_once False" [ref=e918]:
+            - cell "wsgi.run_once" [ref=e919]
+            - cell "False" [ref=e920]:
+              - generic [ref=e921]: "False"
+          - row "wsgi.url_scheme 'http'" [ref=e922]:
+            - cell "wsgi.url_scheme" [ref=e923]
+            - cell "'http'" [ref=e924]:
+              - generic [ref=e925]: "'http'"
+          - row "wsgi.version (1, 0)" [ref=e926]:
+            - cell "wsgi.version" [ref=e927]
+            - cell "(1, 0)" [ref=e928]:
+              - generic [ref=e929]: (1, 0)
+      - heading "Settings" [level=3] [ref=e930]
+      - heading "Using settings module config.settings" [level=4] [ref=e931]:
+        - text: Using settings module
+        - code [ref=e932]: config.settings
+      - table [ref=e933]:
+        - rowgroup [ref=e934]:
+          - row "Setting Value" [ref=e935]:
+            - columnheader "Setting" [ref=e936]
+            - columnheader "Value" [ref=e937]
+        - rowgroup [ref=e938]:
+          - 'row "ABSOLUTE_URL_OVERRIDES {}" [ref=e939]':
+            - cell "ABSOLUTE_URL_OVERRIDES" [ref=e940]
+            - 'cell "{}" [ref=e941]':
+              - generic [ref=e942]: "{}"
+          - row "ACCOUNT_DELETION_GRACE_PERIOD_DAYS 10" [ref=e943]:
+            - cell "ACCOUNT_DELETION_GRACE_PERIOD_DAYS" [ref=e944]
+            - cell "10" [ref=e945]:
+              - generic [ref=e946]: "10"
+          - row "ACCOUNT_EMAIL_VERIFICATION 'mandatory'" [ref=e947]:
+            - cell "ACCOUNT_EMAIL_VERIFICATION" [ref=e948]
+            - cell "'mandatory'" [ref=e949]:
+              - generic [ref=e950]: "'mandatory'"
+          - 'row "ACCOUNT_FORMS {''reset_password_from_key'': ''********************''}" [ref=e951]':
+            - cell "ACCOUNT_FORMS" [ref=e952]
+            - 'cell "{''reset_password_from_key'': ''********************''}" [ref=e953]':
+              - generic [ref=e954]: "{'reset_password_from_key': '********************'}"
+          - 'row "ACCOUNT_LOGIN_METHODS {''email''}" [ref=e955]':
+            - cell "ACCOUNT_LOGIN_METHODS" [ref=e956]
+            - 'cell "{''email''}" [ref=e957]':
+              - generic [ref=e958]: "{'email'}"
+          - row "ACCOUNT_LOGOUT_ON_GET True" [ref=e959]:
+            - cell "ACCOUNT_LOGOUT_ON_GET" [ref=e960]
+            - cell "True" [ref=e961]:
+              - generic [ref=e962]: "True"
+          - row "ACCOUNT_SIGNUP_FIELDS ['email*', 'password1*', 'password2*']" [ref=e963]:
+            - cell "ACCOUNT_SIGNUP_FIELDS" [ref=e964]
+            - cell "['email*', 'password1*', 'password2*']" [ref=e965]:
+              - generic [ref=e966]: "['email*', 'password1*', 'password2*']"
+          - row "ACCOUNT_UNIQUE_EMAIL True" [ref=e967]:
+            - cell "ACCOUNT_UNIQUE_EMAIL" [ref=e968]
+            - cell "True" [ref=e969]:
+              - generic [ref=e970]: "True"
+          - row "ACCOUNT_USER_MODEL_USERNAME_FIELD None" [ref=e971]:
+            - cell "ACCOUNT_USER_MODEL_USERNAME_FIELD" [ref=e972]
+            - cell "None" [ref=e973]:
+              - generic [ref=e974]: None
+          - row "ADMINS []" [ref=e975]:
+            - cell "ADMINS" [ref=e976]
+            - cell "[]" [ref=e977]:
+              - generic [ref=e978]: "[]"
+          - row "ALLOWED_HOSTS ['localhost', '192.168.1.189']" [ref=e979]:
+            - cell "ALLOWED_HOSTS" [ref=e980]
+            - cell "['localhost', '192.168.1.189']" [ref=e981]:
+              - generic [ref=e982]: "['localhost', '192.168.1.189']"
+          - row "APPEND_SLASH True" [ref=e983]:
+            - cell "APPEND_SLASH" [ref=e984]
+            - cell "True" [ref=e985]:
+              - generic [ref=e986]: "True"
+          - row "APPS_DIR Path('/code/config')" [ref=e987]:
+            - cell "APPS_DIR" [ref=e988]
+            - cell "Path('/code/config')" [ref=e989]:
+              - generic [ref=e990]: Path('/code/config')
+          - row "ARCHIVES_URL 'https://archives.boost.io/'" [ref=e991]:
+            - cell "ARCHIVES_URL" [ref=e992]
+            - cell "'https://archives.boost.io/'" [ref=e993]:
+              - generic [ref=e994]: "'https://archives.boost.io/'"
+          - row "ARTIFACTORY_URL 'https://boostorg.jfrog.io/artifactory/api/storage/main/'" [ref=e995]:
+            - cell "ARTIFACTORY_URL" [ref=e996]
+            - cell "'https://boostorg.jfrog.io/artifactory/api/storage/main/'" [ref=e997]:
+              - generic [ref=e998]: "'https://boostorg.jfrog.io/artifactory/api/storage/main/'"
+          - row "AUTHENTICATION_BACKENDS '********************'" [ref=e999]:
+            - cell "AUTHENTICATION_BACKENDS" [ref=e1000]
+            - cell "'********************'" [ref=e1001]:
+              - generic [ref=e1002]: "'********************'"
+          - row "AUTH_PASSWORD_VALIDATORS '********************'" [ref=e1003]:
+            - cell "AUTH_PASSWORD_VALIDATORS" [ref=e1004]
+            - cell "'********************'" [ref=e1005]:
+              - generic [ref=e1006]: "'********************'"
+          - row "AUTH_USER_MODEL '********************'" [ref=e1007]:
+            - cell "AUTH_USER_MODEL" [ref=e1008]
+            - cell "'********************'" [ref=e1009]:
+              - generic [ref=e1010]: "'********************'"
+          - row "BASE_CONTENT '/website'" [ref=e1011]:
+            - cell "BASE_CONTENT" [ref=e1012]
+            - cell "'/website'" [ref=e1013]:
+              - generic [ref=e1014]: "'/website'"
+          - row "BASE_DIR Path('/code')" [ref=e1015]:
+            - cell "BASE_DIR" [ref=e1016]
+            - cell "Path('/code')" [ref=e1017]:
+              - generic [ref=e1018]: Path('/code')
+          - row "BOOST_BRANCHES ['master', 'develop']" [ref=e1019]:
+            - cell "BOOST_BRANCHES" [ref=e1020]
+            - cell "['master', 'develop']" [ref=e1021]:
+              - generic [ref=e1022]: "['master', 'develop']"
+          - row "BOOST_CALENDAR '5rorfm42nvmpt77ac0vult9iig@group.calendar.google.com'" [ref=e1023]:
+            - cell "BOOST_CALENDAR" [ref=e1024]
+            - cell "'5rorfm42nvmpt77ac0vult9iig@group.calendar.google.com'" [ref=e1025]:
+              - generic [ref=e1026]: "'5rorfm42nvmpt77ac0vult9iig@group.calendar.google.com'"
+          - 'row "CACHES {''default'': {''BACKEND'': ''django_redis.cache.RedisCache'', ''LOCATION'': ''redis://redis:6379''}, ''static_content'': {''BACKEND'': ''django_redis.cache.RedisCache'', ''LOCATION'': ''redis://redis:6379/2'', ''TIMEOUT'': ''60''}}" [ref=e1027]':
+            - cell "CACHES" [ref=e1028]
+            - 'cell "{''default'': {''BACKEND'': ''django_redis.cache.RedisCache'', ''LOCATION'': ''redis://redis:6379''}, ''static_content'': {''BACKEND'': ''django_redis.cache.RedisCache'', ''LOCATION'': ''redis://redis:6379/2'', ''TIMEOUT'': ''60''}}" [ref=e1029]':
+              - generic [ref=e1030]: "{'default': {'BACKEND': 'django_redis.cache.RedisCache', 'LOCATION': 'redis://redis:6379'}, 'static_content': {'BACKEND': 'django_redis.cache.RedisCache', 'LOCATION': 'redis://redis:6379/2', 'TIMEOUT': '60'}}"
+          - row "CACHE_MIDDLEWARE_ALIAS 'default'" [ref=e1031]:
+            - cell "CACHE_MIDDLEWARE_ALIAS" [ref=e1032]
+            - cell "'default'" [ref=e1033]:
+              - generic [ref=e1034]: "'default'"
+          - row "CACHE_MIDDLEWARE_KEY_PREFIX '********************'" [ref=e1035]:
+            - cell "CACHE_MIDDLEWARE_KEY_PREFIX" [ref=e1036]
+            - cell "'********************'" [ref=e1037]:
+              - generic [ref=e1038]: "'********************'"
+          - row "CACHE_MIDDLEWARE_SECONDS 600" [ref=e1039]:
+            - cell "CACHE_MIDDLEWARE_SECONDS" [ref=e1040]
+            - cell "600" [ref=e1041]:
+              - generic [ref=e1042]: "600"
+          - row "CALENDAR_API_KEY '********************'" [ref=e1043]:
+            - cell "CALENDAR_API_KEY" [ref=e1044]
+            - cell "'********************'" [ref=e1045]:
+              - generic [ref=e1046]: "'********************'"
+          - row "CELERY_ACCEPT_CONTENT ['application/json']" [ref=e1047]:
+            - cell "CELERY_ACCEPT_CONTENT" [ref=e1048]
+            - cell "['application/json']" [ref=e1049]:
+              - generic [ref=e1050]: "['application/json']"
+          - 'row "CELERY_BROKER_TRANSPORT_OPTIONS {''max_connections'': 60}" [ref=e1051]':
+            - cell "CELERY_BROKER_TRANSPORT_OPTIONS" [ref=e1052]
+            - 'cell "{''max_connections'': 60}" [ref=e1053]':
+              - generic [ref=e1054]: "{'max_connections': 60}"
+          - row "CELERY_BROKER_URL 'redis://redis:6379'" [ref=e1055]:
+            - cell "CELERY_BROKER_URL" [ref=e1056]
+            - cell "'redis://redis:6379'" [ref=e1057]:
+              - generic [ref=e1058]: "'redis://redis:6379'"
+          - row "CELERY_RESULT_BACKEND 'redis://redis:6379'" [ref=e1059]:
+            - cell "CELERY_RESULT_BACKEND" [ref=e1060]
+            - cell "'redis://redis:6379'" [ref=e1061]:
+              - generic [ref=e1062]: "'redis://redis:6379'"
+          - row "CELERY_RESULT_BACKEND_THREAD_SAFE True" [ref=e1063]:
+            - cell "CELERY_RESULT_BACKEND_THREAD_SAFE" [ref=e1064]
+            - cell "True" [ref=e1065]:
+              - generic [ref=e1066]: "True"
+          - row "CELERY_RESULT_SERIALIZER 'json'" [ref=e1067]:
+            - cell "CELERY_RESULT_SERIALIZER" [ref=e1068]
+            - cell "'json'" [ref=e1069]:
+              - generic [ref=e1070]: "'json'"
+          - row "CELERY_TASK_ALWAYS_EAGER False" [ref=e1071]:
+            - cell "CELERY_TASK_ALWAYS_EAGER" [ref=e1072]
+            - cell "False" [ref=e1073]:
+              - generic [ref=e1074]: "False"
+          - row "CELERY_TASK_RESULT_EXPIRES 3600" [ref=e1075]:
+            - cell "CELERY_TASK_RESULT_EXPIRES" [ref=e1076]
+            - cell "3600" [ref=e1077]:
+              - generic [ref=e1078]: "3600"
+          - row "CELERY_TASK_SERIALIZER 'json'" [ref=e1079]:
+            - cell "CELERY_TASK_SERIALIZER" [ref=e1080]
+            - cell "'json'" [ref=e1081]:
+              - generic [ref=e1082]: "'json'"
+          - row "CELERY_TIMEZONE 'UTC'" [ref=e1083]:
+            - cell "CELERY_TIMEZONE" [ref=e1084]
+            - cell "'UTC'" [ref=e1085]:
+              - generic [ref=e1086]: "'UTC'"
+          - row "CI False" [ref=e1087]:
+            - cell "CI" [ref=e1088]
+            - cell "False" [ref=e1089]:
+              - generic [ref=e1090]: "False"
+          - row "CLEAR_STATIC_CONTENT_CACHE_DAYS 7000" [ref=e1091]:
+            - cell "CLEAR_STATIC_CONTENT_CACHE_DAYS" [ref=e1092]
+            - cell "7000" [ref=e1093]:
+              - generic [ref=e1094]: "7000"
+          - row "CORS_ALLOW_ALL_ORIGINS True" [ref=e1095]:
+            - cell "CORS_ALLOW_ALL_ORIGINS" [ref=e1096]
+            - cell "True" [ref=e1097]:
+              - generic [ref=e1098]: "True"
+          - row "CORS_ALLOW_CREDENTIALS True" [ref=e1099]:
+            - cell "CORS_ALLOW_CREDENTIALS" [ref=e1100]
+            - cell "True" [ref=e1101]:
+              - generic [ref=e1102]: "True"
+          - row "CORS_ALLOW_HEADERS ('accept', 'authorization', 'content-type', 'user-agent', 'x-csrftoken', 'x-requested-with', 'hx-request', 'hx-target', 'hx-current-url', 'credentials')" [ref=e1103]:
+            - cell "CORS_ALLOW_HEADERS" [ref=e1104]
+            - cell "('accept', 'authorization', 'content-type', 'user-agent', 'x-csrftoken', 'x-requested-with', 'hx-request', 'hx-target', 'hx-current-url', 'credentials')" [ref=e1105]:
+              - generic [ref=e1106]: ('accept', 'authorization', 'content-type', 'user-agent', 'x-csrftoken', 'x-requested-with', 'hx-request', 'hx-target', 'hx-current-url', 'credentials')
+          - row "CORS_ALLOW_METHODS ('DELETE', 'GET', 'OPTIONS', 'PATCH', 'POST', 'PUT')" [ref=e1107]:
+            - cell "CORS_ALLOW_METHODS" [ref=e1108]
+            - cell "('DELETE', 'GET', 'OPTIONS', 'PATCH', 'POST', 'PUT')" [ref=e1109]:
+              - generic [ref=e1110]: ('DELETE', 'GET', 'OPTIONS', 'PATCH', 'POST', 'PUT')
+          - row "CSRF_COOKIE_AGE 31449600" [ref=e1111]:
+            - cell "CSRF_COOKIE_AGE" [ref=e1112]
+            - cell "31449600" [ref=e1113]:
+              - generic [ref=e1114]: "31449600"
+          - row "CSRF_COOKIE_DOMAIN None" [ref=e1115]:
+            - cell "CSRF_COOKIE_DOMAIN" [ref=e1116]
+            - cell "None" [ref=e1117]:
+              - generic [ref=e1118]: None
+          - row "CSRF_COOKIE_HTTPONLY True" [ref=e1119]:
+            - cell "CSRF_COOKIE_HTTPONLY" [ref=e1120]
+            - cell "True" [ref=e1121]:
+              - generic [ref=e1122]: "True"
+          - row "CSRF_COOKIE_NAME 'csrftoken'" [ref=e1123]:
+            - cell "CSRF_COOKIE_NAME" [ref=e1124]
+            - cell "'csrftoken'" [ref=e1125]:
+              - generic [ref=e1126]: "'csrftoken'"
+          - row "CSRF_COOKIE_PATH '/'" [ref=e1127]:
+            - cell "CSRF_COOKIE_PATH" [ref=e1128]
+            - cell "'/'" [ref=e1129]:
+              - generic [ref=e1130]: "'/'"
+          - row "CSRF_COOKIE_SAMESITE 'Lax'" [ref=e1131]:
+            - cell "CSRF_COOKIE_SAMESITE" [ref=e1132]
+            - cell "'Lax'" [ref=e1133]:
+              - generic [ref=e1134]: "'Lax'"
+          - row "CSRF_COOKIE_SECURE False" [ref=e1135]:
+            - cell "CSRF_COOKIE_SECURE" [ref=e1136]
+            - cell "False" [ref=e1137]:
+              - generic [ref=e1138]: "False"
+          - row "CSRF_FAILURE_VIEW 'django.views.csrf.csrf_failure'" [ref=e1139]:
+            - cell "CSRF_FAILURE_VIEW" [ref=e1140]
+            - cell "'django.views.csrf.csrf_failure'" [ref=e1141]:
+              - generic [ref=e1142]: "'django.views.csrf.csrf_failure'"
+          - row "CSRF_HEADER_NAME 'HTTP_X_CSRFTOKEN'" [ref=e1143]:
+            - cell "CSRF_HEADER_NAME" [ref=e1144]
+            - cell "'HTTP_X_CSRFTOKEN'" [ref=e1145]:
+              - generic [ref=e1146]: "'HTTP_X_CSRFTOKEN'"
+          - row "CSRF_TRUSTED_ORIGINS ['http://0.0.0.0', 'http://localhost']" [ref=e1147]:
+            - cell "CSRF_TRUSTED_ORIGINS" [ref=e1148]
+            - cell "['http://0.0.0.0', 'http://localhost']" [ref=e1149]:
+              - generic [ref=e1150]: "['http://0.0.0.0', 'http://localhost']"
+          - row "CSRF_USE_SESSIONS False" [ref=e1151]:
+            - cell "CSRF_USE_SESSIONS" [ref=e1152]
+            - cell "False" [ref=e1153]:
+              - generic [ref=e1154]: "False"
+          - 'row "DATABASES {''default'': {''ATOMIC_REQUESTS'': False, ''AUTOCOMMIT'': True, ''CONN_HEALTH_CHECKS'': False, ''CONN_MAX_AGE'': 0, ''DISABLE_SERVER_SIDE_CURSORS'': False, ''ENGINE'': ''django.db.backends.postgresql'', ''HOST'': ''db'', ''NAME'': ''postgres'', ''OPTIONS'': {}, ''PASSWORD'': ''********************'', ''PORT'': 5432, ''TEST'': {''CHARSET'': None, ''COLLATION'': None, ''MIGRATE'': True, ''MIRROR'': None, ''NAME'': None}, ''TIME_ZONE'': None, ''USER'': ''postgres''}}" [ref=e1155]':
+            - cell "DATABASES" [ref=e1156]
+            - 'cell "{''default'': {''ATOMIC_REQUESTS'': False, ''AUTOCOMMIT'': True, ''CONN_HEALTH_CHECKS'': False, ''CONN_MAX_AGE'': 0, ''DISABLE_SERVER_SIDE_CURSORS'': False, ''ENGINE'': ''django.db.backends.postgresql'', ''HOST'': ''db'', ''NAME'': ''postgres'', ''OPTIONS'': {}, ''PASSWORD'': ''********************'', ''PORT'': 5432, ''TEST'': {''CHARSET'': None, ''COLLATION'': None, ''MIGRATE'': True, ''MIRROR'': None, ''NAME'': None}, ''TIME_ZONE'': None, ''USER'': ''postgres''}}" [ref=e1157]':
+              - generic [ref=e1158]: "{'default': {'ATOMIC_REQUESTS': False, 'AUTOCOMMIT': True, 'CONN_HEALTH_CHECKS': False, 'CONN_MAX_AGE': 0, 'DISABLE_SERVER_SIDE_CURSORS': False, 'ENGINE': 'django.db.backends.postgresql', 'HOST': 'db', 'NAME': 'postgres', 'OPTIONS': {}, 'PASSWORD': '********************', 'PORT': 5432, 'TEST': {'CHARSET': None, 'COLLATION': None, 'MIGRATE': True, 'MIRROR': None, 'NAME': None}, 'TIME_ZONE': None, 'USER': 'postgres'}}"
+          - row "DATABASE_ROUTERS []" [ref=e1159]:
+            - cell "DATABASE_ROUTERS" [ref=e1160]
+            - cell "[]" [ref=e1161]:
+              - generic [ref=e1162]: "[]"
+          - row "DATA_UPLOAD_MAX_MEMORY_SIZE 2621440" [ref=e1163]:
+            - cell "DATA_UPLOAD_MAX_MEMORY_SIZE" [ref=e1164]
+            - cell "2621440" [ref=e1165]:
+              - generic [ref=e1166]: "2621440"
+          - row "DATA_UPLOAD_MAX_NUMBER_FIELDS 1000" [ref=e1167]:
+            - cell "DATA_UPLOAD_MAX_NUMBER_FIELDS" [ref=e1168]
+            - cell "1000" [ref=e1169]:
+              - generic [ref=e1170]: "1000"
+          - row "DATA_UPLOAD_MAX_NUMBER_FILES 100" [ref=e1171]:
+            - cell "DATA_UPLOAD_MAX_NUMBER_FILES" [ref=e1172]
+            - cell "100" [ref=e1173]:
+              - generic [ref=e1174]: "100"
+          - row "DATETIME_FORMAT 'N j, Y, P'" [ref=e1175]:
+            - cell "DATETIME_FORMAT" [ref=e1176]
+            - cell "'N j, Y, P'" [ref=e1177]:
+              - generic [ref=e1178]: "'N j, Y, P'"
+          - row "DATETIME_INPUT_FORMATS ['%Y-%m-%d %H:%M:%S', '%Y-%m-%d %H:%M:%S.%f', '%Y-%m-%d %H:%M', '%m/%d/%Y %H:%M:%S', '%m/%d/%Y %H:%M:%S.%f', '%m/%d/%Y %H:%M', '%m/%d/%y %H:%M:%S', '%m/%d/%y %H:%M:%S.%f', '%m/%d/%y %H:%M']" [ref=e1179]:
+            - cell "DATETIME_INPUT_FORMATS" [ref=e1180]
+            - cell "['%Y-%m-%d %H:%M:%S', '%Y-%m-%d %H:%M:%S.%f', '%Y-%m-%d %H:%M', '%m/%d/%Y %H:%M:%S', '%m/%d/%Y %H:%M:%S.%f', '%m/%d/%Y %H:%M', '%m/%d/%y %H:%M:%S', '%m/%d/%y %H:%M:%S.%f', '%m/%d/%y %H:%M']" [ref=e1181]:
+              - generic [ref=e1182]: "['%Y-%m-%d %H:%M:%S', '%Y-%m-%d %H:%M:%S.%f', '%Y-%m-%d %H:%M', '%m/%d/%Y %H:%M:%S', '%m/%d/%Y %H:%M:%S.%f', '%m/%d/%Y %H:%M', '%m/%d/%y %H:%M:%S', '%m/%d/%y %H:%M:%S.%f', '%m/%d/%y %H:%M']"
+          - row "DATE_FORMAT 'N j, Y'" [ref=e1183]:
+            - cell "DATE_FORMAT" [ref=e1184]
+            - cell "'N j, Y'" [ref=e1185]:
+              - generic [ref=e1186]: "'N j, Y'"
+          - row "DATE_INPUT_FORMATS ['%Y-%m-%d', '%m/%d/%Y', '%m/%d/%y', '%b %d %Y', '%b %d, %Y', '%d %b %Y', '%d %b, %Y', '%B %d %Y', '%B %d, %Y', '%d %B %Y', '%d %B, %Y']" [ref=e1187]:
+            - cell "DATE_INPUT_FORMATS" [ref=e1188]
+            - cell "['%Y-%m-%d', '%m/%d/%Y', '%m/%d/%y', '%b %d %Y', '%b %d, %Y', '%d %b %Y', '%d %b, %Y', '%B %d %Y', '%B %d, %Y', '%d %B %Y', '%d %B, %Y']" [ref=e1189]:
+              - generic [ref=e1190]: "['%Y-%m-%d', '%m/%d/%Y', '%m/%d/%y', '%b %d %Y', '%b %d, %Y', '%d %b %Y', '%d %b, %Y', '%B %d %Y', '%B %d, %Y', '%d %B %Y', '%d %B, %Y']"
+          - row "DEBUG True" [ref=e1191]:
+            - cell "DEBUG" [ref=e1192]
+            - cell "True" [ref=e1193]:
+              - generic [ref=e1194]: "True"
+          - row "DEBUG_PROPAGATE_EXCEPTIONS False" [ref=e1195]:
+            - cell "DEBUG_PROPAGATE_EXCEPTIONS" [ref=e1196]
+            - cell "False" [ref=e1197]:
+              - generic [ref=e1198]: "False"
+          - row "DEBUG_TOOLBAR False" [ref=e1199]:
+            - cell "DEBUG_TOOLBAR" [ref=e1200]
+            - cell "False" [ref=e1201]:
+              - generic [ref=e1202]: "False"
+          - row "DECIMAL_SEPARATOR '.'" [ref=e1203]:
+            - cell "DECIMAL_SEPARATOR" [ref=e1204]
+            - cell "'.'" [ref=e1205]:
+              - generic [ref=e1206]: "'.'"
+          - row "DEFAULT_AUTO_FIELD 'django.db.models.AutoField'" [ref=e1207]:
+            - cell "DEFAULT_AUTO_FIELD" [ref=e1208]
+            - cell "'django.db.models.AutoField'" [ref=e1209]:
+              - generic [ref=e1210]: "'django.db.models.AutoField'"
+          - row "DEFAULT_CHARSET 'utf-8'" [ref=e1211]:
+            - cell "DEFAULT_CHARSET" [ref=e1212]
+            - cell "'utf-8'" [ref=e1213]:
+              - generic [ref=e1214]: "'utf-8'"
+          - row "DEFAULT_EXCEPTION_REPORTER 'django.views.debug.ExceptionReporter'" [ref=e1215]:
+            - cell "DEFAULT_EXCEPTION_REPORTER" [ref=e1216]
+            - cell "'django.views.debug.ExceptionReporter'" [ref=e1217]:
+              - generic [ref=e1218]: "'django.views.debug.ExceptionReporter'"
+          - row "DEFAULT_EXCEPTION_REPORTER_FILTER 'django.views.debug.SafeExceptionReporterFilter'" [ref=e1219]:
+            - cell "DEFAULT_EXCEPTION_REPORTER_FILTER" [ref=e1220]
+            - cell "'django.views.debug.SafeExceptionReporterFilter'" [ref=e1221]:
+              - generic [ref=e1222]: "'django.views.debug.SafeExceptionReporterFilter'"
+          - row "DEFAULT_FROM_EMAIL 'boost@cppalliance.org'" [ref=e1223]:
+            - cell "DEFAULT_FROM_EMAIL" [ref=e1224]
+            - cell "'boost@cppalliance.org'" [ref=e1225]:
+              - generic [ref=e1226]: "'boost@cppalliance.org'"
+          - row "DEFAULT_INDEX_TABLESPACE ''" [ref=e1227]:
+            - cell "DEFAULT_INDEX_TABLESPACE" [ref=e1228]
+            - cell "''" [ref=e1229]:
+              - generic [ref=e1230]: "''"
+          - row "DEFAULT_TABLESPACE ''" [ref=e1231]:
+            - cell "DEFAULT_TABLESPACE" [ref=e1232]
+            - cell "''" [ref=e1233]:
+              - generic [ref=e1234]: "''"
+          - row "DISALLOWED_USER_AGENTS []" [ref=e1235]:
+            - cell "DISALLOWED_USER_AGENTS" [ref=e1236]
+            - cell "[]" [ref=e1237]:
+              - generic [ref=e1238]: "[]"
+          - row "EMAIL_BACKEND 'django.core.mail.backends.smtp.EmailBackend'" [ref=e1239]:
+            - cell "EMAIL_BACKEND" [ref=e1240]
+            - cell "'django.core.mail.backends.smtp.EmailBackend'" [ref=e1241]:
+              - generic [ref=e1242]: "'django.core.mail.backends.smtp.EmailBackend'"
+          - row "EMAIL_HOST 'maildev'" [ref=e1243]:
+            - cell "EMAIL_HOST" [ref=e1244]
+            - cell "'maildev'" [ref=e1245]:
+              - generic [ref=e1246]: "'maildev'"
+          - row "EMAIL_HOST_PASSWORD '********************'" [ref=e1247]:
+            - cell "EMAIL_HOST_PASSWORD" [ref=e1248]
+            - cell "'********************'" [ref=e1249]:
+              - generic [ref=e1250]: "'********************'"
+          - row "EMAIL_HOST_USER ''" [ref=e1251]:
+            - cell "EMAIL_HOST_USER" [ref=e1252]
+            - cell "''" [ref=e1253]:
+              - generic [ref=e1254]: "''"
+          - row "EMAIL_PORT 1025" [ref=e1255]:
+            - cell "EMAIL_PORT" [ref=e1256]
+            - cell "1025" [ref=e1257]:
+              - generic [ref=e1258]: "1025"
+          - row "EMAIL_SSL_CERTFILE None" [ref=e1259]:
+            - cell "EMAIL_SSL_CERTFILE" [ref=e1260]
+            - cell "None" [ref=e1261]:
+              - generic [ref=e1262]: None
+          - row "EMAIL_SSL_KEYFILE '********************'" [ref=e1263]:
+            - cell "EMAIL_SSL_KEYFILE" [ref=e1264]
+            - cell "'********************'" [ref=e1265]:
+              - generic [ref=e1266]: "'********************'"
+          - row "EMAIL_SUBJECT_PREFIX '[Django] '" [ref=e1267]:
+            - cell "EMAIL_SUBJECT_PREFIX" [ref=e1268]
+            - cell "'[Django] '" [ref=e1269]:
+              - generic [ref=e1270]: "'[Django] '"
+          - row "EMAIL_TIMEOUT None" [ref=e1271]:
+            - cell "EMAIL_TIMEOUT" [ref=e1272]
+            - cell "None" [ref=e1273]:
+              - generic [ref=e1274]: None
+          - row "EMAIL_USE_LOCALTIME False" [ref=e1275]:
+            - cell "EMAIL_USE_LOCALTIME" [ref=e1276]
+            - cell "False" [ref=e1277]:
+              - generic [ref=e1278]: "False"
+          - row "EMAIL_USE_SSL False" [ref=e1279]:
+            - cell "EMAIL_USE_SSL" [ref=e1280]
+            - cell "False" [ref=e1281]:
+              - generic [ref=e1282]: "False"
+          - row "EMAIL_USE_TLS False" [ref=e1283]:
+            - cell "EMAIL_USE_TLS" [ref=e1284]
+            - cell "False" [ref=e1285]:
+              - generic [ref=e1286]: "False"
+          - row "ENABLE_DB_CACHE True" [ref=e1287]:
+            - cell "ENABLE_DB_CACHE" [ref=e1288]
+            - cell "True" [ref=e1289]:
+              - generic [ref=e1290]: "True"
+          - row "ENVIRONMENT_COLOR '#718096'" [ref=e1291]:
+            - cell "ENVIRONMENT_COLOR" [ref=e1292]
+            - cell "'#718096'" [ref=e1293]:
+              - generic [ref=e1294]: "'#718096'"
+          - row "ENVIRONMENT_NAME 'Unknown Environment - 0.0.523-586-g7b375b5'" [ref=e1295]:
+            - cell "ENVIRONMENT_NAME" [ref=e1296]
+            - cell "'Unknown Environment - 0.0.523-586-g7b375b5'" [ref=e1297]:
+              - generic [ref=e1298]: "'Unknown Environment - 0.0.523-586-g7b375b5'"
+          - row "ENV_NAME 'Unknown Environment'" [ref=e1299]:
+            - cell "ENV_NAME" [ref=e1300]
+            - cell "'Unknown Environment'" [ref=e1301]:
+              - generic [ref=e1302]: "'Unknown Environment'"
+          - row "EVENTS_CACHE_KEY '********************'" [ref=e1303]:
+            - cell "EVENTS_CACHE_KEY" [ref=e1304]
+            - cell "'********************'" [ref=e1305]:
+              - generic [ref=e1306]: "'********************'"
+          - row "EVENTS_CACHE_TIMEOUT 300" [ref=e1307]:
+            - cell "EVENTS_CACHE_TIMEOUT" [ref=e1308]
+            - cell "300" [ref=e1309]:
+              - generic [ref=e1310]: "300"
+          - row "FASTLY_API_TOKEN '********************'" [ref=e1311]:
+            - cell "FASTLY_API_TOKEN" [ref=e1312]
+            - cell "'********************'" [ref=e1313]:
+              - generic [ref=e1314]: "'********************'"
+          - row "FASTLY_SERVICE 'empty'" [ref=e1315]:
+            - cell "FASTLY_SERVICE" [ref=e1316]
+            - cell "'empty'" [ref=e1317]:
+              - generic [ref=e1318]: "'empty'"
+          - row "FASTLY_SERVICE2 'empty'" [ref=e1319]:
+            - cell "FASTLY_SERVICE2" [ref=e1320]
+            - cell "'empty'" [ref=e1321]:
+              - generic [ref=e1322]: "'empty'"
+          - row "FILE_UPLOAD_DIRECTORY_PERMISSIONS None" [ref=e1323]:
+            - cell "FILE_UPLOAD_DIRECTORY_PERMISSIONS" [ref=e1324]
+            - cell "None" [ref=e1325]:
+              - generic [ref=e1326]: None
+          - row "FILE_UPLOAD_HANDLERS ['django.core.files.uploadhandler.MemoryFileUploadHandler', 'django.core.files.uploadhandler.TemporaryFileUploadHandler']" [ref=e1327]:
+            - cell "FILE_UPLOAD_HANDLERS" [ref=e1328]
+            - cell "['django.core.files.uploadhandler.MemoryFileUploadHandler', 'django.core.files.uploadhandler.TemporaryFileUploadHandler']" [ref=e1329]:
+              - generic [ref=e1330]: "['django.core.files.uploadhandler.MemoryFileUploadHandler', 'django.core.files.uploadhandler.TemporaryFileUploadHandler']"
+          - row "FILE_UPLOAD_MAX_MEMORY_SIZE 2621440" [ref=e1331]:
+            - cell "FILE_UPLOAD_MAX_MEMORY_SIZE" [ref=e1332]
+            - cell "2621440" [ref=e1333]:
+              - generic [ref=e1334]: "2621440"
+          - row "FILE_UPLOAD_PERMISSIONS 420" [ref=e1335]:
+            - cell "FILE_UPLOAD_PERMISSIONS" [ref=e1336]
+            - cell "420" [ref=e1337]:
+              - generic [ref=e1338]: "420"
+          - row "FILE_UPLOAD_TEMP_DIR None" [ref=e1339]:
+            - cell "FILE_UPLOAD_TEMP_DIR" [ref=e1340]
+            - cell "None" [ref=e1341]:
+              - generic [ref=e1342]: None
+          - row "FIRST_DAY_OF_WEEK 0" [ref=e1343]:
+            - cell "FIRST_DAY_OF_WEEK" [ref=e1344]
+            - cell "0" [ref=e1345]:
+              - generic [ref=e1346]: "0"
+          - row "FIXTURE_DIRS []" [ref=e1347]:
+            - cell "FIXTURE_DIRS" [ref=e1348]
+            - cell "[]" [ref=e1349]:
+              - generic [ref=e1350]: "[]"
+          - row "FORCE_SCRIPT_NAME None" [ref=e1351]:
+            - cell "FORCE_SCRIPT_NAME" [ref=e1352]
+            - cell "None" [ref=e1353]:
+              - generic [ref=e1354]: None
+          - row "FORMAT_MODULE_PATH None" [ref=e1355]:
+            - cell "FORMAT_MODULE_PATH" [ref=e1356]
+            - cell "None" [ref=e1357]:
+              - generic [ref=e1358]: None
+          - row "FORMS_URLFIELD_ASSUME_HTTPS False" [ref=e1359]:
+            - cell "FORMS_URLFIELD_ASSUME_HTTPS" [ref=e1360]
+            - cell "False" [ref=e1361]:
+              - generic [ref=e1362]: "False"
+          - row "FORM_RENDERER 'django.forms.renderers.DjangoTemplates'" [ref=e1363]:
+            - cell "FORM_RENDERER" [ref=e1364]
+            - cell "'django.forms.renderers.DjangoTemplates'" [ref=e1365]:
+              - generic [ref=e1366]: "'django.forms.renderers.DjangoTemplates'"
+          - row "GITHUB_TOKEN '********************'" [ref=e1367]:
+            - cell "GITHUB_TOKEN" [ref=e1368]
+            - cell "'********************'" [ref=e1369]:
+              - generic [ref=e1370]: "'********************'"
+          - 'row "HAYSTACK_CONNECTIONS {''default'': {''ENGINE'': ''haystack.backends.simple_backend.SimpleEngine''}}" [ref=e1371]':
+            - cell "HAYSTACK_CONNECTIONS" [ref=e1372]
+            - 'cell "{''default'': {''ENGINE'': ''haystack.backends.simple_backend.SimpleEngine''}}" [ref=e1373]':
+              - generic [ref=e1374]: "{'default': {'ENGINE': 'haystack.backends.simple_backend.SimpleEngine'}}"
+          - row "HYPERKITTY_DATABASE_NAME ''" [ref=e1375]:
+            - cell "HYPERKITTY_DATABASE_NAME" [ref=e1376]
+            - cell "''" [ref=e1377]:
+              - generic [ref=e1378]: "''"
+          - row "HYPERKITTY_DATABASE_URL ''" [ref=e1379]:
+            - cell "HYPERKITTY_DATABASE_URL" [ref=e1380]
+            - cell "''" [ref=e1381]:
+              - generic [ref=e1382]: "''"
+          - row "IGNORABLE_404_URLS []" [ref=e1383]:
+            - cell "IGNORABLE_404_URLS" [ref=e1384]
+            - cell "[]" [ref=e1385]:
+              - generic [ref=e1386]: "[]"
+          - row "IMAGEKIT_CACHEFILE_DIR 'CACHE/images'" [ref=e1387]:
+            - cell "IMAGEKIT_CACHEFILE_DIR" [ref=e1388]
+            - cell "'CACHE/images'" [ref=e1389]:
+              - generic [ref=e1390]: "'CACHE/images'"
+          - row "IMAGEKIT_CACHEFILE_NAMER 'imagekit.cachefiles.namers.hash'" [ref=e1391]:
+            - cell "IMAGEKIT_CACHEFILE_NAMER" [ref=e1392]
+            - cell "'imagekit.cachefiles.namers.hash'" [ref=e1393]:
+              - generic [ref=e1394]: "'imagekit.cachefiles.namers.hash'"
+          - row "IMAGEKIT_CACHE_BACKEND 'default'" [ref=e1395]:
+            - cell "IMAGEKIT_CACHE_BACKEND" [ref=e1396]
+            - cell "'default'" [ref=e1397]:
+              - generic [ref=e1398]: "'default'"
+          - row "IMAGEKIT_CACHE_PREFIX 'imagekit:'" [ref=e1399]:
+            - cell "IMAGEKIT_CACHE_PREFIX" [ref=e1400]
+            - cell "'imagekit:'" [ref=e1401]:
+              - generic [ref=e1402]: "'imagekit:'"
+          - row "IMAGEKIT_CACHE_TIMEOUT 300" [ref=e1403]:
+            - cell "IMAGEKIT_CACHE_TIMEOUT" [ref=e1404]
+            - cell "300" [ref=e1405]:
+              - generic [ref=e1406]: "300"
+          - row "IMAGEKIT_DEFAULT_CACHEFILE_BACKEND 'imagekit.cachefiles.backends.Simple'" [ref=e1407]:
+            - cell "IMAGEKIT_DEFAULT_CACHEFILE_BACKEND" [ref=e1408]
+            - cell "'imagekit.cachefiles.backends.Simple'" [ref=e1409]:
+              - generic [ref=e1410]: "'imagekit.cachefiles.backends.Simple'"
+          - row "IMAGEKIT_DEFAULT_CACHEFILE_STRATEGY 'imagekit.cachefiles.strategies.JustInTime'" [ref=e1411]:
+            - cell "IMAGEKIT_DEFAULT_CACHEFILE_STRATEGY" [ref=e1412]
+            - cell "'imagekit.cachefiles.strategies.JustInTime'" [ref=e1413]:
+              - generic [ref=e1414]: "'imagekit.cachefiles.strategies.JustInTime'"
+          - row "IMAGEKIT_DEFAULT_FILE_STORAGE 'default'" [ref=e1415]:
+            - cell "IMAGEKIT_DEFAULT_FILE_STORAGE" [ref=e1416]
+            - cell "'default'" [ref=e1417]:
+              - generic [ref=e1418]: "'default'"
+          - row "IMAGEKIT_SPEC_CACHEFILE_NAMER 'imagekit.cachefiles.namers.source_name_as_path'" [ref=e1419]:
+            - cell "IMAGEKIT_SPEC_CACHEFILE_NAMER" [ref=e1420]
+            - cell "'imagekit.cachefiles.namers.source_name_as_path'" [ref=e1421]:
+              - generic [ref=e1422]: "'imagekit.cachefiles.namers.source_name_as_path'"
+          - row "IMAGEKIT_USE_MEMCACHED_SAFE_CACHE_KEY '********************'" [ref=e1423]:
+            - cell "IMAGEKIT_USE_MEMCACHED_SAFE_CACHE_KEY" [ref=e1424]
+            - cell "'********************'" [ref=e1425]:
+              - generic [ref=e1426]: "'********************'"
+          - row "IMAGE_TAG '0.0.523-586-g7b375b5'" [ref=e1427]:
+            - cell "IMAGE_TAG" [ref=e1428]
+            - cell "'0.0.523-586-g7b375b5'" [ref=e1429]:
+              - generic [ref=e1430]: "'0.0.523-586-g7b375b5'"
+          - row "INSTALLED_APPS ['django_admin_env_notice', 'django.contrib.admin', 'django.contrib.auth', 'django.contrib.contenttypes', 'django.contrib.humanize', 'django.contrib.sessions', 'django.contrib.messages', 'django.contrib.staticfiles', 'django.contrib.sites', 'django.contrib.postgres', 'anymail', 'rest_framework', 'corsheaders', 'django_extensions', 'health_check', 'health_check.db', 'health_check.contrib.celery', 'imagekit', 'oauth2_provider', 'allauth', 'allauth.account', 'allauth.socialaccount', 'allauth.socialaccount.providers.github', 'allauth.socialaccount.providers.google', 'mptt', 'haystack', 'widget_tweaks', 'ak', 'users', 'versions', 'libraries', 'mailing_list', 'news', 'reports', 'core', 'slack', 'asciidoctor_sandbox']" [ref=e1431]:
+            - cell "INSTALLED_APPS" [ref=e1432]
+            - cell "['django_admin_env_notice', 'django.contrib.admin', 'django.contrib.auth', 'django.contrib.contenttypes', 'django.contrib.humanize', 'django.contrib.sessions', 'django.contrib.messages', 'django.contrib.staticfiles', 'django.contrib.sites', 'django.contrib.postgres', 'anymail', 'rest_framework', 'corsheaders', 'django_extensions', 'health_check', 'health_check.db', 'health_check.contrib.celery', 'imagekit', 'oauth2_provider', 'allauth', 'allauth.account', 'allauth.socialaccount', 'allauth.socialaccount.providers.github', 'allauth.socialaccount.providers.google', 'mptt', 'haystack', 'widget_tweaks', 'ak', 'users', 'versions', 'libraries', 'mailing_list', 'news', 'reports', 'core', 'slack', 'asciidoctor_sandbox']" [ref=e1433]:
+              - generic [ref=e1434]: "['django_admin_env_notice', 'django.contrib.admin', 'django.contrib.auth', 'django.contrib.contenttypes', 'django.contrib.humanize', 'django.contrib.sessions', 'django.contrib.messages', 'django.contrib.staticfiles', 'django.contrib.sites', 'django.contrib.postgres', 'anymail', 'rest_framework', 'corsheaders', 'django_extensions', 'health_check', 'health_check.db', 'health_check.contrib.celery', 'imagekit', 'oauth2_provider', 'allauth', 'allauth.account', 'allauth.socialaccount', 'allauth.socialaccount.providers.github', 'allauth.socialaccount.providers.google', 'mptt', 'haystack', 'widget_tweaks', 'ak', 'users', 'versions', 'libraries', 'mailing_list', 'news', 'reports', 'core', 'slack', 'asciidoctor_sandbox']"
+          - row "INTERNAL_IPS []" [ref=e1435]:
+            - cell "INTERNAL_IPS" [ref=e1436]
+            - cell "[]" [ref=e1437]:
+              - generic [ref=e1438]: "[]"
+          - row "JDOODLE_API_CLIENT_ID '********************'" [ref=e1439]:
+            - cell "JDOODLE_API_CLIENT_ID" [ref=e1440]
+            - cell "'********************'" [ref=e1441]:
+              - generic [ref=e1442]: "'********************'"
+          - row "JDOODLE_API_CLIENT_SECRET '********************'" [ref=e1443]:
+            - cell "JDOODLE_API_CLIENT_SECRET" [ref=e1444]
+            - cell "'********************'" [ref=e1445]:
+              - generic [ref=e1446]: "'********************'"
+          - row [ref=e1447]:
+            - cell "LANGUAGES" [ref=e1448]
+            - cell [ref=e1449]:
+              - generic [ref=e1450]: "[('af', 'Afrikaans'), ('ar', 'Arabic'), ('ar-dz', 'Algerian Arabic'), ('ast', 'Asturian'), ('az', 'Azerbaijani'), ('bg', 'Bulgarian'), ('be', 'Belarusian'), ('bn', 'Bengali'), ('br', 'Breton'), ('bs', 'Bosnian'), ('ca', 'Catalan'), ('ckb', 'Central Kurdish (Sorani)'), ('cs', 'Czech'), ('cy', 'Welsh'), ('da', 'Danish'), ('de', 'German'), ('dsb', 'Lower Sorbian'), ('el', 'Greek'), ('en', 'English'), ('en-au', 'Australian English'), ('en-gb', 'British English'), ('eo', 'Esperanto'), ('es', 'Spanish'), ('es-ar', 'Argentinian Spanish'), ('es-co', 'Colombian Spanish'), ('es-mx', 'Mexican Spanish'), ('es-ni', 'Nicaraguan Spanish'), ('es-ve', 'Venezuelan Spanish'), ('et', 'Estonian'), ('eu', 'Basque'), ('fa', 'Persian'), ('fi', 'Finnish'), ('fr', 'French'), ('fy', 'Frisian'), ('ga', 'Irish'), ('gd', 'Scottish Gaelic'), ('gl', 'Galician'), ('he', 'Hebrew'), ('hi', 'Hindi'), ('hr', 'Croatian'), ('hsb', 'Upper Sorbian'), ('hu', 'Hungarian'), ('hy', 'Armenian'), ('ia', 'Interlingua'), ('id', 'Indonesian'), ('ig', 'Igbo'), ('io', 'Ido'), ('is', 'Icelandic'), ('it', 'Italian'), ('ja', 'Japanese'), ('ka', 'Georgian'), ('kab', 'Kabyle'), ('kk', 'Kazakh'), ('km', 'Khmer'), ('kn', 'Kannada'), ('ko', 'Korean'), ('ky', 'Kyrgyz'), ('lb', 'Luxembourgish'), ('lt', 'Lithuanian'), ('lv', 'Latvian'), ('mk', 'Macedonian'), ('ml', 'Malayalam'), ('mn', 'Mongolian'), ('mr', 'Marathi'), ('ms', 'Malay'), ('my', 'Burmese'), ('nb', 'Norwegian Bokmål'), ('ne', 'Nepali'), ('nl', 'Dutch'), ('nn', 'Norwegian Nynorsk'), ('os', 'Ossetic'), ('pa', 'Punjabi'), ('pl', 'Polish'), ('pt', 'Portuguese'), ('pt-br', 'Brazilian Portuguese'), ('ro', 'Romanian'), ('ru', 'Russian'), ('sk', 'Slovak'), ('sl', 'Slovenian'), ('sq', 'Albanian'), ('sr', 'Serbian'), ('sr-latn', 'Serbian Latin'), ('sv', 'Swedish'), ('sw', 'Swahili'), ('ta', 'Tamil'), ('te', 'Telugu'), ('tg', 'Tajik'), ('th', 'Thai'), ('tk', 'Turkmen'), ('tr', 'Turkish'), ('tt', 'Tatar'), ('udm', 'Udmurt'), ('ug', 'Uyghur'), ('uk', 'Ukrainian'), ('ur', 'Urdu'), ('uz', 'Uzbek'), ('vi', 'Vietnamese'), ('zh-hans', 'Simplified Chinese'), ('zh-hant', 'Traditional Chinese')]"
+          - row "LANGUAGES_BIDI ['he', 'ar', 'ar-dz', 'ckb', 'fa', 'ug', 'ur']" [ref=e1451]:
+            - cell "LANGUAGES_BIDI" [ref=e1452]
+            - cell "['he', 'ar', 'ar-dz', 'ckb', 'fa', 'ug', 'ur']" [ref=e1453]:
+              - generic [ref=e1454]: "['he', 'ar', 'ar-dz', 'ckb', 'fa', 'ug', 'ur']"
+          - row "LANGUAGE_CODE 'en-us'" [ref=e1455]:
+            - cell "LANGUAGE_CODE" [ref=e1456]
+            - cell "'en-us'" [ref=e1457]:
+              - generic [ref=e1458]: "'en-us'"
+          - row "LANGUAGE_COOKIE_AGE None" [ref=e1459]:
+            - cell "LANGUAGE_COOKIE_AGE" [ref=e1460]
+            - cell "None" [ref=e1461]:
+              - generic [ref=e1462]: None
+          - row "LANGUAGE_COOKIE_DOMAIN None" [ref=e1463]:
+            - cell "LANGUAGE_COOKIE_DOMAIN" [ref=e1464]
+            - cell "None" [ref=e1465]:
+              - generic [ref=e1466]: None
+          - row "LANGUAGE_COOKIE_HTTPONLY False" [ref=e1467]:
+            - cell "LANGUAGE_COOKIE_HTTPONLY" [ref=e1468]
+            - cell "False" [ref=e1469]:
+              - generic [ref=e1470]: "False"
+          - row "LANGUAGE_COOKIE_NAME 'django_language'" [ref=e1471]:
+            - cell "LANGUAGE_COOKIE_NAME" [ref=e1472]
+            - cell "'django_language'" [ref=e1473]:
+              - generic [ref=e1474]: "'django_language'"
+          - row "LANGUAGE_COOKIE_PATH '/'" [ref=e1475]:
+            - cell "LANGUAGE_COOKIE_PATH" [ref=e1476]
+            - cell "'/'" [ref=e1477]:
+              - generic [ref=e1478]: "'/'"
+          - row "LANGUAGE_COOKIE_SAMESITE None" [ref=e1479]:
+            - cell "LANGUAGE_COOKIE_SAMESITE" [ref=e1480]
+            - cell "None" [ref=e1481]:
+              - generic [ref=e1482]: None
+          - row "LANGUAGE_COOKIE_SECURE False" [ref=e1483]:
+            - cell "LANGUAGE_COOKIE_SECURE" [ref=e1484]
+            - cell "False" [ref=e1485]:
+              - generic [ref=e1486]: "False"
+          - row "LOCALE_PATHS []" [ref=e1487]:
+            - cell "LOCALE_PATHS" [ref=e1488]
+            - cell "[]" [ref=e1489]:
+              - generic [ref=e1490]: "[]"
+          - row "LOCAL_DEVELOPMENT True" [ref=e1491]:
+            - cell "LOCAL_DEVELOPMENT" [ref=e1492]
+            - cell "True" [ref=e1493]:
+              - generic [ref=e1494]: "True"
+          - 'row "LOGGING {}" [ref=e1495]':
+            - cell "LOGGING" [ref=e1496]
+            - 'cell "{}" [ref=e1497]':
+              - generic [ref=e1498]: "{}"
+          - row "LOGGING_CONFIG 'logging.config.dictConfig'" [ref=e1499]:
+            - cell "LOGGING_CONFIG" [ref=e1500]
+            - cell "'logging.config.dictConfig'" [ref=e1501]:
+              - generic [ref=e1502]: "'logging.config.dictConfig'"
+          - row "LOGIN_REDIRECT_URL 'home'" [ref=e1503]:
+            - cell "LOGIN_REDIRECT_URL" [ref=e1504]
+            - cell "'home'" [ref=e1505]:
+              - generic [ref=e1506]: "'home'"
+          - row "LOGIN_URL '/accounts/login/'" [ref=e1507]:
+            - cell "LOGIN_URL" [ref=e1508]
+            - cell "'/accounts/login/'" [ref=e1509]:
+              - generic [ref=e1510]: "'/accounts/login/'"
+          - row "LOGOUT_REDIRECT_URL None" [ref=e1511]:
+            - cell "LOGOUT_REDIRECT_URL" [ref=e1512]
+            - cell "None" [ref=e1513]:
+              - generic [ref=e1514]: None
+          - row "MAILMAN_CORE_DATABASE 'unknown'" [ref=e1515]:
+            - cell "MAILMAN_CORE_DATABASE" [ref=e1516]
+            - cell "'unknown'" [ref=e1517]:
+              - generic [ref=e1518]: "'unknown'"
+          - row "MANAGERS []" [ref=e1519]:
+            - cell "MANAGERS" [ref=e1520]
+            - cell "[]" [ref=e1521]:
+              - generic [ref=e1522]: "[]"
+          - row "MAXIMUM_BOOST_DOCS_VERSION 'boost-1.30.2'" [ref=e1523]:
+            - cell "MAXIMUM_BOOST_DOCS_VERSION" [ref=e1524]
+            - cell "'boost-1.30.2'" [ref=e1525]:
+              - generic [ref=e1526]: "'boost-1.30.2'"
+          - row "MEDIA_ROOT '/code/media'" [ref=e1527]:
+            - cell "MEDIA_ROOT" [ref=e1528]
+            - cell "'/code/media'" [ref=e1529]:
+              - generic [ref=e1530]: "'/code/media'"
+          - row "MEDIA_URL '/media/'" [ref=e1531]:
+            - cell "MEDIA_URL" [ref=e1532]
+            - cell "'/media/'" [ref=e1533]:
+              - generic [ref=e1534]: "'/media/'"
+          - row "MESSAGE_STORAGE 'django.contrib.messages.storage.fallback.FallbackStorage'" [ref=e1535]:
+            - cell "MESSAGE_STORAGE" [ref=e1536]
+            - cell "'django.contrib.messages.storage.fallback.FallbackStorage'" [ref=e1537]:
+              - generic [ref=e1538]: "'django.contrib.messages.storage.fallback.FallbackStorage'"
+          - row "MIDDLEWARE ['corsheaders.middleware.CorsMiddleware', 'tracer.middleware.RequestID', 'django.middleware.security.SecurityMiddleware', 'django.contrib.sessions.middleware.SessionMiddleware', 'django.middleware.common.CommonMiddleware', 'django.middleware.csrf.CsrfViewMiddleware', 'django.contrib.auth.middleware.AuthenticationMiddleware', 'django.contrib.messages.middleware.MessageMiddleware', 'django.middleware.clickjacking.XFrameOptionsMiddleware', 'allauth.account.middleware.AccountMiddleware', 'oauth2_provider.middleware.OAuth2TokenMiddleware', 'whitenoise.middleware.WhiteNoiseMiddleware']" [ref=e1539]:
+            - cell "MIDDLEWARE" [ref=e1540]
+            - cell "['corsheaders.middleware.CorsMiddleware', 'tracer.middleware.RequestID', 'django.middleware.security.SecurityMiddleware', 'django.contrib.sessions.middleware.SessionMiddleware', 'django.middleware.common.CommonMiddleware', 'django.middleware.csrf.CsrfViewMiddleware', 'django.contrib.auth.middleware.AuthenticationMiddleware', 'django.contrib.messages.middleware.MessageMiddleware', 'django.middleware.clickjacking.XFrameOptionsMiddleware', 'allauth.account.middleware.AccountMiddleware', 'oauth2_provider.middleware.OAuth2TokenMiddleware', 'whitenoise.middleware.WhiteNoiseMiddleware']" [ref=e1541]:
+              - generic [ref=e1542]: "['corsheaders.middleware.CorsMiddleware', 'tracer.middleware.RequestID', 'django.middleware.security.SecurityMiddleware', 'django.contrib.sessions.middleware.SessionMiddleware', 'django.middleware.common.CommonMiddleware', 'django.middleware.csrf.CsrfViewMiddleware', 'django.contrib.auth.middleware.AuthenticationMiddleware', 'django.contrib.messages.middleware.MessageMiddleware', 'django.middleware.clickjacking.XFrameOptionsMiddleware', 'allauth.account.middleware.AccountMiddleware', 'oauth2_provider.middleware.OAuth2TokenMiddleware', 'whitenoise.middleware.WhiteNoiseMiddleware']"
+          - 'row "MIGRATION_MODULES {}" [ref=e1543]':
+            - cell "MIGRATION_MODULES" [ref=e1544]
+            - 'cell "{}" [ref=e1545]':
+              - generic [ref=e1546]: "{}"
+          - row "MINIMUM_BOOST_VERSION '1.16.1'" [ref=e1547]:
+            - cell "MINIMUM_BOOST_VERSION" [ref=e1548]
+            - cell "'1.16.1'" [ref=e1549]:
+              - generic [ref=e1550]: "'1.16.1'"
+          - row "MIN_ARCHIVES_RELEASE 'boost-1.63.0'" [ref=e1551]:
+            - cell "MIN_ARCHIVES_RELEASE" [ref=e1552]
+            - cell "'boost-1.63.0'" [ref=e1553]:
+              - generic [ref=e1554]: "'boost-1.63.0'"
+          - row "MIN_ARTIFACTORY_RELEASE 'boost-1.63.0'" [ref=e1555]:
+            - cell "MIN_ARTIFACTORY_RELEASE" [ref=e1556]
+            - cell "'boost-1.63.0'" [ref=e1557]:
+              - generic [ref=e1558]: "'boost-1.63.0'"
+          - row "MONTH_DAY_FORMAT 'F j'" [ref=e1559]:
+            - cell "MONTH_DAY_FORMAT" [ref=e1560]
+            - cell "'F j'" [ref=e1561]:
+              - generic [ref=e1562]: "'F j'"
+          - row "NEWS_MODERATION_ALLOWLIST []" [ref=e1563]:
+            - cell "NEWS_MODERATION_ALLOWLIST" [ref=e1564]
+            - cell "[]" [ref=e1565]:
+              - generic [ref=e1566]: "[]"
+          - row "NUMBER_GROUPING 0" [ref=e1567]:
+            - cell "NUMBER_GROUPING" [ref=e1568]
+            - cell "0" [ref=e1569]:
+              - generic [ref=e1570]: "0"
+          - row "OAUTH_APP_NAME '********************'" [ref=e1571]:
+            - cell "OAUTH_APP_NAME" [ref=e1572]
+            - cell "'********************'" [ref=e1573]:
+              - generic [ref=e1574]: "'********************'"
+          - row "OPENROUTER_API_KEY '********************'" [ref=e1575]:
+            - cell "OPENROUTER_API_KEY" [ref=e1576]
+            - cell "'********************'" [ref=e1577]:
+              - generic [ref=e1578]: "'********************'"
+          - row "OPENROUTER_URL 'https://openrouter.ai/api/v1'" [ref=e1579]:
+            - cell "OPENROUTER_URL" [ref=e1580]
+            - cell "'https://openrouter.ai/api/v1'" [ref=e1581]:
+              - generic [ref=e1582]: "'https://openrouter.ai/api/v1'"
+          - row "PASSWORD_HASHERS '********************'" [ref=e1583]:
+            - cell "PASSWORD_HASHERS" [ref=e1584]
+            - cell "'********************'" [ref=e1585]:
+              - generic [ref=e1586]: "'********************'"
+          - row "PASSWORD_RESET_TIMEOUT '********************'" [ref=e1587]:
+            - cell "PASSWORD_RESET_TIMEOUT" [ref=e1588]
+            - cell "'********************'" [ref=e1589]:
+              - generic [ref=e1590]: "'********************'"
+          - row "PREPEND_WWW False" [ref=e1591]:
+            - cell "PREPEND_WWW" [ref=e1592]
+            - cell "False" [ref=e1593]:
+              - generic [ref=e1594]: "False"
+          - row "READ_DOT_ENV_FILE False" [ref=e1595]:
+            - cell "READ_DOT_ENV_FILE" [ref=e1596]
+            - cell "False" [ref=e1597]:
+              - generic [ref=e1598]: "False"
+          - row "REDIS_HOST 'redis'" [ref=e1599]:
+            - cell "REDIS_HOST" [ref=e1600]
+            - cell "'redis'" [ref=e1601]:
+              - generic [ref=e1602]: "'redis'"
+          - row "RELEASE_NOTES_IN_PROGRESS_CACHE_KEY '********************'" [ref=e1603]:
+            - cell "RELEASE_NOTES_IN_PROGRESS_CACHE_KEY" [ref=e1604]
+            - cell "'********************'" [ref=e1605]:
+              - generic [ref=e1606]: "'********************'"
+          - row "RELEASE_NOTES_IN_PROGRESS_URL 'https://raw.githubusercontent.com/boostorg/website/master/users/history/in_progress.html'" [ref=e1607]:
+            - cell "RELEASE_NOTES_IN_PROGRESS_URL" [ref=e1608]
+            - cell "'https://raw.githubusercontent.com/boostorg/website/master/users/history/in_progress.html'" [ref=e1609]:
+              - generic [ref=e1610]: "'https://raw.githubusercontent.com/boostorg/website/master/users/history/in_progress.html'"
+          - row "ROOT_URLCONF 'config.urls'" [ref=e1611]:
+            - cell "ROOT_URLCONF" [ref=e1612]
+            - cell "'config.urls'" [ref=e1613]:
+              - generic [ref=e1614]: "'config.urls'"
+          - row "SECRET_KEY '********************'" [ref=e1615]:
+            - cell "SECRET_KEY" [ref=e1616]
+            - cell "'********************'" [ref=e1617]:
+              - generic [ref=e1618]: "'********************'"
+          - row "SECRET_KEY_FALLBACKS '********************'" [ref=e1619]:
+            - cell "SECRET_KEY_FALLBACKS" [ref=e1620]
+            - cell "'********************'" [ref=e1621]:
+              - generic [ref=e1622]: "'********************'"
+          - row "SECURE_CONTENT_TYPE_NOSNIFF True" [ref=e1623]:
+            - cell "SECURE_CONTENT_TYPE_NOSNIFF" [ref=e1624]
+            - cell "True" [ref=e1625]:
+              - generic [ref=e1626]: "True"
+          - row "SECURE_CROSS_ORIGIN_OPENER_POLICY 'same-origin'" [ref=e1627]:
+            - cell "SECURE_CROSS_ORIGIN_OPENER_POLICY" [ref=e1628]
+            - cell "'same-origin'" [ref=e1629]:
+              - generic [ref=e1630]: "'same-origin'"
+          - row "SECURE_HSTS_INCLUDE_SUBDOMAINS False" [ref=e1631]:
+            - cell "SECURE_HSTS_INCLUDE_SUBDOMAINS" [ref=e1632]
+            - cell "False" [ref=e1633]:
+              - generic [ref=e1634]: "False"
+          - row "SECURE_HSTS_PRELOAD False" [ref=e1635]:
+            - cell "SECURE_HSTS_PRELOAD" [ref=e1636]
+            - cell "False" [ref=e1637]:
+              - generic [ref=e1638]: "False"
+          - row "SECURE_HSTS_SECONDS 0" [ref=e1639]:
+            - cell "SECURE_HSTS_SECONDS" [ref=e1640]
+            - cell "0" [ref=e1641]:
+              - generic [ref=e1642]: "0"
+          - row "SECURE_PROXY_SSL_HEADER None" [ref=e1643]:
+            - cell "SECURE_PROXY_SSL_HEADER" [ref=e1644]
+            - cell "None" [ref=e1645]:
+              - generic [ref=e1646]: None
+          - row "SECURE_REDIRECT_EXEMPT []" [ref=e1647]:
+            - cell "SECURE_REDIRECT_EXEMPT" [ref=e1648]
+            - cell "[]" [ref=e1649]:
+              - generic [ref=e1650]: "[]"
+          - row "SECURE_REFERRER_POLICY 'same-origin'" [ref=e1651]:
+            - cell "SECURE_REFERRER_POLICY" [ref=e1652]
+            - cell "'same-origin'" [ref=e1653]:
+              - generic [ref=e1654]: "'same-origin'"
+          - row "SECURE_SSL_HOST None" [ref=e1655]:
+            - cell "SECURE_SSL_HOST" [ref=e1656]
+            - cell "None" [ref=e1657]:
+              - generic [ref=e1658]: None
+          - row "SECURE_SSL_REDIRECT False" [ref=e1659]:
+            - cell "SECURE_SSL_REDIRECT" [ref=e1660]
+            - cell "False" [ref=e1661]:
+              - generic [ref=e1662]: "False"
+          - row "SERVER_EMAIL 'errors@cppalliance.org'" [ref=e1663]:
+            - cell "SERVER_EMAIL" [ref=e1664]
+            - cell "'errors@cppalliance.org'" [ref=e1665]:
+              - generic [ref=e1666]: "'errors@cppalliance.org'"
+          - row "SESSION_CACHE_ALIAS 'default'" [ref=e1667]:
+            - cell "SESSION_CACHE_ALIAS" [ref=e1668]
+            - cell "'default'" [ref=e1669]:
+              - generic [ref=e1670]: "'default'"
+          - row "SESSION_COOKIE_AGE 7257600" [ref=e1671]:
+            - cell "SESSION_COOKIE_AGE" [ref=e1672]
+            - cell "7257600" [ref=e1673]:
+              - generic [ref=e1674]: "7257600"
+          - row "SESSION_COOKIE_DOMAIN None" [ref=e1675]:
+            - cell "SESSION_COOKIE_DOMAIN" [ref=e1676]
+            - cell "None" [ref=e1677]:
+              - generic [ref=e1678]: None
+          - row "SESSION_COOKIE_HTTPONLY False" [ref=e1679]:
+            - cell "SESSION_COOKIE_HTTPONLY" [ref=e1680]
+            - cell "False" [ref=e1681]:
+              - generic [ref=e1682]: "False"
+          - row "SESSION_COOKIE_NAME 'config-sessionid'" [ref=e1683]:
+            - cell "SESSION_COOKIE_NAME" [ref=e1684]
+            - cell "'config-sessionid'" [ref=e1685]:
+              - generic [ref=e1686]: "'config-sessionid'"
+          - row "SESSION_COOKIE_PATH '/'" [ref=e1687]:
+            - cell "SESSION_COOKIE_PATH" [ref=e1688]
+            - cell "'/'" [ref=e1689]:
+              - generic [ref=e1690]: "'/'"
+          - row "SESSION_COOKIE_SAMESITE 'Lax'" [ref=e1691]:
+            - cell "SESSION_COOKIE_SAMESITE" [ref=e1692]
+            - cell "'Lax'" [ref=e1693]:
+              - generic [ref=e1694]: "'Lax'"
+          - row "SESSION_COOKIE_SECURE False" [ref=e1695]:
+            - cell "SESSION_COOKIE_SECURE" [ref=e1696]
+            - cell "False" [ref=e1697]:
+              - generic [ref=e1698]: "False"
+          - row "SESSION_ENGINE 'django.contrib.sessions.backends.db'" [ref=e1699]:
+            - cell "SESSION_ENGINE" [ref=e1700]
+            - cell "'django.contrib.sessions.backends.db'" [ref=e1701]:
+              - generic [ref=e1702]: "'django.contrib.sessions.backends.db'"
+          - row "SESSION_EXPIRE_AT_BROWSER_CLOSE False" [ref=e1703]:
+            - cell "SESSION_EXPIRE_AT_BROWSER_CLOSE" [ref=e1704]
+            - cell "False" [ref=e1705]:
+              - generic [ref=e1706]: "False"
+          - row "SESSION_FILE_PATH None" [ref=e1707]:
+            - cell "SESSION_FILE_PATH" [ref=e1708]
+            - cell "None" [ref=e1709]:
+              - generic [ref=e1710]: None
+          - row "SESSION_SAVE_EVERY_REQUEST False" [ref=e1711]:
+            - cell "SESSION_SAVE_EVERY_REQUEST" [ref=e1712]
+            - cell "False" [ref=e1713]:
+              - generic [ref=e1714]: "False"
+          - row "SESSION_SERIALIZER 'django.contrib.sessions.serializers.JSONSerializer'" [ref=e1715]:
+            - cell "SESSION_SERIALIZER" [ref=e1716]
+            - cell "'django.contrib.sessions.serializers.JSONSerializer'" [ref=e1717]:
+              - generic [ref=e1718]: "'django.contrib.sessions.serializers.JSONSerializer'"
+          - row "SETTINGS_MODULE 'config.settings'" [ref=e1719]:
+            - cell "SETTINGS_MODULE" [ref=e1720]
+            - cell "'config.settings'" [ref=e1721]:
+              - generic [ref=e1722]: "'config.settings'"
+          - row "SHORT_DATETIME_FORMAT 'm/d/Y P'" [ref=e1723]:
+            - cell "SHORT_DATETIME_FORMAT" [ref=e1724]
+            - cell "'m/d/Y P'" [ref=e1725]:
+              - generic [ref=e1726]: "'m/d/Y P'"
+          - row "SHORT_DATE_FORMAT 'm/d/Y'" [ref=e1727]:
+            - cell "SHORT_DATE_FORMAT" [ref=e1728]
+            - cell "'m/d/Y'" [ref=e1729]:
+              - generic [ref=e1730]: "'m/d/Y'"
+          - row "SIGNING_BACKEND 'django.core.signing.TimestampSigner'" [ref=e1731]:
+            - cell "SIGNING_BACKEND" [ref=e1732]
+            - cell "'django.core.signing.TimestampSigner'" [ref=e1733]:
+              - generic [ref=e1734]: "'django.core.signing.TimestampSigner'"
+          - row "SILENCED_SYSTEM_CHECKS []" [ref=e1735]:
+            - cell "SILENCED_SYSTEM_CHECKS" [ref=e1736]
+            - cell "[]" [ref=e1737]:
+              - generic [ref=e1738]: "[]"
+          - row "SITE_ID 1" [ref=e1739]:
+            - cell "SITE_ID" [ref=e1740]
+            - cell "1" [ref=e1741]:
+              - generic [ref=e1742]: "1"
+          - row "SLACK_BOT_TOKEN '********************'" [ref=e1743]:
+            - cell "SLACK_BOT_TOKEN" [ref=e1744]
+            - cell "'********************'" [ref=e1745]:
+              - generic [ref=e1746]: "'********************'"
+          - row "SOCIALACCOUNT_EMAIL_AUTHENTICATION '********************'" [ref=e1747]:
+            - cell "SOCIALACCOUNT_EMAIL_AUTHENTICATION" [ref=e1748]
+            - cell "'********************'" [ref=e1749]:
+              - generic [ref=e1750]: "'********************'"
+          - row "SOCIALACCOUNT_EMAIL_AUTHENTICATION_AUTO_CONNECT '********************'" [ref=e1751]:
+            - cell "SOCIALACCOUNT_EMAIL_AUTHENTICATION_AUTO_CONNECT" [ref=e1752]
+            - cell "'********************'" [ref=e1753]:
+              - generic [ref=e1754]: "'********************'"
+          - row "SOCIALACCOUNT_LOGIN_ON_GET True" [ref=e1755]:
+            - cell "SOCIALACCOUNT_LOGIN_ON_GET" [ref=e1756]
+            - cell "True" [ref=e1757]:
+              - generic [ref=e1758]: "True"
+          - 'row "SOCIALACCOUNT_PROVIDERS {''github'': {''APPS'': [{''client_id'': ''cd1727c1983df3b658fe'', ''secret'': ''********************''}]}, ''google'': {''AUTH_PARAMS'': ''********************'', ''OAUTH_PKCE_ENABLED'': ''********************'', ''SCOPE'': [''profile'', ''email'']}}" [ref=e1759]':
+            - cell "SOCIALACCOUNT_PROVIDERS" [ref=e1760]
+            - 'cell "{''github'': {''APPS'': [{''client_id'': ''cd1727c1983df3b658fe'', ''secret'': ''********************''}]}, ''google'': {''AUTH_PARAMS'': ''********************'', ''OAUTH_PKCE_ENABLED'': ''********************'', ''SCOPE'': [''profile'', ''email'']}}" [ref=e1761]':
+              - generic [ref=e1762]: "{'github': {'APPS': [{'client_id': 'cd1727c1983df3b658fe', 'secret': '********************'}]}, 'google': {'AUTH_PARAMS': '********************', 'OAUTH_PKCE_ENABLED': '********************', 'SCOPE': ['profile', 'email']}}"
+          - row "SOCIALACCOUNT_QUERY_EMAIL True" [ref=e1763]:
+            - cell "SOCIALACCOUNT_QUERY_EMAIL" [ref=e1764]
+            - cell "True" [ref=e1765]:
+              - generic [ref=e1766]: "True"
+          - row "STATICFILES_DIRS [Path('/code/static')]" [ref=e1767]:
+            - cell "STATICFILES_DIRS" [ref=e1768]
+            - cell "[Path('/code/static')]" [ref=e1769]:
+              - generic [ref=e1770]: "[Path('/code/static')]"
+          - row "STATICFILES_FINDERS ['django.contrib.staticfiles.finders.FileSystemFinder', 'django.contrib.staticfiles.finders.AppDirectoriesFinder']" [ref=e1771]:
+            - cell "STATICFILES_FINDERS" [ref=e1772]
+            - cell "['django.contrib.staticfiles.finders.FileSystemFinder', 'django.contrib.staticfiles.finders.AppDirectoriesFinder']" [ref=e1773]:
+              - generic [ref=e1774]: "['django.contrib.staticfiles.finders.FileSystemFinder', 'django.contrib.staticfiles.finders.AppDirectoriesFinder']"
+          - row "STATIC_CONTENT_AWS_ACCESS_KEY_ID '********************'" [ref=e1775]:
+            - cell "STATIC_CONTENT_AWS_ACCESS_KEY_ID" [ref=e1776]
+            - cell "'********************'" [ref=e1777]:
+              - generic [ref=e1778]: "'********************'"
+          - row "STATIC_CONTENT_AWS_S3_ENDPOINT_URL 'https://s3.us-east-2.amazonaws.com'" [ref=e1779]:
+            - cell "STATIC_CONTENT_AWS_S3_ENDPOINT_URL" [ref=e1780]
+            - cell "'https://s3.us-east-2.amazonaws.com'" [ref=e1781]:
+              - generic [ref=e1782]: "'https://s3.us-east-2.amazonaws.com'"
+          - row "STATIC_CONTENT_AWS_SECRET_ACCESS_KEY '********************'" [ref=e1783]:
+            - cell "STATIC_CONTENT_AWS_SECRET_ACCESS_KEY" [ref=e1784]
+            - cell "'********************'" [ref=e1785]:
+              - generic [ref=e1786]: "'********************'"
+          - row "STATIC_CONTENT_BUCKET_NAME 'stage.boost.org.v2'" [ref=e1787]:
+            - cell "STATIC_CONTENT_BUCKET_NAME" [ref=e1788]
+            - cell "'stage.boost.org.v2'" [ref=e1789]:
+              - generic [ref=e1790]: "'stage.boost.org.v2'"
+          - row "STATIC_CONTENT_MAPPING 'stage_static_config.json'" [ref=e1791]:
+            - cell "STATIC_CONTENT_MAPPING" [ref=e1792]
+            - cell "'stage_static_config.json'" [ref=e1793]:
+              - generic [ref=e1794]: "'stage_static_config.json'"
+          - row "STATIC_CONTENT_REGION 'us-east-2'" [ref=e1795]:
+            - cell "STATIC_CONTENT_REGION" [ref=e1796]
+            - cell "'us-east-2'" [ref=e1797]:
+              - generic [ref=e1798]: "'us-east-2'"
+          - row "STATIC_ROOT '/code/static_deploy'" [ref=e1799]:
+            - cell "STATIC_ROOT" [ref=e1800]
+            - cell "'/code/static_deploy'" [ref=e1801]:
+              - generic [ref=e1802]: "'/code/static_deploy'"
+          - row "STATIC_URL '/static/'" [ref=e1803]:
+            - cell "STATIC_URL" [ref=e1804]
+            - cell "'/static/'" [ref=e1805]:
+              - generic [ref=e1806]: "'/static/'"
+          - 'row "STORAGES {''default'': {''BACKEND'': ''django.core.files.storage.FileSystemStorage''}, ''staticfiles'': {''BACKEND'': ''django.contrib.staticfiles.storage.StaticFilesStorage''}}" [ref=e1807]':
+            - cell "STORAGES" [ref=e1808]
+            - 'cell "{''default'': {''BACKEND'': ''django.core.files.storage.FileSystemStorage''}, ''staticfiles'': {''BACKEND'': ''django.contrib.staticfiles.storage.StaticFilesStorage''}}" [ref=e1809]':
+              - generic [ref=e1810]: "{'default': {'BACKEND': 'django.core.files.storage.FileSystemStorage'}, 'staticfiles': {'BACKEND': 'django.contrib.staticfiles.storage.StaticFilesStorage'}}"
+          - 'row "TEMPLATES [{''BACKEND'': ''django.template.backends.django.DjangoTemplates'', ''DIRS'': [''/code/templates''], ''OPTIONS'': {''context_processors'': [''django_admin_env_notice.context_processors.from_settings'', ''django.template.context_processors.debug'', ''django.template.context_processors.request'', ''django.contrib.auth.context_processors.auth'', ''django.contrib.messages.context_processors.messages'', ''core.context_processors.current_version'', ''core.context_processors.active_nav_item'', ''core.context_processors.debug''], ''loaders'': [''django.template.loaders.filesystem.Loader'', ''django.template.loaders.app_directories.Loader'']}}]" [ref=e1811]':
+            - cell "TEMPLATES" [ref=e1812]
+            - 'cell "[{''BACKEND'': ''django.template.backends.django.DjangoTemplates'', ''DIRS'': [''/code/templates''], ''OPTIONS'': {''context_processors'': [''django_admin_env_notice.context_processors.from_settings'', ''django.template.context_processors.debug'', ''django.template.context_processors.request'', ''django.contrib.auth.context_processors.auth'', ''django.contrib.messages.context_processors.messages'', ''core.context_processors.current_version'', ''core.context_processors.active_nav_item'', ''core.context_processors.debug''], ''loaders'': [''django.template.loaders.filesystem.Loader'', ''django.template.loaders.app_directories.Loader'']}}]" [ref=e1813]':
+              - generic [ref=e1814]: "[{'BACKEND': 'django.template.backends.django.DjangoTemplates', 'DIRS': ['/code/templates'], 'OPTIONS': {'context_processors': ['django_admin_env_notice.context_processors.from_settings', 'django.template.context_processors.debug', 'django.template.context_processors.request', 'django.contrib.auth.context_processors.auth', 'django.contrib.messages.context_processors.messages', 'core.context_processors.current_version', 'core.context_processors.active_nav_item', 'core.context_processors.debug'], 'loaders': ['django.template.loaders.filesystem.Loader', 'django.template.loaders.app_directories.Loader']}}]"
+          - row "TEST_NON_SERIALIZED_APPS []" [ref=e1815]:
+            - cell "TEST_NON_SERIALIZED_APPS" [ref=e1816]
+            - cell "[]" [ref=e1817]:
+              - generic [ref=e1818]: "[]"
+          - row "TEST_RUNNER 'django.test.runner.DiscoverRunner'" [ref=e1819]:
+            - cell "TEST_RUNNER" [ref=e1820]
+            - cell "'django.test.runner.DiscoverRunner'" [ref=e1821]:
+              - generic [ref=e1822]: "'django.test.runner.DiscoverRunner'"
+          - row "THOUSAND_SEPARATOR ','" [ref=e1823]:
+            - cell "THOUSAND_SEPARATOR" [ref=e1824]
+            - cell "','" [ref=e1825]:
+              - generic [ref=e1826]: "','"
+          - row "TIME_FORMAT 'P'" [ref=e1827]:
+            - cell "TIME_FORMAT" [ref=e1828]
+            - cell "'P'" [ref=e1829]:
+              - generic [ref=e1830]: "'P'"
+          - row "TIME_INPUT_FORMATS ['%H:%M:%S', '%H:%M:%S.%f', '%H:%M']" [ref=e1831]:
+            - cell "TIME_INPUT_FORMATS" [ref=e1832]
+            - cell "['%H:%M:%S', '%H:%M:%S.%f', '%H:%M']" [ref=e1833]:
+              - generic [ref=e1834]: "['%H:%M:%S', '%H:%M:%S.%f', '%H:%M']"
+          - row "TIME_ZONE 'UTC'" [ref=e1835]:
+            - cell "TIME_ZONE" [ref=e1836]
+            - cell "'UTC'" [ref=e1837]:
+              - generic [ref=e1838]: "'UTC'"
+          - row "USE_I18N True" [ref=e1839]:
+            - cell "USE_I18N" [ref=e1840]
+            - cell "True" [ref=e1841]:
+              - generic [ref=e1842]: "True"
+          - row "USE_THOUSAND_SEPARATOR False" [ref=e1843]:
+            - cell "USE_THOUSAND_SEPARATOR" [ref=e1844]
+            - cell "False" [ref=e1845]:
+              - generic [ref=e1846]: "False"
+          - row "USE_TZ True" [ref=e1847]:
+            - cell "USE_TZ" [ref=e1848]
+            - cell "True" [ref=e1849]:
+              - generic [ref=e1850]: "True"
+          - row "USE_X_FORWARDED_HOST False" [ref=e1851]:
+            - cell "USE_X_FORWARDED_HOST" [ref=e1852]
+            - cell "False" [ref=e1853]:
+              - generic [ref=e1854]: "False"
+          - row "USE_X_FORWARDED_PORT False" [ref=e1855]:
+            - cell "USE_X_FORWARDED_PORT" [ref=e1856]
+            - cell "False" [ref=e1857]:
+              - generic [ref=e1858]: "False"
+          - row "WHITENOISE_AUTOREFRESH True" [ref=e1859]:
+            - cell "WHITENOISE_AUTOREFRESH" [ref=e1860]
+            - cell "True" [ref=e1861]:
+              - generic [ref=e1862]: "True"
+          - row "WHITENOISE_USE_FINDERS True" [ref=e1863]:
+            - cell "WHITENOISE_USE_FINDERS" [ref=e1864]
+            - cell "True" [ref=e1865]:
+              - generic [ref=e1866]: "True"
+          - row "WSGI_APPLICATION 'config.wsgi.application'" [ref=e1867]:
+            - cell "WSGI_APPLICATION" [ref=e1868]
+            - cell "'config.wsgi.application'" [ref=e1869]:
+              - generic [ref=e1870]: "'config.wsgi.application'"
+          - row "X_FRAME_OPTIONS 'SAMEORIGIN'" [ref=e1871]:
+            - cell "X_FRAME_OPTIONS" [ref=e1872]
+            - cell "'SAMEORIGIN'" [ref=e1873]:
+              - generic [ref=e1874]: "'SAMEORIGIN'"
+          - row "YEAR_MONTH_FORMAT 'F Y'" [ref=e1875]:
+            - cell "YEAR_MONTH_FORMAT" [ref=e1876]
+            - cell "'F Y'" [ref=e1877]:
+              - generic [ref=e1878]: "'F Y'"
+  - contentinfo [ref=e1879]:
+    - paragraph [ref=e1880]:
+      - text: You’re seeing this error because you have
+      - code [ref=e1881]: DEBUG = True
+      - text: in your Django settings file. Change that to
+      - code [ref=e1882]: "False"
+      - text: ", and Django will display a standard page generated by the handler for this status code."
+```
