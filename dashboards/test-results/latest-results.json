@@ -1,55 +1,59 @@
 {
-  "timestamp": "2025-10-14T21:35:57.830Z",
+  "timestamp": "2025-10-14T21:40:07.593Z",
   "metrics": {
     "totalTests": 6,
     "passed": 6,
     "failed": 0,
     "passRate": 100,
-    "smokeCount": 2,
-    "regressionCount": 3,
-    "versionCount": 1,
-    "timestamp": "2025-10-14T21:35:57.541Z",
+    "smokeCount": 6,
+    "regressionCount": 0,
+    "versionCount": 0,
+    "timestamp": "2025-10-14T21:40:07.359Z",
     "environment": "staging",
-    "runId": "18510765705",
-    "runNumber": "66",
+    "runId": "18510817507",
+    "runNumber": "67",
     "branch": "main"
   },
   "testResults": {
     "smoke": [
       {
-        "name": "Homepage loads",
+        "name": "Homepage loads with key elements",
         "status": "passed",
-        "duration": "1.2s"
+        "duration": "2.04s",
+        "error": null
       },
       {
-        "name": "Navigation works",
+        "name": "Navigation menu links work correctly",
         "status": "passed",
-        "duration": "0.8s"
+        "duration": "5.94s",
+        "error": null
+      },
+      {
+        "name": "Libraries page displays and links to documentation",
+        "status": "passed",
+        "duration": "7.97s",
+        "error": null
+      },
+      {
+        "name": "Download section works correctly",
+        "status": "passed",
+        "duration": "3.54s",
+        "error": null
+      },
+      {
+        "name": "Search bar works with basic query",
+        "status": "passed",
+        "duration": "3.97s",
+        "error": null
+      },
+      {
+        "name": "Homepage is responsive on mobile",
+        "status": "passed",
+        "duration": "2.10s",
+        "error": null
       }
     ],
-    "regression": [
-      {
-        "name": "Boost.io accessible",
-        "status": "passed",
-        "duration": "1.5s"
-      },
-      {
-        "name": "Library docs load",
-        "status": "passed",
-        "duration": "2.1s"
-      },
-      {
-        "name": "Version page loads",
-        "status": "passed",
-        "duration": "1.3s"
-      }
-    ],
-    "version": [
-      {
-        "name": "Version compatibility check",
-        "status": "passed",
-        "duration": "1.0s"
-      }
-    ]
+    "regression": [],
+    "version": []
   }
 }
