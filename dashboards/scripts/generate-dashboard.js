@@ -242,7 +242,7 @@ ${generateTestTable(results.version)}
 
 ---
 
-## 📅 7-Day Trend
+##  📊 Last 7 Runs
 
 | Date | Total | Passed | Failed | Pass Rate |
 |------|-------|--------|--------|-----------|
