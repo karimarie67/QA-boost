@@ -242,10 +242,10 @@ ${generateTestTable(results.version)}
 
 ---
 
-##  📊 Last 7 Runs
+## 📊 Last 7 Runs
 
-| Date | Total | Passed | Failed | Pass Rate |
-|------|-------|--------|--------|-----------|
+| Date & Time | Total | Passed | Failed | Pass Rate |
+|-------------|-------|--------|--------|-----------|
 ${generateHistoryTable(history.slice(-7))}
 
 ---
@@ -360,8 +360,14 @@ function generateHistoryTable(history) {
     return '*No historical data yet - run more tests to see trends!*';
   }
   return history.map(entry => {
-    const date = new Date(entry.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-    return `| ${date} | ${entry.total} | ${entry.passed} | ${entry.failed} | ${entry.passRate.toFixed(1)}% |`;
+    const timestamp = new Date(entry.time).toLocaleString('en-US', { 
+      month: 'short', 
+      day: 'numeric',
+      hour: '2-digit', 
+      minute: '2-digit',
+      hour12: true 
+    });
+    return `| ${timestamp} | ${entry.total} | ${entry.passed} | ${entry.failed} | ${entry.passRate.toFixed(1)}% |`;
   }).join('\n');
 }
 
