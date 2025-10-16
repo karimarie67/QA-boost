@@ -168,14 +168,26 @@ function updateHistory(metrics) {
   if (fs.existsSync(HISTORY_FILE)) {
     history = JSON.parse(fs.readFileSync(HISTORY_FILE, 'utf8'));
   }
-  history.push({
+  
+  const newEntry = {
     date: new Date().toISOString().split('T')[0],
     time: new Date().toISOString(),
     total: metrics.totalTests,
     passed: metrics.passed,
     failed: metrics.failed,
     passRate: metrics.passRate
-  });
+  };
+  
+  // Check if we already have an entry from this run (within last 5 minutes)
+  const fiveMinutesAgo = new Date(Date.now() - 5 * 60 * 1000).toISOString();
+  const recentEntry = history.find(entry => entry.time > fiveMinutesAgo && entry.total === newEntry.total);
+  
+  if (!recentEntry) {
+    history.push(newEntry);
+  } else {
+    console.log('Skipping duplicate history entry');
+  }
+  
   if (history.length > 30) history = history.slice(-30);
   fs.writeFileSync(HISTORY_FILE, JSON.stringify(history, null, 2));
 }
