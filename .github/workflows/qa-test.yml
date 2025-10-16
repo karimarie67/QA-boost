@@ -256,6 +256,13 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git pull --rebase origin ${{ github.ref_name }}
+          git add dashboards/
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git pull --rebase origin ${{ github.ref_name }} || true
+            git commit -m "📊 Update QA Dashboard - Run #${{ github.run_number }} [${{ github.ref_name }}]"
+            git push
+          fi
           git add dashboards/
           git diff --quiet && git diff --staged --quiet || (git commit -m "📊 Update QA Dashboard - Run #${{ github.run_number }} [${{ github.ref_name }}]" && git push)
