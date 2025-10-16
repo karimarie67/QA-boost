@@ -2,10 +2,10 @@
 
 > **Live automated testing metrics for Boost C++ Libraries**
 
-**Last Updated:** Thursday, October 16, 2025 at 9:54:01 AM EDT  
+**Last Updated:** Thursday, October 16, 2025 at 10:26:16 AM EDT  
 **Environment:** STAGING  
 **Branch:** main  
-**Run:** [#74](https://github.com/karimarie67/QA-documentation/actions/runs/18563515525)
+**Run:** [#75](https://github.com/karimarie67/QA-documentation/actions/runs/18564565777)
 
 ---
 
@@ -13,8 +13,8 @@
 
 | Metric | Value | Status |
 |--------|-------|--------|
-| **Total Tests** | 22 | - |
-| **✅ Passed** | 22 | 🟢 |
+| **Total Tests** | 6 | - |
+| **✅ Passed** | 6 | 🟢 |
 | **❌ Failed** | 0 | ✅ |
 | **Pass Rate** | **100.0%** | 🟢 **Excellent** |
 
@@ -26,10 +26,10 @@
 🔥 Smoke Tests:        ████████████████████ 100% (6 tests)
    ↳ Runs on: Every PR/commit (pre-merge validation)
 
-🔄 Regression Tests:   ████████████████████ 100% (14 tests)
+🔄 Regression Tests:   ░░░░░░░░░░░░░░░░░░░░ 0% (0 tests)
    ↳ Runs on: Develop branch merges (comprehensive validation)
 
-📦 Version Tests:      ████████████████████ 100% (2 tests)
+📦 Version Tests:      ░░░░░░░░░░░░░░░░░░░░ 0% (0 tests)
    ↳ Runs on: Develop branch merges (version compatibility checks)
 ```
 
@@ -40,36 +40,20 @@
 ### 🔥 Smoke Tests (Pre-Merge Validation)
 | Test Name | Status | Duration |
 |-----------|--------|----------|
-| Homepage loads with key elements | ✅ passed | 1.77s |
-| Navigation menu links work correctly | ✅ passed | 5.61s |
-| Libraries page displays and links to documentation | ✅ passed | 7.52s |
-| Download section works correctly | ✅ passed | 2.67s |
-| Search bar works with basic query | ✅ passed | 3.90s |
-| Homepage is responsive on mobile | ✅ passed | 1.29s |
+| Homepage loads with key elements | ✅ passed | 1.64s |
+| Navigation menu links work correctly | ✅ passed | 5.85s |
+| Libraries page displays and links to documentation | ✅ passed | 7.55s |
+| Download section works correctly | ✅ passed | 3.22s |
+| Search bar works with basic query | ✅ passed | 3.62s |
+| Homepage is responsive on mobile | ✅ passed | 1.36s |
 
 
 ### 🔄 Regression Tests (Post-Merge on Develop)
-| Test Name | Status | Duration |
-|-----------|--------|----------|
-| Homepage loads and displays key elements | ✅ passed | 4.23s |
-| Search bar is visible and functional | ✅ passed | 3.48s |
-| Navigation menu links work | ✅ passed | 27.46s |
-| Responsive design adapts to mobile viewport | ✅ passed | 1.33s |
-| Logo redirects to homepage | ✅ passed | 8.77s |
-| Footer links are accessible | ✅ passed | 1.57s |
-| Main content loads on library page | ✅ passed | 3.20s |
-| External links are valid | ✅ passed | 1.49s |
-| GitHub links point to correct repositories | ✅ passed | 0.84s |
-| Documentation page loads and displays content | ✅ passed | 3.80s |
-
-*... and 4 more tests*
+*No tests in this category*
 
 
 ### 📦 Version Tests (Compatibility Checks)
-| Test Name | Status | Duration |
-|-----------|--------|----------|
-| Libraries page loads and displays version information | ✅ passed | 5.54s |
-| Releases page loads and displays release information | ✅ passed | 2.53s |
+*No tests in this category*
 
 
 ---
@@ -78,13 +62,13 @@
 
 | Date & Time | Total | Passed | Failed | Pass Rate |
 |-------------|-------|--------|--------|-----------|
-| Oct 3, 07:54 PM | 6 | 6 | 0 | 100.0% |
 | Oct 14, 02:39 PM | 22 | 22 | 0 | 100.0% |
 | Oct 14, 03:28 PM | 6 | 6 | 0 | 100.0% |
 | Oct 14, 09:35 PM | 6 | 6 | 0 | 100.0% |
 | Oct 14, 09:40 PM | 6 | 6 | 0 | 100.0% |
 | Oct 16, 01:47 PM | 6 | 6 | 0 | 100.0% |
 | Oct 16, 01:54 PM | 22 | 22 | 0 | 100.0% |
+| Oct 16, 02:26 PM | 6 | 6 | 0 | 100.0% |
 
 ---
 
@@ -94,8 +78,8 @@
 |--------|---------|--------|--------|
 | Test Automation Coverage | 75% | 80% | 🟡 |
 | Smoke Test Pass Rate | 100% | >98% | ✅ |
-| Regression Pass Rate | 100% | >95% | ✅ |
-| Version Test Pass Rate | 100% | >98% | ✅ |
+| Regression Pass Rate | 0% | >95% | 🔴 |
+| Version Test Pass Rate | 0% | >98% | 🔴 |
 | Bug Escape Rate | <5% | <5% | ✅ |
 
 ---
@@ -109,7 +93,7 @@
 - [QA Handbook](../docs/QA_handbook.md)
 - [Testing Strategy](../docs/Testing-Strategy.md)
 - [Test Coverage Map](../docs/Test-Coverage-Map.md)
-- [View Full Report](https://github.com/karimarie67/QA-documentation/actions/runs/18563515525)
+- [View Full Report](https://github.com/karimarie67/QA-documentation/actions/runs/18564565777)
 
 ---
 
