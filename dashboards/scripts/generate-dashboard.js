@@ -53,7 +53,7 @@ function collectTestResults() {
   
   // Parse boost.io regression results
   const boostFile = path.join(ARTIFACTS_DIR, 'boost-io-test-results/boost-io-results.json');
-  if (fs.existsExists(boostFile)) {
+  if (fs.existsSync(boostFile)) {
     console.log(`Found boost-io results: ${boostFile}`);
     const boostTests = parsePlaywrightJson(boostFile);
     results.regression = results.regression.concat(boostTests);
