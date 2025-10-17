@@ -53,7 +53,7 @@ function collectTestResults() {
   
   // Parse boost.io regression results
   const boostFile = path.join(ARTIFACTS_DIR, 'boost-io-test-results/boost-io-results.json');
-  if (fs.existsSync(boostFile)) {
+  if (fs.existsExists(boostFile)) {
     console.log(`Found boost-io results: ${boostFile}`);
     const boostTests = parsePlaywrightJson(boostFile);
     results.regression = results.regression.concat(boostTests);
@@ -169,24 +169,22 @@ function updateHistory(metrics) {
     history = JSON.parse(fs.readFileSync(HISTORY_FILE, 'utf8'));
   }
   
+  const runNumber = process.env.GITHUB_RUN_NUMBER || '0';
+  
   const newEntry = {
     date: new Date().toISOString().split('T')[0],
     time: new Date().toISOString(),
     total: metrics.totalTests,
     passed: metrics.passed,
     failed: metrics.failed,
-    passRate: metrics.passRate
+    passRate: metrics.passRate,
+    runNumber: runNumber
   };
   
-  // Check if we already have an entry from this run (within last 5 minutes)
-  const fiveMinutesAgo = new Date(Date.now() - 5 * 60 * 1000).toISOString();
-  const recentEntry = history.find(entry => entry.time > fiveMinutesAgo && entry.total === newEntry.total);
+  // Remove any existing entry with the same run number (in case of re-runs)
+  history = history.filter(entry => entry.runNumber !== runNumber);
   
-  if (!recentEntry) {
-    history.push(newEntry);
-  } else {
-    console.log('Skipping duplicate history entry');
-  }
+  history.push(newEntry);
   
   if (history.length > 30) history = history.slice(-30);
   fs.writeFileSync(HISTORY_FILE, JSON.stringify(history, null, 2));
