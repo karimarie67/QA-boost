@@ -35,7 +35,7 @@ This document maps test coverage for boost.org automated testing, showing what's
 ## Manual Test Cases
 
 Reference the following for manual test documentation:
-- `2. Functional-Table 1.csv` - Functional test cases
+- `Functional-Table 1.csv` - Functional test cases
 - `Regression-Table 1.csv` - Regression test cases
 
 ## Coverage Metrics
