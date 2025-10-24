@@ -552,13 +552,11 @@ steps:
 
 **Resources:**
 - [Playwright Documentation](https://playwright.dev/)
-- [GitHub Repository Issues](https://github.com/your-org/playwright-boost-tests/issues)
-- Team Slack channel: #qa-automation
 
 **Common Commands Quick Reference:**
 ```bash
 # Quick test run
-npm run test:e2e
+npm run test:boost_io_tests.spec.js
 
 # Debug specific test
 npx playwright test --grep "TC_FUNC_001" --debug
@@ -567,7 +565,7 @@ npx playwright test --grep "TC_FUNC_001" --debug
 npx playwright codegen https://stage.boost.org
 
 # View latest report
-npm run test:e2e:report
+npm run test:boost_io_tests.spec.js:report
 ```
 
 This documentation covers the complete setup and integration of your Playwright test suite. The architecture we've built together provides a solid foundation for reliable, maintainable automated testing.
