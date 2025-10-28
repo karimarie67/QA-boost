@@ -49,7 +49,7 @@ The dashboard updates automatically after each test run, showing:
 
 ### 📚 Complete Documentation
 - [QA Handbook](./docs/QA_handbook.md)
-- [Testing Strategy](./docs/Testing-Strategy.md) ← **Read this!**
+- [Testing Strategy](./docs/testing_strategy_doc.md) ← **Read this!**
 - [Test Coverage Maps](./docs/)
 - [Functional Test Cases](./docs/2.%20Functional-Table%201.csv)
 - [Regression Test Cases](./docs/Regression-Table%201.csv)
