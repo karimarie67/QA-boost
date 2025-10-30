@@ -1,14 +1,6 @@
 [
   {
     "date": "2025-10-03",
-    "time": "2025-10-03T19:11:32.580Z",
-    "total": 6,
-    "passed": 6,
-    "failed": 0,
-    "passRate": 100
-  },
-  {
-    "date": "2025-10-03",
     "time": "2025-10-03T19:37:43.888Z",
     "total": 6,
     "passed": 6,
@@ -256,5 +248,14 @@
     "failed": 0,
     "passRate": 100,
     "runNumber": "103"
+  },
+  {
+    "date": "2025-10-30",
+    "time": "2025-10-30T18:14:34.566Z",
+    "total": 22,
+    "passed": 22,
+    "failed": 0,
+    "passRate": 100,
+    "runNumber": "104"
   }
 ]
