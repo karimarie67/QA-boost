@@ -59,7 +59,7 @@ export default defineConfig({
     },
   ],
   use: {
-    screenshot: 'only-on-failure',
+    screenshot: 'on',
     video: 'off',
   },
   testDir: './tests',
