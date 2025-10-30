@@ -2,7 +2,7 @@ blank_issues_enabled: false
 contact_links:
   - name: Join Boost Slack Discussion
     url: https://cpplang.slack.com/archives/C0610TPQMAR
-    about: Ask questions and discuss with the community in the #boost channel on C++ Lang Slack (requires Slack workspace membership)
+    about: Ask questions and discuss with the community
   - name: Boost Documentation
     url: https://www.boost.org/doc/
     about: Check the official Boost documentation
