@@ -1,8 +1,11 @@
 blank_issues_enabled: false
 contact_links:
-  - name: Ask a Question
-    url: https://github.com/boostorg/website-v2/discussions
-    about: Please ask questions in GitHub Discussions
+  - name: Join Boost Slack Discussion
+    url: https://cpplang.slack.com/archives/C0610TPQMAR
+    about: Ask questions and discuss with the community in the #boost channel on C++ Lang Slack (requires Slack workspace membership)
   - name: Boost Documentation
     url: https://www.boost.org/doc/
     about: Check the official Boost documentation
+  - name: Boost Mailing Lists
+    url: https://www.boost.org/community/groups.html
+    about: Join the Boost mailing lists for discussions and announcements
