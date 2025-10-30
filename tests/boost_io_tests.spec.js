@@ -44,7 +44,7 @@ async function setupPage(page, testInfo, viewport = testData.viewport.desktop) {
   });
 }
 
-test.describe('Boost Staging Functional Tests', () => {
+test.describe('Boost Functional Tests', () => {
   test.beforeEach(async ({ page }, testInfo) => {
     testInfo.setTimeout(90000);
     await setupPage(page, testInfo);
