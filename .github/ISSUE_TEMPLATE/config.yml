@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Ask a Question
+    url: https://github.com/boostorg/website-v2/discussions
+    about: Please ask questions in GitHub Discussions
+  - name: Boost Documentation
+    url: https://www.boost.org/doc/
+    about: Check the official Boost documentation
