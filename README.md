@@ -2,7 +2,7 @@
 
 > Complete QA automation suite with CI/CD integration and live metrics dashboards for Boost C++ Libraries
 
-[![Tests](https://github.com/karimarie67/QA-documentation/actions/workflows/qa-tests.yml/badge.svg)](https://github.com/karimarie67/QA-documentation/actions/workflows/qa-tests.yml)
+[![Tests](https://github.com/karimarie67/QA-documentation/actions/workflows/qa-test.yml/badge.svg)](https://github.com/karimarie67/QA-documentation/actions/workflows/qa-test.yml)
 [![Dashboard](https://img.shields.io/badge/📊_Dashboard-Live-brightgreen)](./dashboards/qa-metrics.md)
 
 ## 🎯 Live Demo
@@ -50,7 +50,7 @@ The dashboard updates automatically after each test run, showing:
 ### 📚 Complete Documentation
 - [QA Handbook](./docs/QA_handbook.md)
 - [Testing Strategy](./docs/testing_strategy_doc.md) ← **Read this!**
-- [Test Coverage Maps](./docs/)
+- [Test Coverage Maps](./docs/Test-Coverage-Map.md)
 - [Functional Test Cases](./docs/2.%20Functional-Table%201.csv)
 - [Regression Test Cases](./docs/Regression-Table%201.csv)
 
