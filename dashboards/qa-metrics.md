@@ -2,10 +2,10 @@
 
 > **Live automated testing metrics for Boost C++ Libraries**
 
-**Last Updated:** Thursday, October 30, 2025 at 8:39:23 AM EDT  
+**Last Updated:** Thursday, October 30, 2025 at 9:47:30 AM EDT  
 **Environment:** STAGING  
 **Branch:** main  
-**Run:** [#97](https://github.com/karimarie67/QA-documentation/actions/runs/18940867894)
+**Run:** [#98](https://github.com/karimarie67/QA-documentation/actions/runs/18942781639)
 
 ---
 
@@ -40,12 +40,12 @@
 ### 🔥 Smoke Tests (Pre-Merge Validation)
 | Test Name | Status | Duration |
 |-----------|--------|----------|
-| Homepage loads with key elements | ✅ passed | 1.79s |
-| Navigation menu links work correctly | ✅ passed | 3.87s |
-| Libraries page displays and links to documentation | ✅ passed | 7.36s |
-| Download section works correctly | ✅ passed | 3.27s |
-| Search bar works with basic query | ✅ passed | 4.02s |
-| Homepage is responsive on mobile | ✅ passed | 1.20s |
+| Homepage loads with key elements | ✅ passed | 1.62s |
+| Navigation menu links work correctly | ✅ passed | 4.14s |
+| Libraries page displays and links to documentation | ✅ passed | 7.87s |
+| Download section works correctly | ✅ passed | 3.16s |
+| Search bar works with basic query | ✅ passed | 3.55s |
+| Homepage is responsive on mobile | ✅ passed | 1.41s |
 
 
 ### 🔄 Regression Tests (Post-Merge on Develop)
@@ -62,13 +62,13 @@
 
 | Date & Time | Total | Passed | Failed | Pass Rate |
 |-------------|-------|--------|--------|-----------|
-| Oct 28, 10:34 PM | 22 | 22 | 0 | 100.0% |
 | Oct 28, 10:49 PM | 22 | 22 | 0 | 100.0% |
 | Oct 28, 11:04 PM | 6 | 6 | 0 | 100.0% |
 | Oct 30, 12:15 PM | 6 | 6 | 0 | 100.0% |
 | Oct 30, 12:22 PM | 6 | 6 | 0 | 100.0% |
 | Oct 30, 12:33 PM | 6 | 6 | 0 | 100.0% |
 | Oct 30, 12:39 PM | 6 | 6 | 0 | 100.0% |
+| Oct 30, 01:47 PM | 6 | 6 | 0 | 100.0% |
 
 ---
 
@@ -93,7 +93,7 @@
 - [QA Handbook](../docs/QA_handbook.md)
 - [Testing Strategy](../docs/Testing-Strategy.md)
 - [Test Coverage Map](../docs/Test-Coverage-Map.md)
-- [View Full Report](https://github.com/karimarie67/QA-documentation/actions/runs/18940867894)
+- [View Full Report](https://github.com/karimarie67/QA-documentation/actions/runs/18942781639)
 
 ---
 
