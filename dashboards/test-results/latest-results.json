@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-11-04T22:27:12.923Z",
+  "timestamp": "2025-12-02T22:34:51.758Z",
   "metrics": {
     "totalTests": 22,
     "passed": 22,
@@ -8,10 +8,10 @@
     "smokeCount": 6,
     "regressionCount": 14,
     "versionCount": 2,
-    "timestamp": "2025-11-04T22:27:12.619Z",
+    "timestamp": "2025-12-02T22:34:51.527Z",
     "environment": "staging",
-    "runId": "19084555657",
-    "runNumber": "106",
+    "runId": "19875667354",
+    "runNumber": "107",
     "branch": "main"
   },
   "testResults": {
@@ -19,37 +19,37 @@
       {
         "name": "Homepage loads with key elements",
         "status": "passed",
-        "duration": "1.73s",
+        "duration": "1.79s",
         "error": null
       },
       {
         "name": "Navigation menu links work correctly",
         "status": "passed",
-        "duration": "3.92s",
+        "duration": "4.11s",
         "error": null
       },
       {
         "name": "Libraries page displays and links to documentation",
         "status": "passed",
-        "duration": "8.03s",
+        "duration": "7.62s",
         "error": null
       },
       {
         "name": "Download section works correctly",
         "status": "passed",
-        "duration": "2.67s",
+        "duration": "3.04s",
         "error": null
       },
       {
         "name": "Search bar works with basic query",
         "status": "passed",
-        "duration": "3.52s",
+        "duration": "3.99s",
         "error": null
       },
       {
         "name": "Homepage is responsive on mobile",
         "status": "passed",
-        "duration": "1.83s",
+        "duration": "1.30s",
         "error": null
       }
     ],
@@ -57,85 +57,85 @@
       {
         "name": "Homepage loads and displays key elements",
         "status": "passed",
-        "duration": "3.45s",
+        "duration": "3.90s",
         "error": null
       },
       {
         "name": "Search bar is visible and functional",
         "status": "passed",
-        "duration": "3.59s",
+        "duration": "3.60s",
         "error": null
       },
       {
         "name": "Navigation menu links work",
         "status": "passed",
-        "duration": "27.78s",
+        "duration": "27.55s",
         "error": null
       },
       {
         "name": "Responsive design adapts to mobile viewport",
         "status": "passed",
-        "duration": "1.40s",
+        "duration": "1.38s",
         "error": null
       },
       {
         "name": "Logo redirects to homepage",
         "status": "passed",
-        "duration": "3.76s",
+        "duration": "4.43s",
         "error": null
       },
       {
         "name": "Footer links are accessible",
         "status": "passed",
-        "duration": "1.45s",
+        "duration": "1.64s",
         "error": null
       },
       {
         "name": "Main content loads on library page",
         "status": "passed",
-        "duration": "3.46s",
+        "duration": "3.63s",
         "error": null
       },
       {
         "name": "External links are valid",
         "status": "passed",
-        "duration": "1.66s",
+        "duration": "1.71s",
         "error": null
       },
       {
         "name": "GitHub links point to correct repositories",
         "status": "passed",
-        "duration": "0.81s",
+        "duration": "0.80s",
         "error": null
       },
       {
         "name": "Documentation page loads and displays content",
         "status": "passed",
-        "duration": "3.53s",
+        "duration": "3.78s",
         "error": null
       },
       {
         "name": "Release notes are accessible",
         "status": "passed",
-        "duration": "1.01s",
+        "duration": "1.11s",
         "error": null
       },
       {
         "name": "Download link for previous release works",
         "status": "passed",
-        "duration": "62.27s",
+        "duration": "62.32s",
         "error": null
       },
       {
         "name": "Download handles broken or unavailable links",
         "status": "passed",
-        "duration": "2.69s",
+        "duration": "2.70s",
         "error": null
       },
       {
         "name": "Community page links are functional",
         "status": "passed",
-        "duration": "1.40s",
+        "duration": "1.45s",
         "error": null
       }
     ],
@@ -143,13 +143,13 @@
       {
         "name": "Libraries page loads and displays version information",
         "status": "passed",
-        "duration": "6.12s",
+        "duration": "6.50s",
         "error": null
       },
       {
         "name": "Releases page loads and displays release information",
         "status": "passed",
-        "duration": "2.65s",
+        "duration": "2.56s",
         "error": null
       }
     ]
