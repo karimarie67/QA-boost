@@ -5,7 +5,10 @@ const path = require('path');
 const QUALITY_GATES = {
   SMOKE_TARGET: 100,      
   REGRESSION_TARGET: 95,  
-  VERSION_TARGET: 98,     
+  VERSION_TARGET: 98,
+  ERROR_HANDLING_TARGET: 95,
+  DOWNLOAD_SEARCH_TARGET: 95,
+  DOCUMENTATION_TARGET: 95,
   MAX_DURATION_SEC: 300   
 };
 
@@ -16,7 +19,7 @@ const HISTORY_FILE = path.join(RESULTS_DIR, 'history.json');
 const SLACK_FILE = path.join(RESULTS_DIR, 'slack-payload.json');
 
 function main() {
-  console.log('🔄 Generating QA Dashboard (v3.0 - Visual Trends)...');
+  console.log('📄 Generating QA Dashboard (v4.0 - Enhanced Coverage)...');
   
   if (!fs.existsSync(RESULTS_DIR)) {
     fs.mkdirSync(RESULTS_DIR, { recursive: true });
@@ -41,7 +44,7 @@ function main() {
     JSON.stringify({ timestamp: new Date().toISOString(), metrics, testResults }, null, 2)
   );
   
-  // --- 3. SLACK PAYLOAD GENERATION ---
+  // --- SLACK PAYLOAD GENERATION ---
   if (metrics.failed > 0 || trends.flakyTests.length > 0) {
     const slackPayload = {
       text: `🚨 **Boost.org QA Alert**`,
@@ -63,7 +66,14 @@ function main() {
 }
 
 function collectTestResults() {
-  const results = { smoke: [], regression: [], version: [] };
+  const results = { 
+    smoke: [], 
+    regression: [], 
+    version: [],
+    errorHandling: [],
+    downloadSearch: [],
+    documentation: []
+  };
   
   if (!fs.existsSync(ARTIFACTS_DIR)) {
     console.warn('⚠️  No artifacts directory found - Using Sample Data');
@@ -73,17 +83,23 @@ function collectTestResults() {
   const files = {
     smoke: path.join(ARTIFACTS_DIR, 'smoke-test-results/smoke-results.json'),
     regression: path.join(ARTIFACTS_DIR, 'boost-io-test-results/boost-io-results.json'),
-    version: path.join(ARTIFACTS_DIR, 'version-test-results/version-results.json')
+    version: path.join(ARTIFACTS_DIR, 'version-test-results/version-results.json'),
+    errorHandling: path.join(ARTIFACTS_DIR, 'error-handling-test-results/error-handling-results.json'),
+    downloadSearch: path.join(ARTIFACTS_DIR, 'download-search-test-results/download-search-results.json'),
+    documentation: path.join(ARTIFACTS_DIR, 'documentation-test-results/documentation-results.json')
   };
 
   for (const [key, filepath] of Object.entries(files)) {
     if (fs.existsSync(filepath)) {
       console.log(`Found ${key} results: ${filepath}`);
       results[key] = parsePlaywrightJson(filepath);
+    } else {
+      console.log(`Missing ${key} results: ${filepath}`);
     }
   }
   
-  if (results.smoke.length === 0 && results.regression.length === 0 && results.version.length === 0) {
+  const hasAnyResults = Object.values(results).some(arr => arr.length > 0);
+  if (!hasAnyResults) {
     return getSampleResults();
   }
   
@@ -106,7 +122,6 @@ function parsePlaywrightJson(filepath) {
                   name: spec.title || test.title || 'Unknown Test',
                   status: result.status === 'passed' ? 'passed' : 'failed',
                   durationSec: (result.duration || 0) / 1000,
-                  // Capture Project Name (e.g., 'chromium', 'firefox')
                   projectName: test.projectName || 'Default', 
                   error: result.errors && result.errors.length > 0 ? result.errors[0].message : null
                 });
@@ -127,7 +142,15 @@ function parsePlaywrightJson(filepath) {
 }
 
 function calculateMetrics(results) {
-  const allTests = [...results.smoke, ...results.regression, ...results.version];
+  const allTests = [
+    ...results.smoke, 
+    ...results.regression, 
+    ...results.version,
+    ...results.errorHandling,
+    ...results.downloadSearch,
+    ...results.documentation
+  ];
+  
   const passed = allTests.filter(t => t.status === 'passed').length;
   const failedTests = allTests.filter(t => t.status === 'failed');
   const totalDuration = allTests.reduce((acc, t) => acc + (t.durationSec || 0), 0);
@@ -142,7 +165,9 @@ function calculateMetrics(results) {
     smokeCount: results.smoke.length,
     regressionCount: results.regression.length,
     versionCount: results.version.length,
-    // Add full test list to calculate browser breakdown later
+    errorHandlingCount: results.errorHandling.length,
+    downloadSearchCount: results.downloadSearch.length,
+    documentationCount: results.documentation.length,
     allTestObjects: allTests, 
     timestamp: new Date().toISOString(),
     environment: process.env.TEST_ENV || 'staging',
@@ -218,7 +243,7 @@ function generateDashboardMarkdown(metrics, results, history, trends) {
   const env = (metrics.environment || 'staging').toUpperCase();
   const timestamp = new Date().toLocaleString('en-US', { timeZone: 'America/New_York', dateStyle: 'full', timeStyle: 'short' });
   
-  const durationSign = trends.durationDiff > 0 ? '🔺 Slower' : 'Hz Faster';
+  const durationSign = trends.durationDiff > 0 ? '🔺 Slower' : '⚡ Faster';
   const durationColor = trends.durationDiff > 5 ? '🔴' : '🟢'; 
   const durationText = `${formatDuration(metrics.totalDuration)} (${durationColor} ${Math.abs(trends.durationDiff).toFixed(1)}s ${durationSign})`;
 
@@ -239,6 +264,19 @@ function generateDashboardMarkdown(metrics, results, history, trends) {
 | **Execution Time** | **${durationText}** | ${metrics.totalDuration > QUALITY_GATES.MAX_DURATION_SEC ? '⚠️ Long Running' : '✅ Optimized'} |
 | **Total Tests** | ${metrics.totalTests} | ${metrics.passed} Passing / ${metrics.failed} Failed |
 | **Flakiness** | ${trends.flakyTests.length} Recurring Issues | ${trends.flakyTests.length > 0 ? '⚠️ Unstable' : '✅ Stable'} |
+
+---
+
+## 📋 Test Suite Coverage
+
+| Test Suite | Tests Run | Pass Rate | Target | Status |
+|------------|-----------|-----------|--------|--------|
+| 🔥 **Smoke Tests** | ${metrics.smokeCount} | ${calculatePassRate(results.smoke)}% | ${QUALITY_GATES.SMOKE_TARGET}% | ${getStatusIcon(calculatePassRate(results.smoke), QUALITY_GATES.SMOKE_TARGET)} |
+| 🔄 **Regression Tests** | ${metrics.regressionCount} | ${calculatePassRate(results.regression)}% | ${QUALITY_GATES.REGRESSION_TARGET}% | ${getStatusIcon(calculatePassRate(results.regression), QUALITY_GATES.REGRESSION_TARGET)} |
+| 📦 **Version Tests** | ${metrics.versionCount} | ${calculatePassRate(results.version)}% | ${QUALITY_GATES.VERSION_TARGET}% | ${getStatusIcon(calculatePassRate(results.version), QUALITY_GATES.VERSION_TARGET)} |
+| ⚠️ **Error Handling** | ${metrics.errorHandlingCount} | ${calculatePassRate(results.errorHandling)}% | ${QUALITY_GATES.ERROR_HANDLING_TARGET}% | ${getStatusIcon(calculatePassRate(results.errorHandling), QUALITY_GATES.ERROR_HANDLING_TARGET)} |
+| 🔍 **Download & Search** | ${metrics.downloadSearchCount} | ${calculatePassRate(results.downloadSearch)}% | ${QUALITY_GATES.DOWNLOAD_SEARCH_TARGET}% | ${getStatusIcon(calculatePassRate(results.downloadSearch), QUALITY_GATES.DOWNLOAD_SEARCH_TARGET)} |
+| 📚 **Documentation** | ${metrics.documentationCount} | ${calculatePassRate(results.documentation)}% | ${QUALITY_GATES.DOCUMENTATION_TARGET}% | ${getStatusIcon(calculatePassRate(results.documentation), QUALITY_GATES.DOCUMENTATION_TARGET)} |
 
 ---
 
@@ -266,6 +304,15 @@ ${generateTestTable(results.regression)}
 ### 📦 Version Tests (Target: ${QUALITY_GATES.VERSION_TARGET}%)
 ${generateTestTable(results.version)}
 
+### ⚠️ Error Handling Tests (Target: ${QUALITY_GATES.ERROR_HANDLING_TARGET}%)
+${generateTestTable(results.errorHandling)}
+
+### 🔍 Download & Search Tests (Target: ${QUALITY_GATES.DOWNLOAD_SEARCH_TARGET}%)
+${generateTestTable(results.downloadSearch)}
+
+### 📚 Documentation Tests (Target: ${QUALITY_GATES.DOCUMENTATION_TARGET}%)
+${generateTestTable(results.documentation)}
+
 ---
 
 ## 📈 History (Last 10 Runs)
@@ -279,15 +326,27 @@ ${generateHistoryTable(history.slice(-10))}
 
 // --- HELPER FUNCTIONS ---
 
+function calculatePassRate(tests) {
+  if (!tests || tests.length === 0) return 0;
+  const passed = tests.filter(t => t.status === 'passed').length;
+  return ((passed / tests.length) * 100).toFixed(1);
+}
+
+function getStatusIcon(passRate, target) {
+  const rate = parseFloat(passRate);
+  if (rate >= target) return '✅ Passing';
+  if (rate >= target - 5) return '⚠️ Warning';
+  return '❌ Failing';
+}
+
 // 1. MERMAID CHART GENERATOR
 function generateMermaidChart(history) {
   if (!history || history.length < 2) return '';
 
-  const recent = history.slice(-20); // Last 20 runs
+  const recent = history.slice(-20);
   const labels = recent.map(h => `#${h.runNumber}`);
   const data = recent.map(h => parseFloat(h.passRate).toFixed(1));
 
-  // Using Mermaid's xy-chart (beta)
   return `
 ### 📉 Reliability Trend (Last 20 Runs)
 
@@ -313,7 +372,6 @@ function generateBrowserBreakdown(allTests) {
     if (t.status === 'passed') browsers[p].passed++;
   });
 
-  // Only show if we actually have multiple browsers/projects
   const keys = Object.keys(browsers);
   if (keys.length < 2 && keys[0] === 'Default') return '';
 
@@ -385,16 +443,22 @@ function generateHistoryTable(history) {
 function getSampleResults() {
   return {
     smoke: [
-      { name: 'Homepage loads', status: 'passed', durationSec: 1.2, projectName: 'chromium' },
-      { name: 'Homepage loads', status: 'passed', durationSec: 1.4, projectName: 'firefox' }
+      { name: 'Homepage loads', status: 'passed', durationSec: 1.2, projectName: 'chromium' }
     ],
     regression: [
-      { name: 'Boost.io accessible', status: 'passed', durationSec: 1.5, projectName: 'chromium' },
-      { name: 'Library docs load', status: 'failed', durationSec: 2.1, projectName: 'chromium' }, // Fail
-      { name: 'Library docs load', status: 'passed', durationSec: 2.3, projectName: 'firefox' }
+      { name: 'Boost.io accessible', status: 'passed', durationSec: 1.5, projectName: 'chromium' }
     ],
     version: [
       { name: 'Version compatibility check', status: 'passed', durationSec: 1.0, projectName: 'Default' }
+    ],
+    errorHandling: [
+      { name: '404 page displays', status: 'passed', durationSec: 0.8, projectName: 'chromium' }
+    ],
+    downloadSearch: [
+      { name: 'Download links valid', status: 'passed', durationSec: 1.2, projectName: 'chromium' }
+    ],
+    documentation: [
+      { name: 'Doc page loads', status: 'passed', durationSec: 1.5, projectName: 'chromium' }
     ]
   };
 }
