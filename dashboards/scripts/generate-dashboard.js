@@ -2,21 +2,21 @@ const fs = require('fs');
 const path = require('path');
 
 // --- CONFIGURATION: QUALITY GATES ---
-// Adjust these values to change the pass/fail thresholds in the dashboard
 const QUALITY_GATES = {
-  SMOKE_TARGET: 100,      // Smoke tests must be perfect
-  REGRESSION_TARGET: 95,  // Regression allows small margin for known flakes
-  VERSION_TARGET: 98,     // Version checks should be high
-  MAX_DURATION_SEC: 300   // Warning if total suite takes > 5 mins
+  SMOKE_TARGET: 100,      
+  REGRESSION_TARGET: 95,  
+  VERSION_TARGET: 98,     
+  MAX_DURATION_SEC: 300   
 };
 
 const ARTIFACTS_DIR = path.join(__dirname, '../../artifacts');
 const DASHBOARD_PATH = path.join(__dirname, '../qa-metrics.md');
 const RESULTS_DIR = path.join(__dirname, '../test-results');
 const HISTORY_FILE = path.join(RESULTS_DIR, 'history.json');
+const SLACK_FILE = path.join(RESULTS_DIR, 'slack-payload.json');
 
 function main() {
-  console.log('🔄 Generating QA Dashboard (v2.0 - Robust Stats)...');
+  console.log('🔄 Generating QA Dashboard (v3.0 - Visual Trends)...');
   
   if (!fs.existsSync(RESULTS_DIR)) {
     fs.mkdirSync(RESULTS_DIR, { recursive: true });
@@ -28,9 +28,9 @@ function main() {
   updateHistory(metrics);
   const history = loadHistory();
   
-  // Calculate trends based on history
   const trends = calculateTrends(metrics, history);
   
+  // Generate Markdown with Mermaid Charts and Browser stats
   const dashboard = generateDashboardMarkdown(metrics, testResults, history, trends);
   
   fs.writeFileSync(DASHBOARD_PATH, dashboard);
@@ -41,8 +41,25 @@ function main() {
     JSON.stringify({ timestamp: new Date().toISOString(), metrics, testResults }, null, 2)
   );
   
+  // --- 3. SLACK PAYLOAD GENERATION ---
+  if (metrics.failed > 0 || trends.flakyTests.length > 0) {
+    const slackPayload = {
+      text: `🚨 **Boost.org QA Alert**`,
+      blocks: [
+        {
+          type: "section",
+          text: {
+            type: "mrkdwn",
+            text: `*${metrics.failed} Tests Failed* on \`${metrics.branch}\`\n<https://github.com/${process.env.GITHUB_REPOSITORY}/actions/runs/${metrics.runId}|View Dashboard>`
+          }
+        }
+      ]
+    };
+    fs.writeFileSync(SLACK_FILE, JSON.stringify(slackPayload));
+    console.log('⚠️ Generated Slack alert payload');
+  }
+
   console.log('✅ Dashboard generated successfully!');
-  console.log(`📊 Pass Rate: ${metrics.passRate.toFixed(1)}% | Duration: ${formatDuration(metrics.totalDuration)}`);
 }
 
 function collectTestResults() {
@@ -63,8 +80,6 @@ function collectTestResults() {
     if (fs.existsSync(filepath)) {
       console.log(`Found ${key} results: ${filepath}`);
       results[key] = parsePlaywrightJson(filepath);
-    } else {
-      console.log(`No ${key} results found`);
     }
   }
   
@@ -90,8 +105,9 @@ function parsePlaywrightJson(filepath) {
                 tests.push({
                   name: spec.title || test.title || 'Unknown Test',
                   status: result.status === 'passed' ? 'passed' : 'failed',
-                  // Store as raw number for math, convert to string for display later
-                  durationSec: (result.duration || 0) / 1000, 
+                  durationSec: (result.duration || 0) / 1000,
+                  // Capture Project Name (e.g., 'chromium', 'firefox')
+                  projectName: test.projectName || 'Default', 
                   error: result.errors && result.errors.length > 0 ? result.errors[0].message : null
                 });
               }
@@ -114,20 +130,20 @@ function calculateMetrics(results) {
   const allTests = [...results.smoke, ...results.regression, ...results.version];
   const passed = allTests.filter(t => t.status === 'passed').length;
   const failedTests = allTests.filter(t => t.status === 'failed');
-  
-  // Calculate total duration
   const totalDuration = allTests.reduce((acc, t) => acc + (t.durationSec || 0), 0);
 
   return {
     totalTests: allTests.length,
     passed,
     failed: failedTests.length,
-    failedTestNames: failedTests.map(t => t.name), // Store names for flakiness tracking
+    failedTestNames: failedTests.map(t => t.name),
     passRate: allTests.length > 0 ? (passed / allTests.length) * 100 : 0,
     totalDuration: totalDuration,
     smokeCount: results.smoke.length,
     regressionCount: results.regression.length,
     versionCount: results.version.length,
+    // Add full test list to calculate browser breakdown later
+    allTestObjects: allTests, 
     timestamp: new Date().toISOString(),
     environment: process.env.TEST_ENV || 'staging',
     runId: process.env.GITHUB_RUN_ID || 'local',
@@ -155,16 +171,14 @@ function updateHistory(metrics) {
     passed: metrics.passed,
     failed: metrics.failed,
     passRate: metrics.passRate,
-    duration: metrics.totalDuration, // NEW: Tracking duration
-    failedTestNames: metrics.failedTestNames, // NEW: Tracking specific failures
+    duration: metrics.totalDuration,
+    failedTestNames: metrics.failedTestNames,
     runNumber: runNumber
   };
   
-  // Remove existing entry for this run (idempotency)
   history = history.filter(entry => entry.runNumber !== runNumber);
   history.push(newEntry);
   
-  // Keep last 50 runs
   if (history.length > 50) history = history.slice(-50);
   fs.writeFileSync(HISTORY_FILE, JSON.stringify(history, null, 2));
 }
@@ -173,16 +187,12 @@ function loadHistory() {
   return fs.existsSync(HISTORY_FILE) ? JSON.parse(fs.readFileSync(HISTORY_FILE, 'utf8')) : [];
 }
 
-// NEW: Trend Calculation Logic
 function calculateTrends(metrics, history) {
   if (history.length < 2) return { durationDiff: 0, flakyTests: [] };
 
-  // 1. Duration Trend (vs previous run)
-  const prevRun = history[history.length - 2]; // -1 is current, -2 is previous
+  const prevRun = history[history.length - 2];
   const durationDiff = metrics.totalDuration - (prevRun.duration || 0);
 
-  // 2. Flakiness Detection
-  // Look at last 10 runs. If a test failed > 1 time, it's a "Top Offender"
   const recentHistory = history.slice(-10);
   const failureCounts = {};
   
@@ -194,22 +204,22 @@ function calculateTrends(metrics, history) {
     }
   });
 
-  // Filter for tests that failed at least twice in recent history
   const flakyTests = Object.entries(failureCounts)
     .filter(([name, count]) => count > 1)
     .map(([name, count]) => ({ name, count }))
-    .sort((a, b) => b.count - a.count); // Sort by most frequent
+    .sort((a, b) => b.count - a.count);
 
   return { durationDiff, flakyTests };
 }
+
+// --- MARKDOWN GENERATION ---
 
 function generateDashboardMarkdown(metrics, results, history, trends) {
   const env = (metrics.environment || 'staging').toUpperCase();
   const timestamp = new Date().toLocaleString('en-US', { timeZone: 'America/New_York', dateStyle: 'full', timeStyle: 'short' });
   
-  // Duration Logic
   const durationSign = trends.durationDiff > 0 ? '🔺 Slower' : 'Hz Faster';
-  const durationColor = trends.durationDiff > 5 ? '🔴' : '🟢'; // Red if >5s slower
+  const durationColor = trends.durationDiff > 5 ? '🔴' : '🟢'; 
   const durationText = `${formatDuration(metrics.totalDuration)} (${durationColor} ${Math.abs(trends.durationDiff).toFixed(1)}s ${durationSign})`;
 
   return `# 📊 QA Metrics Dashboard - Boost.org
@@ -217,7 +227,7 @@ function generateDashboardMarkdown(metrics, results, history, trends) {
 > **Automated Quality Gate Report**
 
 **Last Updated:** ${timestamp} | **Env:** ${env} | **Branch:** ${metrics.branch}
-**Run:** [#${metrics.runNumber}](https://github.com/karimarie67/QA-documentation/actions/runs/${metrics.runId})
+**Run:** [#${metrics.runNumber}](https://github.com/${process.env.GITHUB_REPOSITORY}/actions/runs/${metrics.runId})
 
 ---
 
@@ -229,6 +239,14 @@ function generateDashboardMarkdown(metrics, results, history, trends) {
 | **Execution Time** | **${durationText}** | ${metrics.totalDuration > QUALITY_GATES.MAX_DURATION_SEC ? '⚠️ Long Running' : '✅ Optimized'} |
 | **Total Tests** | ${metrics.totalTests} | ${metrics.passed} Passing / ${metrics.failed} Failed |
 | **Flakiness** | ${trends.flakyTests.length} Recurring Issues | ${trends.flakyTests.length > 0 ? '⚠️ Unstable' : '✅ Stable'} |
+
+---
+
+${generateMermaidChart(history)}
+
+---
+
+${generateBrowserBreakdown(metrics.allTestObjects)}
 
 ---
 
@@ -250,21 +268,10 @@ ${generateTestTable(results.version)}
 
 ---
 
-## 📈 Performance & History (Last 10 Runs)
-
+## 📈 History (Last 10 Runs)
 | Date | Pass Rate | Duration | Failures | Status |
 |------|-----------|----------|----------|--------|
 ${generateHistoryTable(history.slice(-10))}
-
----
-
-## 🐛 Quality Gate Status
-
-| Gate | Current | Target | Status |
-|------|---------|--------|--------|
-| **Smoke Reliability** | ${calculatePassRate(results.smoke)}% | ${QUALITY_GATES.SMOKE_TARGET}% | ${getGateEmoji(calculatePassRate(results.smoke), QUALITY_GATES.SMOKE_TARGET)} |
-| **Regression Reliability** | ${calculatePassRate(results.regression)}% | ${QUALITY_GATES.REGRESSION_TARGET}% | ${getGateEmoji(calculatePassRate(results.regression), QUALITY_GATES.REGRESSION_TARGET)} |
-| **Version Compatibility** | ${calculatePassRate(results.version)}% | ${QUALITY_GATES.VERSION_TARGET}% | ${getGateEmoji(calculatePassRate(results.version), QUALITY_GATES.VERSION_TARGET)} |
 
 ---
 `;
@@ -272,22 +279,61 @@ ${generateHistoryTable(history.slice(-10))}
 
 // --- HELPER FUNCTIONS ---
 
+// 1. MERMAID CHART GENERATOR
+function generateMermaidChart(history) {
+  if (!history || history.length < 2) return '';
+
+  const recent = history.slice(-20); // Last 20 runs
+  const labels = recent.map(h => `#${h.runNumber}`);
+  const data = recent.map(h => parseFloat(h.passRate).toFixed(1));
+
+  // Using Mermaid's xy-chart (beta)
+  return `
+### 📉 Reliability Trend (Last 20 Runs)
+
+\`\`\`mermaid
+xychart-beta
+    title "Pass Rate Trend (%)"
+    x-axis [${labels.join(', ')}]
+    y-axis "Pass %" 0 --> 100
+    line [${data.join(', ')}]
+\`\`\`
+`;
+}
+
+// 2. BROWSER BREAKDOWN GENERATOR
+function generateBrowserBreakdown(allTests) {
+  if (!allTests || allTests.length === 0) return '';
+
+  const browsers = {};
+  allTests.forEach(t => {
+    const p = t.projectName || 'Default';
+    if (!browsers[p]) browsers[p] = { total: 0, passed: 0 };
+    browsers[p].total++;
+    if (t.status === 'passed') browsers[p].passed++;
+  });
+
+  // Only show if we actually have multiple browsers/projects
+  const keys = Object.keys(browsers);
+  if (keys.length < 2 && keys[0] === 'Default') return '';
+
+  let section = '### 🌐 Browser / Project Compatibility\n\n| Project | Pass Rate | Status |\n|---|---|---|\n';
+  
+  keys.forEach(b => {
+    const rate = (browsers[b].passed / browsers[b].total) * 100;
+    const icon = rate >= 98 ? '🟢' : (rate >= 90 ? '🟡' : '🔴');
+    section += `| **${b}** | ${rate.toFixed(1)}% | ${icon} |\n`;
+  });
+  
+  return section;
+}
+
 function formatDuration(seconds) {
   if (!seconds) return '0s';
   if (seconds < 60) return `${seconds.toFixed(1)}s`;
   const m = Math.floor(seconds / 60);
   const s = (seconds % 60).toFixed(0);
   return `${m}m ${s}s`;
-}
-
-function calculatePassRate(tests) {
-  if (!tests || tests.length === 0) return 0;
-  const passed = tests.filter(t => t.status === 'passed').length;
-  return Math.round((passed / tests.length) * 100);
-}
-
-function getGateEmoji(current, target) {
-  return current >= target ? '✅' : '🔴';
 }
 
 function getPassRateStatus(passRate) {
@@ -312,11 +358,11 @@ function generateTestTable(tests) {
   const displayTests = tests.slice(0, 10);
   const remaining = tests.length - displayTests.length;
   
-  let table = '| Test Name | Status | Duration |\n|-----------|--------|----------|\n';
+  let table = '| Test Name | Status | Duration | Project |\n|-----------|--------|----------|---------|\n';
   displayTests.forEach(test => {
     const statusIcon = test.status === 'passed' ? '✅' : '❌';
     const dur = test.durationSec < 1 ? '<1s' : `${test.durationSec.toFixed(1)}s`;
-    table += `| ${test.name} | ${statusIcon} ${test.status} | ${dur} |\n`;
+    table += `| ${test.name} | ${statusIcon} ${test.status} | ${dur} | ${test.projectName} |\n`;
   });
   
   if (remaining > 0) table += `\n*... and ${remaining} more tests*\n`;
@@ -339,16 +385,16 @@ function generateHistoryTable(history) {
 function getSampleResults() {
   return {
     smoke: [
-      { name: 'Homepage loads', status: 'passed', durationSec: 1.2 },
-      { name: 'Navigation works', status: 'passed', durationSec: 0.8 }
+      { name: 'Homepage loads', status: 'passed', durationSec: 1.2, projectName: 'chromium' },
+      { name: 'Homepage loads', status: 'passed', durationSec: 1.4, projectName: 'firefox' }
     ],
     regression: [
-      { name: 'Boost.io accessible', status: 'passed', durationSec: 1.5 },
-      { name: 'Library docs load', status: 'passed', durationSec: 2.1 },
-      { name: 'Version page loads', status: 'failed', durationSec: 1.3 } // Intentional fail for sample
+      { name: 'Boost.io accessible', status: 'passed', durationSec: 1.5, projectName: 'chromium' },
+      { name: 'Library docs load', status: 'failed', durationSec: 2.1, projectName: 'chromium' }, // Fail
+      { name: 'Library docs load', status: 'passed', durationSec: 2.3, projectName: 'firefox' }
     ],
     version: [
-      { name: 'Version compatibility check', status: 'passed', durationSec: 1.0 }
+      { name: 'Version compatibility check', status: 'passed', durationSec: 1.0, projectName: 'Default' }
     ]
   };
 }
