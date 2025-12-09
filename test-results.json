@@ -129,49 +129,49 @@
       "specs": [],
       "suites": [
         {
-          "title": "Boost Staging Functional Tests",
+          "title": "Boost Functional Tests",
           "file": "boost_io_tests.spec.js",
           "line": 47,
           "column": 6,
           "specs": [
             {
-              "title": "Responsive design adapts to mobile viewport",
+              "title": "Download link for previous release works",
               "ok": true,
               "tags": [],
               "tests": [
                 {
-                  "timeout": 90000,
+                  "timeout": 120000,
                   "annotations": [
                     {
                       "type": "test_case",
-                      "description": "TC_FUNC_004"
+                      "description": "TC_FUNC_012"
                     }
                   ],
                   "expectedStatus": "passed",
-                  "projectId": "local",
-                  "projectName": "local",
+                  "projectId": "staging",
+                  "projectName": "staging",
                   "results": [
                     {
-                      "workerIndex": 3,
+                      "workerIndex": 7,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 2796,
+                      "duration": 66180,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-14T15:53:03.808Z",
+                      "startTime": "2025-11-14T01:41:23.090Z",
                       "annotations": [
                         {
                           "type": "test_case",
-                          "description": "TC_FUNC_004"
+                          "description": "TC_FUNC_012"
                         }
                       ],
                       "attachments": [
                         {
                           "name": "trace",
                           "contentType": "application/zip",
-                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/boost_io_tests-Boost-Stagi-3566f-n-adapts-to-mobile-viewport-local/trace.zip"
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/boost_io_tests-Boost-Funct-8a5b7--for-previous-release-works-staging/trace.zip"
                         }
                       ]
                     }
@@ -179,9 +179,9 @@
                   "status": "expected"
                 }
               ],
-              "id": "3261b4064291f16b5f75-3bd480ce14c3ef24d231",
+              "id": "3261b4064291f16b5f75-ea5f1b3699ee98663787",
               "file": "boost_io_tests.spec.js",
-              "line": 188,
+              "line": 344,
               "column": 7
             }
           ]
@@ -191,8 +191,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-10-14T15:53:02.238Z",
-    "duration": 4923.212999999989,
+    "startTime": "2025-11-14T01:41:21.512Z",
+    "duration": 68663.06699999998,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,
