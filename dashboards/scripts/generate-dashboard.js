@@ -1,14 +1,22 @@
 const fs = require('fs');
 const path = require('path');
 
+// --- CONFIGURATION: QUALITY GATES ---
+// Adjust these values to change the pass/fail thresholds in the dashboard
+const QUALITY_GATES = {
+  SMOKE_TARGET: 100,      // Smoke tests must be perfect
+  REGRESSION_TARGET: 95,  // Regression allows small margin for known flakes
+  VERSION_TARGET: 98,     // Version checks should be high
+  MAX_DURATION_SEC: 300   // Warning if total suite takes > 5 mins
+};
+
 const ARTIFACTS_DIR = path.join(__dirname, '../../artifacts');
 const DASHBOARD_PATH = path.join(__dirname, '../qa-metrics.md');
 const RESULTS_DIR = path.join(__dirname, '../test-results');
 const HISTORY_FILE = path.join(RESULTS_DIR, 'history.json');
 
 function main() {
-  console.log('🔄 Generating QA Dashboard...');
-  console.log(`Looking for artifacts in: ${ARTIFACTS_DIR}`);
+  console.log('🔄 Generating QA Dashboard (v2.0 - Robust Stats)...');
   
   if (!fs.existsSync(RESULTS_DIR)) {
     fs.mkdirSync(RESULTS_DIR, { recursive: true });
@@ -17,62 +25,50 @@ function main() {
   const testResults = collectTestResults();
   const metrics = calculateMetrics(testResults);
   
-  console.log(`Collected ${metrics.totalTests} total tests`);
-  console.log(`Smoke: ${metrics.smokeCount}, Regression: ${metrics.regressionCount}, Version: ${metrics.versionCount}`);
-  
   updateHistory(metrics);
   const history = loadHistory();
-  const dashboard = generateDashboardMarkdown(metrics, testResults, history);
+  
+  // Calculate trends based on history
+  const trends = calculateTrends(metrics, history);
+  
+  const dashboard = generateDashboardMarkdown(metrics, testResults, history, trends);
   
   fs.writeFileSync(DASHBOARD_PATH, dashboard);
+  
+  // Save detailed latest results
   fs.writeFileSync(
     path.join(RESULTS_DIR, 'latest-results.json'),
     JSON.stringify({ timestamp: new Date().toISOString(), metrics, testResults }, null, 2)
   );
   
   console.log('✅ Dashboard generated successfully!');
-  console.log(`📊 Total: ${metrics.totalTests} | Passed: ${metrics.passed} | Failed: ${metrics.failed} | Pass Rate: ${metrics.passRate.toFixed(1)}%`);
+  console.log(`📊 Pass Rate: ${metrics.passRate.toFixed(1)}% | Duration: ${formatDuration(metrics.totalDuration)}`);
 }
 
 function collectTestResults() {
   const results = { smoke: [], regression: [], version: [] };
   
   if (!fs.existsSync(ARTIFACTS_DIR)) {
-    console.warn('⚠️  No artifacts directory found');
+    console.warn('⚠️  No artifacts directory found - Using Sample Data');
     return getSampleResults();
   }
   
-  // Parse smoke test results
-  const smokeFile = path.join(ARTIFACTS_DIR, 'smoke-test-results/smoke-results.json');
-  if (fs.existsSync(smokeFile)) {
-    console.log(`Found smoke results: ${smokeFile}`);
-    results.smoke = parsePlaywrightJson(smokeFile);
-  } else {
-    console.log('No smoke results found');
-  }
-  
-  // Parse boost.io regression results
-  const boostFile = path.join(ARTIFACTS_DIR, 'boost-io-test-results/boost-io-results.json');
-  if (fs.existsSync(boostFile)) {
-    console.log(`Found boost-io results: ${boostFile}`);
-    const boostTests = parsePlaywrightJson(boostFile);
-    results.regression = results.regression.concat(boostTests);
-  } else {
-    console.log('No boost-io results found');
-  }
-  
-  // Parse version regression results - NOW IN SEPARATE CATEGORY
-  const versionFile = path.join(ARTIFACTS_DIR, 'version-test-results/version-results.json');
-  if (fs.existsSync(versionFile)) {
-    console.log(`Found version results: ${versionFile}`);
-    const versionTests = parsePlaywrightJson(versionFile);
-    results.version = versionTests;  // Changed from regression to version
-  } else {
-    console.log('No version results found');
+  const files = {
+    smoke: path.join(ARTIFACTS_DIR, 'smoke-test-results/smoke-results.json'),
+    regression: path.join(ARTIFACTS_DIR, 'boost-io-test-results/boost-io-results.json'),
+    version: path.join(ARTIFACTS_DIR, 'version-test-results/version-results.json')
+  };
+
+  for (const [key, filepath] of Object.entries(files)) {
+    if (fs.existsSync(filepath)) {
+      console.log(`Found ${key} results: ${filepath}`);
+      results[key] = parsePlaywrightJson(filepath);
+    } else {
+      console.log(`No ${key} results found`);
+    }
   }
   
   if (results.smoke.length === 0 && results.regression.length === 0 && results.version.length === 0) {
-    console.warn('⚠️  No test results found, using sample data');
     return getSampleResults();
   }
   
@@ -84,21 +80,18 @@ function parsePlaywrightJson(filepath) {
     const data = JSON.parse(fs.readFileSync(filepath, 'utf8'));
     const tests = [];
     
-    console.log(`Parsing ${filepath}...`);
-    
-    // Recursive function to traverse the entire test tree
     function traverse(node) {
-      // If this node has specs, extract tests from them
-      if (node.specs && Array.isArray(node.specs)) {
+      if (node.specs) {
         node.specs.forEach(spec => {
-          if (spec.tests && Array.isArray(spec.tests)) {
+          if (spec.tests) {
             spec.tests.forEach(test => {
               if (test.results && test.results.length > 0) {
-                const result = test.results[0]; // Take first result (retries would be additional results)
+                const result = test.results[0];
                 tests.push({
                   name: spec.title || test.title || 'Unknown Test',
                   status: result.status === 'passed' ? 'passed' : 'failed',
-                  duration: ((result.duration || 0) / 1000).toFixed(2) + 's',
+                  // Store as raw number for math, convert to string for display later
+                  durationSec: (result.duration || 0) / 1000, 
                   error: result.errors && result.errors.length > 0 ? result.errors[0].message : null
                 });
               }
@@ -106,18 +99,10 @@ function parsePlaywrightJson(filepath) {
           }
         });
       }
-      
-      // If this node has nested suites, recurse into them
-      if (node.suites && Array.isArray(node.suites)) {
-        node.suites.forEach(suite => traverse(suite));
-      }
+      if (node.suites) node.suites.forEach(suite => traverse(suite));
     }
     
-    // Start traversal from root
     traverse(data);
-    
-    console.log(`✓ Parsed ${tests.length} tests from ${path.basename(filepath)}`);
-    
     return tests;
   } catch (e) {
     console.error(`✗ Error parsing ${filepath}:`, e.message);
@@ -125,36 +110,24 @@ function parsePlaywrightJson(filepath) {
   }
 }
 
-function getSampleResults() {
-  return {
-    smoke: [
-      { name: 'Homepage loads', status: 'passed', duration: '1.2s' },
-      { name: 'Navigation works', status: 'passed', duration: '0.8s' }
-    ],
-    regression: [
-      { name: 'Boost.io accessible', status: 'passed', duration: '1.5s' },
-      { name: 'Library docs load', status: 'passed', duration: '2.1s' },
-      { name: 'Version page loads', status: 'passed', duration: '1.3s' }
-    ],
-    version: [
-      { name: 'Version compatibility check', status: 'passed', duration: '1.0s' }
-    ]
-  };
-}
-
 function calculateMetrics(results) {
   const allTests = [...results.smoke, ...results.regression, ...results.version];
   const passed = allTests.filter(t => t.status === 'passed').length;
-  const failed = allTests.filter(t => t.status === 'failed').length;
+  const failedTests = allTests.filter(t => t.status === 'failed');
   
+  // Calculate total duration
+  const totalDuration = allTests.reduce((acc, t) => acc + (t.durationSec || 0), 0);
+
   return {
     totalTests: allTests.length,
     passed,
-    failed,
+    failed: failedTests.length,
+    failedTestNames: failedTests.map(t => t.name), // Store names for flakiness tracking
     passRate: allTests.length > 0 ? (passed / allTests.length) * 100 : 0,
+    totalDuration: totalDuration,
     smokeCount: results.smoke.length,
     regressionCount: results.regression.length,
-    versionCount: results.version.length,  // Added version count
+    versionCount: results.version.length,
     timestamp: new Date().toISOString(),
     environment: process.env.TEST_ENV || 'staging',
     runId: process.env.GITHUB_RUN_ID || 'local',
@@ -166,7 +139,11 @@ function calculateMetrics(results) {
 function updateHistory(metrics) {
   let history = [];
   if (fs.existsSync(HISTORY_FILE)) {
-    history = JSON.parse(fs.readFileSync(HISTORY_FILE, 'utf8'));
+    try {
+      history = JSON.parse(fs.readFileSync(HISTORY_FILE, 'utf8'));
+    } catch (e) {
+      console.warn('⚠️ Could not parse history file, starting fresh.');
+    }
   }
   
   const runNumber = process.env.GITHUB_RUN_NUMBER || '0';
@@ -178,15 +155,17 @@ function updateHistory(metrics) {
     passed: metrics.passed,
     failed: metrics.failed,
     passRate: metrics.passRate,
+    duration: metrics.totalDuration, // NEW: Tracking duration
+    failedTestNames: metrics.failedTestNames, // NEW: Tracking specific failures
     runNumber: runNumber
   };
   
-  // Remove any existing entry with the same run number (in case of re-runs)
+  // Remove existing entry for this run (idempotency)
   history = history.filter(entry => entry.runNumber !== runNumber);
-  
   history.push(newEntry);
   
-  if (history.length > 30) history = history.slice(-30);
+  // Keep last 50 runs
+  if (history.length > 50) history = history.slice(-50);
   fs.writeFileSync(HISTORY_FILE, JSON.stringify(history, null, 2));
 }
 
@@ -194,197 +173,184 @@ function loadHistory() {
   return fs.existsSync(HISTORY_FILE) ? JSON.parse(fs.readFileSync(HISTORY_FILE, 'utf8')) : [];
 }
 
-function generateDashboardMarkdown(metrics, results, history) {
-  const env = (metrics.environment || 'staging').toUpperCase();
-  const timestamp = new Date().toLocaleString('en-US', { 
-    timeZone: 'America/New_York', 
-    dateStyle: 'full', 
-    timeStyle: 'long' 
-  });
+// NEW: Trend Calculation Logic
+function calculateTrends(metrics, history) {
+  if (history.length < 2) return { durationDiff: 0, flakyTests: [] };
+
+  // 1. Duration Trend (vs previous run)
+  const prevRun = history[history.length - 2]; // -1 is current, -2 is previous
+  const durationDiff = metrics.totalDuration - (prevRun.duration || 0);
+
+  // 2. Flakiness Detection
+  // Look at last 10 runs. If a test failed > 1 time, it's a "Top Offender"
+  const recentHistory = history.slice(-10);
+  const failureCounts = {};
   
-  return `# 📊 QA Metrics Dashboard - Boost.org Testing
+  recentHistory.forEach(run => {
+    if (run.failedTestNames && Array.isArray(run.failedTestNames)) {
+      run.failedTestNames.forEach(name => {
+        failureCounts[name] = (failureCounts[name] || 0) + 1;
+      });
+    }
+  });
 
-> **Live automated testing metrics for Boost C++ Libraries**
+  // Filter for tests that failed at least twice in recent history
+  const flakyTests = Object.entries(failureCounts)
+    .filter(([name, count]) => count > 1)
+    .map(([name, count]) => ({ name, count }))
+    .sort((a, b) => b.count - a.count); // Sort by most frequent
 
-**Last Updated:** ${timestamp}  
-**Environment:** ${env}  
-**Branch:** ${metrics.branch}  
+  return { durationDiff, flakyTests };
+}
+
+function generateDashboardMarkdown(metrics, results, history, trends) {
+  const env = (metrics.environment || 'staging').toUpperCase();
+  const timestamp = new Date().toLocaleString('en-US', { timeZone: 'America/New_York', dateStyle: 'full', timeStyle: 'short' });
+  
+  // Duration Logic
+  const durationSign = trends.durationDiff > 0 ? '🔺 Slower' : 'Hz Faster';
+  const durationColor = trends.durationDiff > 5 ? '🔴' : '🟢'; // Red if >5s slower
+  const durationText = `${formatDuration(metrics.totalDuration)} (${durationColor} ${Math.abs(trends.durationDiff).toFixed(1)}s ${durationSign})`;
+
+  return `# 📊 QA Metrics Dashboard - Boost.org
+
+> **Automated Quality Gate Report**
+
+**Last Updated:** ${timestamp} | **Env:** ${env} | **Branch:** ${metrics.branch}
 **Run:** [#${metrics.runNumber}](https://github.com/karimarie67/QA-documentation/actions/runs/${metrics.runId})
 
 ---
 
-## 🎯 Test Execution Summary
+## 🎯 Executive Summary
 
-| Metric | Value | Status |
-|--------|-------|--------|
-| **Total Tests** | ${metrics.totalTests} | - |
-| **✅ Passed** | ${metrics.passed} | ${getStatusEmoji(metrics.passRate)} |
-| **❌ Failed** | ${metrics.failed} | ${metrics.failed === 0 ? '✅' : '⚠️'} |
+| Metric | Current Value | Trend / Status |
+|--------|---------------|----------------|
 | **Pass Rate** | **${metrics.passRate.toFixed(1)}%** | ${getPassRateStatus(metrics.passRate)} |
+| **Execution Time** | **${durationText}** | ${metrics.totalDuration > QUALITY_GATES.MAX_DURATION_SEC ? '⚠️ Long Running' : '✅ Optimized'} |
+| **Total Tests** | ${metrics.totalTests} | ${metrics.passed} Passing / ${metrics.failed} Failed |
+| **Flakiness** | ${trends.flakyTests.length} Recurring Issues | ${trends.flakyTests.length > 0 ? '⚠️ Unstable' : '✅ Stable'} |
 
 ---
 
-## 📈 Test Coverage by Suite
-
-\`\`\`
-🔥 Smoke Tests:        ${'█'.repeat(getBarLength(results.smoke))}${'░'.repeat(20 - getBarLength(results.smoke))} ${getPassPercentage(results.smoke)}% (${results.smoke.length} tests)
-   ↳ Runs on: Every PR/commit (pre-merge validation)
-
-🔄 Regression Tests:   ${'█'.repeat(getBarLength(results.regression))}${'░'.repeat(20 - getBarLength(results.regression))} ${getPassPercentage(results.regression)}% (${results.regression.length} tests)
-   ↳ Runs on: Develop branch merges (comprehensive validation)
-
-📦 Version Tests:      ${'█'.repeat(getBarLength(results.version))}${'░'.repeat(20 - getBarLength(results.version))} ${getPassPercentage(results.version)}% (${results.version.length} tests)
-   ↳ Runs on: Develop branch merges (version compatibility checks)
-\`\`\`
+## ⚠️ Top Flaky / Recurring Failures
+${generateFlakyTable(trends.flakyTests)}
 
 ---
 
 ## 🔍 Detailed Test Results
 
-### 🔥 Smoke Tests (Pre-Merge Validation)
+### 🔥 Smoke Tests (Target: ${QUALITY_GATES.SMOKE_TARGET}%)
 ${generateTestTable(results.smoke)}
 
-### 🔄 Regression Tests (Post-Merge on Develop)
+### 🔄 Regression Tests (Target: ${QUALITY_GATES.REGRESSION_TARGET}%)
 ${generateTestTable(results.regression)}
 
-### 📦 Version Tests (Compatibility Checks)
+### 📦 Version Tests (Target: ${QUALITY_GATES.VERSION_TARGET}%)
 ${generateTestTable(results.version)}
 
 ---
 
-## 📊 Last 7 Runs
+## 📈 Performance & History (Last 10 Runs)
 
-| Date & Time | Total | Passed | Failed | Pass Rate |
-|-------------|-------|--------|--------|-----------|
-${generateHistoryTable(history.slice(-7))}
-
----
-
-## 🐛 Quality Metrics
-
-| Metric | Current | Target | Status |
-|--------|---------|--------|--------|
-| Test Automation Coverage | 75% | 80% | 🟡 |
-| Smoke Test Pass Rate | ${calculateSmokePassRate(results)}% | >98% | ${getSmokeStatus(results)} |
-| Regression Pass Rate | ${calculateRegressionPassRate(results)}% | >95% | ${getRegressionStatus(results)} |
-| Version Test Pass Rate | ${calculateVersionPassRate(results)}% | >98% | ${getVersionStatus(results)} |
-| Bug Escape Rate | <5% | <5% | ✅ |
+| Date | Pass Rate | Duration | Failures | Status |
+|------|-----------|----------|----------|--------|
+${generateHistoryTable(history.slice(-10))}
 
 ---
 
-## 🚀 Recent Activity
+## 🐛 Quality Gate Status
 
-${metrics.failed > 0 ? `### ⚠️ Failed Tests\n${getFailedTests(results)}\n` : '### ✅ All Tests Passing!\n'}
-
-### 📚 Resources
-- [QA Handbook](../docs/QA_handbook.md)
-- [Testing Strategy](../docs/Testing-Strategy.md)
-- [Test Coverage Map](../docs/Test-Coverage-Map.md)
-- [View Full Report](https://github.com/karimarie67/QA-documentation/actions/runs/${metrics.runId})
+| Gate | Current | Target | Status |
+|------|---------|--------|--------|
+| **Smoke Reliability** | ${calculatePassRate(results.smoke)}% | ${QUALITY_GATES.SMOKE_TARGET}% | ${getGateEmoji(calculatePassRate(results.smoke), QUALITY_GATES.SMOKE_TARGET)} |
+| **Regression Reliability** | ${calculatePassRate(results.regression)}% | ${QUALITY_GATES.REGRESSION_TARGET}% | ${getGateEmoji(calculatePassRate(results.regression), QUALITY_GATES.REGRESSION_TARGET)} |
+| **Version Compatibility** | ${calculatePassRate(results.version)}% | ${QUALITY_GATES.VERSION_TARGET}% | ${getGateEmoji(calculatePassRate(results.version), QUALITY_GATES.VERSION_TARGET)} |
 
 ---
-
-<sub>🤖 *This dashboard is automatically updated by GitHub Actions after each test run.*</sub>
 `;
 }
 
-function getBarLength(tests) {
+// --- HELPER FUNCTIONS ---
+
+function formatDuration(seconds) {
+  if (!seconds) return '0s';
+  if (seconds < 60) return `${seconds.toFixed(1)}s`;
+  const m = Math.floor(seconds / 60);
+  const s = (seconds % 60).toFixed(0);
+  return `${m}m ${s}s`;
+}
+
+function calculatePassRate(tests) {
   if (!tests || tests.length === 0) return 0;
   const passed = tests.filter(t => t.status === 'passed').length;
-  return Math.floor((passed / tests.length) * 20);
+  return Math.round((passed / tests.length) * 100);
 }
 
-function getPassPercentage(tests) {
-  if (!tests || tests.length === 0) return 0;
-  const passed = tests.filter(t => t.status === 'passed').length;
-  return Math.floor((passed / tests.length) * 100);
-}
-
-function calculateSmokePassRate(results) {
-  if (!results.smoke || results.smoke.length === 0) return 0;
-  const passed = results.smoke.filter(t => t.status === 'passed').length;
-  return Math.round((passed / results.smoke.length) * 100);
-}
-
-function calculateRegressionPassRate(results) {
-  if (!results.regression || results.regression.length === 0) return 0;
-  const passed = results.regression.filter(t => t.status === 'passed').length;
-  return Math.round((passed / results.regression.length) * 100);
-}
-
-function calculateVersionPassRate(results) {
-  if (!results.version || results.version.length === 0) return 0;
-  const passed = results.version.filter(t => t.status === 'passed').length;
-  return Math.round((passed / results.version.length) * 100);
-}
-
-function getSmokeStatus(results) {
-  const rate = calculateSmokePassRate(results);
-  return rate >= 98 ? '✅' : rate >= 90 ? '🟡' : '🔴';
-}
-
-function getRegressionStatus(results) {
-  const rate = calculateRegressionPassRate(results);
-  return rate >= 95 ? '✅' : rate >= 85 ? '🟡' : '🔴';
-}
-
-function getVersionStatus(results) {
-  const rate = calculateVersionPassRate(results);
-  return rate >= 98 ? '✅' : rate >= 90 ? '🟡' : '🔴';
-}
-
-function getStatusEmoji(passRate) {
-  if (passRate >= 95) return '🟢';
-  if (passRate >= 80) return '🟡';
-  return '🔴';
+function getGateEmoji(current, target) {
+  return current >= target ? '✅' : '🔴';
 }
 
 function getPassRateStatus(passRate) {
-  if (passRate >= 95) return '🟢 **Excellent**';
-  if (passRate >= 80) return '🟡 **Good**';
+  if (passRate >= 98) return '🟢 **Excellent**';
+  if (passRate >= 90) return '🟡 **Good**';
   return '🔴 **Needs Attention**';
+}
+
+function generateFlakyTable(flakyTests) {
+  if (!flakyTests || flakyTests.length === 0) {
+    return '> *No recurring failures detected in the last 10 runs. Great job!* 🎉';
+  }
+  let table = '| Test Name | Recent Failures (Last 10 Runs) |\n|-----------|--------------------------------|\n';
+  flakyTests.slice(0, 5).forEach(item => {
+    table += `| \`${item.name}\` | **${item.count}** 🚩 |\n`;
+  });
+  return table;
 }
 
 function generateTestTable(tests) {
   if (!tests || tests.length === 0) return '*No tests in this category*\n';
-  
-  // Limit to first 10 tests for readability
   const displayTests = tests.slice(0, 10);
   const remaining = tests.length - displayTests.length;
   
   let table = '| Test Name | Status | Duration |\n|-----------|--------|----------|\n';
   displayTests.forEach(test => {
     const statusIcon = test.status === 'passed' ? '✅' : '❌';
-    table += `| ${test.name} | ${statusIcon} ${test.status} | ${test.duration} |\n`;
+    const dur = test.durationSec < 1 ? '<1s' : `${test.durationSec.toFixed(1)}s`;
+    table += `| ${test.name} | ${statusIcon} ${test.status} | ${dur} |\n`;
   });
   
-  if (remaining > 0) {
-    table += `\n*... and ${remaining} more tests*\n`;
-  }
-  
+  if (remaining > 0) table += `\n*... and ${remaining} more tests*\n`;
   return table;
 }
 
 function generateHistoryTable(history) {
-  if (!history || history.length === 0) {
-    return '*No historical data yet - run more tests to see trends!*';
-  }
-  return history.map(entry => {
-    const timestamp = new Date(entry.time).toLocaleString('en-US', { 
-      month: 'short', 
-      day: 'numeric',
-      hour: '2-digit', 
-      minute: '2-digit',
-      hour12: true 
-    });
-    return `| ${timestamp} | ${entry.total} | ${entry.passed} | ${entry.failed} | ${entry.passRate.toFixed(1)}% |`;
+  if (!history || history.length === 0) return '*No history yet*';
+  
+  return history.reverse().map(entry => {
+    const date = new Date(entry.time).toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+    const dur = formatDuration(entry.duration);
+    const passRate = parseFloat(entry.passRate).toFixed(1);
+    const status = entry.passRate >= 95 ? '🟢' : (entry.passRate >= 85 ? '🟡' : '🔴');
+    
+    return `| ${date} | ${passRate}% | ${dur} | ${entry.failed} | ${status} |`;
   }).join('\n');
 }
 
-function getFailedTests(results) {
-  const failed = [...results.smoke, ...results.regression, ...results.version].filter(t => t.status === 'failed');
-  if (failed.length === 0) return '';
-  return failed.map(t => `- **${t.name}**${t.error ? `\n  \`${t.error}\`` : ''}`).join('\n');
+function getSampleResults() {
+  return {
+    smoke: [
+      { name: 'Homepage loads', status: 'passed', durationSec: 1.2 },
+      { name: 'Navigation works', status: 'passed', durationSec: 0.8 }
+    ],
+    regression: [
+      { name: 'Boost.io accessible', status: 'passed', durationSec: 1.5 },
+      { name: 'Library docs load', status: 'passed', durationSec: 2.1 },
+      { name: 'Version page loads', status: 'failed', durationSec: 1.3 } // Intentional fail for sample
+    ],
+    version: [
+      { name: 'Version compatibility check', status: 'passed', durationSec: 1.0 }
+    ]
+  };
 }
 
 main();
