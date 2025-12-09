@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 2
+      "actualWorkers": 6
     },
     "preserveOutput": "always",
     "reporter": [
@@ -37,7 +37,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 2
+          "actualWorkers": 6
         },
         "id": "local",
         "name": "local",
@@ -53,7 +53,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 2
+          "actualWorkers": 6
         },
         "id": "staging",
         "name": "staging",
@@ -69,7 +69,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 2
+          "actualWorkers": 6
         },
         "id": "production",
         "name": "production",
@@ -85,7 +85,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 2
+          "actualWorkers": 6
         },
         "id": "staging-mobile",
         "name": "staging-mobile",
@@ -101,7 +101,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 2
+          "actualWorkers": 6
         },
         "id": "production-mobile",
         "name": "production-mobile",
@@ -121,6 +121,2007 @@
     "webServer": null
   },
   "suites": [
+    {
+      "title": "boost_io_tests.spec.js",
+      "file": "boost_io_tests.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Boost Functional Tests",
+          "file": "boost_io_tests.spec.js",
+          "line": 47,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Homepage loads and displays key elements",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "test_case",
+                      "description": "TC_FUNC_001"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "staging",
+                  "projectName": "staging",
+                  "results": [
+                    {
+                      "workerIndex": 28,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 8758,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-09T20:23:51.442Z",
+                      "annotations": [
+                        {
+                          "type": "test_case",
+                          "description": "TC_FUNC_001"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/boost_io_tests-Boost-Funct-c9048-s-and-displays-key-elements-staging/test-finished-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/boost_io_tests-Boost-Funct-c9048-s-and-displays-key-elements-staging/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3261b4064291f16b5f75-514406142b3020f6327b",
+              "file": "boost_io_tests.spec.js",
+              "line": 62,
+              "column": 7
+            },
+            {
+              "title": "Search bar is visible and functional",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "test_case",
+                      "description": "TC_FUNC_002"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "staging",
+                  "projectName": "staging",
+                  "results": [
+                    {
+                      "workerIndex": 28,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 7286,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-09T20:24:01.484Z",
+                      "annotations": [
+                        {
+                          "type": "test_case",
+                          "description": "TC_FUNC_002"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/boost_io_tests-Boost-Funct-82b4b-r-is-visible-and-functional-staging/test-finished-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/boost_io_tests-Boost-Funct-82b4b-r-is-visible-and-functional-staging/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3261b4064291f16b5f75-e16ce27d727b3a531ba9",
+              "file": "boost_io_tests.spec.js",
+              "line": 124,
+              "column": 7
+            },
+            {
+              "title": "Navigation menu links work",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "test_case",
+                      "description": "TC_FUNC_003"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "staging",
+                  "projectName": "staging",
+                  "results": [
+                    {
+                      "workerIndex": 28,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 30926,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-09T20:24:09.329Z",
+                      "annotations": [
+                        {
+                          "type": "test_case",
+                          "description": "TC_FUNC_003"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/boost_io_tests-Boost-Funct-f5522--Navigation-menu-links-work-staging/test-finished-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/boost_io_tests-Boost-Funct-f5522--Navigation-menu-links-work-staging/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3261b4064291f16b5f75-aaff40d5d9dc79d261cf",
+              "file": "boost_io_tests.spec.js",
+              "line": 158,
+              "column": 7
+            },
+            {
+              "title": "Responsive design adapts to mobile viewport",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "test_case",
+                      "description": "TC_FUNC_004"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "staging",
+                  "projectName": "staging",
+                  "results": [
+                    {
+                      "workerIndex": 28,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3249,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-09T20:24:40.445Z",
+                      "annotations": [
+                        {
+                          "type": "test_case",
+                          "description": "TC_FUNC_004"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/boost_io_tests-Boost-Funct-4d96a-n-adapts-to-mobile-viewport-staging/test-finished-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/boost_io_tests-Boost-Funct-4d96a-n-adapts-to-mobile-viewport-staging/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3261b4064291f16b5f75-a22b2c9e1a92abc8c686",
+              "file": "boost_io_tests.spec.js",
+              "line": 188,
+              "column": 7
+            },
+            {
+              "title": "Logo redirects to homepage",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "test_case",
+                      "description": "TC_FUNC_005"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "staging",
+                  "projectName": "staging",
+                  "results": [
+                    {
+                      "workerIndex": 28,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 7535,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-09T20:24:43.905Z",
+                      "annotations": [
+                        {
+                          "type": "test_case",
+                          "description": "TC_FUNC_005"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/boost_io_tests-Boost-Funct-08b25--Logo-redirects-to-homepage-staging/test-finished-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/boost_io_tests-Boost-Funct-08b25--Logo-redirects-to-homepage-staging/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3261b4064291f16b5f75-d71d9acbcefe05b24d5a",
+              "file": "boost_io_tests.spec.js",
+              "line": 224,
+              "column": 7
+            },
+            {
+              "title": "Footer links are accessible",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "test_case",
+                      "description": "TC_FUNC_006"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "staging",
+                  "projectName": "staging",
+                  "results": [
+                    {
+                      "workerIndex": 28,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3720,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-09T20:24:51.662Z",
+                      "annotations": [
+                        {
+                          "type": "test_case",
+                          "description": "TC_FUNC_006"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/boost_io_tests-Boost-Funct-e3ff3-Footer-links-are-accessible-staging/test-finished-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/boost_io_tests-Boost-Funct-e3ff3-Footer-links-are-accessible-staging/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3261b4064291f16b5f75-00a4aac8a3314db329e1",
+              "file": "boost_io_tests.spec.js",
+              "line": 246,
+              "column": 7
+            },
+            {
+              "title": "Main content loads on library page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "test_case",
+                      "description": "TC_FUNC_007"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "staging",
+                  "projectName": "staging",
+                  "results": [
+                    {
+                      "workerIndex": 28,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 6705,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-09T20:24:55.555Z",
+                      "annotations": [
+                        {
+                          "type": "test_case",
+                          "description": "TC_FUNC_007"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/boost_io_tests-Boost-Funct-069ae-ntent-loads-on-library-page-staging/test-finished-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/boost_io_tests-Boost-Funct-069ae-ntent-loads-on-library-page-staging/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3261b4064291f16b5f75-cb6aa61636c4778fc94f",
+              "file": "boost_io_tests.spec.js",
+              "line": 275,
+              "column": 7
+            },
+            {
+              "title": "External links are valid",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "test_case",
+                      "description": "TC_FUNC_008"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "staging",
+                  "projectName": "staging",
+                  "results": [
+                    {
+                      "workerIndex": 28,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3781,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-09T20:25:02.457Z",
+                      "annotations": [
+                        {
+                          "type": "test_case",
+                          "description": "TC_FUNC_008"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/boost_io_tests-Boost-Funct-44b2e-ts-External-links-are-valid-staging/test-finished-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/boost_io_tests-Boost-Funct-44b2e-ts-External-links-are-valid-staging/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3261b4064291f16b5f75-4812e8cf6fcb2028d2e2",
+              "file": "boost_io_tests.spec.js",
+              "line": 286,
+              "column": 7
+            },
+            {
+              "title": "GitHub links point to correct repositories",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "test_case",
+                      "description": "TC_FUNC_009"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "staging",
+                  "projectName": "staging",
+                  "results": [
+                    {
+                      "workerIndex": 28,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2277,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-09T20:25:06.426Z",
+                      "annotations": [
+                        {
+                          "type": "test_case",
+                          "description": "TC_FUNC_009"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/boost_io_tests-Boost-Funct-9b142-int-to-correct-repositories-staging/test-finished-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/boost_io_tests-Boost-Funct-9b142-int-to-correct-repositories-staging/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3261b4064291f16b5f75-07f9ab1e7f81a98056eb",
+              "file": "boost_io_tests.spec.js",
+              "line": 302,
+              "column": 7
+            },
+            {
+              "title": "Documentation page loads and displays content",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "test_case",
+                      "description": "TC_FUNC_010"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "staging",
+                  "projectName": "staging",
+                  "results": [
+                    {
+                      "workerIndex": 28,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 5598,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-09T20:25:08.850Z",
+                      "annotations": [
+                        {
+                          "type": "test_case",
+                          "description": "TC_FUNC_010"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/boost_io_tests-Boost-Funct-39e3c--loads-and-displays-content-staging/test-finished-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/boost_io_tests-Boost-Funct-39e3c--loads-and-displays-content-staging/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3261b4064291f16b5f75-c2a19dd76ecf9a10689d",
+              "file": "boost_io_tests.spec.js",
+              "line": 322,
+              "column": 7
+            },
+            {
+              "title": "Release notes are accessible",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "test_case",
+                      "description": "TC_FUNC_011"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "staging",
+                  "projectName": "staging",
+                  "results": [
+                    {
+                      "workerIndex": 28,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2387,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-09T20:25:14.585Z",
+                      "annotations": [
+                        {
+                          "type": "test_case",
+                          "description": "TC_FUNC_011"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/boost_io_tests-Boost-Funct-891c6-elease-notes-are-accessible-staging/test-finished-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/boost_io_tests-Boost-Funct-891c6-elease-notes-are-accessible-staging/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3261b4064291f16b5f75-e3ef9619795ea973f604",
+              "file": "boost_io_tests.spec.js",
+              "line": 333,
+              "column": 7
+            },
+            {
+              "title": "Download link for previous release works",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "test_case",
+                      "description": "TC_FUNC_012"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "staging",
+                  "projectName": "staging",
+                  "results": [
+                    {
+                      "workerIndex": 28,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 64623,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-09T20:25:17.069Z",
+                      "annotations": [
+                        {
+                          "type": "test_case",
+                          "description": "TC_FUNC_012"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/boost_io_tests-Boost-Funct-8a5b7--for-previous-release-works-staging/test-finished-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/boost_io_tests-Boost-Funct-8a5b7--for-previous-release-works-staging/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3261b4064291f16b5f75-ea5f1b3699ee98663787",
+              "file": "boost_io_tests.spec.js",
+              "line": 344,
+              "column": 7
+            },
+            {
+              "title": "Download handles broken or unavailable links",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "test_case",
+                      "description": "TC_FUNC_013"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "staging",
+                  "projectName": "staging",
+                  "results": [
+                    {
+                      "workerIndex": 28,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 5291,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-09T20:26:21.918Z",
+                      "annotations": [
+                        {
+                          "type": "test_case",
+                          "description": "TC_FUNC_013"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/boost_io_tests-Boost-Funct-12463-broken-or-unavailable-links-staging/test-finished-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/boost_io_tests-Boost-Funct-12463-broken-or-unavailable-links-staging/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3261b4064291f16b5f75-bbc0e3fb00edc287eb8c",
+              "file": "boost_io_tests.spec.js",
+              "line": 416,
+              "column": 7
+            },
+            {
+              "title": "Community page links are functional",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "test_case",
+                      "description": "TC_FUNC_014"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "staging",
+                  "projectName": "staging",
+                  "results": [
+                    {
+                      "workerIndex": 28,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2867,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-09T20:26:27.424Z",
+                      "annotations": [
+                        {
+                          "type": "test_case",
+                          "description": "TC_FUNC_014"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/boost_io_tests-Boost-Funct-058ac-y-page-links-are-functional-staging/test-finished-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/boost_io_tests-Boost-Funct-058ac-y-page-links-are-functional-staging/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3261b4064291f16b5f75-000363f3c3b7d0ac0794",
+              "file": "boost_io_tests.spec.js",
+              "line": 453,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "boost_version_tests.spec.js",
+      "file": "boost_version_tests.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Boost Website Version Tests",
+          "file": "boost_version_tests.spec.js",
+          "line": 8,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Libraries page loads and displays version information",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "test_case",
+                      "description": "TC_VERSION_001"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "staging",
+                  "projectName": "staging",
+                  "results": [
+                    {
+                      "workerIndex": 29,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 19101,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-09T20:23:51.511Z",
+                      "annotations": [
+                        {
+                          "type": "test_case",
+                          "description": "TC_VERSION_001"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/boost_version_tests-Boost--2418f-isplays-version-information-staging/test-finished-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/boost_version_tests-Boost--2418f-isplays-version-information-staging/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "8704e09d7aaa556a06e9-89b6dce354d02709c4f0",
+              "file": "boost_version_tests.spec.js",
+              "line": 10,
+              "column": 7
+            },
+            {
+              "title": "Releases page loads and displays release information",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "test_case",
+                      "description": "TC_VERSION_002"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "staging",
+                  "projectName": "staging",
+                  "results": [
+                    {
+                      "workerIndex": 29,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 7515,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-09T20:24:11.678Z",
+                      "annotations": [
+                        {
+                          "type": "test_case",
+                          "description": "TC_VERSION_002"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/boost_version_tests-Boost--3121f-isplays-release-information-staging/test-finished-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/boost_version_tests-Boost--3121f-isplays-release-information-staging/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "8704e09d7aaa556a06e9-2a30567869c731cf4ef4",
+              "file": "boost_version_tests.spec.js",
+              "line": 131,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "documentation_tests.spec.js",
+      "file": "documentation_tests.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Boost Documentation Tests",
+          "file": "documentation_tests.spec.js",
+          "line": 8,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Documentation page loads with table of contents",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "test_case",
+                      "description": "TC_DOC_001"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "staging",
+                  "projectName": "staging",
+                  "results": [
+                    {
+                      "workerIndex": 30,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 10632,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-09T20:23:51.557Z",
+                      "annotations": [
+                        {
+                          "type": "test_case",
+                          "description": "TC_DOC_001"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/documentation_tests-Boost--04acf-oads-with-table-of-contents-staging/test-finished-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/documentation_tests-Boost--04acf-oads-with-table-of-contents-staging/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "db2b772c428763b2504d-506ab420dbbe7363c664",
+              "file": "documentation_tests.spec.js",
+              "line": 10,
+              "column": 7
+            },
+            {
+              "title": "Library documentation links are accessible",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "test_case",
+                      "description": "TC_DOC_002"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "staging",
+                  "projectName": "staging",
+                  "results": [
+                    {
+                      "workerIndex": 30,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 15461,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-09T20:24:03.184Z",
+                      "annotations": [
+                        {
+                          "type": "test_case",
+                          "description": "TC_DOC_002"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/documentation_tests-Boost--2a3da-tation-links-are-accessible-staging/test-finished-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/documentation_tests-Boost--2a3da-tation-links-are-accessible-staging/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "db2b772c428763b2504d-d8f757c2939c37721b53",
+              "file": "documentation_tests.spec.js",
+              "line": 51,
+              "column": 7
+            },
+            {
+              "title": "Code examples are properly formatted",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "test_case",
+                      "description": "TC_DOC_003"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "staging",
+                  "projectName": "staging",
+                  "results": [
+                    {
+                      "workerIndex": 30,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 6952,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-09T20:24:19.067Z",
+                      "annotations": [
+                        {
+                          "type": "test_case",
+                          "description": "TC_DOC_003"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/documentation_tests-Boost--d5356-ples-are-properly-formatted-staging/test-finished-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/documentation_tests-Boost--d5356-ples-are-properly-formatted-staging/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "db2b772c428763b2504d-c254feccdbc6c0b4ab95",
+              "file": "documentation_tests.spec.js",
+              "line": 101,
+              "column": 7
+            },
+            {
+              "title": "Documentation breadcrumbs navigation works",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "test_case",
+                      "description": "TC_DOC_004"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "staging",
+                  "projectName": "staging",
+                  "results": [
+                    {
+                      "workerIndex": 30,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 6201,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-09T20:24:26.198Z",
+                      "annotations": [
+                        {
+                          "type": "test_case",
+                          "description": "TC_DOC_004"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/documentation_tests-Boost--d2135-readcrumbs-navigation-works-staging/test-finished-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/documentation_tests-Boost--d2135-readcrumbs-navigation-works-staging/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "db2b772c428763b2504d-7bd1f2ae3162559b85e7",
+              "file": "documentation_tests.spec.js",
+              "line": 154,
+              "column": 7
+            },
+            {
+              "title": "Documentation version switcher works",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "test_case",
+                      "description": "TC_DOC_005"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "staging",
+                  "projectName": "staging",
+                  "results": [
+                    {
+                      "workerIndex": 30,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 8279,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-09T20:24:32.554Z",
+                      "annotations": [
+                        {
+                          "type": "test_case",
+                          "description": "TC_DOC_005"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/documentation_tests-Boost--c4375-tion-version-switcher-works-staging/test-finished-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/documentation_tests-Boost--c4375-tion-version-switcher-works-staging/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "db2b772c428763b2504d-19996a9d597b504fd611",
+              "file": "documentation_tests.spec.js",
+              "line": 208,
+              "column": 7
+            },
+            {
+              "title": "Documentation search within docs works",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "test_case",
+                      "description": "TC_DOC_006"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "staging",
+                  "projectName": "staging",
+                  "results": [
+                    {
+                      "workerIndex": 30,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 6282,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-09T20:24:40.987Z",
+                      "annotations": [
+                        {
+                          "type": "test_case",
+                          "description": "TC_DOC_006"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/documentation_tests-Boost--92746-on-search-within-docs-works-staging/test-finished-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/documentation_tests-Boost--92746-on-search-within-docs-works-staging/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "db2b772c428763b2504d-6900a917094c16c2a37e",
+              "file": "documentation_tests.spec.js",
+              "line": 263,
+              "column": 7
+            },
+            {
+              "title": "Documentation anchor links work correctly",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "test_case",
+                      "description": "TC_DOC_007"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "staging",
+                  "projectName": "staging",
+                  "results": [
+                    {
+                      "workerIndex": 30,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 5905,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-09T20:24:47.428Z",
+                      "annotations": [
+                        {
+                          "type": "test_case",
+                          "description": "TC_DOC_007"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/documentation_tests-Boost--096e7-anchor-links-work-correctly-staging/test-finished-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/documentation_tests-Boost--096e7-anchor-links-work-correctly-staging/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "db2b772c428763b2504d-550404cce4ad1ea3b4c8",
+              "file": "documentation_tests.spec.js",
+              "line": 306,
+              "column": 7
+            },
+            {
+              "title": "Documentation external links open correctly",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "test_case",
+                      "description": "TC_DOC_008"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "staging",
+                  "projectName": "staging",
+                  "results": [
+                    {
+                      "workerIndex": 30,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 6593,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-09T20:24:53.509Z",
+                      "annotations": [
+                        {
+                          "type": "test_case",
+                          "description": "TC_DOC_008"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/documentation_tests-Boost--0e3a7-ternal-links-open-correctly-staging/test-finished-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/documentation_tests-Boost--0e3a7-ternal-links-open-correctly-staging/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "db2b772c428763b2504d-303f9feaf3485bf5260f",
+              "file": "documentation_tests.spec.js",
+              "line": 360,
+              "column": 7
+            },
+            {
+              "title": "Documentation page titles are descriptive",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "test_case",
+                      "description": "TC_DOC_009"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "staging",
+                  "projectName": "staging",
+                  "results": [
+                    {
+                      "workerIndex": 30,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 2229,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-09T20:25:00.345Z",
+                      "annotations": [
+                        {
+                          "type": "test_case",
+                          "description": "TC_DOC_009"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/documentation_tests-Boost--84c7a-page-titles-are-descriptive-staging/test-finished-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/documentation_tests-Boost--84c7a-page-titles-are-descriptive-staging/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "db2b772c428763b2504d-2653a9b1ad7e7806038d",
+              "file": "documentation_tests.spec.js",
+              "line": 413,
+              "column": 7
+            },
+            {
+              "title": "Documentation PDF/print versions are accessible",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "test_case",
+                      "description": "TC_DOC_010"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "staging",
+                  "projectName": "staging",
+                  "results": [
+                    {
+                      "workerIndex": 30,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 6259,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-09T20:25:02.717Z",
+                      "annotations": [
+                        {
+                          "type": "test_case",
+                          "description": "TC_DOC_010"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/documentation_tests-Boost--d245b-int-versions-are-accessible-staging/test-finished-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/documentation_tests-Boost--d245b-int-versions-are-accessible-staging/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "db2b772c428763b2504d-f0f9af4333caacfcf6b0",
+              "file": "documentation_tests.spec.js",
+              "line": 475,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "download_search_tests.spec.js",
+      "file": "download_search_tests.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Boost Download Tests",
+          "file": "download_search_tests.spec.js",
+          "line": 8,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Download links return valid HTTP status codes",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "test_case",
+                      "description": "TC_DOWNLOAD_001"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "staging",
+                  "projectName": "staging",
+                  "results": [
+                    {
+                      "workerIndex": 31,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 11161,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-09T20:23:51.472Z",
+                      "annotations": [
+                        {
+                          "type": "test_case",
+                          "description": "TC_DOWNLOAD_001"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/download_search_tests-Boos-fad3e-urn-valid-HTTP-status-codes-staging/test-finished-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/download_search_tests-Boos-fad3e-urn-valid-HTTP-status-codes-staging/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4d1de4b4a9aebcf3c3ce-b62c7fe24b3ca4f58f9a",
+              "file": "download_search_tests.spec.js",
+              "line": 10,
+              "column": 7
+            },
+            {
+              "title": "Download file names are correct format",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "test_case",
+                      "description": "TC_DOWNLOAD_002"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "staging",
+                  "projectName": "staging",
+                  "results": [
+                    {
+                      "workerIndex": 31,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 7191,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-09T20:24:04.140Z",
+                      "annotations": [
+                        {
+                          "type": "test_case",
+                          "description": "TC_DOWNLOAD_002"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/download_search_tests-Boos-738c2-le-names-are-correct-format-staging/test-finished-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/download_search_tests-Boos-738c2-le-names-are-correct-format-staging/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4d1de4b4a9aebcf3c3ce-d3606021d6a7f638c4d7",
+              "file": "download_search_tests.spec.js",
+              "line": 61,
+              "column": 7
+            },
+            {
+              "title": "Version selector displays available versions",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "test_case",
+                      "description": "TC_DOWNLOAD_003"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "staging",
+                  "projectName": "staging",
+                  "results": [
+                    {
+                      "workerIndex": 31,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 8232,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-09T20:24:11.921Z",
+                      "annotations": [
+                        {
+                          "type": "test_case",
+                          "description": "TC_DOWNLOAD_003"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/download_search_tests-Boos-9e43b-displays-available-versions-staging/test-finished-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/download_search_tests-Boos-9e43b-displays-available-versions-staging/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4d1de4b4a9aebcf3c3ce-bad33b2747c94c9a5051",
+              "file": "download_search_tests.spec.js",
+              "line": 89,
+              "column": 7
+            },
+            {
+              "title": "Download page displays file sizes",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "test_case",
+                      "description": "TC_DOWNLOAD_004"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "staging",
+                  "projectName": "staging",
+                  "results": [
+                    {
+                      "workerIndex": 31,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 4910,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-09T20:24:20.579Z",
+                      "annotations": [
+                        {
+                          "type": "test_case",
+                          "description": "TC_DOWNLOAD_004"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/download_search_tests-Boos-0ab86-ad-page-displays-file-sizes-staging/test-finished-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/download_search_tests-Boos-0ab86-ad-page-displays-file-sizes-staging/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4d1de4b4a9aebcf3c3ce-332f8fb0071c97efe59f",
+              "file": "download_search_tests.spec.js",
+              "line": 133,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "Boost Search Tests",
+          "file": "download_search_tests.spec.js",
+          "line": 171,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Search returns relevant results for common queries",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "test_case",
+                      "description": "TC_SEARCH_001"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "staging",
+                  "projectName": "staging",
+                  "results": [
+                    {
+                      "workerIndex": 31,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 15815,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-09T20:24:25.775Z",
+                      "annotations": [
+                        {
+                          "type": "test_case",
+                          "description": "TC_SEARCH_001"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/download_search_tests-Boos-550dd--results-for-common-queries-staging/test-finished-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/download_search_tests-Boos-550dd--results-for-common-queries-staging/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4d1de4b4a9aebcf3c3ce-978752cd462c48b1330f",
+              "file": "download_search_tests.spec.js",
+              "line": 173,
+              "column": 7
+            },
+            {
+              "title": "Search with special characters handles gracefully",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "test_case",
+                      "description": "TC_SEARCH_002"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "staging",
+                  "projectName": "staging",
+                  "results": [
+                    {
+                      "workerIndex": 31,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 14500,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-09T20:24:42.003Z",
+                      "annotations": [
+                        {
+                          "type": "test_case",
+                          "description": "TC_SEARCH_002"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/download_search_tests-Boos-2ac4a-aracters-handles-gracefully-staging/test-finished-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/download_search_tests-Boos-2ac4a-aracters-handles-gracefully-staging/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4d1de4b4a9aebcf3c3ce-b95bf51191b34143b735",
+              "file": "download_search_tests.spec.js",
+              "line": 206,
+              "column": 7
+            },
+            {
+              "title": "Empty search shows appropriate message",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "test_case",
+                      "description": "TC_SEARCH_003"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "staging",
+                  "projectName": "staging",
+                  "results": [
+                    {
+                      "workerIndex": 31,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 3044,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-09T20:24:56.816Z",
+                      "annotations": [
+                        {
+                          "type": "test_case",
+                          "description": "TC_SEARCH_003"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/download_search_tests-Boos-4a685-h-shows-appropriate-message-staging/test-finished-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/download_search_tests-Boos-4a685-h-shows-appropriate-message-staging/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4d1de4b4a9aebcf3c3ce-2d06cba6a26576c419a2",
+              "file": "download_search_tests.spec.js",
+              "line": 243,
+              "column": 7
+            },
+            {
+              "title": "Search result pagination works correctly",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "test_case",
+                      "description": "TC_SEARCH_004"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "staging",
+                  "projectName": "staging",
+                  "results": [
+                    {
+                      "workerIndex": 31,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 7644,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-09T20:25:00.073Z",
+                      "annotations": [
+                        {
+                          "type": "test_case",
+                          "description": "TC_SEARCH_004"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/download_search_tests-Boos-8bf4e--pagination-works-correctly-staging/test-finished-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/download_search_tests-Boos-8bf4e--pagination-works-correctly-staging/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4d1de4b4a9aebcf3c3ce-9d8de4d3e1b3720ccbd8",
+              "file": "download_search_tests.spec.js",
+              "line": 298,
+              "column": 7
+            },
+            {
+              "title": "Search autocomplete/suggestions appear",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "test_case",
+                      "description": "TC_SEARCH_005"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "staging",
+                  "projectName": "staging",
+                  "results": [
+                    {
+                      "workerIndex": 31,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 3078,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-09T20:25:07.969Z",
+                      "annotations": [
+                        {
+                          "type": "test_case",
+                          "description": "TC_SEARCH_005"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/download_search_tests-Boos-e028b-complete-suggestions-appear-staging/test-finished-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/download_search_tests-Boos-e028b-complete-suggestions-appear-staging/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4d1de4b4a9aebcf3c3ce-292fd507fd3fa977b4cd",
+              "file": "download_search_tests.spec.js",
+              "line": 351,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
     {
       "title": "error_handling_tests.spec.js",
       "file": "error_handling_tests.spec.js",
@@ -152,15 +2153,15 @@
                   "projectName": "staging",
                   "results": [
                     {
-                      "workerIndex": 12,
-                      "parallelIndex": 0,
+                      "workerIndex": 32,
+                      "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 2912,
+                      "duration": 3673,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-09T14:37:25.354Z",
+                      "startTime": "2025-12-09T20:23:51.539Z",
                       "annotations": [
                         {
                           "type": "test_case",
@@ -207,15 +2208,15 @@
                   "projectName": "staging",
                   "results": [
                     {
-                      "workerIndex": 12,
-                      "parallelIndex": 0,
+                      "workerIndex": 32,
+                      "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 2608,
+                      "duration": 3055,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-09T14:37:28.643Z",
+                      "startTime": "2025-12-09T20:23:56.445Z",
                       "annotations": [
                         {
                           "type": "test_case",
@@ -246,7 +2247,7 @@
             },
             {
               "title": "Invalid search query handles gracefully",
-              "ok": false,
+              "ok": true,
               "tags": [],
               "tests": [
                 {
@@ -262,34 +2263,15 @@
                   "projectName": "staging",
                   "results": [
                     {
-                      "workerIndex": 12,
-                      "parallelIndex": 0,
-                      "status": "failed",
-                      "duration": 18135,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  locator('input[type=\"search\"], input[placeholder*=\"search\" i], input[name=\"search\"], input[name=\"q\"]').first()\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  15000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('input[type=\"search\"], input[placeholder*=\"search\" i], input[name=\"search\"], input[name=\"q\"]').first()\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  locator('input[type=\"search\"], input[placeholder*=\"search\" i], input[name=\"search\"], input[name=\"q\"]').first()\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  15000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('input[type=\"search\"], input[placeholder*=\"search\" i], input[name=\"search\"], input[name=\"q\"]').first()\u001b[22m\n\n    at /Users/kskinner/github/karimarie67/QA-documentation/tests/error_handling_tests.spec.js:98:31",
-                        "location": {
-                          "file": "/Users/kskinner/github/karimarie67/QA-documentation/tests/error_handling_tests.spec.js",
-                          "column": 31,
-                          "line": 98
-                        },
-                        "snippet": "\u001b[0m \u001b[90m  96 |\u001b[39m     \u001b[90m// Find search input\u001b[39m\n \u001b[90m  97 |\u001b[39m     \u001b[36mconst\u001b[39m searchInput \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'input[type=\"search\"], input[placeholder*=\"search\" i], input[name=\"search\"], input[name=\"q\"]'\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  98 |\u001b[39m     \u001b[36mawait\u001b[39m expect(searchInput)\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m testData\u001b[33m.\u001b[39mtimeouts\u001b[33m.\u001b[39mmedium })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  99 |\u001b[39m\n \u001b[90m 100 |\u001b[39m     \u001b[90m// Try searching for special characters that might break things\u001b[39m\n \u001b[90m 101 |\u001b[39m     \u001b[36mconst\u001b[39m invalidSearchTerms \u001b[33m=\u001b[39m [\u001b[32m'<script>'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'%%%'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'///'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'\"\"\"'\u001b[39m]\u001b[33m;\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "/Users/kskinner/github/karimarie67/QA-documentation/tests/error_handling_tests.spec.js",
-                            "column": 31,
-                            "line": 98
-                          },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  locator('input[type=\"search\"], input[placeholder*=\"search\" i], input[name=\"search\"], input[name=\"q\"]').first()\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  15000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('input[type=\"search\"], input[placeholder*=\"search\" i], input[name=\"search\"], input[name=\"q\"]').first()\u001b[22m\n\n\n\u001b[0m \u001b[90m  96 |\u001b[39m     \u001b[90m// Find search input\u001b[39m\n \u001b[90m  97 |\u001b[39m     \u001b[36mconst\u001b[39m searchInput \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'input[type=\"search\"], input[placeholder*=\"search\" i], input[name=\"search\"], input[name=\"q\"]'\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  98 |\u001b[39m     \u001b[36mawait\u001b[39m expect(searchInput)\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m testData\u001b[33m.\u001b[39mtimeouts\u001b[33m.\u001b[39mmedium })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  99 |\u001b[39m\n \u001b[90m 100 |\u001b[39m     \u001b[90m// Try searching for special characters that might break things\u001b[39m\n \u001b[90m 101 |\u001b[39m     \u001b[36mconst\u001b[39m invalidSearchTerms \u001b[33m=\u001b[39m [\u001b[32m'<script>'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'%%%'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'///'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'\"\"\"'\u001b[39m]\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at /Users/kskinner/github/karimarie67/QA-documentation/tests/error_handling_tests.spec.js:98:31\u001b[22m"
-                        }
-                      ],
+                      "workerIndex": 32,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 3944,
+                      "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-09T14:37:31.420Z",
+                      "startTime": "2025-12-09T20:23:59.674Z",
                       "annotations": [
                         {
                           "type": "test_case",
@@ -300,27 +2282,17 @@
                         {
                           "name": "screenshot",
                           "contentType": "image/png",
-                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/error_handling_tests-Boost-14c0d-ch-query-handles-gracefully-staging/test-failed-1.png"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/error_handling_tests-Boost-14c0d-ch-query-handles-gracefully-staging/error-context.md"
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/error_handling_tests-Boost-14c0d-ch-query-handles-gracefully-staging/test-finished-1.png"
                         },
                         {
                           "name": "trace",
                           "contentType": "application/zip",
                           "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/error_handling_tests-Boost-14c0d-ch-query-handles-gracefully-staging/trace.zip"
                         }
-                      ],
-                      "errorLocation": {
-                        "file": "/Users/kskinner/github/karimarie67/QA-documentation/tests/error_handling_tests.spec.js",
-                        "column": 31,
-                        "line": 98
-                      }
+                      ]
                     }
                   ],
-                  "status": "unexpected"
+                  "status": "expected"
                 }
               ],
               "id": "774b7ddbbbaf5644fea5-75c029e3821fd6602e49",
@@ -346,15 +2318,15 @@
                   "projectName": "staging",
                   "results": [
                     {
-                      "workerIndex": 15,
-                      "parallelIndex": 0,
+                      "workerIndex": 32,
+                      "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 7686,
+                      "duration": 8123,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-09T14:37:51.055Z",
+                      "startTime": "2025-12-09T20:24:03.986Z",
                       "annotations": [
                         {
                           "type": "test_case",
@@ -380,7 +2352,7 @@
               ],
               "id": "774b7ddbbbaf5644fea5-a3e509ff2813623fd701",
               "file": "error_handling_tests.spec.js",
-              "line": 128,
+              "line": 137,
               "column": 7
             },
             {
@@ -401,15 +2373,15 @@
                   "projectName": "staging",
                   "results": [
                     {
-                      "workerIndex": 15,
-                      "parallelIndex": 0,
+                      "workerIndex": 32,
+                      "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 5233,
+                      "duration": 5881,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-09T14:37:59.441Z",
+                      "startTime": "2025-12-09T20:24:12.525Z",
                       "annotations": [
                         {
                           "type": "test_case",
@@ -435,7 +2407,7 @@
               ],
               "id": "774b7ddbbbaf5644fea5-8c95715daea65b5c7387",
               "file": "error_handling_tests.spec.js",
-              "line": 173,
+              "line": 182,
               "column": 7
             },
             {
@@ -456,15 +2428,15 @@
                   "projectName": "staging",
                   "results": [
                     {
-                      "workerIndex": 15,
-                      "parallelIndex": 0,
+                      "workerIndex": 32,
+                      "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 3531,
+                      "duration": 3779,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-09T14:38:04.882Z",
+                      "startTime": "2025-12-09T20:24:18.711Z",
                       "annotations": [
                         {
                           "type": "test_case",
@@ -490,11 +2462,28 @@
               ],
               "id": "774b7ddbbbaf5644fea5-0b1ef3706265a53a3c49",
               "file": "error_handling_tests.spec.js",
-              "line": 216,
+              "line": 225,
               "column": 7
-            },
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "smoke_tests.spec.js",
+      "file": "smoke_tests.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Boost Smoke Tests",
+          "file": "smoke_tests.spec.js",
+          "line": 16,
+          "column": 6,
+          "specs": [
             {
-              "title": "404 page displays appropriate error message",
+              "title": "Homepage loads with key elements",
               "ok": true,
               "tags": [],
               "tests": [
@@ -503,39 +2492,39 @@
                   "annotations": [
                     {
                       "type": "test_case",
-                      "description": "TC_ERROR_001"
+                      "description": "TC_SMOKE_001"
                     }
                   ],
                   "expectedStatus": "passed",
-                  "projectId": "staging-mobile",
-                  "projectName": "staging-mobile",
+                  "projectId": "staging",
+                  "projectName": "staging",
                   "results": [
                     {
-                      "workerIndex": 13,
-                      "parallelIndex": 1,
+                      "workerIndex": 33,
+                      "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 2981,
+                      "duration": 6326,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-09T14:37:25.354Z",
+                      "startTime": "2025-12-09T20:23:51.647Z",
                       "annotations": [
                         {
                           "type": "test_case",
-                          "description": "TC_ERROR_001"
+                          "description": "TC_SMOKE_001"
                         }
                       ],
                       "attachments": [
                         {
                           "name": "screenshot",
                           "contentType": "image/png",
-                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/error_handling_tests-Boost-05b59-s-appropriate-error-message-staging-mobile/test-finished-1.png"
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/smoke_tests-Boost-Smoke-Te-8f14c-age-loads-with-key-elements-staging/test-finished-1.png"
                         },
                         {
                           "name": "trace",
                           "contentType": "application/zip",
-                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/error_handling_tests-Boost-05b59-s-appropriate-error-message-staging-mobile/trace.zip"
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/smoke_tests-Boost-Smoke-Te-8f14c-age-loads-with-key-elements-staging/trace.zip"
                         }
                       ]
                     }
@@ -543,207 +2532,13 @@
                   "status": "expected"
                 }
               ],
-              "id": "774b7ddbbbaf5644fea5-e01920b3988bd279951c",
-              "file": "error_handling_tests.spec.js",
-              "line": 10,
+              "id": "0dd4ca234e5177e0dd80-f48068901fd3ef82e190",
+              "file": "smoke_tests.spec.js",
+              "line": 19,
               "column": 7
             },
             {
-              "title": "Broken documentation link returns appropriate error",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [
-                    {
-                      "type": "test_case",
-                      "description": "TC_ERROR_002"
-                    }
-                  ],
-                  "expectedStatus": "passed",
-                  "projectId": "staging-mobile",
-                  "projectName": "staging-mobile",
-                  "results": [
-                    {
-                      "workerIndex": 13,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 2475,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-12-09T14:37:28.718Z",
-                      "annotations": [
-                        {
-                          "type": "test_case",
-                          "description": "TC_ERROR_002"
-                        }
-                      ],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/error_handling_tests-Boost-0dcae-k-returns-appropriate-error-staging-mobile/test-finished-1.png"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/error_handling_tests-Boost-0dcae-k-returns-appropriate-error-staging-mobile/trace.zip"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "774b7ddbbbaf5644fea5-614718343bc2f982145b",
-              "file": "error_handling_tests.spec.js",
-              "line": 60,
-              "column": 7
-            },
-            {
-              "title": "Invalid search query handles gracefully",
-              "ok": false,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [
-                    {
-                      "type": "test_case",
-                      "description": "TC_ERROR_003"
-                    }
-                  ],
-                  "expectedStatus": "passed",
-                  "projectId": "staging-mobile",
-                  "projectName": "staging-mobile",
-                  "results": [
-                    {
-                      "workerIndex": 13,
-                      "parallelIndex": 1,
-                      "status": "failed",
-                      "duration": 17981,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  locator('input[type=\"search\"], input[placeholder*=\"search\" i], input[name=\"search\"], input[name=\"q\"]').first()\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  15000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('input[type=\"search\"], input[placeholder*=\"search\" i], input[name=\"search\"], input[name=\"q\"]').first()\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  locator('input[type=\"search\"], input[placeholder*=\"search\" i], input[name=\"search\"], input[name=\"q\"]').first()\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  15000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('input[type=\"search\"], input[placeholder*=\"search\" i], input[name=\"search\"], input[name=\"q\"]').first()\u001b[22m\n\n    at /Users/kskinner/github/karimarie67/QA-documentation/tests/error_handling_tests.spec.js:98:31",
-                        "location": {
-                          "file": "/Users/kskinner/github/karimarie67/QA-documentation/tests/error_handling_tests.spec.js",
-                          "column": 31,
-                          "line": 98
-                        },
-                        "snippet": "\u001b[0m \u001b[90m  96 |\u001b[39m     \u001b[90m// Find search input\u001b[39m\n \u001b[90m  97 |\u001b[39m     \u001b[36mconst\u001b[39m searchInput \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'input[type=\"search\"], input[placeholder*=\"search\" i], input[name=\"search\"], input[name=\"q\"]'\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  98 |\u001b[39m     \u001b[36mawait\u001b[39m expect(searchInput)\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m testData\u001b[33m.\u001b[39mtimeouts\u001b[33m.\u001b[39mmedium })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  99 |\u001b[39m\n \u001b[90m 100 |\u001b[39m     \u001b[90m// Try searching for special characters that might break things\u001b[39m\n \u001b[90m 101 |\u001b[39m     \u001b[36mconst\u001b[39m invalidSearchTerms \u001b[33m=\u001b[39m [\u001b[32m'<script>'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'%%%'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'///'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'\"\"\"'\u001b[39m]\u001b[33m;\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "/Users/kskinner/github/karimarie67/QA-documentation/tests/error_handling_tests.spec.js",
-                            "column": 31,
-                            "line": 98
-                          },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  locator('input[type=\"search\"], input[placeholder*=\"search\" i], input[name=\"search\"], input[name=\"q\"]').first()\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  15000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('input[type=\"search\"], input[placeholder*=\"search\" i], input[name=\"search\"], input[name=\"q\"]').first()\u001b[22m\n\n\n\u001b[0m \u001b[90m  96 |\u001b[39m     \u001b[90m// Find search input\u001b[39m\n \u001b[90m  97 |\u001b[39m     \u001b[36mconst\u001b[39m searchInput \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'input[type=\"search\"], input[placeholder*=\"search\" i], input[name=\"search\"], input[name=\"q\"]'\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  98 |\u001b[39m     \u001b[36mawait\u001b[39m expect(searchInput)\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m testData\u001b[33m.\u001b[39mtimeouts\u001b[33m.\u001b[39mmedium })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  99 |\u001b[39m\n \u001b[90m 100 |\u001b[39m     \u001b[90m// Try searching for special characters that might break things\u001b[39m\n \u001b[90m 101 |\u001b[39m     \u001b[36mconst\u001b[39m invalidSearchTerms \u001b[33m=\u001b[39m [\u001b[32m'<script>'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'%%%'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'///'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'\"\"\"'\u001b[39m]\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at /Users/kskinner/github/karimarie67/QA-documentation/tests/error_handling_tests.spec.js:98:31\u001b[22m"
-                        }
-                      ],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-12-09T14:37:31.341Z",
-                      "annotations": [
-                        {
-                          "type": "test_case",
-                          "description": "TC_ERROR_003"
-                        }
-                      ],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/error_handling_tests-Boost-14c0d-ch-query-handles-gracefully-staging-mobile/test-failed-1.png"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/error_handling_tests-Boost-14c0d-ch-query-handles-gracefully-staging-mobile/error-context.md"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/error_handling_tests-Boost-14c0d-ch-query-handles-gracefully-staging-mobile/trace.zip"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "/Users/kskinner/github/karimarie67/QA-documentation/tests/error_handling_tests.spec.js",
-                        "column": 31,
-                        "line": 98
-                      }
-                    }
-                  ],
-                  "status": "unexpected"
-                }
-              ],
-              "id": "774b7ddbbbaf5644fea5-7cc2ef3889c5263cd074",
-              "file": "error_handling_tests.spec.js",
-              "line": 88,
-              "column": 7
-            },
-            {
-              "title": "Malformed URL redirects or shows error appropriately",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [
-                    {
-                      "type": "test_case",
-                      "description": "TC_ERROR_004"
-                    }
-                  ],
-                  "expectedStatus": "passed",
-                  "projectId": "staging-mobile",
-                  "projectName": "staging-mobile",
-                  "results": [
-                    {
-                      "workerIndex": 14,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 8009,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-12-09T14:37:50.870Z",
-                      "annotations": [
-                        {
-                          "type": "test_case",
-                          "description": "TC_ERROR_004"
-                        }
-                      ],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/error_handling_tests-Boost-1383e-r-shows-error-appropriately-staging-mobile/test-finished-1.png"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/error_handling_tests-Boost-1383e-r-shows-error-appropriately-staging-mobile/trace.zip"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "774b7ddbbbaf5644fea5-e44c249ff855eaaad8d1",
-              "file": "error_handling_tests.spec.js",
-              "line": 128,
-              "column": 7
-            },
-            {
-              "title": "Broken external links are identified",
+              "title": "Navigation menu links work correctly",
               "ok": true,
               "tags": [],
               "tests": [
@@ -752,39 +2547,39 @@
                   "annotations": [
                     {
                       "type": "test_case",
-                      "description": "TC_ERROR_005"
+                      "description": "TC_SMOKE_002"
                     }
                   ],
                   "expectedStatus": "passed",
-                  "projectId": "staging-mobile",
-                  "projectName": "staging-mobile",
+                  "projectId": "staging",
+                  "projectName": "staging",
                   "results": [
                     {
-                      "workerIndex": 14,
-                      "parallelIndex": 1,
+                      "workerIndex": 33,
+                      "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 5055,
+                      "duration": 11579,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-09T14:37:59.449Z",
+                      "startTime": "2025-12-09T20:23:58.872Z",
                       "annotations": [
                         {
                           "type": "test_case",
-                          "description": "TC_ERROR_005"
+                          "description": "TC_SMOKE_002"
                         }
                       ],
                       "attachments": [
                         {
                           "name": "screenshot",
                           "contentType": "image/png",
-                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/error_handling_tests-Boost-eb90a-ternal-links-are-identified-staging-mobile/test-finished-1.png"
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/smoke_tests-Boost-Smoke-Te-08d63-n-menu-links-work-correctly-staging/test-finished-1.png"
                         },
                         {
                           "name": "trace",
                           "contentType": "application/zip",
-                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/error_handling_tests-Boost-eb90a-ternal-links-are-identified-staging-mobile/trace.zip"
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/smoke_tests-Boost-Smoke-Te-08d63-n-menu-links-work-correctly-staging/trace.zip"
                         }
                       ]
                     }
@@ -792,13 +2587,178 @@
                   "status": "expected"
                 }
               ],
-              "id": "774b7ddbbbaf5644fea5-a69cc305c013d0f218be",
-              "file": "error_handling_tests.spec.js",
-              "line": 173,
+              "id": "0dd4ca234e5177e0dd80-0ab4f3bf7a8895ed08a2",
+              "file": "smoke_tests.spec.js",
+              "line": 61,
               "column": 7
             },
             {
-              "title": "Form validation errors display correctly",
+              "title": "Libraries page displays and links to documentation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "test_case",
+                      "description": "TC_SMOKE_003"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "staging",
+                  "projectName": "staging",
+                  "results": [
+                    {
+                      "workerIndex": 33,
+                      "parallelIndex": 5,
+                      "status": "passed",
+                      "duration": 13027,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-09T20:24:11.437Z",
+                      "annotations": [
+                        {
+                          "type": "test_case",
+                          "description": "TC_SMOKE_003"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/smoke_tests-Boost-Smoke-Te-13c7d--and-links-to-documentation-staging/test-finished-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/smoke_tests-Boost-Smoke-Te-13c7d--and-links-to-documentation-staging/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0dd4ca234e5177e0dd80-986a05a2b23482d22df5",
+              "file": "smoke_tests.spec.js",
+              "line": 169,
+              "column": 7
+            },
+            {
+              "title": "Download section works correctly",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "test_case",
+                      "description": "TC_SMOKE_004"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "staging",
+                  "projectName": "staging",
+                  "results": [
+                    {
+                      "workerIndex": 33,
+                      "parallelIndex": 5,
+                      "status": "passed",
+                      "duration": 5264,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-09T20:24:24.767Z",
+                      "annotations": [
+                        {
+                          "type": "test_case",
+                          "description": "TC_SMOKE_004"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/smoke_tests-Boost-Smoke-Te-c777b-oad-section-works-correctly-staging/test-finished-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/smoke_tests-Boost-Smoke-Te-c777b-oad-section-works-correctly-staging/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0dd4ca234e5177e0dd80-82c22283b678e951d137",
+              "file": "smoke_tests.spec.js",
+              "line": 227,
+              "column": 7
+            },
+            {
+              "title": "Search bar works with basic query",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "test_case",
+                      "description": "TC_SMOKE_005"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "staging",
+                  "projectName": "staging",
+                  "results": [
+                    {
+                      "workerIndex": 33,
+                      "parallelIndex": 5,
+                      "status": "passed",
+                      "duration": 6096,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-09T20:24:30.314Z",
+                      "annotations": [
+                        {
+                          "type": "test_case",
+                          "description": "TC_SMOKE_005"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/smoke_tests-Boost-Smoke-Te-bdfcd--bar-works-with-basic-query-staging/test-finished-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/smoke_tests-Boost-Smoke-Te-bdfcd--bar-works-with-basic-query-staging/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0dd4ca234e5177e0dd80-ec14c392f10495474ed7",
+              "file": "smoke_tests.spec.js",
+              "line": 291,
+              "column": 7
+            },
+            {
+              "title": "Homepage is responsive on mobile",
               "ok": true,
               "tags": [],
               "tests": [
@@ -807,39 +2767,39 @@
                   "annotations": [
                     {
                       "type": "test_case",
-                      "description": "TC_ERROR_006"
+                      "description": "TC_SMOKE_006"
                     }
                   ],
                   "expectedStatus": "passed",
-                  "projectId": "staging-mobile",
-                  "projectName": "staging-mobile",
+                  "projectId": "staging",
+                  "projectName": "staging",
                   "results": [
                     {
-                      "workerIndex": 14,
-                      "parallelIndex": 1,
+                      "workerIndex": 33,
+                      "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 2935,
+                      "duration": 3205,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-09T14:38:04.776Z",
+                      "startTime": "2025-12-09T20:24:36.628Z",
                       "annotations": [
                         {
                           "type": "test_case",
-                          "description": "TC_ERROR_006"
+                          "description": "TC_SMOKE_006"
                         }
                       ],
                       "attachments": [
                         {
                           "name": "screenshot",
                           "contentType": "image/png",
-                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/error_handling_tests-Boost-89500-on-errors-display-correctly-staging-mobile/test-finished-1.png"
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/smoke_tests-Boost-Smoke-Te-ff2eb-age-is-responsive-on-mobile-staging/test-finished-1.png"
                         },
                         {
                           "name": "trace",
                           "contentType": "application/zip",
-                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/error_handling_tests-Boost-89500-on-errors-display-correctly-staging-mobile/trace.zip"
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/smoke_tests-Boost-Smoke-Te-ff2eb-age-is-responsive-on-mobile-staging/trace.zip"
                         }
                       ]
                     }
@@ -847,9 +2807,9 @@
                   "status": "expected"
                 }
               ],
-              "id": "774b7ddbbbaf5644fea5-902f36f213a123171774",
-              "file": "error_handling_tests.spec.js",
-              "line": 216,
+              "id": "0dd4ca234e5177e0dd80-0a8fff9a06e88aca1330",
+              "file": "smoke_tests.spec.js",
+              "line": 330,
               "column": 7
             }
           ]
@@ -859,11 +2819,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-12-09T14:37:23.936Z",
-    "duration": 44694.55000000005,
-    "expected": 10,
+    "startTime": "2025-12-09T20:23:49.689Z",
+    "duration": 160849.96500000032,
+    "expected": 47,
     "skipped": 0,
-    "unexpected": 2,
+    "unexpected": 0,
     "flaky": 0
   }
 }
