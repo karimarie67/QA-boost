@@ -1,0 +1,749 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - text: 
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - link [ref=e5] [cursor=pointer]:
+          - /url: /
+          - img [ref=e6] [cursor=pointer]
+        - link [ref=e7] [cursor=pointer]:
+          - /url: /news/
+          - text: news
+        - link [ref=e8] [cursor=pointer]:
+          - /url: /docs/
+          - text: learn
+        - link [ref=e9] [cursor=pointer]:
+          - /url: /community/
+          - text: community
+        - link [ref=e10] [cursor=pointer]:
+          - /url: /libraries/
+          - text: libraries
+        - link [ref=e11] [cursor=pointer]:
+          - /url: /releases/
+          - text: releases
+      - generic [ref=e12]:
+        - generic [ref=e14] [cursor=pointer]: 
+        - generic [ref=e16] [cursor=pointer]: 
+        - generic [ref=e17] [cursor=pointer]: 
+        - link [ref=e20] [cursor=pointer]:
+          - /url: /accounts/signup/
+          - text: Join
+    - main [ref=e22]:
+      - generic [ref=e24]:
+        - link [ref=e28] [cursor=pointer]:
+          - /url: /releases/
+          - generic [ref=e29] [cursor=pointer]: 
+          - text: Download the Latest Release
+        - generic [ref=e30]:
+          - heading [level=1] [ref=e31]:
+            - generic [ref=e32]:
+              - text: The
+              - generic [ref=e33]: Boost
+              - text: C++ Libraries are open source, peer-reviewed, portable and free
+          - paragraph [ref=e34]: Created by experts to be reliable, skillfully-designed, and well-tested.
+      - generic [ref=e36]:
+        - generic [ref=e37]:
+          - heading [level=5] [ref=e38]: Boost Mission
+          - list [ref=e39]:
+            - listitem [ref=e40]: development of high quality, expert reviewed, legally unencumbered, open-source libraries,
+            - listitem [ref=e41]: inspiring standard enhancements, and
+            - listitem [ref=e42]: advancing and disseminating software development best practices.
+          - paragraph [ref=e43]: It does this by fostering community engagement, nurturing leaders, providing necessary financial/legal support, and making directional decisions in the event of Boost community deadlock.
+          - paragraph [ref=e44]: Equally important to our mission is the guidance provided by our shared values. These are transparency, inclusivity, consensus-building, federated authorship, and community-driven leadership.
+        - generic [ref=e46]:
+          - generic [ref=e47]:
+            - img [ref=e48]
+            - heading [level=4] [ref=e49]: 10M+
+            - text: Total Downloads
+          - generic [ref=e50]:
+            - img [ref=e51]
+            - heading [level=4] [ref=e52]: 165+
+            - text: Individual Libraries
+          - paragraph [ref=e54]:
+            - generic [ref=e55]: Why Use Boost?
+            - text: In a word,
+            - generic [ref=e56]: Productivity
+            - text: . Use of high-quality libraries like Boost speeds initial development, results in fewer bugs, reduces reinvention-of-the-wheel, and cuts long-term maintenance costs. And since Boost libraries tend to become de facto or de jure standards, many programmers are already familiar with them.
+      - generic [ref=e58]:
+        - generic [ref=e60]:
+          - generic [ref=e61]: schedule of events
+          - link [ref=e63] [cursor=pointer]:
+            - /url: /calendar/
+            - text: All Events
+            - generic [ref=e64] [cursor=pointer]: 
+        - generic [ref=e66]:
+          - generic [ref=e68]:
+            - heading [level=3] [ref=e69]: December 2025
+            - generic [ref=e70]:
+              - strong [ref=e71]: "Dec. 10, 2025:"
+              - text: Boost 1.90.0 release
+              - generic [ref=e72]: Release posted for download.
+          - generic [ref=e73]:
+            - generic [ref=e74]: 
+            - generic [ref=e75]: 
+      - generic [ref=e77]:
+        - generic [ref=e79]: library spotlight
+        - link [ref=e81] [cursor=pointer]:
+          - /url: /libraries/
+          - text: All Libraries
+          - generic [ref=e82] [cursor=pointer]: 
+        - heading [level=3] [ref=e83]:
+          - link [ref=e84] [cursor=pointer]:
+            - /url: /library/latest/stl_interfaces/
+            - text: Stl_interfaces
+        - generic [ref=e85]: C++14 and later CRTP templates for defining iterators, views, and containers.
+        - paragraph [ref=e86]
+        - generic [ref=e89]:
+          - generic [ref=e90]:
+            - generic [ref=e94]: 
+            - generic [ref=e95]:
+              - generic [ref=e96]: T. Zachary Laine
+              - generic [ref=e97]: Author
+          - generic [ref=e98]:
+            - link [ref=e99] [cursor=pointer]:
+              - /url: https://github.com/tzlaine
+              - img [ref=e102] [cursor=pointer]
+            - generic [ref=e103]:
+              - generic [ref=e104]: Zach Laine
+              - generic [ref=e105]: Maintainer
+      - generic [ref=e107]:
+        - generic [ref=e109]: featured video
+        - link [ref=e113] [cursor=pointer]:
+          - /url: https://www.youtube.com/watch?v=XB3uEit5R_Y
+          - text: "Getting Started with Boost.Asio: Timers and Serial Ports"
+      - generic [ref=e115]:
+        - generic [ref=e117]: recent news
+        - link [ref=e119] [cursor=pointer]:
+          - /url: /news/
+          - text: All News
+          - generic [ref=e120] [cursor=pointer]: 
+        - generic [ref=e121]:
+          - generic [ref=e122]:
+            - heading [level=2] [ref=e123]:
+              - link [ref=e125] [cursor=pointer]:
+                - /url: https://github.com/rbbeeston
+                - img [ref=e128] [cursor=pointer]
+              - generic [ref=e130]: 
+              - link [ref=e131] [cursor=pointer]:
+                - /url: /news/entry/four-boost-libraries-come-with-c-modules-support-in-boost-189/
+                - text: Four Boost libraries come with C++ modules support in Boost 1.89!
+            - paragraph [ref=e132]: Posted on Aug 18th, 2025 by Rob Beeston
+            - generic [ref=e134]:
+              - text: "Any:"
+              - link [ref=e135] [cursor=pointer]:
+                - /url: https://t.co/b5uXlmBBka
+                - text: https://t.co/b5uXlmBBka
+              - text: "PFR:"
+              - link [ref=e136] [cursor=pointer]:
+                - /url: https://t.co/MV146rWJF5
+                - text: https://t.co/MV146rWJF5
+              - text: "Regex:"
+              - link [ref=e137] [cursor=pointer]:
+                - /url: https://t.co/CncJ17OYvj
+                - text: https://t.co/CncJ17OYvj
+              - text: "TypeIndex:"
+              - link [ref=e138] [cursor=pointer]:
+                - /url: https://t.co/eHyCbrIdbG
+                - text: https://t.co/eHyCbrIdbG
+              - text: Learn about C++ modules support in Boost at
+              - link [ref=e139] [cursor=pointer]:
+                - /url: https://t.co/QBMoGAFmI7
+                - text: https://t.co/QBMoGAFmI7
+          - generic [ref=e140]:
+            - heading [level=2] [ref=e141]:
+              - img [ref=e146]
+              - generic [ref=e148]: 
+              - link [ref=e149] [cursor=pointer]:
+                - /url: /news/entry/boost-184-arrived/
+                - text: Boost 1.84 arrived!
+            - paragraph [ref=e150]: Posted on Dec 15th, 2024 by Louis Tatta
+            - generic [ref=e152]:
+              - text: "Two new libraries, field name reflection in PFR and many more updates. Download:"
+              - link [ref=e153] [cursor=pointer]:
+                - /url: http://ttps://boost.org/users/history/version_1_84_0.html
+                - text: ttps://boost.org/use..../version_1_84_0.html
+              - text: "Boost.Cobalt, algorithms and types for C++20 coroutines:"
+              - link [ref=e154] [cursor=pointer]:
+                - /url: https://boost.org/libs/cobalt
+                - text: https://boost.org/libs/cobalt
+              - text: "Boost.Redis:"
+              - link [ref=e155] [cursor=pointer]:
+                - /url: https://boost.org/libs/redis
+                - text: https://boost.org/libs/redis
+          - generic [ref=e156]:
+            - heading [level=2] [ref=e157]:
+              - img [ref=e162]
+              - generic [ref=e164]: 
+              - link [ref=e165] [cursor=pointer]:
+                - /url: /news/entry/boost-1850-closed-for-all-changes-on-april-3rd/
+                - text: Boost 1.85.0 closed for all changes on April 3rd
+            - paragraph [ref=e166]: Posted on Mar 17th, 2024 by Louis Tatta
+            - generic [ref=e168]: Boost 1.85.0 closed for all changes When Wednesday, Apr 3, 2024
+    - contentinfo [ref=e169]:
+      - generic [ref=e170]:
+        - generic [ref=e171]:
+          - link [ref=e172] [cursor=pointer]:
+            - /url: https://lists.boost.org/mailman3/lists/boost-users.lists.boost.org/
+            - text: Contact
+          - link [ref=e173] [cursor=pointer]:
+            - /url: /privacy/
+            - text: Privacy Policy
+          - link [ref=e174] [cursor=pointer]:
+            - /url: /terms-of-use/
+            - text: Terms of Use
+          - link [ref=e175] [cursor=pointer]:
+            - /url: /doc/user-guide/reporting-issues.html
+            - text: Report Bug
+          - generic [ref=e176]:
+            - link [ref=e177] [cursor=pointer]:
+              - /url: https://x.com/boost_libraries
+              - generic [ref=e178] [cursor=pointer]: 
+            - link [ref=e179] [cursor=pointer]:
+              - /url: https://bsky.app/profile/boost.org
+              - generic [ref=e180] [cursor=pointer]: 
+            - link [ref=e181] [cursor=pointer]:
+              - /url: https://mastodon.social/@boostlibs
+              - generic [ref=e182] [cursor=pointer]: 
+            - link [ref=e183] [cursor=pointer]:
+              - /url: https://www.reddit.com/user/boostlibs/
+              - generic [ref=e184] [cursor=pointer]: 
+            - link [ref=e185] [cursor=pointer]:
+              - /url: https://github.com/boostorg
+              - generic [ref=e186] [cursor=pointer]: 
+            - link [ref=e187] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/cppalliance/
+              - generic [ref=e188] [cursor=pointer]: 
+        - generic [ref=e190]:
+          - text: Website supported by grants from
+          - link [ref=e191] [cursor=pointer]:
+            - /url: https://cppalliance.org/
+            - text: The C++ Alliance
+          - text: .
+        - generic [ref=e193]:
+          - text: Distributed under the
+          - link [ref=e194] [cursor=pointer]:
+            - /url: /LICENSE_1_0.txt
+            - text: Boost Software License, Version 1.0
+          - text: .
+  - 'dialog "C++ Esc Tip: limit the search scope by navigating to a library page. Libraries (3.8k) Learn (210)" [ref=e197]':
+    - 'heading "C++ Esc Tip: limit the search scope by navigating to a library page." [level=2] [ref=e198]':
+      - generic [ref=e199]:
+        - generic [ref=e203]:
+          - img [ref=e205]
+          - combobox "Search..." [active] [ref=e207]: C++
+          - group
+        - button "Esc" [ref=e209] [cursor=pointer]:
+          - img [ref=e210] [cursor=pointer]
+          - text: Esc
+        - generic [ref=e212]:
+          - generic [ref=e213]:
+            - generic [ref=e214]: "Tip:"
+            - text: limit the search scope by navigating to a library page.
+          - tablist [ref=e217]:
+            - tab "Libraries (3.8k)" [selected] [ref=e218] [cursor=pointer]:
+              - text: Libraries
+              - generic [ref=e219] [cursor=pointer]: (3.8k)
+            - tab "Learn (210)" [ref=e220] [cursor=pointer]:
+              - text: Learn
+              - generic [ref=e221] [cursor=pointer]: (210)
+    - generic [ref=e225]:
+      - generic [ref=e226]:
+        - navigation [ref=e227]:
+          - list [ref=e228]:
+            - listitem [ref=e229]:
+              - link "Preprocessor" [ref=e230] [cursor=pointer]:
+                - /url: https://www.stage.boost.org/doc/libs/latest/libs/preprocessor
+            - listitem [ref=e231]: ›
+            - listitem [ref=e232]:
+              - link "Known Problems of the C/C++ Preprocessor" [ref=e233] [cursor=pointer]:
+                - /url: https://www.stage.boost.org/doc/libs/latest/libs/preprocessor/doc/topics/problems.html
+                - text: Known Problems of the C/
+                - mark [ref=e234] [cursor=pointer]: C++
+                - text: Preprocessor
+        - generic [ref=e235]:
+          - generic [ref=e236]: … - Bjarne Stroustrup in [Stroustrup]. Solution The C/
+          - mark [ref=e237]: C++
+          - generic [ref=e238]: preprocessor will be here for a long time. In …
+      - navigation [ref=e240]:
+        - list [ref=e241]:
+          - listitem [ref=e242]:
+            - link "Circular Buffer" [ref=e243] [cursor=pointer]:
+              - /url: https://www.stage.boost.org/doc/libs/latest/libs/circular_buffer
+          - listitem [ref=e244]: ›
+          - listitem [ref=e245]:
+            - link "Boost.Circular_buffer C++ Reference" [ref=e246] [cursor=pointer]:
+              - /url: https://www.stage.boost.org/doc/libs/latest/doc/html/boost_circular_buffer_c___reference.html
+              - text: Boost.Circular_buffer
+              - mark [ref=e247] [cursor=pointer]: C++
+              - text: Reference
+      - generic [ref=e248]:
+        - navigation [ref=e249]:
+          - list [ref=e250]:
+            - listitem [ref=e251]:
+              - link "Hash2" [ref=e252] [cursor=pointer]:
+                - /url: https://www.stage.boost.org/doc/libs/latest/libs/hash2
+            - listitem [ref=e253]: ›
+            - listitem [ref=e254]:
+              - link "Hashing C++ Objects" [ref=e255] [cursor=pointer]:
+                - /url: https://www.stage.boost.org/doc/libs/latest/libs/hash2/doc/html/hash2.html#hashing_objects
+                - text: Hashing
+                - mark [ref=e256] [cursor=pointer]: C++
+                - text: Objects
+        - generic [ref=e257]:
+          - generic [ref=e258]: The traditional approach to hashing
+          - mark [ref=e259]: C++
+          - generic [ref=e260]: objects is to make them responsible for providing a hash value. The standard, for instance …
+      - generic [ref=e261]:
+        - navigation [ref=e262]:
+          - list [ref=e263]:
+            - listitem [ref=e264]:
+              - link "MySQL" [ref=e265] [cursor=pointer]:
+                - /url: https://www.stage.boost.org/doc/libs/latest/libs/mysql
+            - listitem [ref=e266]: ›
+            - listitem [ref=e267]:
+              - 'link "Tutorial 2: going async with C++20 coroutines" [ref=e268] [cursor=pointer]':
+                - /url: https://www.stage.boost.org/doc/libs/latest/libs/mysql/doc/html/mysql/tutorial_async.html
+                - text: "Tutorial 2: going async with"
+                - mark [ref=e269] [cursor=pointer]: C++
+                - text: 20 coroutines
+        - generic [ref=e270]:
+          - generic [ref=e271]: … using
+          - mark [ref=e272]: C++
+          - generic [ref=e273]: 20? Don't worry, you can use stackful coroutines and callbacks even in
+          - mark [ref=e274]: C++
+          - generic [ref=e275]: "11."
+      - navigation [ref=e277]:
+        - list [ref=e278]:
+          - listitem [ref=e279]:
+            - link "Algorithm" [ref=e280] [cursor=pointer]:
+              - /url: https://www.stage.boost.org/doc/libs/latest/libs/algorithm
+          - listitem [ref=e281]: ›
+          - listitem [ref=e282]:
+            - link "C++14 Algorithms" [ref=e283] [cursor=pointer]:
+              - /url: https://www.stage.boost.org/doc/libs/latest/libs/algorithm/doc/html/algorithm/CXX14.html
+              - mark [ref=e284] [cursor=pointer]: C++
+              - text: 14 Algorithms
+      - navigation [ref=e286]:
+        - list [ref=e287]:
+          - listitem [ref=e288]:
+            - link "Algorithm" [ref=e289] [cursor=pointer]:
+              - /url: https://www.stage.boost.org/doc/libs/latest/libs/algorithm
+          - listitem [ref=e290]: ›
+          - listitem [ref=e291]:
+            - link "C++11 Algorithms" [ref=e292] [cursor=pointer]:
+              - /url: https://www.stage.boost.org/doc/libs/latest/libs/algorithm/doc/html/algorithm/CXX11.html
+              - mark [ref=e293] [cursor=pointer]: C++
+              - text: 11 Algorithms
+      - generic [ref=e294]:
+        - navigation [ref=e295]:
+          - list [ref=e296]:
+            - listitem [ref=e297]:
+              - link "Algorithm" [ref=e298] [cursor=pointer]:
+                - /url: https://www.stage.boost.org/doc/libs/latest/libs/algorithm
+            - listitem [ref=e299]: ›
+            - listitem [ref=e300]:
+              - link "Not-yet-documented C++17 Algorithms" [ref=e301] [cursor=pointer]:
+                - /url: https://www.stage.boost.org/doc/libs/latest/libs/algorithm/doc/html/algorithm/not_yet_documented_cxx17_algos.html
+                - text: Not-yet-documented
+                - mark [ref=e302] [cursor=pointer]: C++
+                - text: 17 Algorithms
+        - generic [ref=e304]: exclusive_scan inclusive_scan reduce transform_reduce
+      - navigation [ref=e306]:
+        - list [ref=e307]:
+          - listitem [ref=e308]:
+            - link "Algorithm" [ref=e309] [cursor=pointer]:
+              - /url: https://www.stage.boost.org/doc/libs/latest/libs/algorithm
+          - listitem [ref=e310]: ›
+          - listitem [ref=e311]:
+            - link "C++17 Algorithms" [ref=e312] [cursor=pointer]:
+              - /url: https://www.stage.boost.org/doc/libs/latest/libs/algorithm/doc/html/algorithm/CXX17.html
+              - mark [ref=e313] [cursor=pointer]: C++
+              - text: 17 Algorithms
+      - generic [ref=e314]:
+        - navigation [ref=e315]:
+          - list [ref=e316]:
+            - listitem [ref=e317]:
+              - link "PFR" [ref=e318] [cursor=pointer]:
+                - /url: https://www.stage.boost.org/doc/libs/latest/libs/pfr
+            - listitem [ref=e319]: ›
+            - listitem [ref=e320]:
+              - link "PFR as a C++20 module" [ref=e321] [cursor=pointer]:
+                - /url: https://www.stage.boost.org/doc/libs/latest/doc/html/boost_pfr/pfr_as_a_c_20_module.html
+                - text: PFR as a
+                - mark [ref=e322] [cursor=pointer]: C++
+                - text: 20 module
+        - generic [ref=e323]:
+          - generic [ref=e324]: … module clang++ -I ../include -std=
+          - mark [ref=e325]: c++
+          - generic [ref=e326]: 20 --precompile -x
+          - mark [ref=e327]: c++
+          - generic [ref=e328]: "- …"
+      - generic [ref=e329]:
+        - navigation [ref=e330]:
+          - list [ref=e331]:
+            - listitem [ref=e332]:
+              - link "Type Index" [ref=e333] [cursor=pointer]:
+                - /url: https://www.stage.boost.org/doc/libs/latest/libs/type_index
+            - listitem [ref=e334]: ›
+            - listitem [ref=e335]:
+              - link "C++20 module" [ref=e336] [cursor=pointer]:
+                - /url: https://www.stage.boost.org/doc/libs/latest/doc/html/boost_typeindex/c_20_module.html
+                - mark [ref=e337] [cursor=pointer]: C++
+                - text: 20 module
+        - generic [ref=e338]:
+          - generic [ref=e339]: … modules clang++ -I ../include -std=
+          - mark [ref=e340]: c++
+          - generic [ref=e341]: 20 --precompile -x
+          - mark [ref=e342]: c++
+          - generic [ref=e343]: "- …"
+      - generic [ref=e344]:
+        - navigation [ref=e345]:
+          - list [ref=e346]:
+            - listitem [ref=e347]:
+              - link "VMD" [ref=e348] [cursor=pointer]:
+                - /url: https://www.stage.boost.org/doc/libs/latest/libs/vmd
+            - listitem [ref=e349]: ›
+            - listitem [ref=e350]:
+              - link "Visual C++ define" [ref=e351] [cursor=pointer]:
+                - /url: https://www.stage.boost.org/doc/libs/latest/libs/vmd/doc/html/variadic_macro_data/vmd_vc.html
+                - text: Visual
+                - mark [ref=e352] [cursor=pointer]: C++
+                - text: define
+        - generic [ref=e353]:
+          - generic [ref=e354]: Microsoft's Visual
+          - mark [ref=e355]: C++
+          - generic [ref=e356]: compiler, abbreviated VC++, is a very popular compiler but does not implement the standard …
+      - generic [ref=e357]:
+        - navigation [ref=e358]:
+          - list [ref=e359]:
+            - listitem [ref=e360]:
+              - link "VMD" [ref=e361] [cursor=pointer]:
+                - /url: https://www.stage.boost.org/doc/libs/latest/libs/vmd
+            - listitem [ref=e362]: ›
+            - listitem [ref=e363]:
+              - link "Visual C++ gotchas in VMD" [ref=e364] [cursor=pointer]:
+                - /url: https://www.stage.boost.org/doc/libs/latest/libs/vmd/doc/html/variadic_macro_data/vmd_vc_isms.html
+                - text: Visual
+                - mark [ref=e365] [cursor=pointer]: C++
+                - text: gotchas in VMD
+        - generic [ref=e366]:
+          - generic [ref=e367]: I have discussed throughout the documentation areas of VMD which need to be considered when using Microsoft's Visual
+          - mark [ref=e368]: C++
+          - generic [ref=e369]: compilers with …
+      - generic [ref=e370]:
+        - navigation [ref=e371]:
+          - list [ref=e372]:
+            - listitem [ref=e373]:
+              - link "Stl_interfaces" [ref=e374] [cursor=pointer]:
+                - /url: https://www.stage.boost.org/doc/libs/latest/libs/stl_interfaces
+            - listitem [ref=e375]: ›
+            - listitem [ref=e376]:
+              - link "The v1 and v2 Namespaces, and the Use of C++20 Concepts" [ref=e377] [cursor=pointer]:
+                - /url: https://www.stage.boost.org/doc/libs/latest/doc/html/boost_stlinterfaces/the__v1__and__v2__namespaces__and_the_use_of_c__20_concepts.html
+                - text: The v1 and v2 Namespaces, and the Use of
+                - mark [ref=e378] [cursor=pointer]: C++
+                - text: 20 Concepts
+        - generic [ref=e379]:
+          - generic [ref=e380]: … the v2 version uses concepts, including the standard concepts from
+          - mark [ref=e381]: C++
+          - generic [ref=e382]: 20. When you build with a conforming
+          - mark [ref=e383]: C++
+          - generic [ref=e384]: …
+      - navigation [ref=e386]:
+        - list [ref=e387]:
+          - listitem [ref=e388]:
+            - link "Pool" [ref=e389] [cursor=pointer]:
+              - /url: https://www.stage.boost.org/doc/libs/latest/libs/pool
+          - listitem [ref=e390]: ›
+          - listitem [ref=e391]:
+            - link "Boost.Pool C++ Reference" [ref=e392] [cursor=pointer]:
+              - /url: https://www.stage.boost.org/doc/libs/latest/libs/pool/doc/html/boost_pool_c___reference.html
+              - text: Boost.Pool
+              - mark [ref=e393] [cursor=pointer]: C++
+              - text: Reference
+      - navigation [ref=e395]:
+        - list [ref=e396]:
+          - listitem [ref=e397]:
+            - link "Convert" [ref=e398] [cursor=pointer]:
+              - /url: https://www.stage.boost.org/doc/libs/latest/libs/convert
+          - listitem [ref=e399]: ›
+          - listitem [ref=e400]:
+            - link "Boost.Convert C++ Reference" [ref=e401] [cursor=pointer]:
+              - /url: https://www.stage.boost.org/doc/libs/latest/libs/convert/doc/html/boost_convert_c___reference.html
+              - text: Boost.Convert
+              - mark [ref=e402] [cursor=pointer]: C++
+              - text: Reference
+      - generic [ref=e403]:
+        - navigation [ref=e404]:
+          - list [ref=e405]:
+            - listitem [ref=e406]:
+              - link "Outcome" [ref=e407] [cursor=pointer]:
+                - /url: https://www.stage.boost.org/doc/libs/latest/libs/outcome
+            - listitem [ref=e408]: ›
+            - listitem [ref=e409]:
+              - link "Sample usage (C++)" [ref=e410] [cursor=pointer]:
+                - /url: https://www.stage.boost.org/doc/libs/latest/libs/outcome/doc/html/index.html#sample-usage-c
+                - text: Sample usage (
+                - mark [ref=e411] [cursor=pointer]: C++
+                - text: )
+        - generic [ref=e413]: "The main workhorse in the Outcome library is result<T>: it represents either a successfully computed value of type T, or …"
+      - generic [ref=e414]:
+        - navigation [ref=e415]:
+          - list [ref=e416]:
+            - listitem [ref=e417]:
+              - link "Locale" [ref=e418] [cursor=pointer]:
+                - /url: https://www.stage.boost.org/doc/libs/latest/libs/locale
+            - listitem [ref=e419]: ›
+            - listitem [ref=e420]:
+              - link "Status of C++11 char16_t/char32_t support" [ref=e421] [cursor=pointer]:
+                - /url: https://www.stage.boost.org/doc/libs/latest/libs/locale/doc/html/status_of_cpp0x_characters_support.html
+                - text: Status of
+                - mark [ref=e422] [cursor=pointer]: C++
+                - text: 11 char16_t/char32_t support
+        - generic [ref=e423]:
+          - generic [ref=e424]: The support of
+          - mark [ref=e425]: C++
+          - generic [ref=e426]: 11 char16_t and char32_t is experimental, mostly does not work, and is not …
+      - navigation [ref=e428]:
+        - list [ref=e429]:
+          - listitem [ref=e430]:
+            - link "Locale" [ref=e431] [cursor=pointer]:
+              - /url: https://www.stage.boost.org/doc/libs/latest/libs/locale
+          - listitem [ref=e432]: ›
+          - listitem [ref=e433]:
+            - link "Introduction to C++ Standard Library localization support" [ref=e434] [cursor=pointer]:
+              - /url: https://www.stage.boost.org/doc/libs/latest/libs/locale/doc/html/std_locales.html
+              - text: Introduction to
+              - mark [ref=e435] [cursor=pointer]: C++
+              - text: Standard Library localization support
+      - generic [ref=e436]:
+        - navigation [ref=e437]:
+          - list [ref=e438]:
+            - listitem [ref=e439]:
+              - link "Container" [ref=e440] [cursor=pointer]:
+                - /url: https://www.stage.boost.org/doc/libs/latest/libs/container
+            - listitem [ref=e441]: ›
+            - listitem [ref=e442]:
+              - link "Boost.Container and C++ exceptions" [ref=e443] [cursor=pointer]:
+                - /url: https://www.stage.boost.org/doc/libs/latest/doc/html/container/exception_handling.html
+                - text: Boost.Container and
+                - mark [ref=e444] [cursor=pointer]: C++
+                - text: exceptions
+        - generic [ref=e445]:
+          - generic [ref=e446]: In some environments, such as game development or embedded systems,
+          - mark [ref=e447]: C++
+          - generic [ref=e448]: exceptions are disabled or a customized error handling is needed …
+      - generic [ref=e449]:
+        - navigation [ref=e450]:
+          - list [ref=e451]:
+            - listitem [ref=e452]:
+              - link "Container" [ref=e453] [cursor=pointer]:
+                - /url: https://www.stage.boost.org/doc/libs/latest/libs/container
+            - listitem [ref=e454]: ›
+            - listitem [ref=e455]:
+              - link "C++11/C++14/C++17 Conformance" [ref=e456] [cursor=pointer]:
+                - /url: https://www.stage.boost.org/doc/libs/latest/doc/html/container/cpp_conformance.html
+                - mark [ref=e457] [cursor=pointer]: C++
+                - text: 11/
+                - mark [ref=e458] [cursor=pointer]: C++
+                - text: 14/
+                - mark [ref=e459] [cursor=pointer]: C++
+                - text: 17 Conformance
+        - generic [ref=e460]:
+          - generic [ref=e461]: … this conformance is a work in progress so this section explains what
+          - mark [ref=e462]: C++
+          - generic [ref=e463]: 11/
+          - mark [ref=e464]: C++
+          - generic [ref=e465]: 14/
+          - mark [ref=e466]: C++
+          - generic [ref=e467]: …
+      - generic [ref=e468]:
+        - navigation [ref=e469]:
+          - list [ref=e470]:
+            - listitem [ref=e471]:
+              - link "Multi-Index" [ref=e472] [cursor=pointer]:
+                - /url: https://www.stage.boost.org/doc/libs/latest/libs/multi_index
+            - listitem [ref=e473]: ›
+            - listitem [ref=e474]:
+              - link "C++17 terse key specification syntax" [ref=e475] [cursor=pointer]:
+                - /url: https://www.stage.boost.org/doc/libs/latest/libs/multi_index/doc/tutorial/key_extraction.html#key
+                - mark [ref=e476] [cursor=pointer]: C++
+                - text: 17 terse key specification syntax
+        - generic [ref=e477]:
+          - mark [ref=e478]: C++
+          - generic [ref=e479]: 17 introduces the declaration of auto template parameters, which can be taken advantage of to eliminate some redundancy in the specification …
+      - generic [ref=e480]:
+        - navigation [ref=e481]:
+          - list [ref=e482]:
+            - listitem [ref=e483]:
+              - link "Any" [ref=e484] [cursor=pointer]:
+                - /url: https://www.stage.boost.org/doc/libs/latest/libs/any
+            - listitem [ref=e485]: ›
+            - listitem [ref=e486]:
+              - link "C++20 module" [ref=e487] [cursor=pointer]:
+                - /url: https://www.stage.boost.org/doc/libs/latest/doc/html/any/c_20_module.html
+                - mark [ref=e488] [cursor=pointer]: C++
+                - text: 20 module
+        - generic [ref=e489]:
+          - generic [ref=e490]: … modules clang++ -I ../include -std=
+          - mark [ref=e491]: c++
+          - generic [ref=e492]: 20 --precompile -x
+          - mark [ref=e493]: c++
+          - generic [ref=e494]: "- …"
+      - generic [ref=e495]:
+        - navigation [ref=e496]:
+          - list [ref=e497]:
+            - listitem [ref=e498]:
+              - link "Circular Buffer" [ref=e499] [cursor=pointer]:
+                - /url: https://www.stage.boost.org/doc/libs/latest/libs/circular_buffer
+            - listitem [ref=e500]: ›
+            - listitem [ref=e501]:
+              - link "Boost.Circular_buffer C++ Reference" [ref=e502] [cursor=pointer]:
+                - /url: https://www.stage.boost.org/doc/libs/latest/doc/html/boost_circular_buffer_c___reference.html
+                - text: Boost.Circular_buffer
+                - mark [ref=e503] [cursor=pointer]: C++
+                - text: Reference
+            - listitem [ref=e504]: ›
+            - listitem [ref=e505]:
+              - link "Header <boost/circular_buffer/space_optimized.hpp>" [ref=e506] [cursor=pointer]:
+                - /url: https://www.stage.boost.org/doc/libs/latest/doc/html/boost_circular_buffer_c___reference.html#doxygen.boost_circular_buffer_c___reference.space__optimized_8hpp
+        - generic [ref=e508]: "namespace boost { template<typename T, typename Alloc> class circular_buffer_space_optimized; // Test two space …"
+      - generic [ref=e509]:
+        - navigation [ref=e510]:
+          - list [ref=e511]:
+            - listitem [ref=e512]:
+              - link "Circular Buffer" [ref=e513] [cursor=pointer]:
+                - /url: https://www.stage.boost.org/doc/libs/latest/libs/circular_buffer
+            - listitem [ref=e514]: ›
+            - listitem [ref=e515]:
+              - link "Boost.Circular_buffer C++ Reference" [ref=e516] [cursor=pointer]:
+                - /url: https://www.stage.boost.org/doc/libs/latest/doc/html/boost_circular_buffer_c___reference.html
+                - text: Boost.Circular_buffer
+                - mark [ref=e517] [cursor=pointer]: C++
+                - text: Reference
+            - listitem [ref=e518]: ›
+            - listitem [ref=e519]:
+              - link "Header <boost/circular_buffer/base.hpp>" [ref=e520] [cursor=pointer]:
+                - /url: https://www.stage.boost.org/doc/libs/latest/doc/html/boost_circular_buffer_c___reference.html#doxygen.boost_circular_buffer_c___reference.base_8hpp
+        - generic [ref=e522]: "namespace boost { template<typename T, typename Alloc> class circular_buffer; template<typename T, typename Alloc> bool …"
+      - generic [ref=e523]:
+        - navigation [ref=e524]:
+          - list [ref=e525]:
+            - listitem [ref=e526]:
+              - link "Circular Buffer" [ref=e527] [cursor=pointer]:
+                - /url: https://www.stage.boost.org/doc/libs/latest/libs/circular_buffer
+            - listitem [ref=e528]: ›
+            - listitem [ref=e529]:
+              - link "Boost.Circular_buffer C++ Reference" [ref=e530] [cursor=pointer]:
+                - /url: https://www.stage.boost.org/doc/libs/latest/doc/html/boost_circular_buffer_c___reference.html
+                - text: Boost.Circular_buffer
+                - mark [ref=e531] [cursor=pointer]: C++
+                - text: Reference
+            - listitem [ref=e532]: ›
+            - listitem [ref=e533]:
+              - link "Header <boost/circular_buffer.hpp>" [ref=e534] [cursor=pointer]:
+                - /url: https://www.stage.boost.org/doc/libs/latest/doc/html/boost_circular_buffer_c___reference.html#doxygen.boost_circular_buffer_c___reference.circular__buffer_8hpp
+        - generic [ref=e536]: Includes <boost/circular_buffer/base.hpp> BOOST_CB_ENABLE_DEBUG
+      - generic [ref=e537]:
+        - navigation [ref=e538]:
+          - list [ref=e539]:
+            - listitem [ref=e540]:
+              - link "Hash2" [ref=e541] [cursor=pointer]:
+                - /url: https://www.stage.boost.org/doc/libs/latest/libs/hash2
+            - listitem [ref=e542]: ›
+            - listitem [ref=e543]:
+              - link "Hashing C++ Objects" [ref=e544] [cursor=pointer]:
+                - /url: https://www.stage.boost.org/doc/libs/latest/libs/hash2/doc/html/hash2.html#hashing_objects
+                - text: Hashing
+                - mark [ref=e545] [cursor=pointer]: C++
+                - text: Objects
+            - listitem [ref=e546]: ›
+            - listitem [ref=e547]:
+              - link "User Defined Types" [ref=e548] [cursor=pointer]:
+                - /url: https://www.stage.boost.org/doc/libs/latest/libs/hash2/doc/html/hash2.html#hashing_objects_user_defined_types
+        - generic [ref=e550]: When T is a user defined type that does not fall into one of the above categories, it needs to provide its own hashing …
+      - generic [ref=e551]:
+        - navigation [ref=e552]:
+          - list [ref=e553]:
+            - listitem [ref=e554]:
+              - link "Hash2" [ref=e555] [cursor=pointer]:
+                - /url: https://www.stage.boost.org/doc/libs/latest/libs/hash2
+            - listitem [ref=e556]: ›
+            - listitem [ref=e557]:
+              - link "Hashing C++ Objects" [ref=e558] [cursor=pointer]:
+                - /url: https://www.stage.boost.org/doc/libs/latest/libs/hash2/doc/html/hash2.html#hashing_objects
+                - text: Hashing
+                - mark [ref=e559] [cursor=pointer]: C++
+                - text: Objects
+            - listitem [ref=e560]: ›
+            - listitem [ref=e561]:
+              - link "Described Classes" [ref=e562] [cursor=pointer]:
+                - /url: https://www.stage.boost.org/doc/libs/latest/libs/hash2/doc/html/hash2.html#hashing_objects_described_classes
+        - generic [ref=e564]: "When T is a described class (boost::container_hash::is_described_class<T>:: …"
+      - generic [ref=e565]:
+        - navigation [ref=e566]:
+          - list [ref=e567]:
+            - listitem [ref=e568]:
+              - link "Hash2" [ref=e569] [cursor=pointer]:
+                - /url: https://www.stage.boost.org/doc/libs/latest/libs/hash2
+            - listitem [ref=e570]: ›
+            - listitem [ref=e571]:
+              - link "Hashing C++ Objects" [ref=e572] [cursor=pointer]:
+                - /url: https://www.stage.boost.org/doc/libs/latest/libs/hash2/doc/html/hash2.html#hashing_objects
+                - text: Hashing
+                - mark [ref=e573] [cursor=pointer]: C++
+                - text: Objects
+            - listitem [ref=e574]: ›
+            - listitem [ref=e575]:
+              - link "Tuples" [ref=e576] [cursor=pointer]:
+                - /url: https://www.stage.boost.org/doc/libs/latest/libs/hash2/doc/html/hash2.html#hashing_objects_tuples
+        - generic [ref=e578]: When T is a tuple (boost::container_hash::is_tuple_like<T>::value …
+      - generic [ref=e579]:
+        - navigation [ref=e580]:
+          - list [ref=e581]:
+            - listitem [ref=e582]:
+              - link "Hash2" [ref=e583] [cursor=pointer]:
+                - /url: https://www.stage.boost.org/doc/libs/latest/libs/hash2
+            - listitem [ref=e584]: ›
+            - listitem [ref=e585]:
+              - link "Hashing C++ Objects" [ref=e586] [cursor=pointer]:
+                - /url: https://www.stage.boost.org/doc/libs/latest/libs/hash2/doc/html/hash2.html#hashing_objects
+                - text: Hashing
+                - mark [ref=e587] [cursor=pointer]: C++
+                - text: Objects
+            - listitem [ref=e588]: ›
+            - listitem [ref=e589]:
+              - link "Ranges" [ref=e590] [cursor=pointer]:
+                - /url: https://www.stage.boost.org/doc/libs/latest/libs/hash2/doc/html/hash2.html#hashing_objects_ranges
+        - generic [ref=e592]: When T is a range (boost::container_hash::is_range<T>::value is true …
+      - generic [ref=e593]:
+        - navigation [ref=e594]:
+          - list [ref=e595]:
+            - listitem [ref=e596]:
+              - link "Hash2" [ref=e597] [cursor=pointer]:
+                - /url: https://www.stage.boost.org/doc/libs/latest/libs/hash2
+            - listitem [ref=e598]: ›
+            - listitem [ref=e599]:
+              - link "Hashing C++ Objects" [ref=e600] [cursor=pointer]:
+                - /url: https://www.stage.boost.org/doc/libs/latest/libs/hash2/doc/html/hash2.html#hashing_objects
+                - text: Hashing
+                - mark [ref=e601] [cursor=pointer]: C++
+                - text: Objects
+            - listitem [ref=e602]: ›
+            - listitem [ref=e603]:
+              - link "Arrays" [ref=e604] [cursor=pointer]:
+                - /url: https://www.stage.boost.org/doc/libs/latest/libs/hash2/doc/html/hash2.html#hashing_objects_arrays
+        - generic [ref=e606]: When T is an array type U[N], the elements of v are passed to hash_append in sequence. This …
+      - button "Show More" [ref=e608] [cursor=pointer]
+    - generic [ref=e610]:
+      - link "Search by Algolia" [ref=e613] [cursor=pointer]:
+        - /url: https://www.algolia.com/?utm_source=react-instantsearch&utm_medium=website&utm_content=www.stage.boost.org&utm_campaign=poweredby
+        - img [ref=e614] [cursor=pointer]
+      - link "Report Issue" [ref=e618] [cursor=pointer]:
+        - /url: https://github.com/cppalliance/boost-gecko/issues
+        - img [ref=e620] [cursor=pointer]
+        - text: Report Issue
+```

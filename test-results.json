@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 1
+      "actualWorkers": 2
     },
     "preserveOutput": "always",
     "reporter": [
@@ -37,7 +37,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 1
+          "actualWorkers": 2
         },
         "id": "local",
         "name": "local",
@@ -53,7 +53,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 1
+          "actualWorkers": 2
         },
         "id": "staging",
         "name": "staging",
@@ -69,7 +69,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 1
+          "actualWorkers": 2
         },
         "id": "production",
         "name": "production",
@@ -85,7 +85,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 1
+          "actualWorkers": 2
         },
         "id": "staging-mobile",
         "name": "staging-mobile",
@@ -101,7 +101,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 1
+          "actualWorkers": 2
         },
         "id": "production-mobile",
         "name": "production-mobile",
@@ -122,29 +122,29 @@
   },
   "suites": [
     {
-      "title": "boost_io_tests.spec.js",
-      "file": "boost_io_tests.spec.js",
+      "title": "error_handling_tests.spec.js",
+      "file": "error_handling_tests.spec.js",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
-          "title": "Boost Functional Tests",
-          "file": "boost_io_tests.spec.js",
-          "line": 47,
+          "title": "Boost Error Handling Tests",
+          "file": "error_handling_tests.spec.js",
+          "line": 8,
           "column": 6,
           "specs": [
             {
-              "title": "Download link for previous release works",
+              "title": "404 page displays appropriate error message",
               "ok": true,
               "tags": [],
               "tests": [
                 {
-                  "timeout": 120000,
+                  "timeout": 30000,
                   "annotations": [
                     {
                       "type": "test_case",
-                      "description": "TC_FUNC_012"
+                      "description": "TC_ERROR_001"
                     }
                   ],
                   "expectedStatus": "passed",
@@ -152,26 +152,31 @@
                   "projectName": "staging",
                   "results": [
                     {
-                      "workerIndex": 7,
+                      "workerIndex": 12,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 66180,
+                      "duration": 2912,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-14T01:41:23.090Z",
+                      "startTime": "2025-12-09T14:37:25.354Z",
                       "annotations": [
                         {
                           "type": "test_case",
-                          "description": "TC_FUNC_012"
+                          "description": "TC_ERROR_001"
                         }
                       ],
                       "attachments": [
                         {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/error_handling_tests-Boost-05b59-s-appropriate-error-message-staging/test-finished-1.png"
+                        },
+                        {
                           "name": "trace",
                           "contentType": "application/zip",
-                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/boost_io_tests-Boost-Funct-8a5b7--for-previous-release-works-staging/trace.zip"
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/error_handling_tests-Boost-05b59-s-appropriate-error-message-staging/trace.zip"
                         }
                       ]
                     }
@@ -179,9 +184,672 @@
                   "status": "expected"
                 }
               ],
-              "id": "3261b4064291f16b5f75-ea5f1b3699ee98663787",
-              "file": "boost_io_tests.spec.js",
-              "line": 344,
+              "id": "774b7ddbbbaf5644fea5-225753459974dc5bb85b",
+              "file": "error_handling_tests.spec.js",
+              "line": 10,
+              "column": 7
+            },
+            {
+              "title": "Broken documentation link returns appropriate error",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "test_case",
+                      "description": "TC_ERROR_002"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "staging",
+                  "projectName": "staging",
+                  "results": [
+                    {
+                      "workerIndex": 12,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2608,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-09T14:37:28.643Z",
+                      "annotations": [
+                        {
+                          "type": "test_case",
+                          "description": "TC_ERROR_002"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/error_handling_tests-Boost-0dcae-k-returns-appropriate-error-staging/test-finished-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/error_handling_tests-Boost-0dcae-k-returns-appropriate-error-staging/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "774b7ddbbbaf5644fea5-89eb583c1b26473efab3",
+              "file": "error_handling_tests.spec.js",
+              "line": 60,
+              "column": 7
+            },
+            {
+              "title": "Invalid search query handles gracefully",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "test_case",
+                      "description": "TC_ERROR_003"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "staging",
+                  "projectName": "staging",
+                  "results": [
+                    {
+                      "workerIndex": 12,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 18135,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  locator('input[type=\"search\"], input[placeholder*=\"search\" i], input[name=\"search\"], input[name=\"q\"]').first()\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  15000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('input[type=\"search\"], input[placeholder*=\"search\" i], input[name=\"search\"], input[name=\"q\"]').first()\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  locator('input[type=\"search\"], input[placeholder*=\"search\" i], input[name=\"search\"], input[name=\"q\"]').first()\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  15000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('input[type=\"search\"], input[placeholder*=\"search\" i], input[name=\"search\"], input[name=\"q\"]').first()\u001b[22m\n\n    at /Users/kskinner/github/karimarie67/QA-documentation/tests/error_handling_tests.spec.js:98:31",
+                        "location": {
+                          "file": "/Users/kskinner/github/karimarie67/QA-documentation/tests/error_handling_tests.spec.js",
+                          "column": 31,
+                          "line": 98
+                        },
+                        "snippet": "\u001b[0m \u001b[90m  96 |\u001b[39m     \u001b[90m// Find search input\u001b[39m\n \u001b[90m  97 |\u001b[39m     \u001b[36mconst\u001b[39m searchInput \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'input[type=\"search\"], input[placeholder*=\"search\" i], input[name=\"search\"], input[name=\"q\"]'\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  98 |\u001b[39m     \u001b[36mawait\u001b[39m expect(searchInput)\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m testData\u001b[33m.\u001b[39mtimeouts\u001b[33m.\u001b[39mmedium })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  99 |\u001b[39m\n \u001b[90m 100 |\u001b[39m     \u001b[90m// Try searching for special characters that might break things\u001b[39m\n \u001b[90m 101 |\u001b[39m     \u001b[36mconst\u001b[39m invalidSearchTerms \u001b[33m=\u001b[39m [\u001b[32m'<script>'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'%%%'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'///'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'\"\"\"'\u001b[39m]\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/kskinner/github/karimarie67/QA-documentation/tests/error_handling_tests.spec.js",
+                            "column": 31,
+                            "line": 98
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  locator('input[type=\"search\"], input[placeholder*=\"search\" i], input[name=\"search\"], input[name=\"q\"]').first()\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  15000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('input[type=\"search\"], input[placeholder*=\"search\" i], input[name=\"search\"], input[name=\"q\"]').first()\u001b[22m\n\n\n\u001b[0m \u001b[90m  96 |\u001b[39m     \u001b[90m// Find search input\u001b[39m\n \u001b[90m  97 |\u001b[39m     \u001b[36mconst\u001b[39m searchInput \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'input[type=\"search\"], input[placeholder*=\"search\" i], input[name=\"search\"], input[name=\"q\"]'\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  98 |\u001b[39m     \u001b[36mawait\u001b[39m expect(searchInput)\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m testData\u001b[33m.\u001b[39mtimeouts\u001b[33m.\u001b[39mmedium })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  99 |\u001b[39m\n \u001b[90m 100 |\u001b[39m     \u001b[90m// Try searching for special characters that might break things\u001b[39m\n \u001b[90m 101 |\u001b[39m     \u001b[36mconst\u001b[39m invalidSearchTerms \u001b[33m=\u001b[39m [\u001b[32m'<script>'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'%%%'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'///'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'\"\"\"'\u001b[39m]\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at /Users/kskinner/github/karimarie67/QA-documentation/tests/error_handling_tests.spec.js:98:31\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-09T14:37:31.420Z",
+                      "annotations": [
+                        {
+                          "type": "test_case",
+                          "description": "TC_ERROR_003"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/error_handling_tests-Boost-14c0d-ch-query-handles-gracefully-staging/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/error_handling_tests-Boost-14c0d-ch-query-handles-gracefully-staging/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/error_handling_tests-Boost-14c0d-ch-query-handles-gracefully-staging/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/kskinner/github/karimarie67/QA-documentation/tests/error_handling_tests.spec.js",
+                        "column": 31,
+                        "line": 98
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "774b7ddbbbaf5644fea5-75c029e3821fd6602e49",
+              "file": "error_handling_tests.spec.js",
+              "line": 88,
+              "column": 7
+            },
+            {
+              "title": "Malformed URL redirects or shows error appropriately",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "test_case",
+                      "description": "TC_ERROR_004"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "staging",
+                  "projectName": "staging",
+                  "results": [
+                    {
+                      "workerIndex": 15,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 7686,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-09T14:37:51.055Z",
+                      "annotations": [
+                        {
+                          "type": "test_case",
+                          "description": "TC_ERROR_004"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/error_handling_tests-Boost-1383e-r-shows-error-appropriately-staging/test-finished-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/error_handling_tests-Boost-1383e-r-shows-error-appropriately-staging/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "774b7ddbbbaf5644fea5-a3e509ff2813623fd701",
+              "file": "error_handling_tests.spec.js",
+              "line": 128,
+              "column": 7
+            },
+            {
+              "title": "Broken external links are identified",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "test_case",
+                      "description": "TC_ERROR_005"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "staging",
+                  "projectName": "staging",
+                  "results": [
+                    {
+                      "workerIndex": 15,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 5233,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-09T14:37:59.441Z",
+                      "annotations": [
+                        {
+                          "type": "test_case",
+                          "description": "TC_ERROR_005"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/error_handling_tests-Boost-eb90a-ternal-links-are-identified-staging/test-finished-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/error_handling_tests-Boost-eb90a-ternal-links-are-identified-staging/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "774b7ddbbbaf5644fea5-8c95715daea65b5c7387",
+              "file": "error_handling_tests.spec.js",
+              "line": 173,
+              "column": 7
+            },
+            {
+              "title": "Form validation errors display correctly",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "test_case",
+                      "description": "TC_ERROR_006"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "staging",
+                  "projectName": "staging",
+                  "results": [
+                    {
+                      "workerIndex": 15,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3531,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-09T14:38:04.882Z",
+                      "annotations": [
+                        {
+                          "type": "test_case",
+                          "description": "TC_ERROR_006"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/error_handling_tests-Boost-89500-on-errors-display-correctly-staging/test-finished-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/error_handling_tests-Boost-89500-on-errors-display-correctly-staging/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "774b7ddbbbaf5644fea5-0b1ef3706265a53a3c49",
+              "file": "error_handling_tests.spec.js",
+              "line": 216,
+              "column": 7
+            },
+            {
+              "title": "404 page displays appropriate error message",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "test_case",
+                      "description": "TC_ERROR_001"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "staging-mobile",
+                  "projectName": "staging-mobile",
+                  "results": [
+                    {
+                      "workerIndex": 13,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 2981,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-09T14:37:25.354Z",
+                      "annotations": [
+                        {
+                          "type": "test_case",
+                          "description": "TC_ERROR_001"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/error_handling_tests-Boost-05b59-s-appropriate-error-message-staging-mobile/test-finished-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/error_handling_tests-Boost-05b59-s-appropriate-error-message-staging-mobile/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "774b7ddbbbaf5644fea5-e01920b3988bd279951c",
+              "file": "error_handling_tests.spec.js",
+              "line": 10,
+              "column": 7
+            },
+            {
+              "title": "Broken documentation link returns appropriate error",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "test_case",
+                      "description": "TC_ERROR_002"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "staging-mobile",
+                  "projectName": "staging-mobile",
+                  "results": [
+                    {
+                      "workerIndex": 13,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 2475,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-09T14:37:28.718Z",
+                      "annotations": [
+                        {
+                          "type": "test_case",
+                          "description": "TC_ERROR_002"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/error_handling_tests-Boost-0dcae-k-returns-appropriate-error-staging-mobile/test-finished-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/error_handling_tests-Boost-0dcae-k-returns-appropriate-error-staging-mobile/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "774b7ddbbbaf5644fea5-614718343bc2f982145b",
+              "file": "error_handling_tests.spec.js",
+              "line": 60,
+              "column": 7
+            },
+            {
+              "title": "Invalid search query handles gracefully",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "test_case",
+                      "description": "TC_ERROR_003"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "staging-mobile",
+                  "projectName": "staging-mobile",
+                  "results": [
+                    {
+                      "workerIndex": 13,
+                      "parallelIndex": 1,
+                      "status": "failed",
+                      "duration": 17981,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  locator('input[type=\"search\"], input[placeholder*=\"search\" i], input[name=\"search\"], input[name=\"q\"]').first()\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  15000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('input[type=\"search\"], input[placeholder*=\"search\" i], input[name=\"search\"], input[name=\"q\"]').first()\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  locator('input[type=\"search\"], input[placeholder*=\"search\" i], input[name=\"search\"], input[name=\"q\"]').first()\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  15000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('input[type=\"search\"], input[placeholder*=\"search\" i], input[name=\"search\"], input[name=\"q\"]').first()\u001b[22m\n\n    at /Users/kskinner/github/karimarie67/QA-documentation/tests/error_handling_tests.spec.js:98:31",
+                        "location": {
+                          "file": "/Users/kskinner/github/karimarie67/QA-documentation/tests/error_handling_tests.spec.js",
+                          "column": 31,
+                          "line": 98
+                        },
+                        "snippet": "\u001b[0m \u001b[90m  96 |\u001b[39m     \u001b[90m// Find search input\u001b[39m\n \u001b[90m  97 |\u001b[39m     \u001b[36mconst\u001b[39m searchInput \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'input[type=\"search\"], input[placeholder*=\"search\" i], input[name=\"search\"], input[name=\"q\"]'\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  98 |\u001b[39m     \u001b[36mawait\u001b[39m expect(searchInput)\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m testData\u001b[33m.\u001b[39mtimeouts\u001b[33m.\u001b[39mmedium })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  99 |\u001b[39m\n \u001b[90m 100 |\u001b[39m     \u001b[90m// Try searching for special characters that might break things\u001b[39m\n \u001b[90m 101 |\u001b[39m     \u001b[36mconst\u001b[39m invalidSearchTerms \u001b[33m=\u001b[39m [\u001b[32m'<script>'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'%%%'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'///'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'\"\"\"'\u001b[39m]\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/kskinner/github/karimarie67/QA-documentation/tests/error_handling_tests.spec.js",
+                            "column": 31,
+                            "line": 98
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  locator('input[type=\"search\"], input[placeholder*=\"search\" i], input[name=\"search\"], input[name=\"q\"]').first()\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  15000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('input[type=\"search\"], input[placeholder*=\"search\" i], input[name=\"search\"], input[name=\"q\"]').first()\u001b[22m\n\n\n\u001b[0m \u001b[90m  96 |\u001b[39m     \u001b[90m// Find search input\u001b[39m\n \u001b[90m  97 |\u001b[39m     \u001b[36mconst\u001b[39m searchInput \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'input[type=\"search\"], input[placeholder*=\"search\" i], input[name=\"search\"], input[name=\"q\"]'\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  98 |\u001b[39m     \u001b[36mawait\u001b[39m expect(searchInput)\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m testData\u001b[33m.\u001b[39mtimeouts\u001b[33m.\u001b[39mmedium })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  99 |\u001b[39m\n \u001b[90m 100 |\u001b[39m     \u001b[90m// Try searching for special characters that might break things\u001b[39m\n \u001b[90m 101 |\u001b[39m     \u001b[36mconst\u001b[39m invalidSearchTerms \u001b[33m=\u001b[39m [\u001b[32m'<script>'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'%%%'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'///'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'\"\"\"'\u001b[39m]\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at /Users/kskinner/github/karimarie67/QA-documentation/tests/error_handling_tests.spec.js:98:31\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-09T14:37:31.341Z",
+                      "annotations": [
+                        {
+                          "type": "test_case",
+                          "description": "TC_ERROR_003"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/error_handling_tests-Boost-14c0d-ch-query-handles-gracefully-staging-mobile/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/error_handling_tests-Boost-14c0d-ch-query-handles-gracefully-staging-mobile/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/error_handling_tests-Boost-14c0d-ch-query-handles-gracefully-staging-mobile/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/kskinner/github/karimarie67/QA-documentation/tests/error_handling_tests.spec.js",
+                        "column": 31,
+                        "line": 98
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "774b7ddbbbaf5644fea5-7cc2ef3889c5263cd074",
+              "file": "error_handling_tests.spec.js",
+              "line": 88,
+              "column": 7
+            },
+            {
+              "title": "Malformed URL redirects or shows error appropriately",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "test_case",
+                      "description": "TC_ERROR_004"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "staging-mobile",
+                  "projectName": "staging-mobile",
+                  "results": [
+                    {
+                      "workerIndex": 14,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 8009,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-09T14:37:50.870Z",
+                      "annotations": [
+                        {
+                          "type": "test_case",
+                          "description": "TC_ERROR_004"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/error_handling_tests-Boost-1383e-r-shows-error-appropriately-staging-mobile/test-finished-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/error_handling_tests-Boost-1383e-r-shows-error-appropriately-staging-mobile/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "774b7ddbbbaf5644fea5-e44c249ff855eaaad8d1",
+              "file": "error_handling_tests.spec.js",
+              "line": 128,
+              "column": 7
+            },
+            {
+              "title": "Broken external links are identified",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "test_case",
+                      "description": "TC_ERROR_005"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "staging-mobile",
+                  "projectName": "staging-mobile",
+                  "results": [
+                    {
+                      "workerIndex": 14,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 5055,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-09T14:37:59.449Z",
+                      "annotations": [
+                        {
+                          "type": "test_case",
+                          "description": "TC_ERROR_005"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/error_handling_tests-Boost-eb90a-ternal-links-are-identified-staging-mobile/test-finished-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/error_handling_tests-Boost-eb90a-ternal-links-are-identified-staging-mobile/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "774b7ddbbbaf5644fea5-a69cc305c013d0f218be",
+              "file": "error_handling_tests.spec.js",
+              "line": 173,
+              "column": 7
+            },
+            {
+              "title": "Form validation errors display correctly",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "test_case",
+                      "description": "TC_ERROR_006"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "staging-mobile",
+                  "projectName": "staging-mobile",
+                  "results": [
+                    {
+                      "workerIndex": 14,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 2935,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-09T14:38:04.776Z",
+                      "annotations": [
+                        {
+                          "type": "test_case",
+                          "description": "TC_ERROR_006"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/error_handling_tests-Boost-89500-on-errors-display-correctly-staging-mobile/test-finished-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/error_handling_tests-Boost-89500-on-errors-display-correctly-staging-mobile/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "774b7ddbbbaf5644fea5-902f36f213a123171774",
+              "file": "error_handling_tests.spec.js",
+              "line": 216,
               "column": 7
             }
           ]
@@ -191,11 +859,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-11-14T01:41:21.512Z",
-    "duration": 68663.06699999998,
-    "expected": 1,
+    "startTime": "2025-12-09T14:37:23.936Z",
+    "duration": 44694.55000000005,
+    "expected": 10,
     "skipped": 0,
-    "unexpected": 0,
+    "unexpected": 2,
     "flaky": 0
   }
 }

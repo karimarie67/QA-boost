@@ -24707,3 +24707,851 @@ TC_FUNC_012 Download link details: {"text":"boost_1_89_0.tar.bz2","href":"https:
 Network request: GET https://archives.boost.io/release/1.89.0/source/boost_1_89_0.tar.bz2, Type: document, Status: 200, Duration: 132ms
 TC_FUNC_012 Downloaded file: boost_1_89_0.tar.bz2
 Page closed unexpectedly at 2025-11-14T01:42:29.661Z
+TC_Documentation page loads with table of contents: Navigated to https://www.stage.boost.org/doc/libs/?cachebust=1765290347391 with status 200 on attempt 1
+TC_Documentation page loads with table of contents: Navigated to https://www.stage.boost.org/doc/libs/?cachebust=1765290347392 with status 200 on attempt 1
+Screenshot saved: screenshots/goto_attempt_1.png
+TC_Documentation page loads with table of contents: Page loaded in 4420ms, URL: https://www.stage.boost.org/libraries/latest/grid/
+Screenshot saved: screenshots/goto_attempt_1.png
+TC_Documentation page loads with table of contents: Page loaded in 4556ms, URL: https://www.stage.boost.org/libraries/latest/grid/
+Screenshot saved: screenshots/tc_doc_001_loaded.png
+TC_DOC_001 No explicit TOC found - doc may use different navigation
+TC_DOC_001 Documentation content (primary) locator matched 2 elements
+TC_DOC_001 Documentation content (primary) 0 visible: true
+Screenshot saved: screenshots/tc_doc_001_loaded.png
+TC_DOC_001 No explicit TOC found - doc may use different navigation
+TC_DOC_001 Documentation content (primary) locator matched 2 elements
+TC_DOC_001 Documentation content (primary) 0 visible: true
+TC_Library documentation links are accessible: Navigated to https://www.stage.boost.org/libraries/?cachebust=1765290354253 with status 200 on attempt 1
+TC_Library documentation links are accessible: Navigated to https://www.stage.boost.org/libraries/?cachebust=1765290354486 with status 200 on attempt 1
+Screenshot saved: screenshots/goto_attempt_1.png
+TC_Library documentation links are accessible: Page loaded in 3502ms, URL: https://www.stage.boost.org/libraries/latest/grid/
+Screenshot saved: screenshots/goto_attempt_1.png
+TC_Library documentation links are accessible: Page loaded in 3647ms, URL: https://www.stage.boost.org/libraries/latest/grid/
+Screenshot saved: screenshots/tc_doc_002_loaded.png
+TC_DOC_002 Found asio library: /library/latest/asio/
+Screenshot saved: screenshots/tc_doc_002_loaded.png
+TC_DOC_002 Found asio library: /library/latest/asio/
+TC_DOC_002 Navigated to library doc: https://www.stage.boost.org/library/latest/asio/
+TC_DOC_002 Navigated to library doc: https://www.stage.boost.org/library/latest/asio/
+TC_DOC_002 Found filesystem library: /library/latest/filesystem/
+TC_DOC_002 Found algorithm library: /library/latest/algorithm/
+TC_DOC_002 Found filesystem library: /library/latest/filesystem/
+TC_DOC_002 Found thread library: /library/latest/thread/
+TC_DOC_002 Found algorithm library: /library/latest/algorithm/
+TC_DOC_002 Found beast library: /library/latest/beast/
+TC_DOC_002 Found 5 library links
+TC_DOC_002 Found thread library: /library/latest/thread/
+TC_DOC_002 Found beast library: /library/latest/beast/
+TC_DOC_002 Found 5 library links
+TC_Code examples are properly formatted: Navigated to https://www.stage.boost.org/doc/libs/1_85_0/?cachebust=1765290364147 with status 200 on attempt 1
+TC_Code examples are properly formatted: Navigated to https://www.stage.boost.org/doc/libs/1_85_0/?cachebust=1765290364082 with status 200 on attempt 1
+Screenshot saved: screenshots/goto_attempt_1.png
+TC_Code examples are properly formatted: Page loaded in 3956ms, URL: https://www.stage.boost.org/libraries/1-85-0/grid/
+Screenshot saved: screenshots/goto_attempt_1.png
+TC_Code examples are properly formatted: Page loaded in 4031ms, URL: https://www.stage.boost.org/libraries/1-85-0/grid/
+Screenshot saved: screenshots/tc_doc_003_loaded.png
+TC_DOC_003 No code examples found on this page
+Screenshot saved: screenshots/tc_doc_003_loaded.png
+TC_DOC_003 No code examples found on this page
+TC_Documentation breadcrumbs navigation works: Navigated to https://www.stage.boost.org/doc/libs/1_85_0/?cachebust=1765290370155 with status 200 on attempt 1
+TC_Documentation breadcrumbs navigation works: Navigated to https://www.stage.boost.org/doc/libs/1_85_0/?cachebust=1765290370425 with status 200 on attempt 1
+Screenshot saved: screenshots/goto_attempt_1.png
+TC_Documentation breadcrumbs navigation works: Page loaded in 3545ms, URL: https://www.stage.boost.org/libraries/1-85-0/grid/
+Screenshot saved: screenshots/goto_attempt_1.png
+TC_Documentation breadcrumbs navigation works: Page loaded in 3867ms, URL: https://www.stage.boost.org/libraries/1-85-0/grid/
+Screenshot saved: screenshots/tc_doc_004_loaded.png
+TC_DOC_004 No breadcrumbs found - may not be used on this page
+Screenshot saved: screenshots/tc_doc_004_loaded.png
+TC_DOC_004 No breadcrumbs found - may not be used on this page
+TC_Documentation version switcher works: Navigated to https://www.stage.boost.org/doc/libs/1_85_0/?cachebust=1765290375839 with status 200 on attempt 1
+TC_Documentation version switcher works: Navigated to https://www.stage.boost.org/doc/libs/1_85_0/?cachebust=1765290376550 with status 200 on attempt 1
+Screenshot saved: screenshots/goto_attempt_1.png
+TC_Documentation version switcher works: Page loaded in 3529ms, URL: https://www.stage.boost.org/libraries/1-85-0/grid/
+Screenshot saved: screenshots/goto_attempt_1.png
+TC_Documentation version switcher works: Page loaded in 3589ms, URL: https://www.stage.boost.org/libraries/1-85-0/grid/
+Screenshot saved: screenshots/tc_doc_005_loaded.png
+TC_DOC_005 Found 90 version options
+Screenshot saved: screenshots/tc_doc_005_loaded.png
+TC_DOC_005 Found 90 version options
+TC_DOC_005 Version switch: https://www.stage.boost.org/libraries/1-85-0/grid/ -> https://www.stage.boost.org/libraries/1.90.0.beta1/grid/
+TC_DOC_005 Version switch: https://www.stage.boost.org/libraries/1-85-0/grid/ -> https://www.stage.boost.org/libraries/1.90.0.beta1/grid/
+TC_Documentation search within docs works: Navigated to https://www.stage.boost.org/doc/libs/?cachebust=1765290383921 with status 200 on attempt 1
+TC_Documentation search within docs works: Navigated to https://www.stage.boost.org/doc/libs/?cachebust=1765290384673 with status 200 on attempt 1
+Screenshot saved: screenshots/goto_attempt_1.png
+TC_Documentation search within docs works: Page loaded in 3566ms, URL: https://www.stage.boost.org/libraries/latest/grid/
+Screenshot saved: screenshots/goto_attempt_1.png
+TC_Documentation search within docs works: Page loaded in 3546ms, URL: https://www.stage.boost.org/libraries/latest/grid/
+Screenshot saved: screenshots/tc_doc_006_loaded.png
+TC_DOC_006 No doc-specific search found - uses global search
+Screenshot saved: screenshots/tc_doc_006_loaded.png
+TC_DOC_006 No doc-specific search found - uses global search
+TC_Documentation anchor links work correctly: Navigated to https://www.stage.boost.org/doc/libs/1_85_0/?cachebust=1765290389615 with status 200 on attempt 1
+TC_Documentation anchor links work correctly: Navigated to https://www.stage.boost.org/doc/libs/1_85_0/?cachebust=1765290390746 with status 200 on attempt 1
+Screenshot saved: screenshots/goto_attempt_1.png
+TC_Documentation anchor links work correctly: Page loaded in 3495ms, URL: https://www.stage.boost.org/libraries/1-85-0/grid/
+Screenshot saved: screenshots/goto_attempt_1.png
+TC_Documentation anchor links work correctly: Page loaded in 3736ms, URL: https://www.stage.boost.org/libraries/1-85-0/grid/
+Screenshot saved: screenshots/tc_doc_007_loaded.png
+TC_DOC_007 Found 0 anchor links
+TC_DOC_007 No anchor links found on this page
+Screenshot saved: screenshots/tc_doc_007_loaded.png
+TC_DOC_007 Found 0 anchor links
+TC_DOC_007 No anchor links found on this page
+TC_Documentation external links open correctly: Navigated to https://www.stage.boost.org/doc/libs/?cachebust=1765290395296 with status 200 on attempt 1
+TC_Documentation external links open correctly: Navigated to https://www.stage.boost.org/doc/libs/?cachebust=1765290396747 with status 200 on attempt 1
+Screenshot saved: screenshots/goto_attempt_1.png
+TC_Documentation external links open correctly: Page loaded in 3339ms, URL: https://www.stage.boost.org/libraries/latest/grid/
+Screenshot saved: screenshots/tc_doc_008_loaded.png
+TC_DOC_008 Found 8 external links
+Screenshot saved: screenshots/goto_attempt_1.png
+TC_Documentation external links open correctly: Page loaded in 3545ms, URL: https://www.stage.boost.org/libraries/latest/grid/
+TC_DOC_008 External link 0: https://lists.boost.org/mailman3/lists/boost-users.lists.boost.org/, target=null
+TC_DOC_008 External link 1: https://x.com/boost_libraries, target=_blank
+TC_DOC_008 Link correctly set to open in new tab
+TC_DOC_008 External link 2: https://bsky.app/profile/boost.org, target=_blank
+TC_DOC_008 Link correctly set to open in new tab
+TC_DOC_008 Checked 3 external links
+Screenshot saved: screenshots/tc_doc_008_loaded.png
+TC_DOC_008 Found 8 external links
+TC_DOC_008 External link 0: https://lists.boost.org/mailman3/lists/boost-users.lists.boost.org/, target=null
+TC_DOC_008 External link 1: https://x.com/boost_libraries, target=_blank
+TC_DOC_008 Link correctly set to open in new tab
+TC_DOC_008 External link 2: https://bsky.app/profile/boost.org, target=_blank
+TC_DOC_008 Link correctly set to open in new tab
+TC_DOC_008 Checked 3 external links
+TC_Documentation page titles are descriptive: Navigated to https://www.stage.boost.org/doc/libs/?cachebust=1765290401050 with status 200 on attempt 1
+TC_Documentation page titles are descriptive: Navigated to https://www.stage.boost.org/doc/libs/?cachebust=1765290402842 with status 200 on attempt 1
+Screenshot saved: screenshots/goto_attempt_1.png
+TC_Documentation page titles are descriptive: Page loaded in 3411ms, URL: https://www.stage.boost.org/libraries/latest/grid/
+Screenshot saved: screenshots/tc_doc_009_loaded.png
+Screenshot saved: screenshots/goto_attempt_1.png
+TC_Documentation page titles are descriptive: Page loaded in 3503ms, URL: https://www.stage.boost.org/libraries/latest/grid/
+Screenshot saved: screenshots/tc_doc_009_loaded.png
+TC_DOC_009 Page title: "Boost Libraries"
+TC_DOC_009 H1 text: ""
+TC_DOC_009 Page title: "Boost Libraries"
+TC_DOC_009 H1 text: ""
+TC_Documentation PDF/print versions are accessible: Navigated to https://www.stage.boost.org/doc/libs/?cachebust=1765290432920 with status 200 on attempt 1
+TC_Documentation PDF/print versions are accessible: Navigated to https://www.stage.boost.org/doc/libs/?cachebust=1765290434786 with status 200 on attempt 1
+Screenshot saved: screenshots/goto_attempt_1.png
+TC_Documentation PDF/print versions are accessible: Page loaded in 3560ms, URL: https://www.stage.boost.org/libraries/latest/grid/
+Screenshot saved: screenshots/tc_doc_010_loaded.png
+TC_DOC_010 No PDF/Print options found - may not be offered
+Screenshot saved: screenshots/goto_attempt_1.png
+TC_Documentation PDF/print versions are accessible: Page loaded in 3650ms, URL: https://www.stage.boost.org/libraries/latest/grid/
+Screenshot saved: screenshots/tc_doc_010_loaded.png
+TC_DOC_010 No PDF/Print options found - may not be offered
+TC_Documentation page titles are descriptive: Navigated to https://www.stage.boost.org/doc/libs/?cachebust=1765290769267 with status 200 on attempt 1
+TC_Documentation page titles are descriptive: Navigated to https://www.stage.boost.org/doc/libs/?cachebust=1765290769268 with status 200 on attempt 1
+Screenshot saved: screenshots/goto_attempt_1.png
+TC_Documentation page titles are descriptive: Page loaded in 4198ms, URL: https://www.stage.boost.org/libraries/latest/grid/
+Screenshot saved: screenshots/goto_attempt_1.png
+TC_Documentation page titles are descriptive: Page loaded in 4348ms, URL: https://www.stage.boost.org/libraries/latest/grid/
+Screenshot saved: screenshots/tc_doc_009_loaded.png
+Screenshot saved: screenshots/tc_doc_009_loaded.png
+TC_DOC_009 Page title: "Boost Libraries"
+TC_DOC_009 H1 text: ""
+TC_DOC_009 Page title: "Boost Libraries"
+TC_DOC_009 H1 text: ""
+TC_Download links return valid HTTP status codes: Navigated to https://www.stage.boost.org/releases/?cachebust=1765290888493 with status 200 on attempt 1
+TC_Download links return valid HTTP status codes: Navigated to https://www.stage.boost.org/releases/?cachebust=1765290888493 with status 200 on attempt 1
+Screenshot saved: screenshots/goto_attempt_1.png
+TC_Download links return valid HTTP status codes: Page loaded in 4407ms, URL: https://www.stage.boost.org/releases/latest/
+Screenshot saved: screenshots/goto_attempt_1.png
+TC_Download links return valid HTTP status codes: Page loaded in 4454ms, URL: https://www.stage.boost.org/releases/latest/
+Screenshot saved: screenshots/tc_download_001_loaded.png
+Screenshot saved: screenshots/tc_download_001_loaded.png
+TC_DOWNLOAD_001 Found 24 download links
+TC_DOWNLOAD_001 Found 24 download links
+TC_DOWNLOAD_001 Download link: https://archives.boost.io/release/1.89.0/source/boost_1_89_0.tar.gz - Status: 200
+TC_DOWNLOAD_001 Download link: https://archives.boost.io/release/1.89.0/source/boost_1_89_0.zip - Status: 200
+TC_DOWNLOAD_001 Download link: https://archives.boost.io/release/1.89.0/source/boost_1_89_0.tar.gz - Status: 200
+TC_DOWNLOAD_001 Download link: https://archives.boost.io/release/1.89.0/source/boost_1_89_0.tar.bz2 - Status: 200
+TC_DOWNLOAD_001 Download link: https://archives.boost.io/release/1.89.0/source/boost_1_89_0.zip - Status: 200
+TC_DOWNLOAD_001 Download link: https://archives.boost.io/release/1.89.0/source/boost_1_89_0.tar.gz - Status: 200
+TC_DOWNLOAD_001 Download link: https://archives.boost.io/release/1.89.0/source/boost_1_89_0.tar.bz2 - Status: 200
+TC_DOWNLOAD_001 Download link: https://archives.boost.io/release/1.89.0/source/boost_1_89_0.7z - Status: 200
+TC_DOWNLOAD_001 Download link: https://archives.boost.io/release/1.89.0/source/boost_1_89_0.tar.gz - Status: 200
+TC_DOWNLOAD_001 Download link: https://archives.boost.io/release/1.89.0/source/boost_1_89_0.7z - Status: 200
+TC_Download file names are correct format: Navigated to https://www.stage.boost.org/releases/?cachebust=1765290895568 with status 200 on attempt 1
+TC_Download file names are correct format: Navigated to https://www.stage.boost.org/releases/?cachebust=1765290895644 with status 200 on attempt 1
+Screenshot saved: screenshots/goto_attempt_1.png
+TC_Download file names are correct format: Page loaded in 2851ms, URL: https://www.stage.boost.org/releases/latest/
+Screenshot saved: screenshots/goto_attempt_1.png
+TC_Download file names are correct format: Page loaded in 3033ms, URL: https://www.stage.boost.org/releases/latest/
+Screenshot saved: screenshots/tc_download_002_loaded.png
+TC_DOWNLOAD_002 Found 11 download links
+TC_DOWNLOAD_002 Link: boost_1_89_0.tar.bz2 -> https://archives.boost.io/release/1.89.0/source/boost_1_89_0.tar.bz2, Valid format: true
+TC_DOWNLOAD_002 Link: boost_1_89_0.tar.gz -> https://archives.boost.io/release/1.89.0/source/boost_1_89_0.tar.gz, Valid format: true
+TC_DOWNLOAD_002 Link: boost_1_89_0.7z -> https://archives.boost.io/release/1.89.0/source/boost_1_89_0.7z, Valid format: true
+TC_DOWNLOAD_002 Link: boost_1_89_0.zip -> https://archives.boost.io/release/1.89.0/source/boost_1_89_0.zip, Valid format: true
+TC_DOWNLOAD_002 Link: boost_1_89_0-bin-msvc-all-32-64.7z -> https://archives.boost.io/release/1.89.0/binaries/boost_1_89_0-bin-msvc-all-32-64.7z, Valid format: true
+Screenshot saved: screenshots/tc_download_002_loaded.png
+TC_DOWNLOAD_002 Found 11 download links
+TC_DOWNLOAD_002 Link: boost_1_89_0.tar.bz2 -> https://archives.boost.io/release/1.89.0/source/boost_1_89_0.tar.bz2, Valid format: true
+TC_DOWNLOAD_002 Link: boost_1_89_0.tar.gz -> https://archives.boost.io/release/1.89.0/source/boost_1_89_0.tar.gz, Valid format: true
+TC_DOWNLOAD_002 Link: boost_1_89_0.7z -> https://archives.boost.io/release/1.89.0/source/boost_1_89_0.7z, Valid format: true
+TC_DOWNLOAD_002 Link: boost_1_89_0.zip -> https://archives.boost.io/release/1.89.0/source/boost_1_89_0.zip, Valid format: true
+TC_DOWNLOAD_002 Link: boost_1_89_0-bin-msvc-all-32-64.7z -> https://archives.boost.io/release/1.89.0/binaries/boost_1_89_0-bin-msvc-all-32-64.7z, Valid format: true
+TC_Version selector displays available versions: Navigated to https://www.stage.boost.org/releases/?cachebust=1765290899994 with status 200 on attempt 1
+TC_Version selector displays available versions: Navigated to https://www.stage.boost.org/releases/?cachebust=1765290900392 with status 200 on attempt 1
+Screenshot saved: screenshots/goto_attempt_1.png
+TC_Version selector displays available versions: Page loaded in 2841ms, URL: https://www.stage.boost.org/releases/latest/
+Screenshot saved: screenshots/goto_attempt_1.png
+TC_Version selector displays available versions: Page loaded in 2978ms, URL: https://www.stage.boost.org/releases/latest/
+Screenshot saved: screenshots/tc_download_003_loaded.png
+Screenshot saved: screenshots/tc_download_003_loaded.png
+TC_DOWNLOAD_003 Available versions: 
+            Latest (1.89.0)
+        , 
+                1.90.0.Beta1
+            , 
+                1.89.0
+            , 
+                1.88.0
+            , 
+                1.87.0
+            , 
+                1.86.0
+            , 
+                1.85.0
+            , 
+                1.84.0
+            , 
+                1.83.0
+            , 
+                1.82.0
+            , 
+                1.81.0
+            , 
+                1.80.0
+            , 
+                1.79.0
+            , 
+                1.78.0
+            , 
+                1.77.0
+            , 
+                1.76.0
+            , 
+                1.75.0
+            , 
+                1.74.0
+            , 
+                1.73.0
+            , 
+                1.72.0
+            , 
+                1.71.0
+            , 
+                1.70.0
+            , 
+                1.69.0
+            , 
+                1.68.0
+            , 
+                1.67.0
+            , 
+                1.66.0
+            , 
+                1.65.1
+            , 
+                1.65.0
+            , 
+                1.64.0
+            , 
+                1.63.0
+            , 
+                1.62.0
+            , 
+                1.61.0
+            , 
+                1.60.0
+            , 
+                1.59.0
+            , 
+                1.58.0
+            , 
+                1.57.0
+            , 
+                1.56.0
+            , 
+                1.55.0
+            , 
+                1.54.0
+            , 
+                1.53.0
+            , 
+                1.52.0
+            , 
+                1.51.0
+            , 
+                1.50.0
+            , 
+                1.49.0
+            , 
+                1.48.0
+            , 
+                1.47.0
+            , 
+                1.46.1
+            , 
+                1.46.0
+            , 
+                1.45.0
+            , 
+                1.44.0
+            , 
+                1.43.0
+            , 
+                1.42.0
+            , 
+                1.41.0
+            , 
+                1.40.0
+            , 
+                1.39.0
+            , 
+                1.38.0
+            , 
+                1.37.0
+            , 
+                1.36.0
+            , 
+                1.35.0
+            , 
+                1.34.1
+            , 
+                1.34.0
+            , 
+                1.33.1
+            , 
+                1.33.0
+            , 
+                1.32.0
+            , 
+                1.31.0
+            , 
+                1.30.2
+            , 
+                1.30.1
+            , 
+                1.30.0
+            , 
+                1.29.0
+            , 
+                1.28.0
+            , 
+                1.27.0
+            , 
+                1.26.0
+            , 
+                1.25.1-Bgl
+            , 
+                1.25.1
+            , 
+                1.25.0
+            , 
+                1.24.0
+            , 
+                1.23.0
+            , 
+                1.22.0
+            , 
+                1.21.2
+            , 
+                1.21.1
+            , 
+                1.21.0
+            , 
+                1.20.2
+            , 
+                1.20.1
+            , 
+                1.20.0
+            , 
+                1.19.0
+            , 
+                1.18.3
+            , 
+                1.18.2
+            , 
+                1.18.0
+            , 
+                1.17.0
+            , 
+                1.16.1
+            
+TC_DOWNLOAD_003 Available versions: 
+            Latest (1.89.0)
+        , 
+                1.90.0.Beta1
+            , 
+                1.89.0
+            , 
+                1.88.0
+            , 
+                1.87.0
+            , 
+                1.86.0
+            , 
+                1.85.0
+            , 
+                1.84.0
+            , 
+                1.83.0
+            , 
+                1.82.0
+            , 
+                1.81.0
+            , 
+                1.80.0
+            , 
+                1.79.0
+            , 
+                1.78.0
+            , 
+                1.77.0
+            , 
+                1.76.0
+            , 
+                1.75.0
+            , 
+                1.74.0
+            , 
+                1.73.0
+            , 
+                1.72.0
+            , 
+                1.71.0
+            , 
+                1.70.0
+            , 
+                1.69.0
+            , 
+                1.68.0
+            , 
+                1.67.0
+            , 
+                1.66.0
+            , 
+                1.65.1
+            , 
+                1.65.0
+            , 
+                1.64.0
+            , 
+                1.63.0
+            , 
+                1.62.0
+            , 
+                1.61.0
+            , 
+                1.60.0
+            , 
+                1.59.0
+            , 
+                1.58.0
+            , 
+                1.57.0
+            , 
+                1.56.0
+            , 
+                1.55.0
+            , 
+                1.54.0
+            , 
+                1.53.0
+            , 
+                1.52.0
+            , 
+                1.51.0
+            , 
+                1.50.0
+            , 
+                1.49.0
+            , 
+                1.48.0
+            , 
+                1.47.0
+            , 
+                1.46.1
+            , 
+                1.46.0
+            , 
+                1.45.0
+            , 
+                1.44.0
+            , 
+                1.43.0
+            , 
+                1.42.0
+            , 
+                1.41.0
+            , 
+                1.40.0
+            , 
+                1.39.0
+            , 
+                1.38.0
+            , 
+                1.37.0
+            , 
+                1.36.0
+            , 
+                1.35.0
+            , 
+                1.34.1
+            , 
+                1.34.0
+            , 
+                1.33.1
+            , 
+                1.33.0
+            , 
+                1.32.0
+            , 
+                1.31.0
+            , 
+                1.30.2
+            , 
+                1.30.1
+            , 
+                1.30.0
+            , 
+                1.29.0
+            , 
+                1.28.0
+            , 
+                1.27.0
+            , 
+                1.26.0
+            , 
+                1.25.1-Bgl
+            , 
+                1.25.1
+            , 
+                1.25.0
+            , 
+                1.24.0
+            , 
+                1.23.0
+            , 
+                1.22.0
+            , 
+                1.21.2
+            , 
+                1.21.1
+            , 
+                1.21.0
+            , 
+                1.20.2
+            , 
+                1.20.1
+            , 
+                1.20.0
+            , 
+                1.19.0
+            , 
+                1.18.3
+            , 
+                1.18.2
+            , 
+                1.18.0
+            , 
+                1.17.0
+            , 
+                1.16.1
+            
+TC_Download page displays file sizes: Navigated to https://www.stage.boost.org/releases/?cachebust=1765290905503 with status 200 on attempt 1
+TC_Download page displays file sizes: Navigated to https://www.stage.boost.org/releases/?cachebust=1765290906117 with status 200 on attempt 1
+Screenshot saved: screenshots/goto_attempt_1.png
+TC_Download page displays file sizes: Page loaded in 2908ms, URL: https://www.stage.boost.org/releases/latest/
+Screenshot saved: screenshots/tc_download_004_loaded.png
+Screenshot saved: screenshots/goto_attempt_1.png
+TC_Download page displays file sizes: Page loaded in 3038ms, URL: https://www.stage.boost.org/releases/latest/
+TC_DOWNLOAD_004 No file sizes found - may not be displayed on this page
+Screenshot saved: screenshots/tc_download_004_loaded.png
+TC_DOWNLOAD_004 No file sizes found - may not be displayed on this page
+TC_Search returns relevant results for common queries: Navigated to https://www.stage.boost.org/?cachebust=1765290909889 with status 200 on attempt 1
+Screenshot saved: screenshots/goto_attempt_1.png
+TC_Search returns relevant results for common queries: Page loaded in 2176ms, URL: https://www.stage.boost.org/?cachebust=1765290909889
+Screenshot saved: screenshots/tc_search_001_loaded.png
+TC_Search returns relevant results for common queries: Navigated to https://www.stage.boost.org/?cachebust=1765290910731 with status 200 on attempt 1
+TC_SEARCH_001 Search trigger locator matched 1 elements
+TC_SEARCH_001 Search trigger 0 visible: true
+TC_SEARCH_001 Search trigger clicked
+TC_SEARCH_001 Found 2 search input elements
+TC_SEARCH_001 Using search input element 0 (input, type: text, role: combobox)
+TC_SEARCH_001 Search performed for: asio
+Screenshot saved: screenshots/goto_attempt_1.png
+TC_Search returns relevant results for common queries: Page loaded in 2228ms, URL: https://www.stage.boost.org/?cachebust=1765290910731
+Screenshot saved: screenshots/tc_search_001_loaded.png
+TC_SEARCH_001 Search trigger locator matched 1 elements
+TC_SEARCH_001 Search trigger 0 visible: true
+TC_SEARCH_001 Search trigger clicked
+TC_SEARCH_001 Found 2 search input elements
+TC_SEARCH_001 Using search input element 0 (input, type: text, role: combobox)
+TC_SEARCH_001 Search performed for: asio
+TC_SEARCH_001 Found 0 elements with selector: [class*="search-result"], [class*="result"]
+TC_SEARCH_001 Found 0 elements with selector: [data-testid*="search"], [data-testid*="result"]
+TC_SEARCH_001 Found 0 elements with selector: .algolia-autocomplete .aa-dropdown-menu .aa-suggestion
+TC_SEARCH_001 Found 0 elements with selector: [role="listbox"] [role="option"]
+TC_SEARCH_001 Found 0 elements with selector: .search-hits, .search-results, #search-results
+TC_SEARCH_001 Found 174 content elements containing "asio"
+TC_SEARCH_001 Search for "asio" returned 174 results
+TC_SEARCH_001 Found 0 elements with selector: [class*="search-result"], [class*="result"]
+TC_SEARCH_001 Found 0 elements with selector: [data-testid*="search"], [data-testid*="result"]
+TC_SEARCH_001 Found 0 elements with selector: .algolia-autocomplete .aa-dropdown-menu .aa-suggestion
+TC_SEARCH_001 Found 0 elements with selector: [role="listbox"] [role="option"]
+TC_SEARCH_001 Found 0 elements with selector: .search-hits, .search-results, #search-results
+TC_SEARCH_001 Found 174 content elements containing "asio"
+TC_SEARCH_001 Search for "asio" returned 174 results
+TC_SEARCH_001 Search trigger locator matched 1 elements
+TC_SEARCH_001 Search trigger 0 visible: true
+TC_SEARCH_001 Search trigger clicked
+TC_SEARCH_001 Found 2 search input elements
+TC_SEARCH_001 Using search input element 0 (input, type: text, role: combobox)
+TC_SEARCH_001 Search performed for: filesystem
+TC_SEARCH_001 Search trigger locator matched 1 elements
+TC_SEARCH_001 Search trigger 0 visible: true
+TC_SEARCH_001 Search trigger clicked
+TC_SEARCH_001 Found 2 search input elements
+TC_SEARCH_001 Using search input element 0 (input, type: text, role: combobox)
+TC_SEARCH_001 Search performed for: filesystem
+TC_SEARCH_001 Found 0 elements with selector: [class*="search-result"], [class*="result"]
+TC_SEARCH_001 Found 0 elements with selector: [data-testid*="search"], [data-testid*="result"]
+TC_SEARCH_001 Found 0 elements with selector: .algolia-autocomplete .aa-dropdown-menu .aa-suggestion
+TC_SEARCH_001 Found 0 elements with selector: [role="listbox"] [role="option"]
+TC_SEARCH_001 Found 0 elements with selector: .search-hits, .search-results, #search-results
+TC_SEARCH_001 Found 147 content elements containing "filesystem"
+TC_SEARCH_001 Search for "filesystem" returned 147 results
+TC_SEARCH_001 Found 0 elements with selector: [class*="search-result"], [class*="result"]
+TC_SEARCH_001 Found 0 elements with selector: [data-testid*="search"], [data-testid*="result"]
+TC_SEARCH_001 Found 0 elements with selector: .algolia-autocomplete .aa-dropdown-menu .aa-suggestion
+TC_SEARCH_001 Found 0 elements with selector: [role="listbox"] [role="option"]
+TC_SEARCH_001 Found 0 elements with selector: .search-hits, .search-results, #search-results
+TC_SEARCH_001 Found 147 content elements containing "filesystem"
+TC_SEARCH_001 Search for "filesystem" returned 147 results
+TC_SEARCH_001 Search trigger locator matched 1 elements
+TC_SEARCH_001 Search trigger 0 visible: true
+TC_SEARCH_001 Search trigger clicked
+TC_SEARCH_001 Found 2 search input elements
+TC_SEARCH_001 Using search input element 0 (input, type: text, role: combobox)
+TC_SEARCH_001 Search performed for: algorithm
+TC_SEARCH_001 Search trigger locator matched 1 elements
+TC_SEARCH_001 Search trigger 0 visible: true
+TC_SEARCH_001 Search trigger clicked
+TC_SEARCH_001 Found 2 search input elements
+TC_SEARCH_001 Using search input element 0 (input, type: text, role: combobox)
+TC_SEARCH_001 Search performed for: algorithm
+TC_SEARCH_001 Found 0 elements with selector: [class*="search-result"], [class*="result"]
+TC_SEARCH_001 Found 0 elements with selector: [data-testid*="search"], [data-testid*="result"]
+TC_SEARCH_001 Found 0 elements with selector: .algolia-autocomplete .aa-dropdown-menu .aa-suggestion
+TC_SEARCH_001 Found 0 elements with selector: [role="listbox"] [role="option"]
+TC_SEARCH_001 Found 0 elements with selector: .search-hits, .search-results, #search-results
+TC_SEARCH_001 Found 179 content elements containing "algorithm"
+TC_SEARCH_001 Search for "algorithm" returned 179 results
+TC_SEARCH_001 Found 0 elements with selector: [class*="search-result"], [class*="result"]
+TC_SEARCH_001 Found 0 elements with selector: [data-testid*="search"], [data-testid*="result"]
+TC_SEARCH_001 Found 0 elements with selector: .algolia-autocomplete .aa-dropdown-menu .aa-suggestion
+TC_SEARCH_001 Found 0 elements with selector: [role="listbox"] [role="option"]
+TC_SEARCH_001 Found 0 elements with selector: .search-hits, .search-results, #search-results
+TC_SEARCH_001 Found 179 content elements containing "algorithm"
+TC_SEARCH_001 Search for "algorithm" returned 179 results
+TC_Search with special characters handles gracefully: Navigated to https://www.stage.boost.org/?cachebust=1765290925735 with status 200 on attempt 1
+Screenshot saved: screenshots/goto_attempt_1.png
+TC_Search with special characters handles gracefully: Page loaded in 2119ms, URL: https://www.stage.boost.org/?cachebust=1765290925735
+Screenshot saved: screenshots/tc_search_002_loaded.png
+TC_SEARCH_002 Search trigger locator matched 1 elements
+TC_SEARCH_002 Search trigger 0 visible: true
+TC_SEARCH_002 Search trigger clicked
+TC_SEARCH_002 Found 2 search input elements
+TC_SEARCH_002 Using search input element 0 (input, type: text, role: combobox)
+TC_SEARCH_002 Search performed for: C++
+TC_Search with special characters handles gracefully: Navigated to https://www.stage.boost.org/?cachebust=1765290926465 with status 200 on attempt 1
+Screenshot saved: screenshots/goto_attempt_1.png
+TC_Search with special characters handles gracefully: Page loaded in 2771ms, URL: https://www.stage.boost.org/?cachebust=1765290926465
+Screenshot saved: screenshots/tc_search_002_loaded.png
+TC_SEARCH_002 Search trigger locator matched 1 elements
+TC_SEARCH_002 Search trigger 0 visible: true
+TC_SEARCH_002 Search trigger clicked
+TC_SEARCH_002 Found 2 search input elements
+TC_SEARCH_002 Using search input element 0 (input, type: text, role: combobox)
+TC_SEARCH_002 Search performed for: C++
+TC_SEARCH_002 Search with "C++" failed: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+Expected: [32m0[39m
+Received: [31m1[39m
+TC_SEARCH_002 Search trigger locator matched 1 elements
+TC_SEARCH_002 Search trigger 0 visible: true
+TC_SEARCH_002 Search with "C++" failed: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+Expected: [32m0[39m
+Received: [31m1[39m
+TC_SEARCH_002 Search trigger locator matched 1 elements
+TC_SEARCH_002 Search trigger 0 visible: true
+TC_SEARCH_002 Search with "boost::asio" failed: locator.click: Test timeout of 45000ms exceeded.
+Call log:
+[2m  - waiting for locator('#gecko-search-button').or(locator('button[aria-label*="search" i], button[title*="search" i]')).or(locator('.search-trigger, #search-trigger, [class*="search-btn"]')).or(locator('button:has-text("Search"), [type="submit"][value*="search" i]')).first()[22m
+[2m    - locator resolved to <i data-theme-mode="light" id="gecko-search-button" data-font-family="sans-serif" class="fas fa-search icon-link" data-current-boost-version="1_89_0"></i>[22m
+[2m  - attempting click action[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is visible, enabled and stable[22m
+[2m      - scrolling into view if needed[22m
+[2m      - done scrolling[22m
+[2m      - <div tabindex="-1" role="presentation" class="MuiDialog-container MuiDialog-scrollPaper css-8azq84">…</div> from <div role="presentation" class="MuiDialog-root MuiModal-root css-chtbck">…</div> subtree intercepts pointer events[22m
+[2m    - retrying click action[22m
+[2m    - waiting 20ms[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is visible, enabled and stable[22m
+[2m      - scrolling into view if needed[22m
+[2m      - done scrolling[22m
+[2m      - <div tabindex="-1" role="presentation" class="MuiDialog-container MuiDialog-scrollPaper css-8azq84">…</div> from <div role="presentation" class="MuiDialog-root MuiModal-root css-chtbck">…</div> subtree intercepts pointer events[22m
+[2m    - retrying click action[22m
+[2m      - waiting 100ms[22m
+[2m    74 × waiting for element to be visible, enabled and stable[22m
+[2m       - element is visible, enabled and stable[22m
+[2m       - scrolling into view if needed[22m
+[2m       - done scrolling[22m
+[2m       - <div tabindex="-1" role="presentation" class="MuiDialog-container MuiDialog-scrollPaper css-8azq84">…</div> from <div role="presentation" class="MuiDialog-root MuiModal-root css-chtbck">…</div> subtree intercepts pointer events[22m
+[2m     - retrying click action[22m
+[2m       - waiting 500ms[22m
+
+TC_SEARCH_002 Search with "std::vector" failed: locator.count: Target page, context or browser has been closed
+TC_SEARCH_002 Search with "boost::asio" failed: locator.click: Test timeout of 45000ms exceeded.
+Call log:
+[2m  - waiting for locator('#gecko-search-button').or(locator('button[aria-label*="search" i], button[title*="search" i]')).or(locator('.search-trigger, #search-trigger, [class*="search-btn"]')).or(locator('button:has-text("Search"), [type="submit"][value*="search" i]')).first()[22m
+[2m    - locator resolved to <i data-theme-mode="light" id="gecko-search-button" data-font-family="sans-serif" class="fas fa-search icon-link" data-current-boost-version="1_89_0"></i>[22m
+[2m  - attempting click action[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is visible, enabled and stable[22m
+[2m      - scrolling into view if needed[22m
+[2m      - done scrolling[22m
+[2m      - <div tabindex="-1" role="presentation" class="MuiDialog-container MuiDialog-scrollPaper css-8azq84">…</div> from <div role="presentation" class="MuiDialog-root MuiModal-root css-chtbck">…</div> subtree intercepts pointer events[22m
+[2m    - retrying click action[22m
+[2m    - waiting 20ms[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is visible, enabled and stable[22m
+[2m      - scrolling into view if needed[22m
+[2m      - done scrolling[22m
+[2m      - <div tabindex="-1" role="presentation" class="MuiDialog-container MuiDialog-scrollPaper css-8azq84">…</div> from <div role="presentation" class="MuiDialog-root MuiModal-root css-chtbck">…</div> subtree intercepts pointer events[22m
+[2m    - retrying click action[22m
+[2m      - waiting 100ms[22m
+[2m    73 × waiting for element to be visible, enabled and stable[22m
+[2m       - element is visible, enabled and stable[22m
+[2m       - scrolling into view if needed[22m
+[2m       - done scrolling[22m
+[2m       - <div tabindex="-1" role="presentation" class="MuiDialog-container MuiDialog-scrollPaper css-8azq84">…</div> from <div role="presentation" class="MuiDialog-root MuiModal-root css-chtbck">…</div> subtree intercepts pointer events[22m
+[2m     - retrying click action[22m
+[2m       - waiting 500ms[22m
+
+TC_SEARCH_002 Search with "std::vector" failed: locator.count: Target page, context or browser has been closed
+TC_Empty search shows appropriate message: Navigated to https://www.stage.boost.org/?cachebust=1765290973568 with status 200 on attempt 1
+TC_Empty search shows appropriate message: Navigated to https://www.stage.boost.org/?cachebust=1765290974183 with status 200 on attempt 1
+Screenshot saved: screenshots/goto_attempt_1.png
+TC_Empty search shows appropriate message: Page loaded in 2336ms, URL: https://www.stage.boost.org/?cachebust=1765290973568
+Screenshot saved: screenshots/tc_search_003_loaded.png
+Screenshot saved: screenshots/goto_attempt_1.png
+TC_Empty search shows appropriate message: Page loaded in 2254ms, URL: https://www.stage.boost.org/?cachebust=1765290974183
+Screenshot saved: screenshots/tc_search_003_loaded.png
+TC_Search result pagination works correctly: Navigated to https://www.stage.boost.org/?cachebust=1765290992999 with status 200 on attempt 1
+Screenshot saved: screenshots/goto_attempt_1.png
+TC_Search result pagination works correctly: Page loaded in 2257ms, URL: https://www.stage.boost.org/?cachebust=1765290992999
+TC_Search result pagination works correctly: Navigated to https://www.stage.boost.org/?cachebust=1765290993499 with status 200 on attempt 1
+Screenshot saved: screenshots/tc_search_004_loaded.png
+TC_SEARCH_004 Search trigger locator matched 1 elements
+TC_SEARCH_004 Search trigger 0 visible: true
+TC_SEARCH_004 Search trigger clicked
+TC_SEARCH_004 Found 2 search input elements
+Screenshot saved: screenshots/goto_attempt_1.png
+TC_Search result pagination works correctly: Page loaded in 2385ms, URL: https://www.stage.boost.org/?cachebust=1765290993499
+TC_SEARCH_004 Using search input element 0 (input, type: text, role: combobox)
+TC_SEARCH_004 Search performed for: boost
+Screenshot saved: screenshots/tc_search_004_loaded.png
+TC_SEARCH_004 Search trigger locator matched 1 elements
+TC_SEARCH_004 Search trigger 0 visible: true
+TC_SEARCH_004 Search trigger clicked
+TC_SEARCH_004 Found 2 search input elements
+TC_SEARCH_004 Using search input element 0 (input, type: text, role: combobox)
+TC_SEARCH_004 Search performed for: boost
+TC_SEARCH_004 Pagination controls found
+TC_SEARCH_004 Pagination controls found
+TC_Search autocomplete/suggestions appear: Navigated to https://www.stage.boost.org/?cachebust=1765291000889 with status 200 on attempt 1
+TC_Search autocomplete/suggestions appear: Navigated to https://www.stage.boost.org/?cachebust=1765291001402 with status 200 on attempt 1
+Screenshot saved: screenshots/goto_attempt_1.png
+TC_Search autocomplete/suggestions appear: Page loaded in 2268ms, URL: https://www.stage.boost.org/?cachebust=1765291000889
+Screenshot saved: screenshots/tc_search_005_loaded.png
+Screenshot saved: screenshots/goto_attempt_1.png
+TC_Search autocomplete/suggestions appear: Page loaded in 2332ms, URL: https://www.stage.boost.org/?cachebust=1765291001402
+Screenshot saved: screenshots/tc_search_005_loaded.png
+TC_404 page displays appropriate error message: Navigated to https://www.stage.boost.org/this-page-does-not-exist-12345?cachebust=1765291045792 with status 404 on attempt 1
+TC_404 page displays appropriate error message: Navigated to https://www.stage.boost.org/this-page-does-not-exist-12345?cachebust=1765291045792 with status 404 on attempt 1
+Screenshot saved: screenshots/goto_attempt_1.png
+Screenshot saved: screenshots/goto_attempt_1.png
+TC_ERROR_001 404 error message displayed correctly
+TC_ERROR_001 404 error message displayed correctly
+TC_ERROR_002 Response status: 404
+TC_ERROR_002 Error message displayed for broken doc link
+TC_ERROR_002 Response status: 404
+TC_ERROR_002 Error message displayed for broken doc link
+TC_Invalid search query handles gracefully: Navigated to https://www.stage.boost.org/?cachebust=1765291051464 with status 200 on attempt 1
+TC_Invalid search query handles gracefully: Navigated to https://www.stage.boost.org/?cachebust=1765291051531 with status 200 on attempt 1
+Screenshot saved: screenshots/goto_attempt_1.png
+TC_Invalid search query handles gracefully: Page loaded in 2286ms, URL: https://www.stage.boost.org/?cachebust=1765291051464
+Screenshot saved: screenshots/goto_attempt_1.png
+TC_Invalid search query handles gracefully: Page loaded in 2418ms, URL: https://www.stage.boost.org/?cachebust=1765291051531
+Screenshot saved: screenshots/tc_error_003_loaded.png
+Screenshot saved: screenshots/tc_error_003_loaded.png
+TC_ERROR_004 Testing malformed URL: https://www.stage.boost.org/doc/////libs
+TC_ERROR_004 Testing malformed URL: https://www.stage.boost.org/doc/////libs
+TC_ERROR_004 Status: 200, Final URL: https://www.stage.boost.org/libraries/latest/grid/
+TC_ERROR_004 Redirected to valid page
+TC_ERROR_004 Testing malformed URL: https://www.stage.boost.org/users/download
+TC_ERROR_004 Status: 200, Final URL: https://www.stage.boost.org/libraries/latest/grid/
+TC_ERROR_004 Redirected to valid page
+TC_ERROR_004 Testing malformed URL: https://www.stage.boost.org/users/download
+TC_ERROR_004 Status: 200, Final URL: https://www.stage.boost.org/releases/latest/
+TC_ERROR_004 Redirected to valid page
+TC_ERROR_004 Testing malformed URL: https://www.stage.boost.org/libraries/?..
+TC_ERROR_004 Status: 200, Final URL: https://www.stage.boost.org/releases/latest/
+TC_ERROR_004 Redirected to valid page
+TC_ERROR_004 Testing malformed URL: https://www.stage.boost.org/libraries/?..
+TC_ERROR_004 Status: 200, Final URL: https://www.stage.boost.org/libraries/latest/grid/
+TC_ERROR_004 Redirected to valid page
+TC_ERROR_004 Status: 200, Final URL: https://www.stage.boost.org/libraries/latest/grid/
+TC_ERROR_004 Redirected to valid page
+TC_Broken external links are identified: Navigated to https://www.stage.boost.org/?cachebust=1765291079551 with status 200 on attempt 1
+TC_Broken external links are identified: Navigated to https://www.stage.boost.org/?cachebust=1765291079546 with status 200 on attempt 1
+Screenshot saved: screenshots/goto_attempt_1.png
+TC_Broken external links are identified: Page loaded in 2609ms, URL: https://www.stage.boost.org/?cachebust=1765291079551
+Screenshot saved: screenshots/goto_attempt_1.png
+TC_Broken external links are identified: Page loaded in 2853ms, URL: https://www.stage.boost.org/?cachebust=1765291079546
+Screenshot saved: screenshots/tc_error_005_loaded.png
+TC_ERROR_005 Found 18 external links
+Screenshot saved: screenshots/tc_error_005_loaded.png
+TC_ERROR_005 Found 19 external links
+TC_ERROR_005 Link 0: https://github.com/lcaminiti - Status: 200
+TC_ERROR_005 Link 0: https://www.youtube.com/watch?v=XB3uEit5R_Y - Status: 200
+TC_ERROR_005 Link 1: https://github.com/rbbeeston - Status: 200
+TC_ERROR_005 Link 2: https://t.co/b5uXlmBBka - Status: 200
+TC_ERROR_005 Link 1: https://www.youtube.com/watch?v=XB3uEit5R_Y - Status: 200
+TC_ERROR_005 Link 2: https://github.com/rbbeeston - Status: 200
+TC_ERROR_005 Link 3: https://t.co/MV146rWJF5 - Status: 200
+TC_ERROR_005 Link 3: https://t.co/b5uXlmBBka - Status: 200
+TC_ERROR_005 Link 4: https://t.co/CncJ17OYvj - Status: 200
+TC_ERROR_005 Checked 5 external links
+TC_ERROR_005 Link 4: https://t.co/MV146rWJF5 - Status: 200
+TC_ERROR_005 Checked 5 external links
+TC_Form validation errors display correctly: Navigated to https://www.stage.boost.org/?cachebust=1765291084863 with status 200 on attempt 1
+Screenshot saved: screenshots/goto_attempt_1.png
+TC_Form validation errors display correctly: Page loaded in 2302ms, URL: https://www.stage.boost.org/?cachebust=1765291084863
+TC_Form validation errors display correctly: Navigated to https://www.stage.boost.org/?cachebust=1765291084979 with status 200 on attempt 1
+Screenshot saved: screenshots/tc_error_006_loaded.png
+TC_ERROR_006 Found 0 forms on page
+TC_ERROR_006 No forms found on homepage, skipping test
+Screenshot saved: screenshots/goto_attempt_1.png
+TC_Form validation errors display correctly: Page loaded in 2842ms, URL: https://www.stage.boost.org/?cachebust=1765291084979
+Screenshot saved: screenshots/tc_error_006_loaded.png
+TC_ERROR_006 Found 0 forms on page
+TC_ERROR_006 No forms found on homepage, skipping test
