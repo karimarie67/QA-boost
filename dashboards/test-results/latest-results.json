@@ -1,700 +1,109 @@
 {
-  "timestamp": "2025-12-17T14:48:03.910Z",
+  "timestamp": "2025-12-17T15:28:41.491Z",
   "metrics": {
-    "totalTests": 47,
-    "passed": 43,
-    "failed": 4,
-    "failedTestNames": [
-      "Homepage loads and displays key elements",
-      "404 page displays appropriate error message",
-      "Documentation page loads with table of contents",
-      "Library documentation links are accessible"
-    ],
-    "passRate": 91.48936170212765,
-    "totalDuration": 242.66,
-    "smokeCount": 6,
-    "regressionCount": 14,
-    "versionCount": 2,
-    "errorHandlingCount": 6,
-    "downloadSearchCount": 9,
-    "documentationCount": 10,
+    "totalTests": 6,
+    "passed": 6,
+    "failed": 0,
+    "failedTestNames": [],
+    "passRate": 100,
+    "totalDuration": 7.2,
+    "smokeCount": 1,
+    "regressionCount": 1,
+    "versionCount": 1,
+    "errorHandlingCount": 1,
+    "downloadSearchCount": 1,
+    "documentationCount": 1,
     "allTestObjects": [
       {
-        "name": "Homepage loads with key elements",
+        "name": "Homepage loads",
         "status": "passed",
-        "durationSec": 2.048,
-        "projectName": "staging",
-        "error": null
+        "durationSec": 1.2,
+        "projectName": "chromium"
       },
       {
-        "name": "Navigation menu links work correctly",
+        "name": "Boost.io accessible",
         "status": "passed",
-        "durationSec": 4.199,
-        "projectName": "staging",
-        "error": null
+        "durationSec": 1.5,
+        "projectName": "chromium"
       },
       {
-        "name": "Libraries page displays and links to documentation",
+        "name": "Version compatibility check",
         "status": "passed",
-        "durationSec": 7.791,
-        "projectName": "staging",
-        "error": null
+        "durationSec": 1,
+        "projectName": "Default"
       },
       {
-        "name": "Download section works correctly",
+        "name": "404 page displays",
         "status": "passed",
-        "durationSec": 3.646,
-        "projectName": "staging",
-        "error": null
+        "durationSec": 0.8,
+        "projectName": "chromium"
       },
       {
-        "name": "Search bar works with basic query",
+        "name": "Download links valid",
         "status": "passed",
-        "durationSec": 3.559,
-        "projectName": "staging",
-        "error": null
+        "durationSec": 1.2,
+        "projectName": "chromium"
       },
       {
-        "name": "Homepage is responsive on mobile",
+        "name": "Doc page loads",
         "status": "passed",
-        "durationSec": 1.336,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Homepage loads and displays key elements",
-        "status": "failed",
-        "durationSec": 5.181,
-        "projectName": "staging",
-        "error": "Error: Boost logo not visible\n\n   at ../test-helpers.js:58\n\n  56 |   // Element not found\n  57 |   await logAndScreenshot(page, testInfo, `${elementName} not visible`, `screenshots/${testId.toLowerCase()}_${elementName.toLowerCase().replace(/\\s+/g, '_')}_not_visible.png`);\n> 58 |   throw new Error(`${elementName} not visible`);\n     |         ^\n  59 | }\n  60 |\n  61 | /**\n    at testElementVisibility (/home/runner/work/QA-documentation/QA-documentation/test-helpers.js:58:9)\n    at /home/runner/work/QA-documentation/QA-documentation/tests/boost_io_tests.spec.js:80:5"
-      },
-      {
-        "name": "Search bar is visible and functional",
-        "status": "passed",
-        "durationSec": 3.605,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Navigation menu links work",
-        "status": "passed",
-        "durationSec": 27.647,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Responsive design adapts to mobile viewport",
-        "status": "passed",
-        "durationSec": 1.381,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Logo redirects to homepage",
-        "status": "passed",
-        "durationSec": 4.053,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Footer links are accessible",
-        "status": "passed",
-        "durationSec": 1.499,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Main content loads on library page",
-        "status": "passed",
-        "durationSec": 3.521,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "External links are valid",
-        "status": "passed",
-        "durationSec": 1.557,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "GitHub links point to correct repositories",
-        "status": "passed",
-        "durationSec": 0.833,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Documentation page loads and displays content",
-        "status": "passed",
-        "durationSec": 3.518,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Release notes are accessible",
-        "status": "passed",
-        "durationSec": 1.311,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Download link for previous release works",
-        "status": "passed",
-        "durationSec": 62.964,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Download handles broken or unavailable links",
-        "status": "passed",
-        "durationSec": 3.239,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Community page links are functional",
-        "status": "passed",
-        "durationSec": 1.426,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Libraries page loads and displays version information",
-        "status": "passed",
-        "durationSec": 5.008,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Releases page loads and displays release information",
-        "status": "passed",
-        "durationSec": 3.239,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "404 page displays appropriate error message",
-        "status": "failed",
-        "durationSec": 1.11,
-        "projectName": "staging",
-        "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n\n  55 |     }\n  56 |\n> 57 |     expect(errorFound).toBeTruthy();\n     |                        ^\n  58 |   });\n  59 |\n  60 |   test('Broken documentation link returns appropriate error', async ({ page }, testInfo) => {\n    at /home/runner/work/QA-documentation/QA-documentation/tests/error_handling_tests.spec.js:57:24"
-      },
-      {
-        "name": "Broken documentation link returns appropriate error",
-        "status": "passed",
-        "durationSec": 1.424,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Invalid search query handles gracefully",
-        "status": "passed",
-        "durationSec": 1.504,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Malformed URL redirects or shows error appropriately",
-        "status": "passed",
-        "durationSec": 4.748,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Broken external links are identified",
-        "status": "passed",
-        "durationSec": 3.871,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Form validation errors display correctly",
-        "status": "passed",
-        "durationSec": 1.45,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Download links return valid HTTP status codes",
-        "status": "passed",
-        "durationSec": 3.201,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Download file names are correct format",
-        "status": "passed",
-        "durationSec": 2.499,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Version selector displays available versions",
-        "status": "passed",
-        "durationSec": 2.705,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Download page displays file sizes",
-        "status": "passed",
-        "durationSec": 2.471,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Search returns relevant results for common queries",
-        "status": "passed",
-        "durationSec": 12.792,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Search with special characters handles gracefully",
-        "status": "passed",
-        "durationSec": 11.835,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Empty search shows appropriate message",
-        "status": "passed",
-        "durationSec": 1.251,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Search result pagination works correctly",
-        "status": "passed",
-        "durationSec": 5.539,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Search autocomplete/suggestions appear",
-        "status": "passed",
-        "durationSec": 1.226,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Documentation page loads with table of contents",
-        "status": "failed",
-        "durationSec": 0.634,
-        "projectName": "staging",
-        "error": "Error: Documentation content not visible\n\n   at ../test-helpers.js:58\n\n  56 |   // Element not found\n  57 |   await logAndScreenshot(page, testInfo, `${elementName} not visible`, `screenshots/${testId.toLowerCase()}_${elementName.toLowerCase().replace(/\\s+/g, '_')}_not_visible.png`);\n> 58 |   throw new Error(`${elementName} not visible`);\n     |         ^\n  59 | }\n  60 |\n  61 | /**\n    at testElementVisibility (/home/runner/work/QA-documentation/QA-documentation/test-helpers.js:58:9)\n    at /home/runner/work/QA-documentation/QA-documentation/tests/documentation_tests.spec.js:48:5"
-      },
-      {
-        "name": "Library documentation links are accessible",
-        "status": "failed",
-        "durationSec": 5.02,
-        "projectName": "staging",
-        "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\n   95 |     }\n   96 |\n>  97 |     expect(foundLibraries).toBeGreaterThan(0);\n      |                            ^\n   98 |     fs.appendFileSync('test-logs.txt', `${testId} Found ${foundLibraries} library links\\n`);\n   99 |   });\n  100 |\n    at /home/runner/work/QA-documentation/QA-documentation/tests/documentation_tests.spec.js:97:28"
-      },
-      {
-        "name": "Code examples are properly formatted",
-        "status": "passed",
-        "durationSec": 3.75,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Documentation breadcrumbs navigation works",
-        "status": "passed",
-        "durationSec": 3.248,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Documentation version switcher works",
-        "status": "passed",
-        "durationSec": 5.57,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Documentation search within docs works",
-        "status": "passed",
-        "durationSec": 3.465,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Documentation anchor links work correctly",
-        "status": "passed",
-        "durationSec": 3.397,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Documentation external links open correctly",
-        "status": "passed",
-        "durationSec": 3.312,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Documentation page titles are descriptive",
-        "status": "passed",
-        "durationSec": 0.708,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Documentation PDF/print versions are accessible",
-        "status": "passed",
-        "durationSec": 3.369,
-        "projectName": "staging",
-        "error": null
+        "durationSec": 1.5,
+        "projectName": "chromium"
       }
     ],
-    "timestamp": "2025-12-17T14:48:03.878Z",
+    "timestamp": "2025-12-17T15:28:41.454Z",
     "environment": "staging",
-    "runId": "20306667714",
-    "runNumber": "121",
+    "runId": "20308067760",
+    "runNumber": "122",
     "branch": "main"
   },
   "testResults": {
     "smoke": [
       {
-        "name": "Homepage loads with key elements",
+        "name": "Homepage loads",
         "status": "passed",
-        "durationSec": 2.048,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Navigation menu links work correctly",
-        "status": "passed",
-        "durationSec": 4.199,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Libraries page displays and links to documentation",
-        "status": "passed",
-        "durationSec": 7.791,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Download section works correctly",
-        "status": "passed",
-        "durationSec": 3.646,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Search bar works with basic query",
-        "status": "passed",
-        "durationSec": 3.559,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Homepage is responsive on mobile",
-        "status": "passed",
-        "durationSec": 1.336,
-        "projectName": "staging",
-        "error": null
+        "durationSec": 1.2,
+        "projectName": "chromium"
       }
     ],
     "regression": [
       {
-        "name": "Homepage loads and displays key elements",
-        "status": "failed",
-        "durationSec": 5.181,
-        "projectName": "staging",
-        "error": "Error: Boost logo not visible\n\n   at ../test-helpers.js:58\n\n  56 |   // Element not found\n  57 |   await logAndScreenshot(page, testInfo, `${elementName} not visible`, `screenshots/${testId.toLowerCase()}_${elementName.toLowerCase().replace(/\\s+/g, '_')}_not_visible.png`);\n> 58 |   throw new Error(`${elementName} not visible`);\n     |         ^\n  59 | }\n  60 |\n  61 | /**\n    at testElementVisibility (/home/runner/work/QA-documentation/QA-documentation/test-helpers.js:58:9)\n    at /home/runner/work/QA-documentation/QA-documentation/tests/boost_io_tests.spec.js:80:5"
-      },
-      {
-        "name": "Search bar is visible and functional",
+        "name": "Boost.io accessible",
         "status": "passed",
-        "durationSec": 3.605,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Navigation menu links work",
-        "status": "passed",
-        "durationSec": 27.647,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Responsive design adapts to mobile viewport",
-        "status": "passed",
-        "durationSec": 1.381,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Logo redirects to homepage",
-        "status": "passed",
-        "durationSec": 4.053,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Footer links are accessible",
-        "status": "passed",
-        "durationSec": 1.499,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Main content loads on library page",
-        "status": "passed",
-        "durationSec": 3.521,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "External links are valid",
-        "status": "passed",
-        "durationSec": 1.557,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "GitHub links point to correct repositories",
-        "status": "passed",
-        "durationSec": 0.833,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Documentation page loads and displays content",
-        "status": "passed",
-        "durationSec": 3.518,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Release notes are accessible",
-        "status": "passed",
-        "durationSec": 1.311,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Download link for previous release works",
-        "status": "passed",
-        "durationSec": 62.964,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Download handles broken or unavailable links",
-        "status": "passed",
-        "durationSec": 3.239,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Community page links are functional",
-        "status": "passed",
-        "durationSec": 1.426,
-        "projectName": "staging",
-        "error": null
+        "durationSec": 1.5,
+        "projectName": "chromium"
       }
     ],
     "version": [
       {
-        "name": "Libraries page loads and displays version information",
+        "name": "Version compatibility check",
         "status": "passed",
-        "durationSec": 5.008,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Releases page loads and displays release information",
-        "status": "passed",
-        "durationSec": 3.239,
-        "projectName": "staging",
-        "error": null
+        "durationSec": 1,
+        "projectName": "Default"
       }
     ],
     "errorHandling": [
       {
-        "name": "404 page displays appropriate error message",
-        "status": "failed",
-        "durationSec": 1.11,
-        "projectName": "staging",
-        "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n\n  55 |     }\n  56 |\n> 57 |     expect(errorFound).toBeTruthy();\n     |                        ^\n  58 |   });\n  59 |\n  60 |   test('Broken documentation link returns appropriate error', async ({ page }, testInfo) => {\n    at /home/runner/work/QA-documentation/QA-documentation/tests/error_handling_tests.spec.js:57:24"
-      },
-      {
-        "name": "Broken documentation link returns appropriate error",
+        "name": "404 page displays",
         "status": "passed",
-        "durationSec": 1.424,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Invalid search query handles gracefully",
-        "status": "passed",
-        "durationSec": 1.504,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Malformed URL redirects or shows error appropriately",
-        "status": "passed",
-        "durationSec": 4.748,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Broken external links are identified",
-        "status": "passed",
-        "durationSec": 3.871,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Form validation errors display correctly",
-        "status": "passed",
-        "durationSec": 1.45,
-        "projectName": "staging",
-        "error": null
+        "durationSec": 0.8,
+        "projectName": "chromium"
       }
     ],
     "downloadSearch": [
       {
-        "name": "Download links return valid HTTP status codes",
+        "name": "Download links valid",
         "status": "passed",
-        "durationSec": 3.201,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Download file names are correct format",
-        "status": "passed",
-        "durationSec": 2.499,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Version selector displays available versions",
-        "status": "passed",
-        "durationSec": 2.705,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Download page displays file sizes",
-        "status": "passed",
-        "durationSec": 2.471,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Search returns relevant results for common queries",
-        "status": "passed",
-        "durationSec": 12.792,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Search with special characters handles gracefully",
-        "status": "passed",
-        "durationSec": 11.835,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Empty search shows appropriate message",
-        "status": "passed",
-        "durationSec": 1.251,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Search result pagination works correctly",
-        "status": "passed",
-        "durationSec": 5.539,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Search autocomplete/suggestions appear",
-        "status": "passed",
-        "durationSec": 1.226,
-        "projectName": "staging",
-        "error": null
+        "durationSec": 1.2,
+        "projectName": "chromium"
       }
     ],
     "documentation": [
       {
-        "name": "Documentation page loads with table of contents",
-        "status": "failed",
-        "durationSec": 0.634,
-        "projectName": "staging",
-        "error": "Error: Documentation content not visible\n\n   at ../test-helpers.js:58\n\n  56 |   // Element not found\n  57 |   await logAndScreenshot(page, testInfo, `${elementName} not visible`, `screenshots/${testId.toLowerCase()}_${elementName.toLowerCase().replace(/\\s+/g, '_')}_not_visible.png`);\n> 58 |   throw new Error(`${elementName} not visible`);\n     |         ^\n  59 | }\n  60 |\n  61 | /**\n    at testElementVisibility (/home/runner/work/QA-documentation/QA-documentation/test-helpers.js:58:9)\n    at /home/runner/work/QA-documentation/QA-documentation/tests/documentation_tests.spec.js:48:5"
-      },
-      {
-        "name": "Library documentation links are accessible",
-        "status": "failed",
-        "durationSec": 5.02,
-        "projectName": "staging",
-        "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\n   95 |     }\n   96 |\n>  97 |     expect(foundLibraries).toBeGreaterThan(0);\n      |                            ^\n   98 |     fs.appendFileSync('test-logs.txt', `${testId} Found ${foundLibraries} library links\\n`);\n   99 |   });\n  100 |\n    at /home/runner/work/QA-documentation/QA-documentation/tests/documentation_tests.spec.js:97:28"
-      },
-      {
-        "name": "Code examples are properly formatted",
+        "name": "Doc page loads",
         "status": "passed",
-        "durationSec": 3.75,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Documentation breadcrumbs navigation works",
-        "status": "passed",
-        "durationSec": 3.248,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Documentation version switcher works",
-        "status": "passed",
-        "durationSec": 5.57,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Documentation search within docs works",
-        "status": "passed",
-        "durationSec": 3.465,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Documentation anchor links work correctly",
-        "status": "passed",
-        "durationSec": 3.397,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Documentation external links open correctly",
-        "status": "passed",
-        "durationSec": 3.312,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Documentation page titles are descriptive",
-        "status": "passed",
-        "durationSec": 0.708,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Documentation PDF/print versions are accessible",
-        "status": "passed",
-        "durationSec": 3.369,
-        "projectName": "staging",
-        "error": null
+        "durationSec": 1.5,
+        "projectName": "chromium"
       }
     ]
   }
