@@ -155,5 +155,16 @@
     "duration": 21.262999999999998,
     "failedTestNames": [],
     "runNumber": "125"
+  },
+  {
+    "date": "2025-12-22",
+    "time": "2025-12-22T15:26:28.244Z",
+    "total": 6,
+    "passed": 6,
+    "failed": 0,
+    "passRate": 100,
+    "duration": 22.358999999999998,
+    "failedTestNames": [],
+    "runNumber": "126"
   }
 ]
