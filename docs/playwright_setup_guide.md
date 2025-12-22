@@ -739,17 +739,6 @@ npm run test:production           # Production (careful!)
 
 ---
 
-## Next Steps
-
-1. **Day 1**: Clone repos, run tests locally, understand structure
-2. **Day 2-3**: Create QA directory in website-v2, copy files over
-3. **Day 4**: Configure GitHub Actions workflow
-4. **Day 5**: Test everything locally, create PR
-5. **Week 2**: Monitor first few CI/CD runs, fix any issues
-6. **Ongoing**: Maintain tests as site changes, add new coverage
-
----
-
 ## Important Notes
 
 - **Smoke tests must be fast** - They're a pre-merge gate, keep under 10 minutes
