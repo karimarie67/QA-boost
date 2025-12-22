@@ -131,6 +131,58 @@ Our testing suite is divided into two primary tiers to balance speed and coverag
 
 ---
 
+### Requirement Traceability Matrix (RTM)
+
+| Test ID | Category | Validation Goal | Source File |
+| :--- | :--- | :--- | :--- |
+| **TC_SMOKE_001** | Smoke | Homepage loads with logo, nav, and main content | `smoke_tests.spec.js` |
+| **TC_SMOKE_002** | Smoke | Navigation menu links work correctly and change URLs | `smoke_tests.spec.js` |
+| **TC_SMOKE_003** | Smoke | Libraries page displays and links to documentation | `smoke_tests.spec.js` |
+| **TC_SMOKE_004** | Smoke | Download section initiates file downloads correctly | `smoke_tests.spec.js` |
+| **TC_SMOKE_005** | Smoke | Search bar works with basic working query | `smoke_tests.spec.js` |
+| **TC_SMOKE_006** | Smoke | Homepage is responsive on mobile viewports | `smoke_tests.spec.js` |
+| **TC_FUNC_001** | Functional | Homepage loads key elements and CTA button navigation | `boost_io_tests.spec.js` |
+| **TC_FUNC_002** | Functional | Search bar is visible and functional on mobile | `boost_io_tests.spec.js` |
+| **TC_FUNC_003** | Functional | Navigation menu links work across the site | `boost_io_tests.spec.js` |
+| **TC_FUNC_004** | Functional | Responsive design adapts to mobile/desktop viewports | `boost_io_tests.spec.js` |
+| **TC_FUNC_005** | Functional | Logo redirects to homepage from subpages | `boost_io_tests.spec.js` |
+| **TC_FUNC_006** | Functional | Footer links are accessible and visible | `boost_io_tests.spec.js` |
+| **TC_FUNC_007** | Functional | Main content loads on library-specific pages | `boost_io_tests.spec.js` |
+| **TC_FUNC_008** | Functional | External links are valid and visible | `boost_io_tests.spec.js` |
+| **TC_FUNC_009** | Functional | GitHub links point to correct repositories | `boost_io_tests.spec.js` |
+| **TC_FUNC_010** | Functional | Documentation page loads and displays content | `boost_io_tests.spec.js` |
+| **TC_FUNC_011** | Functional | Release notes are accessible | `boost_io_tests.spec.js` |
+| **TC_FUNC_012** | Functional | Download link for previous release (1.85.0) works | `boost_io_tests.spec.js` |
+| **TC_FUNC_013** | Functional | Handles broken or unavailable download links | `boost_io_tests.spec.js` |
+| **TC_FUNC_014** | Functional | Community page links are functional | `boost_io_tests.spec.js` |
+| **TC_DOC_001** | Documentation | Documentation page loads with table of contents | `documentation_tests.spec.js` |
+| **TC_DOC_002** | Documentation | Library documentation links are accessible | `documentation_tests.spec.js` |
+| **TC_DOC_003** | Documentation | Code examples are properly formatted | `documentation_tests.spec.js` |
+| **TC_DOC_004** | Documentation | Documentation breadcrumbs navigation works | `documentation_tests.spec.js` |
+| **TC_DOC_005** | Documentation | Documentation version switcher works | `documentation_tests.spec.js` |
+| **TC_DOC_006** | Documentation | Search within documentation pages works | `documentation_tests.spec.js` |
+| **TC_DOC_007** | Documentation | Documentation anchor links work correctly | `documentation_tests.spec.js` |
+| **TC_DOC_008** | Documentation | Documentation external links open correctly | `documentation_tests.spec.js` |
+| **TC_DOC_009** | Documentation | Documentation page titles are descriptive | `documentation_tests.spec.js` |
+| **TC_DOC_010** | Documentation | Documentation PDF/print versions are accessible | `documentation_tests.spec.js` |
+| **TC_DOWNLOAD_001** | Download | Download links return valid HTTP status codes | `download_search_tests.spec.js` |
+| **TC_DOWNLOAD_002** | Download | Download file names are correct format | `download_search_tests.spec.js` |
+| **TC_DOWNLOAD_003** | Download | Version selector displays available versions | `download_search_tests.spec.js` |
+| **TC_DOWNLOAD_004** | Download | Download page displays file sizes | `download_search_tests.spec.js` |
+| **TC_SEARCH_001** | Search | Returns relevant results for common queries | `download_search_tests.spec.js` |
+| **TC_SEARCH_002** | Search | Handles special characters gracefully | `download_search_tests.spec.js` |
+| **TC_SEARCH_003** | Search | Empty search shows appropriate message | `download_search_tests.spec.js` |
+| **TC_SEARCH_004** | Search | Search result pagination works correctly | `download_search_tests.spec.js` |
+| **TC_SEARCH_005** | Search | Search autocomplete/suggestions appear | `download_search_tests.spec.js` |
+| **TC_ERROR_001** | Error Handling | 404 page displays appropriate error message | `error_handling_tests.spec.js` |
+| **TC_ERROR_002** | Error Handling | Broken documentation link returns appropriate error | `error_handling_tests.spec.js` |
+| **TC_ERROR_003** | Error Handling | Invalid search query handles gracefully | `error_handling_tests.spec.js` |
+| **TC_ERROR_004** | Error Handling | Malformed URL redirects or shows error appropriately | `error_handling_tests.spec.js` |
+| **TC_ERROR_005** | Error Handling | Broken external links are identified | `error_handling_tests.spec.js` |
+| **TC_ERROR_006** | Error Handling | Form validation errors display correctly | `error_handling_tests.spec.js` |
+| **TC_VERSION_001** | Version Tests | Libraries page loads version information | `boost_version_tests.spec.js` |
+| **TC_VERSION_002** | Version Tests | Releases page displays release information | `boost_version_tests.spec.js` |
+
 ### Test Implementation Details
 * **Tracing:** Each test is mapped to a unique Test Case ID (e.g., `TC_DOC_001` or `TC_DOWNLOAD_001`) via Playwright annotations.
 * **Logging:** Test progress and findings (such as found selectors or navigation paths) are appended to `test-logs.txt`.
