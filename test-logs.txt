@@ -38674,3 +38674,413 @@ Call log:
 Screenshot saved: screenshots/goto_attempt_3_error.png
 TC_Homepage is responsive on mobile: Page load failed: http://localhost:8000/?cachebust=1766417209908
 Screenshot saved: screenshots/tc_smoke_006_load_failed.png
+TC_Download links return valid HTTP status codes: Navigated to https://www.stage.boost.org/releases/?cachebust=1766418422190 with status 200 on attempt 1
+TC_Download links return valid HTTP status codes: Navigated to https://www.stage.boost.org/releases/?cachebust=1766418422187 with status 200 on attempt 1
+Screenshot saved: screenshots/goto_attempt_1.png
+TC_Download links return valid HTTP status codes: Page loaded in 6191ms, URL: https://www.stage.boost.org/releases/latest/
+Screenshot saved: screenshots/goto_attempt_1.png
+TC_Download links return valid HTTP status codes: Page loaded in 6364ms, URL: https://www.stage.boost.org/releases/latest/
+Screenshot saved: screenshots/tc_download_001_loaded.png
+Screenshot saved: screenshots/tc_download_001_loaded.png
+TC_DOWNLOAD_001 Found 24 download links
+TC_DOWNLOAD_001 Download link: https://archives.boost.io/release/1.90.0/source/boost_1_90_0.tar.gz - Status: 200
+TC_DOWNLOAD_001 Download link: https://archives.boost.io/release/1.90.0/source/boost_1_90_0.zip - Status: 200
+TC_DOWNLOAD_001 Download link: https://archives.boost.io/release/1.90.0/source/boost_1_90_0.tar.bz2 - Status: 200
+TC_DOWNLOAD_001 Download link: https://archives.boost.io/release/1.90.0/source/boost_1_90_0.tar.gz - Status: 200
+TC_DOWNLOAD_001 Download link: https://archives.boost.io/release/1.90.0/source/boost_1_90_0.7z - Status: 200
+TC_DOWNLOAD_001 Found 24 download links
+TC_DOWNLOAD_001 Download link: https://archives.boost.io/release/1.90.0/source/boost_1_90_0.tar.gz - Status: 200
+TC_DOWNLOAD_001 Download link: https://archives.boost.io/release/1.90.0/source/boost_1_90_0.zip - Status: 200
+TC_DOWNLOAD_001 Download link: https://archives.boost.io/release/1.90.0/source/boost_1_90_0.tar.bz2 - Status: 200
+TC_DOWNLOAD_001 Download link: https://archives.boost.io/release/1.90.0/source/boost_1_90_0.tar.gz - Status: 200
+TC_DOWNLOAD_001 Download link: https://archives.boost.io/release/1.90.0/source/boost_1_90_0.7z - Status: 200
+TC_Download file names are correct format: Navigated to https://www.stage.boost.org/releases/?cachebust=1766418455928 with status 200 on attempt 1
+TC_Download file names are correct format: Navigated to https://www.stage.boost.org/releases/?cachebust=1766418455928 with status 200 on attempt 1
+Screenshot saved: screenshots/goto_attempt_1.png
+TC_Download file names are correct format: Page loaded in 3711ms, URL: https://www.stage.boost.org/releases/latest/
+Screenshot saved: screenshots/goto_attempt_1.png
+TC_Download file names are correct format: Page loaded in 3861ms, URL: https://www.stage.boost.org/releases/latest/
+Screenshot saved: screenshots/tc_download_002_loaded.png
+TC_DOWNLOAD_002 Found 11 download links
+TC_DOWNLOAD_002 Link: boost_1_90_0.tar.bz2 -> https://archives.boost.io/release/1.90.0/source/boost_1_90_0.tar.bz2, Valid format: true
+TC_DOWNLOAD_002 Link: boost_1_90_0.tar.gz -> https://archives.boost.io/release/1.90.0/source/boost_1_90_0.tar.gz, Valid format: true
+TC_DOWNLOAD_002 Link: boost_1_90_0.7z -> https://archives.boost.io/release/1.90.0/source/boost_1_90_0.7z, Valid format: true
+TC_DOWNLOAD_002 Link: boost_1_90_0.zip -> https://archives.boost.io/release/1.90.0/source/boost_1_90_0.zip, Valid format: true
+TC_DOWNLOAD_002 Link: boost_1_90_0-bin-msvc-all-32-64.7z -> https://archives.boost.io/release/1.90.0/binaries/boost_1_90_0-bin-msvc-all-32-64.7z, Valid format: true
+Screenshot saved: screenshots/tc_download_002_loaded.png
+TC_DOWNLOAD_002 Found 11 download links
+TC_DOWNLOAD_002 Link: boost_1_90_0.tar.bz2 -> https://archives.boost.io/release/1.90.0/source/boost_1_90_0.tar.bz2, Valid format: true
+TC_DOWNLOAD_002 Link: boost_1_90_0.tar.gz -> https://archives.boost.io/release/1.90.0/source/boost_1_90_0.tar.gz, Valid format: true
+TC_DOWNLOAD_002 Link: boost_1_90_0.7z -> https://archives.boost.io/release/1.90.0/source/boost_1_90_0.7z, Valid format: true
+TC_DOWNLOAD_002 Link: boost_1_90_0.zip -> https://archives.boost.io/release/1.90.0/source/boost_1_90_0.zip, Valid format: true
+TC_DOWNLOAD_002 Link: boost_1_90_0-bin-msvc-all-32-64.7z -> https://archives.boost.io/release/1.90.0/binaries/boost_1_90_0-bin-msvc-all-32-64.7z, Valid format: true
+TC_Version selector displays available versions: Navigated to https://www.stage.boost.org/releases/?cachebust=1766418482189 with status 200 on attempt 1
+TC_Version selector displays available versions: Navigated to https://www.stage.boost.org/releases/?cachebust=1766418482189 with status 200 on attempt 1
+Screenshot saved: screenshots/goto_attempt_1.png
+TC_Version selector displays available versions: Page loaded in 3928ms, URL: https://www.stage.boost.org/releases/latest/
+Screenshot saved: screenshots/goto_attempt_1.png
+TC_Version selector displays available versions: Page loaded in 4056ms, URL: https://www.stage.boost.org/releases/latest/
+Screenshot saved: screenshots/tc_download_003_loaded.png
+Screenshot saved: screenshots/tc_download_003_loaded.png
+TC_DOWNLOAD_003 Available versions: 
+            Latest (1.90.0)
+        , 
+                1.90.0
+            , 
+                1.89.0
+            , 
+                1.88.0
+            , 
+                1.87.0
+            , 
+                1.86.0
+            , 
+                1.85.0
+            , 
+                1.84.0
+            , 
+                1.83.0
+            , 
+                1.82.0
+            , 
+                1.81.0
+            , 
+                1.80.0
+            , 
+                1.79.0
+            , 
+                1.78.0
+            , 
+                1.77.0
+            , 
+                1.76.0
+            , 
+                1.75.0
+            , 
+                1.74.0
+            , 
+                1.73.0
+            , 
+                1.72.0
+            , 
+                1.71.0
+            , 
+                1.70.0
+            , 
+                1.69.0
+            , 
+                1.68.0
+            , 
+                1.67.0
+            , 
+                1.66.0
+            , 
+                1.65.1
+            , 
+                1.65.0
+            , 
+                1.64.0
+            , 
+                1.63.0
+            , 
+                1.62.0
+            , 
+                1.61.0
+            , 
+                1.60.0
+            , 
+                1.59.0
+            , 
+                1.58.0
+            , 
+                1.57.0
+            , 
+                1.56.0
+            , 
+                1.55.0
+            , 
+                1.54.0
+            , 
+                1.53.0
+            , 
+                1.52.0
+            , 
+                1.51.0
+            , 
+                1.50.0
+            , 
+                1.49.0
+            , 
+                1.48.0
+            , 
+                1.47.0
+            , 
+                1.46.1
+            , 
+                1.46.0
+            , 
+                1.45.0
+            , 
+                1.44.0
+            , 
+                1.43.0
+            , 
+                1.42.0
+            , 
+                1.41.0
+            , 
+                1.40.0
+            , 
+                1.39.0
+            , 
+                1.38.0
+            , 
+                1.37.0
+            , 
+                1.36.0
+            , 
+                1.35.0
+            , 
+                1.34.1
+            , 
+                1.34.0
+            , 
+                1.33.1
+            , 
+                1.33.0
+            , 
+                1.32.0
+            , 
+                1.31.0
+            , 
+                1.30.2
+            , 
+                1.30.1
+            , 
+                1.30.0
+            , 
+                1.29.0
+            , 
+                1.28.0
+            , 
+                1.27.0
+            , 
+                1.26.0
+            , 
+                1.25.1-Bgl
+            , 
+                1.25.1
+            , 
+                1.25.0
+            , 
+                1.24.0
+            , 
+                1.23.0
+            , 
+                1.22.0
+            , 
+                1.21.2
+            , 
+                1.21.1
+            , 
+                1.21.0
+            , 
+                1.20.2
+            , 
+                1.20.1
+            , 
+                1.20.0
+            , 
+                1.19.0
+            , 
+                1.18.3
+            , 
+                1.18.2
+            , 
+                1.18.0
+            , 
+                1.17.0
+            , 
+                1.16.1
+            
+TC_DOWNLOAD_003 Available versions: 
+            Latest (1.90.0)
+        , 
+                1.90.0
+            , 
+                1.89.0
+            , 
+                1.88.0
+            , 
+                1.87.0
+            , 
+                1.86.0
+            , 
+                1.85.0
+            , 
+                1.84.0
+            , 
+                1.83.0
+            , 
+                1.82.0
+            , 
+                1.81.0
+            , 
+                1.80.0
+            , 
+                1.79.0
+            , 
+                1.78.0
+            , 
+                1.77.0
+            , 
+                1.76.0
+            , 
+                1.75.0
+            , 
+                1.74.0
+            , 
+                1.73.0
+            , 
+                1.72.0
+            , 
+                1.71.0
+            , 
+                1.70.0
+            , 
+                1.69.0
+            , 
+                1.68.0
+            , 
+                1.67.0
+            , 
+                1.66.0
+            , 
+                1.65.1
+            , 
+                1.65.0
+            , 
+                1.64.0
+            , 
+                1.63.0
+            , 
+                1.62.0
+            , 
+                1.61.0
+            , 
+                1.60.0
+            , 
+                1.59.0
+            , 
+                1.58.0
+            , 
+                1.57.0
+            , 
+                1.56.0
+            , 
+                1.55.0
+            , 
+                1.54.0
+            , 
+                1.53.0
+            , 
+                1.52.0
+            , 
+                1.51.0
+            , 
+                1.50.0
+            , 
+                1.49.0
+            , 
+                1.48.0
+            , 
+                1.47.0
+            , 
+                1.46.1
+            , 
+                1.46.0
+            , 
+                1.45.0
+            , 
+                1.44.0
+            , 
+                1.43.0
+            , 
+                1.42.0
+            , 
+                1.41.0
+            , 
+                1.40.0
+            , 
+                1.39.0
+            , 
+                1.38.0
+            , 
+                1.37.0
+            , 
+                1.36.0
+            , 
+                1.35.0
+            , 
+                1.34.1
+            , 
+                1.34.0
+            , 
+                1.33.1
+            , 
+                1.33.0
+            , 
+                1.32.0
+            , 
+                1.31.0
+            , 
+                1.30.2
+            , 
+                1.30.1
+            , 
+                1.30.0
+            , 
+                1.29.0
+            , 
+                1.28.0
+            , 
+                1.27.0
+            , 
+                1.26.0
+            , 
+                1.25.1-Bgl
+            , 
+                1.25.1
+            , 
+                1.25.0
+            , 
+                1.24.0
+            , 
+                1.23.0
+            , 
+                1.22.0
+            , 
+                1.21.2
+            , 
+                1.21.1
+            , 
+                1.21.0
+            , 
+                1.20.2
+            , 
+                1.20.1
+            , 
+                1.20.0
+            , 
+                1.19.0
+            , 
+                1.18.3
+            , 
+                1.18.2
+            , 
+                1.18.0
+            , 
+                1.17.0
+            , 
+                1.16.1
+            
