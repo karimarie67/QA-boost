@@ -86,7 +86,7 @@ QA-documentation/
 │   ├── boost_io_tests.spec.js        # Main functional tests (30-60 min)
 │   └── boost_version_tests.spec.js   # Version-specific tests
 │   ├── documentation_tests.spec.js   # Verify docs
-│   ├── error_handling_tests.spec.js  #Check for 404s, etc.
+│   ├── error_handling_tests.spec.js  # Check for 404s, etc.
 │   └── download_search_tests.spec.js # Verify search and download functionality
 |
 ├── Helper Files (the magic sauce):
@@ -102,24 +102,39 @@ QA-documentation/
 
 ### Test Categories
 
-**1. Smoke Tests** (`smoke_tests.spec.js`)
-- Run on every PR before merge
-- Fast (5-10 minutes)
-- Tests critical paths only
-- Examples: Homepage loads, main nav works, search functions
-
-**2. Functional Tests** (`boost_io_tests.spec.js`)
-- Run after merge to `develop` branch
-- Slower (30-60 minutes)
-- Tests complete user journeys
-- Examples: Full search flows, library filtering, documentation navigation
-
-**3. Version Tests** (`boost_version_tests.spec.js`)
-- Run on `develop` branch
-- Tests version-specific functionality
-- Examples: Release downloads, version comparisons
+Our testing suite is divided into two primary tiers to balance speed and coverage across the development lifecycle. All tests are triggered automatically on any change to the **QA Documentation repository** and can also be run manually as needed.
 
 ---
+
+#### 1. Smoke Tests
+* **File:** `smoke_tests.spec.js`
+* **Execution:** Run on every PR before merge.
+* **Duration:** Fast (5-10 minutes).
+* **Objective:** Verifies critical paths to ensure basic site stability.
+* **Key Scenarios:** Homepage loads, main navigation works, and basic search functions.
+
+---
+
+#### 2. Functional & UI Tests
+* **Execution:** Run after merge to the `develop` branch.
+* **Duration:** 30–60 minutes.
+* **Objective:** Deep-dive validation of end-to-end user journeys, documentation integrity, and version-specific logic.
+
+| Test Suite | File | Key Scenarios |
+| :--- | :--- | :--- |
+| **Main Functional** | `boost_io_tests.spec.js` | Full search flows and library filtering. |
+| **Documentation** | `documentation_tests.spec.js` | TOC visibility, library link accessibility, code block formatting, and breadcrumb navigation. |
+| **Search & Download** | `download_search_tests.spec.js` | Download link status codes, filename formats, search relevancy, and pagination. |
+| **Error Handling** | `error_handling_tests.spec.js` | 404 error messaging, malformed URL redirects, and form validation. |
+| **Version Specifics** | `boost_version_tests.spec.js` | Release downloads and version comparisons. |
+| **Doc Versioning** | `documentation_tests.spec.js` | Specifically tests the documentation version switcher (TC_DOC_005). |
+
+---
+
+### Test Implementation Details
+* **Tracing:** Each test is mapped to a unique Test Case ID (e.g., `TC_DOC_001` or `TC_DOWNLOAD_001`) via Playwright annotations.
+* **Logging:** Test progress and findings (such as found selectors or navigation paths) are appended to `test-logs.txt`.
+* **Resilience:** Tests utilize custom helper patterns like `loadAndValidatePage` and `findVisibleElement` to handle dynamic content.
 
 ## Running Your First Tests
 
@@ -151,7 +166,7 @@ npm test -- --grep "TC_FUNC_001"
 # Test against staging (default)
 npm run test:staging
 
-# Test against production (be careful!)
+# Test against production
 npm run test:production
 
 # Or set environment inline
