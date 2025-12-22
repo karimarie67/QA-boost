@@ -25,8 +25,6 @@ You're inheriting a fully functional QA automation setup with:
 - **Live dashboard** showing test results and metrics
 - **Helper architecture** that makes writing new tests easy
 
-**Your main task**: Integrate the existing QA automation from [karimarie67/QA-documentation](https://github.com/karimarie67/QA-documentation) into the main [boostorg/website-v2](https://github.com/boostorg/website-v2) repository.
-
 ---
 
 ## Prerequisites & Setup
@@ -84,10 +82,13 @@ QA-documentation/
 │   └── qa-tests.yml              # CI/CD pipeline (you'll move this)
 │
 ├── tests/
-│   ├── smoke_tests.spec.js       # Quick health checks (5-10 min)
-│   ├── boost_io_tests.spec.js    # Main functional tests (30-60 min)
-│   └── boost_version_tests.spec.js # Version-specific tests
-│
+│   ├── smoke_tests.spec.js           # Quick health checks (5-10 min)
+│   ├── boost_io_tests.spec.js        # Main functional tests (30-60 min)
+│   └── boost_version_tests.spec.js   # Version-specific tests
+│   ├── documentation_tests.spec.js   # Verify docs
+│   ├── error_handling_tests.spec.js  #Check for 404s, etc.
+│   └── download_search_tests.spec.js # Verify search and download functionality
+|
 ├── Helper Files (the magic sauce):
 │   ├── config-helper.js          # Environment switching (staging/prod)
 │   ├── test-helpers.js           # Reusable test functions
