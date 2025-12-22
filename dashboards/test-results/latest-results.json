@@ -1,12 +1,12 @@
 {
-  "timestamp": "2025-12-22T15:35:45.859Z",
+  "timestamp": "2025-12-22T15:58:15.363Z",
   "metrics": {
     "totalTests": 6,
     "passed": 6,
     "failed": 0,
     "failedTestNames": [],
     "passRate": 100,
-    "totalDuration": 20.793000000000003,
+    "totalDuration": 21.526999999999997,
     "smokeCount": 6,
     "regressionCount": 0,
     "versionCount": 0,
@@ -17,50 +17,50 @@
       {
         "name": "Homepage loads with key elements",
         "status": "passed",
-        "durationSec": 1.673,
+        "durationSec": 1.73,
         "projectName": "staging",
         "error": null
       },
       {
         "name": "Navigation menu links work correctly",
         "status": "passed",
-        "durationSec": 3.28,
+        "durationSec": 4.59,
         "projectName": "staging",
         "error": null
       },
       {
         "name": "Libraries page displays and links to documentation",
         "status": "passed",
-        "durationSec": 7.236,
+        "durationSec": 7.398,
         "projectName": "staging",
         "error": null
       },
       {
         "name": "Download section works correctly",
         "status": "passed",
-        "durationSec": 3.701,
+        "durationSec": 3.256,
         "projectName": "staging",
         "error": null
       },
       {
         "name": "Search bar works with basic query",
         "status": "passed",
-        "durationSec": 3.606,
+        "durationSec": 3.374,
         "projectName": "staging",
         "error": null
       },
       {
         "name": "Homepage is responsive on mobile",
         "status": "passed",
-        "durationSec": 1.297,
+        "durationSec": 1.179,
         "projectName": "staging",
         "error": null
       }
     ],
-    "timestamp": "2025-12-22T15:35:45.816Z",
+    "timestamp": "2025-12-22T15:58:15.054Z",
     "environment": "staging",
-    "runId": "20436482794",
-    "runNumber": "128",
+    "runId": "20437022764",
+    "runNumber": "129",
     "branch": "main"
   },
   "testResults": {
@@ -68,42 +68,42 @@
       {
         "name": "Homepage loads with key elements",
         "status": "passed",
-        "durationSec": 1.673,
+        "durationSec": 1.73,
         "projectName": "staging",
         "error": null
       },
       {
         "name": "Navigation menu links work correctly",
         "status": "passed",
-        "durationSec": 3.28,
+        "durationSec": 4.59,
         "projectName": "staging",
         "error": null
       },
       {
         "name": "Libraries page displays and links to documentation",
         "status": "passed",
-        "durationSec": 7.236,
+        "durationSec": 7.398,
         "projectName": "staging",
         "error": null
       },
       {
         "name": "Download section works correctly",
         "status": "passed",
-        "durationSec": 3.701,
+        "durationSec": 3.256,
         "projectName": "staging",
         "error": null
       },
       {
         "name": "Search bar works with basic query",
         "status": "passed",
-        "durationSec": 3.606,
+        "durationSec": 3.374,
         "projectName": "staging",
         "error": null
       },
       {
         "name": "Homepage is responsive on mobile",
         "status": "passed",
-        "durationSec": 1.297,
+        "durationSec": 1.179,
         "projectName": "staging",
         "error": null
       }
