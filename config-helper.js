@@ -72,7 +72,7 @@ export const testData = {
     alternative: 'algorithm',
   },
   downloadFiles: {
-    tarGz: /boost_1_85_0\.tar\.gz$/,
+    tarGz: /boost_1_74_0\.tar\.gz$/,
     zip: /boost_1_85_0\.zip$/,
     supported: /\.(zip|tar\.gz|tar\.bz2|7z|exe)$/,
   },
