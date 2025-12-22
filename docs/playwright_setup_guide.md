@@ -1,314 +1,303 @@
-# Playwright Test Setup & CI/CD Integration Guide
+# Boost.org QA Automation Framework - Onboarding Guide
 
-## Table of Contents
-1. [Project Overview](#project-overview)
-2. [Prerequisites](#prerequisites)
-3. [Project Structure](#project-structure)
-4. [Installation & Setup](#installation--setup)
-5. [Configuration Files](#configuration-files)
-6. [Test Architecture](#test-architecture)
-7. [Running Tests](#running-tests)
+> **Welcome!** This guide will get you from zero to running automated tests on Boost.org in a single day. Since you're already familiar with the codebase as a frontend dev, we'll focus on the QA-specific setup and workflow.
+
+---
+
+## 📋 Table of Contents
+1. [What You're Taking Over](#what-youre-taking-over)
+2. [Prerequisites & Setup](#prerequisites--setup)
+3. [Understanding the Test Structure](#understanding-the-test-structure)
+4. [Running Your First Tests](#running-your-first-tests)
+5. [How the Helper Files Work](#how-the-helper-files-work)
+6. [Integrating CI/CD into website-v2](#integrating-cicd-into-website-v2)
+7. [Daily QA Workflow](#daily-qa-workflow)
 8. [Debugging & Troubleshooting](#debugging--troubleshooting)
-9. [CI/CD Integration with GitHub Actions](#cicd-integration-with-github-actions)
-10. [Best Practices & Maintenance](#best-practices--maintenance)
+9. [Quick Reference](#quick-reference)
 
-## Project Overview
+---
 
-This Playwright test suite is designed to test the boost.org website (both production and staging environments). The project includes:
+## What You're Taking Over
 
-- **Functional tests** for core user journeys
-- **Smoke tests** for basic site functionality
-- **Cross-browser testing** support
-- **Flexible environment configuration**
-- **Comprehensive debugging and logging**
-- **CI/CD integration** with GitHub Actions
+You're inheriting a fully functional QA automation setup with:
+- **Complete test suites** for boost.org (staging + production)
+- **CI/CD pipeline** running in GitHub Actions (currently in separate QA repo)
+- **Live dashboard** showing test results and metrics
+- **Helper architecture** that makes writing new tests easy
 
-## Prerequisites
+**Your main task**: Integrate the existing QA automation from [karimarie67/QA-documentation](https://github.com/karimarie67/QA-documentation) into the main [boostorg/website-v2](https://github.com/boostorg/website-v2) repository.
 
-Before setting up the project, ensure you have:
+---
 
-- **Node.js** (version 16 or higher)
-- **npm** or **yarn** package manager
-- **Git** for version control
-- **VS Code** (recommended) with Playwright extension
+## Prerequisites & Setup
 
-## Project Structure
-
-```
-playwright-boost-tests/
-├── .github/
-│   └── workflows/
-│       └── playwright.yml          # GitHub Actions workflow
-├── tests/
-│   └── boost_io_tests.spec.js      # Main test file
-├── test-results/                   # Test execution reports
-├── playwright-report/              # HTML reports
-├── config-helper.js                # Environment & URL configuration
-├── test-helpers.js                 # Reusable test utilities
-├── selectors.js                    # Page element selectors
-├── utils.js                        # General utility functions
-├── playwright.config.js            # Playwright configuration
-├── package.json                    # Project dependencies
-└── README.md                       # This documentation
-```
-
-## Installation & Setup
-
-### 1. Initialize the Project
+### What You Need Installed
 
 ```bash
-# Create project directory
-mkdir playwright-boost-tests
-cd playwright-boost-tests
+# Check if you have these (you probably already do)
+node --version    # Should be v18 or higher
+npm --version     # Should be v9 or higher
+git --version     # Any recent version
 
-# Initialize npm project
-npm init -y
+# Install VS Code extension (recommended)
+# Search for "Playwright Test for VSCode" in extensions
 ```
 
-### 2. Install Playwright
+### Step 1: Clone the QA Repo (For Reference)
 
 ```bash
-# Install Playwright and browsers
-npm install -D @playwright/test
+# Clone the existing QA repo to see how everything works
+git clone https://github.com/karimarie67/QA-documentation.git
+cd QA-documentation
+
+# Install dependencies
+npm install
+
+# Install Playwright browsers (one-time setup)
 npx playwright install
-
-# Install additional dependencies if needed
-npm install -D dotenv  # For environment variables
 ```
 
-### 3. Create Core Files
+**Note**: This repo is your reference. You'll eventually move this setup into `boostorg/website-v2`.
 
-Create the following files in your project root:
+### Step 2: Verify Everything Works
 
-**package.json** (update scripts section):
-```json
-{
-  "scripts": {
-    "test": "playwright test",
-    "test:headed": "playwright test --headed",
-    "test:ui": "playwright test --ui",
-    "test:debug": "playwright test --debug",
-    "test:report": "playwright show-report",
-    "test:staging": "ENVIRONMENT=staging playwright test",
-    "test:production": "ENVIRONMENT=production playwright test"
-  }
-}
+```bash
+# Run a quick smoke test to make sure everything's set up correctly
+npm run test:smoke
+
+# If that works, you're good to go!
 ```
 
-## Configuration Files
+**Expected output**: You should see tests running in the terminal, and they should mostly pass (some flakiness is normal on first run).
 
-### playwright.config.js
+---
 
-```javascript
-import { defineConfig, devices } from '@playwright/test';
+## Understanding the Test Structure
 
-export default defineConfig({
-  // Test directory
-  testDir: './tests',
-  
-  // Run tests in files in parallel
-  fullyParallel: true,
-  
-  // Fail the build on CI if you accidentally left test.only in the source code
-  forbidOnly: !!process.env.CI,
-  
-  // Retry on CI only
-  retries: process.env.CI ? 2 : 0,
-  
-  // Opt out of parallel tests on CI
-  workers: process.env.CI ? 1 : undefined,
-  
-  // Reporter configuration
-  reporter: [
-    ['html'],
-    ['junit', { outputFile: 'test-results/junit.xml' }],
-    ['json', { outputFile: 'test-results/results.json' }]
-  ],
-  
-  // Global test configuration
-  use: {
-    // Base URL for tests
-    baseURL: process.env.ENVIRONMENT === 'production' 
-      ? 'https://boost.org' 
-      : 'https://stage.boost.org',
-    
-    // Browser context options
-    trace: 'on-first-retry',
-    screenshot: 'only-on-failure',
-    video: 'retain-on-failure',
-    
-    // Extended timeouts for boost.org
-    actionTimeout: 30000,
-    navigationTimeout: 60000,
-  },
+Before you start moving things around, let's understand what you're working with.
 
-  // Browser projects
-  projects: [
-    {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
-    },
-    {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
-    },
-    {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
-    },
-    // Mobile testing
-    {
-      name: 'Mobile Chrome',
-      use: { ...devices['Pixel 5'] },
-    },
-    {
-      name: 'Mobile Safari',
-      use: { ...devices['iPhone 12'] },
-    },
-  ],
+### Project Layout
 
-  // Web server for local development
-  webServer: process.env.CI ? undefined : {
-    command: 'echo "Using external boost.org site"',
-    port: 3000,
-    reuseExistingServer: !process.env.CI,
-  },
-});
 ```
-
-## Test Architecture
-
-### Helper Files Overview
-
-Our test architecture uses several helper files to maintain clean, reusable code:
-
-1. **config-helper.js** - Environment and URL management
-2. **test-helpers.js** - Reusable test functions  
-3. **selectors.js** - Page element selectors
-4. **utils.js** - General utility functions
-
-### Key Features
-
-- **Environment flexibility** - Easy switching between staging/production
-- **Smart element detection** - Fallback selectors for robust tests
-- **Comprehensive logging** - Detailed test execution information
-- **Error handling** - Graceful failure management
-- **Reusable patterns** - DRY principle implementation
+QA-documentation/
+├── .github/workflows/
+│   └── qa-tests.yml              # CI/CD pipeline (you'll move this)
+│
+├── tests/
+│   ├── smoke_tests.spec.js       # Quick health checks (5-10 min)
+│   ├── boost_io_tests.spec.js    # Main functional tests (30-60 min)
+│   └── boost_version_tests.spec.js # Version-specific tests
+│
+├── Helper Files (the magic sauce):
+│   ├── config-helper.js          # Environment switching (staging/prod)
+│   ├── test-helpers.js           # Reusable test functions
+│   ├── selectors.js              # Page element locators
+│   └── utils.js                  # General utilities
+│
+├── playwright.config.js          # Main Playwright config
+├── package.json                  # Dependencies & npm scripts
+└── README.md                     # Current documentation
+```
 
 ### Test Categories
 
-**Smoke Tests (TC_SMOKE_xxx)**
-- Basic site functionality
-- Navigation testing
-- Critical path verification
+**1. Smoke Tests** (`smoke_tests.spec.js`)
+- Run on every PR before merge
+- Fast (5-10 minutes)
+- Tests critical paths only
+- Examples: Homepage loads, main nav works, search functions
 
-**Functional Tests (TC_FUNC_xxx)**  
-- Detailed user journey testing
-- Form interactions
-- Complex workflows
+**2. Functional Tests** (`boost_io_tests.spec.js`)
+- Run after merge to `develop` branch
+- Slower (30-60 minutes)
+- Tests complete user journeys
+- Examples: Full search flows, library filtering, documentation navigation
 
-## Running Tests
+**3. Version Tests** (`boost_version_tests.spec.js`)
+- Run on `develop` branch
+- Tests version-specific functionality
+- Examples: Release downloads, version comparisons
 
-### Local Development
+---
+
+## Running Your First Tests
+
+### Local Development Commands
 
 ```bash
-# Run all tests
+# Run ALL tests (takes a while)
 npm test
 
-# Run with headed browser (see what's happening)
+# Run just smoke tests (recommended for testing)
+npm run test:smoke
+
+# Run specific test file
+npm test tests/boost_io_tests.spec.js
+
+# Run with browser visible (great for debugging)
 npm run test:headed
 
-# Run with Playwright UI for debugging
+# Run in Playwright UI mode (interactive debugging)
 npm run test:ui
 
-# Run specific test
-npx playwright test --grep "TC_FUNC_001"
+# Run specific test by name
+npm test -- --grep "TC_FUNC_001"
+```
 
-# Run against staging environment
+### Environment Switching
+
+```bash
+# Test against staging (default)
 npm run test:staging
 
-# Run against production environment  
+# Test against production (be careful!)
 npm run test:production
+
+# Or set environment inline
+ENVIRONMENT=production npm test
 ```
 
-### Browser-Specific Testing
+### Understanding Test Output
 
 ```bash
-# Run on specific browser
-npx playwright test --project=chromium
-npx playwright test --project=firefox
-npx playwright test --project=webkit
-
-# Run on mobile devices
-npx playwright test --project="Mobile Chrome"
+# When you run tests, you'll see:
+Running 15 tests using 3 workers
+  ✓ TC_SMOKE_001: Homepage loads successfully (2s)
+  ✓ TC_SMOKE_002: Main navigation is accessible (1s)
+  ✗ TC_FUNC_015: Search filters apply correctly (30s)
+    
+# After tests complete:
+npm run test:report  # Opens HTML report in browser
 ```
 
-### Debugging Options
+---
+
+## How the Helper Files Work
+
+Understanding these will make your life MUCH easier when writing new tests.
+
+### config-helper.js - Environment Management
+
+**What it does**: Handles switching between staging and production
+
+```javascript
+// In your tests, you use it like this:
+import { getConfig } from '../config-helper.js';
+
+test('Example test', async ({ page }) => {
+  const config = getConfig();
+  await page.goto(config.baseUrl);  // Automatically uses correct environment
+  // config.baseUrl is either boost.org or stage.boost.org
+});
+```
+
+**Why it matters**: Write tests once, run them anywhere. No hardcoded URLs.
+
+### test-helpers.js - Reusable Test Functions
+
+**What it does**: Common test actions wrapped in functions
+
+```javascript
+// Instead of writing this in every test:
+await page.waitForLoadState('networkidle');
+await page.waitForSelector('.search-results');
+await expect(page.locator('.search-results')).toBeVisible();
+
+// You call this:
+await testHelpers.waitForSearchResults(page);
+```
+
+**Common helpers you'll use**:
+- `waitForPageLoad(page)` - Wait for page to fully load
+- `waitForSearchResults(page)` - Wait for search results to appear
+- `clickAndWaitForNavigation(page, selector)` - Click link and wait for page change
+- `verifyElementVisible(page, selector)` - Check if element exists and is visible
+
+### selectors.js - Page Element Locators
+
+**What it does**: Centralized list of all element selectors
+
+```javascript
+// Instead of scattered selectors throughout your tests:
+await page.click('.header-nav-item:has-text("Libraries")');
+
+// You use named selectors:
+import { SELECTORS } from '../selectors.js';
+await page.click(SELECTORS.navigation.librariesLink);
+```
+
+**Why it matters**: When the UI changes, you update ONE file instead of 50 tests.
+
+### utils.js - General Utilities
+
+**What it does**: Logging, timing, data helpers
+
+```javascript
+// Helpful for debugging
+import { logTestStep, measurePerformance } from '../utils.js';
+
+logTestStep('Searching for "algorithm"');
+const timing = await measurePerformance(page, async () => {
+  await page.fill('input[type="search"]', 'algorithm');
+});
+console.log(`Search took ${timing}ms`);
+```
+
+---
+
+## Integrating CI/CD into website-v2
+
+This is your main task. Here's the step-by-step process:
+
+### Phase 1: Understand Current Setup
+
+**Current state**: 
+- QA tests live in `karimarie67/QA-documentation`
+- CI/CD runs there, testing boost.org from outside
+- website-v2 has no QA automation
+
+**Goal state**:
+- QA tests live in `boostorg/website-v2` 
+- CI/CD runs there as part of the main workflow
+- Tests run on every PR and merge
+
+### Phase 2: Create QA Directory in website-v2
 
 ```bash
-# Debug mode (step through tests)
-npm run test:debug
+# In the website-v2 repo
+cd boostorg/website-v2
 
-# Run with verbose logging
-DEBUG=pw:api npx playwright test
+# Create QA directory structure
+mkdir -p qa-tests/tests
+mkdir -p qa-tests/.github/workflows
 
-# Generate and view HTML report
-npm run test:report
+# You'll copy files here
 ```
 
-## Debugging & Troubleshooting
+### Phase 3: Copy Files Over
 
-### Common Issues & Solutions
+**Files to copy from QA-documentation to website-v2**:
 
-**1. Tests Not Showing in UI**
-- Verify file naming: `*.spec.js` or `*.test.js`
-- Check import statements in test files
-- Ensure helper files exist and are properly exported
-
-**2. Element Not Found Errors**
-- Use Playwright inspector: `npx playwright codegen boost.org`
-- Check if elements are in iframes
-- Verify element visibility and timing
-
-**3. Timeout Issues**
-- Increase timeouts in `playwright.config.js`
-- Add explicit waits: `await page.waitForLoadState('networkidle')`
-- Use `page.waitForSelector()` for dynamic content
-
-**4. Environment Issues**
-- Verify environment variables are set correctly
-- Check network connectivity to target sites
-- Ensure proper SSL certificate handling
-
-### Debugging Tools
-
-```bash
-# Record a new test interactively
-npx playwright codegen https://stage.boost.org
-
-# Run tests with trace viewer
-npx playwright test --trace on
-
-# View traces after test execution
-npx playwright show-trace trace.zip
+```
+QA-documentation/                    →    website-v2/qa-tests/
+├── tests/                           →    ├── tests/
+│   ├── smoke_tests.spec.js          →    │   ├── smoke_tests.spec.js
+│   ├── boost_io_tests.spec.js       →    │   ├── boost_io_tests.spec.js
+│   └── boost_version_tests.spec.js  →    │   └── boost_version_tests.spec.js
+├── config-helper.js                 →    ├── config-helper.js
+├── test-helpers.js                  →    ├── test-helpers.js
+├── selectors.js                     →    ├── selectors.js
+├── utils.js                         →    ├── utils.js
+├── playwright.config.js             →    ├── playwright.config.js
+└── package.json                     →    ├── package.json (merge scripts)
 ```
 
-### Logging & Monitoring
+### Phase 4: Modify GitHub Actions Workflow
 
-The test suite includes comprehensive logging:
-- Test execution progress
-- Element interaction details
-- Performance metrics
-- Error details and stack traces
-
-## CI/CD Integration with GitHub Actions
-
-### GitHub Actions Workflow
-
-Create `.github/workflows/playwright.yml`:
-
+**Current workflow** (in QA-documentation):
 ```yaml
-name: Playwright Tests
+# .github/workflows/qa-tests.yml
+name: QA Test Suite - Boost.org
 
 on:
   push:
@@ -316,256 +305,391 @@ on:
   pull_request:
     branches: [ main ]
   schedule:
-    # Run tests daily at 2 AM UTC
-    - cron: '0 2 * * *'
+    - cron: '0 */6 * * *'  # Every 6 hours
+```
+
+**What you need to change for website-v2**:
+
+```yaml
+# website-v2/.github/workflows/qa-tests.yml
+name: QA Tests
+
+on:
+  pull_request:
+    branches: [ develop, main ]
+    # Run smoke tests on every PR
+    
+  push:
+    branches: [ develop ]
+    # Run full regression after merge to develop
+    
+  schedule:
+    - cron: '0 */6 * * *'
 
 jobs:
-  test-staging:
-    timeout-minutes: 60
+  smoke-tests:
+    # Runs on every PR (pre-merge gate)
+    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
-    environment: staging
+    defaults:
+      run:
+        working-directory: ./qa-tests  # Important!
     
     steps:
-    - uses: actions/checkout@v4
-    
-    - uses: actions/setup-node@v4
-      with:
-        node-version: 18
-        cache: 'npm'
-    
-    - name: Install dependencies
-      run: npm ci
-    
-    - name: Install Playwright Browsers
-      run: npx playwright install --with-deps
-    
-    - name: Run Playwright tests (Staging)
-      run: ENVIRONMENT=staging npm test
-      env:
-        CI: true
-    
-    - name: Upload test results
-      uses: actions/upload-artifact@v4
-      if: always()
-      with:
-        name: playwright-report-staging
-        path: playwright-report/
-        retention-days: 30
-    
-    - name: Upload test artifacts
-      uses: actions/upload-artifact@v4
-      if: always()
-      with:
-        name: test-results-staging
-        path: test-results/
-        retention-days: 30
-
-  test-production:
-    timeout-minutes: 60
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: qa-tests/package-lock.json
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Install Playwright
+        run: npx playwright install --with-deps
+      
+      - name: Run Smoke Tests
+        run: npm run test:smoke
+        env:
+          CI: true
+          ENVIRONMENT: staging
+      
+      - name: Upload results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: smoke-test-results
+          path: qa-tests/playwright-report/
+  
+  regression-tests:
+    # Runs after merge to develop
+    if: github.event_name == 'push' && github.ref == 'refs/heads/develop'
     runs-on: ubuntu-latest
-    needs: test-staging
-    environment: production
-    # Only run production tests on main branch
-    if: github.ref == 'refs/heads/main'
+    defaults:
+      run:
+        working-directory: ./qa-tests
     
     steps:
-    - uses: actions/checkout@v4
-    
-    - uses: actions/setup-node@v4
-      with:
-        node-version: 18
-        cache: 'npm'
-    
-    - name: Install dependencies
-      run: npm ci
-    
-    - name: Install Playwright Browsers
-      run: npx playwright install --with-deps
-    
-    - name: Run Playwright tests (Production)
-      run: ENVIRONMENT=production npm test
-      env:
-        CI: true
-    
-    - name: Upload test results
-      uses: actions/upload-artifact@v4
-      if: always()
-      with:
-        name: playwright-report-production
-        path: playwright-report/
-        retention-days: 30
-
-  notify:
-    runs-on: ubuntu-latest
-    needs: [test-staging, test-production]
-    if: always()
-    
-    steps:
-    - name: Notify on failure
-      if: needs.test-staging.result == 'failure' || needs.test-production.result == 'failure'
-      uses: 8398a7/action-slack@v3
-      with:
-        status: failure
-        webhook_url: ${{ secrets.SLACK_WEBHOOK }}
-        message: "Playwright tests failed! Check the GitHub Actions logs."
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: qa-tests/package-lock.json
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Install Playwright
+        run: npx playwright install --with-deps
+      
+      - name: Run Regression Tests
+        run: npm test
+        env:
+          CI: true
+          ENVIRONMENT: staging
+      
+      - name: Upload results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: regression-test-results
+          path: qa-tests/playwright-report/
 ```
 
-### Advanced CI/CD Features
+### Phase 5: Update package.json for website-v2
 
-**1. Matrix Testing Strategy**
+**In `website-v2/qa-tests/package.json`**, make sure you have:
 
-```yaml
-strategy:
-  matrix:
-    browser: [chromium, firefox, webkit]
-    environment: [staging, production]
-    
-steps:
-  - name: Run tests for ${{ matrix.browser }} on ${{ matrix.environment }}
-    run: |
-      ENVIRONMENT=${{ matrix.environment }} \
-      npx playwright test --project=${{ matrix.browser }}
+```json
+{
+  "name": "boost-qa-tests",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "playwright test",
+    "test:smoke": "playwright test tests/smoke_tests.spec.js",
+    "test:boost-io": "playwright test tests/boost_io_tests.spec.js",
+    "test:version": "playwright test tests/boost_version_tests.spec.js",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "test:report": "playwright show-report",
+    "test:staging": "ENVIRONMENT=staging playwright test",
+    "test:production": "ENVIRONMENT=production playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.48.0"
+  }
+}
 ```
 
-**2. Conditional Test Execution**
+### Phase 6: Update Paths in Config Files
 
-```yaml
-- name: Run smoke tests only for PRs
-  if: github.event_name == 'pull_request'
-  run: npx playwright test --grep "SMOKE"
+**In `playwright.config.js`**, update paths:
 
-- name: Run all tests for main branch
-  if: github.ref == 'refs/heads/main'
-  run: npm test
+```javascript
+export default defineConfig({
+  testDir: './tests',  // This stays the same
+  
+  // Update output directories if needed
+  reporter: [
+    ['html', { outputFolder: 'playwright-report' }],
+    ['junit', { outputFile: 'test-results/junit.xml' }],
+  ],
+  
+  // Rest of config stays the same...
+});
 ```
 
-**3. Performance Monitoring Integration**
+### Phase 7: Test Locally Before Pushing
 
-```yaml
-- name: Upload performance data
-  run: |
-    # Extract performance metrics from test results
-    node scripts/extract-performance-metrics.js
-    
-- name: Post performance comment on PR
-  uses: actions/github-script@v7
-  with:
-    script: |
-      // Post performance results as PR comment
-      const fs = require('fs');
-      const metrics = JSON.parse(fs.readFileSync('performance-metrics.json'));
-      // ... comment posting logic
+```bash
+# In website-v2/qa-tests/
+npm install
+npx playwright install
+
+# Run smoke tests to verify everything works
+npm run test:smoke
+
+# If that works, you're ready to commit!
 ```
 
-### Environment Configuration
+### Phase 8: Create PR for Integration
 
-**GitHub Secrets Setup:**
-- `SLACK_WEBHOOK` - For failure notifications
-- `TEST_USER_EMAIL` - Test account credentials
-- `TEST_USER_PASSWORD` - Test account credentials
+```bash
+# In website-v2/
+git checkout -b add-qa-automation
+git add qa-tests/
+git commit -m "Add QA automation framework
 
-**GitHub Environments:**
-- `staging` - For staging environment tests
-- `production` - For production environment tests (with approval required)
+- Integrate Playwright test suite from QA-documentation repo
+- Add smoke tests (run on PRs)
+- Add regression tests (run on develop)
+- Configure GitHub Actions workflow
+- Add helper files for test maintainability"
 
-### Test Result Integration
+git push origin add-qa-automation
+```
 
-**1. GitHub Status Checks**
-- Tests must pass before PR merge
-- Branch protection rules enforcement
-- Required status checks configuration
-
-**2. Test Reports**
-- HTML reports uploaded as artifacts
-- JUnit XML for integration with other tools
-- JSON results for custom processing
-
-**3. Notifications**
-- Slack notifications for failures
-- Email alerts for critical issues
-- GitHub issue creation for persistent failures
-
-## Best Practices & Maintenance
-
-### Code Quality
-
-**1. Test Organization**
-- Group related tests in describe blocks
-- Use descriptive test names
-- Keep tests independent and atomic
-
-**2. Selector Strategy**
-- Prefer data-testid attributes
-- Use semantic selectors when possible
-- Implement fallback selector strategies
-
-**3. Error Handling**
-- Implement comprehensive error logging
-- Use try-catch blocks for external dependencies
-- Provide meaningful error messages
-
-### Performance Optimization
-
-**1. Test Execution**
-- Run tests in parallel when possible
-- Use page.goto() efficiently
-- Minimize browser context creation
-
-**2. Resource Management**
-- Close pages and contexts properly
-- Use beforeAll/afterAll for setup/teardown
-- Implement test data cleanup
-
-### Maintenance Schedule
-
-**Weekly:**
-- Review test execution results
-- Update selectors for UI changes
-- Check for new test scenarios
-
-**Monthly:**
-- Update Playwright version
-- Review and optimize test performance
-- Update documentation
-
-**Quarterly:**
-- Comprehensive test review
-- Architecture evaluation
-- Tool and process improvements
-
-### Monitoring & Alerts
-
-**Key Metrics to Track:**
-- Test success/failure rates
-- Test execution duration
-- Browser compatibility issues
-- Environment-specific failures
-
-**Alert Thresholds:**
-- >5% increase in test failures
-- >50% increase in execution time
-- Critical path test failures
+**In your PR description, include**:
+- Link to QA-documentation repo
+- Explanation of smoke vs regression tests
+- How to run tests locally
+- What the CI/CD workflow does
 
 ---
 
-## Getting Help
+## Daily QA Workflow
 
-**Resources:**
-- [Playwright Documentation](https://playwright.dev/)
+Once everything's integrated, here's your typical day:
 
-**Common Commands Quick Reference:**
-```bash
-# Quick test run
-npm run test:boost_io_tests.spec.js
+### Morning: Check Test Results
 
-# Debug specific test
-npx playwright test --grep "TC_FUNC_001" --debug
+1. Go to [Actions tab](https://github.com/boostorg/website-v2/actions)
+2. Check overnight scheduled runs
+3. Review any failures
+4. File bugs if needed
 
-# Generate new selectors
-npx playwright codegen https://stage.boost.org
+### When PR is Created:
 
-# View latest report
-npm run test:boost_io_tests.spec.js:report
+1. Smoke tests run automatically
+2. Review results in PR checks
+3. If tests fail:
+   - Check if it's a real bug
+   - Or if selectors need updating
+   - Update tests if UI changed legitimately
+
+### After PR Merges to Develop:
+
+1. Regression tests run automatically
+2. Review full test results
+3. Monitor for new failures
+4. Update dashboard (it auto-updates, but verify)
+
+### Writing New Tests:
+
+```javascript
+// In tests/boost_io_tests.spec.js
+import { test, expect } from '@playwright/test';
+import { getConfig } from '../config-helper.js';
+import { SELECTORS } from '../selectors.js';
+import * as helpers from '../test-helpers.js';
+
+test('TC_FUNC_XXX: Your test description', async ({ page }) => {
+  const config = getConfig();
+  
+  // Navigate to page
+  await page.goto(`${config.baseUrl}/your-page`);
+  await helpers.waitForPageLoad(page);
+  
+  // Perform actions
+  await page.click(SELECTORS.yourElement);
+  
+  // Assert results
+  await expect(page.locator(SELECTORS.yourResult)).toBeVisible();
+});
 ```
 
-This documentation covers the complete setup and integration of your Playwright test suite. The architecture we've built together provides a solid foundation for reliable, maintainable automated testing.
+---
+
+## Debugging & Troubleshooting
+
+### Common Issues
+
+#### Tests Not Running in GitHub Actions
+
+**Problem**: Workflow doesn't trigger
+**Solution**: 
+- Check workflow file is in `.github/workflows/`
+- Verify YAML syntax (tabs vs spaces matter!)
+- Check branch names match your triggers
+
+#### Tests Fail Locally But Pass in CI
+
+**Problem**: Environment differences
+**Solution**:
+```bash
+# Run in CI mode locally
+CI=true npm test
+
+# Check if it's a timing issue
+npm test -- --timeout=60000
+```
+
+#### Element Not Found Errors
+
+**Problem**: Selectors out of date
+**Solution**:
+```bash
+# Use Playwright's inspector to find new selectors
+npx playwright codegen https://stage.boost.org
+
+# Update selectors.js with new values
+```
+
+#### Tests Are Flaky
+
+**Problem**: Tests pass sometimes, fail other times
+**Solution**:
+```javascript
+// Add more explicit waits
+await page.waitForLoadState('networkidle');
+await page.waitForSelector(SELECTORS.yourElement);
+
+// Or use retry logic
+await expect(page.locator(SELECTORS.yourElement))
+  .toBeVisible({ timeout: 10000 });
+```
+
+### Debugging Commands
+
+```bash
+# Run single test with visible browser
+npm test -- --grep "TC_FUNC_001" --headed
+
+# Run with Playwright inspector (step through test)
+npm run test:debug
+
+# Run with trace (records everything)
+npm test -- --trace on
+
+# View trace after test
+npx playwright show-trace trace.zip
+```
+
+### Using Playwright's Tools
+
+```bash
+# Generate new test interactively (records your actions)
+npx playwright codegen https://stage.boost.org
+
+# View last test run in UI
+npx playwright show-report
+
+# Check which browsers are installed
+npx playwright list
+```
+
+---
+
+## Quick Reference
+
+### Essential Commands
+
+```bash
+# Running tests
+npm test                          # All tests
+npm run test:smoke                # Just smoke tests
+npm run test:headed               # See browser
+npm test -- --grep "keyword"      # Specific tests
+
+# Debugging
+npm run test:ui                   # Interactive mode
+npm run test:debug                # Step through
+npm run test:report               # View results
+
+# Environments
+npm run test:staging              # Stage environment
+npm run test:production           # Production (careful!)
+
+# CI/CD
+# Manual trigger: Actions → qa-tests.yml → Run workflow
+```
+
+### File Quick Reference
+
+| File | Purpose | When to Edit |
+|------|---------|--------------|
+| `tests/*.spec.js` | Test files | Adding/modifying tests |
+| `selectors.js` | Element locators | UI changes |
+| `test-helpers.js` | Reusable functions | New common patterns |
+| `config-helper.js` | Environment config | New environments |
+| `playwright.config.js` | Test runner config | Test behavior changes |
+| `.github/workflows/qa-tests.yml` | CI/CD pipeline | Changing when tests run |
+
+### Getting Help
+
+**When tests fail**:
+1. Check the HTML report: `npm run test:report`
+2. Look at screenshots in `test-results/`
+3. Run with `--headed` to see what's happening
+
+**When writing new tests**:
+1. Copy existing test as template
+2. Use `codegen` to find selectors
+3. Test locally before pushing
+
+**When stuck**:
+- Check existing tests for examples
+- Read Playwright docs: https://playwright.dev
+- Ask in #boost-website Slack channel
+
+---
+
+## Next Steps
+
+1. **Day 1**: Clone repos, run tests locally, understand structure
+2. **Day 2-3**: Create QA directory in website-v2, copy files over
+3. **Day 4**: Configure GitHub Actions workflow
+4. **Day 5**: Test everything locally, create PR
+5. **Week 2**: Monitor first few CI/CD runs, fix any issues
+6. **Ongoing**: Maintain tests as site changes, add new coverage
+
+---
+
+## Important Notes
+
+- **Smoke tests must be fast** - They're a pre-merge gate, keep under 10 minutes
+- **Don't test against production frequently** - Use staging for development
+- **Update selectors.js when UI changes** - Don't put selectors in test files
+- **Keep tests independent** - Each test should work on its own
+- **CI/CD is your friend** - If it's not automated, it won't get done consistently
+
+---
+
+**Questions?** Check the existing tests in the QA-documentation repo for examples, visit https://playwright.dev/docs/intro or check with some of the Boost folks
