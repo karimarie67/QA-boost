@@ -17,7 +17,7 @@ const HISTORY_FILE = path.join(RESULTS_DIR, 'history.json');
 const SLACK_FILE = path.join(RESULTS_DIR, 'slack-payload.json');
 
 function main() {
-  console.log('🔄 Generating QA Dashboard (v8.0 - Better Visualization)...');
+  console.log('🔄 Generating QA Dashboard (v9.0 - Chart Removed)...');
   
   if (!fs.existsSync(RESULTS_DIR)) {
     fs.mkdirSync(RESULTS_DIR, { recursive: true });
@@ -29,9 +29,6 @@ function main() {
   updateHistory(metrics);
   const history = loadHistory();
   
-  // DEBUG PRINT
-  console.log(`🔍 DEBUG: History contains ${history.length} records`);
-
   const trends = calculateTrends(metrics, history);
   const dashboard = generateDashboardMarkdown(metrics, testResults, history, trends);
   
@@ -264,10 +261,6 @@ function generateDashboardMarkdown(metrics, results, history, trends) {
 
 ---
 
-${generateSafeTrendChart(history)}
-
----
-
 ${generateBrowserBreakdown(metrics.allTestObjects)}
 
 ---
@@ -298,40 +291,6 @@ ${generateHistoryTable(history.slice(-10))}
 }
 
 // --- HELPER FUNCTIONS ---
-
-// UPDATED CHART: Switched to XYChart for better visual trending
-function generateSafeTrendChart(history) {
-  if (!history || history.length === 0) return '> *No history available yet*';
-  
-  // Grab last 15 runs
-  const recent = history.slice(-15);
-  
-  // Duplicate if only 1 data point to allow line to draw
-  if (recent.length === 1) {
-      recent.push(recent[0]);
-  }
-
-  // Create Labels (X-Axis) and Data (Y-Axis)
-  const labels = recent.map((h, i) => {
-    // If running locally (runNumber 0) use "Local-1", else use "#123"
-    return (h.runNumber === '0' || !h.runNumber) ? `Local-${i+1}` : `#${h.runNumber}`;
-  });
-
-  const data = recent.map(h => parseFloat(h.passRate).toFixed(1));
-
-  // XYChart-beta syntax
-  return `
-### 📉 Trend Visualization
-
-\`\`\`mermaid
-xychart-beta
-    title "Pass Rate Trend (%)"
-    x-axis [${labels.join(', ')}]
-    y-axis "Pass %" 0 --> 100
-    line [${data.join(', ')}]
-\`\`\`
-`;
-}
 
 function generateBrowserBreakdown(allTests) {
   if (!allTests || allTests.length === 0) return '';
