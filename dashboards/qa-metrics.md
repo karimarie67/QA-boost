@@ -2,37 +2,64 @@
 
 > **Automated Quality Gate Report**
 
-**Last Updated:** Tuesday, December 23, 2025 at 10:56 AM | **Env:** STAGING | **Branch:** main
-**Run:** [#136](https://github.com/karimarie67/QA-documentation/actions/runs/20465281915)
+**Last Updated:** Tuesday, December 23, 2025 at 11:23 AM | **Env:** STAGING | **Branch:** main
+**Run:** [#138](https://github.com/karimarie67/QA-documentation/actions/runs/20465959566)
 
 ---
 
 ## 🎯 Executive Summary
 
-| Metric | Current Value | Trend / Status |
+| Metric | Current Value | Status |
 |--------|---------------|----------------|
-| **Pass Rate** | **100.0%** | 🟢 **Excellent** |
-| **Execution Time** | **2m 31s (🔴 127.8s 🔺 Slower)** | ✅ Optimized |
-| **Total Tests** | 22 | 22 Passing / 0 Failed |
-| **Flakiness** | 0 Recurring Issues | ✅ Stable |
+| **Pass Rate** | **100.0%** | 🟢 Excellent |
+| **Duration** | **20.1s** | ✅ Good |
+| **Total Tests** | 6 | 6 Pass / 0 Fail |
+| **Functional** | 0 Tests | ❌ Missing |
 
 ---
 
-
-### 📉 Reliability Trend (Last 20 Runs)
+### 📉 Trend Visualization
 
 ```mermaid
-xychart-beta
-    title "Pass Rate Trend (%)"
-    x-axis [#116, #117, #118, #119, #120, #121, #122, #123, #124, #125, #126, #127, #128, #129, #130, #131, #133, #134, #135, #136]
-    y-axis "Pass %" 0 --> 100
-    line [100.0, 100.0, 100.0, 100.0, 100.0, 91.5, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0]
+graph LR
+    title[Pass Rate Trend - Last 15 Runs]
+    style title fill:#fff,stroke:#fff
+    0[#122]:::bar
+    0 -- 100% --> 1
+    1[#123]:::bar
+    1 -- 100% --> 2
+    2[#124]:::bar
+    2 -- 100% --> 3
+    3[#125]:::bar
+    3 -- 100% --> 4
+    4[#126]:::bar
+    4 -- 100% --> 5
+    5[#127]:::bar
+    5 -- 100% --> 6
+    6[#128]:::bar
+    6 -- 100% --> 7
+    7[#129]:::bar
+    7 -- 100% --> 8
+    8[#130]:::bar
+    8 -- 100% --> 9
+    9[#131]:::bar
+    9 -- 100% --> 10
+    10[#133]:::bar
+    10 -- 100% --> 11
+    11[#134]:::bar
+    11 -- 100% --> 12
+    12[#135]:::bar
+    12 -- 100% --> 13
+    13[#136]:::bar
+    13 -- 100% --> 14
+    14[#138]:::bar
+    classDef bar fill:#e1f5fe,stroke:#01579b,stroke-width:2px;
 ```
 
 
 ---
 
-### 🌐 Browser / Project Compatibility
+### 🌐 Browser Breakdown
 
 | Project | Pass Rate | Status |
 |---|---|---|
@@ -41,76 +68,45 @@ xychart-beta
 
 ---
 
-## ⚠️ Top Flaky / Recurring Failures
-> *No recurring failures detected in the last 10 runs. Great job!* 🎉
-
----
-
 ## 🔍 Detailed Test Results
 
-### 🔥 Smoke Tests (Target: 100%)
+### 🔥 Smoke Tests
 | Test Name | Status | Duration | Project |
 |-----------|--------|----------|---------|
-| Homepage loads with key elements | ✅ passed | 1.4s | staging |
+| Homepage loads with key elements | ✅ passed | 1.6s | staging |
 | Navigation menu links work correctly | ✅ passed | 3.2s | staging |
-| Libraries page displays and links to documentation | ✅ passed | 7.3s | staging |
-| Download section works correctly | ✅ passed | 2.7s | staging |
+| Libraries page displays and links to documentation | ✅ passed | 8.1s | staging |
+| Download section works correctly | ✅ passed | 2.6s | staging |
 | Search bar works with basic query | ✅ passed | 3.5s | staging |
-| Homepage is responsive on mobile | ✅ passed | 1.3s | staging |
+| Homepage is responsive on mobile | ✅ passed | 1.2s | staging |
 
 
-### 🔄 Regression Tests (Target: 95%)
-| Test Name | Status | Duration | Project |
-|-----------|--------|----------|---------|
-| Homepage loads and displays key elements | ✅ passed | 4.1s | staging |
-| Search bar is visible and functional | ✅ passed | 3.6s | staging |
-| Navigation menu links work | ✅ passed | 27.7s | staging |
-| Responsive design adapts to mobile viewport | ✅ passed | 1.5s | staging |
-| Logo redirects to homepage | ✅ passed | 4.5s | staging |
-| Footer links are accessible | ✅ passed | 1.6s | staging |
-| Main content loads on library page | ✅ passed | 3.5s | staging |
-| External links are valid | ✅ passed | 1.6s | staging |
-| GitHub links point to correct repositories | ✅ passed | <1s | staging |
-| Documentation page loads and displays content | ✅ passed | 3.5s | staging |
-
-*... and 4 more tests*
+### 🧩 Functional Tests (Errors, Docs, Search)
+> *No tests found in this category* 
 
 
-### 🧩 Functional Tests (Errors, Docs, Search) (Target: 95%)
-*No tests in this category*
+### 🔄 Regression Tests
+> *No tests found in this category* 
 
 
-### 📦 Version Tests (Target: 98%)
-| Test Name | Status | Duration | Project |
-|-----------|--------|----------|---------|
-| Libraries page loads and displays version information | ✅ passed | 6.3s | staging |
-| Releases page loads and displays release information | ✅ passed | 2.9s | staging |
+### 📦 Version Tests
+> *No tests found in this category* 
 
 
 ---
 
 ## 📈 History (Last 10 Runs)
-| Date | Pass Rate | Duration | Failures | Status |
-|------|-----------|----------|----------|--------|
-| Dec 23 | 100.0% | 2m 31s | 0 | 🟢 |
-| Dec 23 | 100.0% | 23.0s | 0 | 🟢 |
-| Dec 23 | 100.0% | 4m 8s | 0 | 🟢 |
-| Dec 23 | 100.0% | 22.7s | 0 | 🟢 |
-| Dec 23 | 100.0% | 25.3s | 0 | 🟢 |
-| Dec 23 | 100.0% | 22.5s | 0 | 🟢 |
-| Dec 22 | 100.0% | 21.5s | 0 | 🟢 |
-| Dec 22 | 100.0% | 20.8s | 0 | 🟢 |
-| Dec 22 | 100.0% | 22.2s | 0 | 🟢 |
-| Dec 22 | 100.0% | 22.4s | 0 | 🟢 |
+| Date | Pass Rate | Duration | Failures |
+|------|-----------|----------|----------|
+| Dec 23 | 100.0% | 20.1s | 0 |
+| Dec 23 | 100.0% | 2m 31s | 0 |
+| Dec 23 | 100.0% | 23.0s | 0 |
+| Dec 23 | 100.0% | 4m 8s | 0 |
+| Dec 23 | 100.0% | 22.7s | 0 |
+| Dec 23 | 100.0% | 25.3s | 0 |
+| Dec 23 | 100.0% | 22.5s | 0 |
+| Dec 22 | 100.0% | 21.5s | 0 |
+| Dec 22 | 100.0% | 20.8s | 0 |
+| Dec 22 | 100.0% | 22.2s | 0 |
 
 ---
-
-## 🐛 Quality Gate Status
-
-| Gate | Current | Target | Status |
-|------|---------|--------|--------|
-| **Smoke Reliability** | 100% | 100% | ✅ |
-| **Regression Reliability** | 100% | 95% | ✅ |
-| **Functional Reliability** | 0% | 95% | 🔴 |
-| **Version Compatibility** | 100% | 98% | ✅ |
-
