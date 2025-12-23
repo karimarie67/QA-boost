@@ -76,8 +76,6 @@ jobs:
             echo "✓ Copying test-results directory"
             cp -r test-results artifacts/smoke-test-results/
           fi
-          echo "Final artifacts/smoke-test-results contents:"
-          ls -la artifacts/smoke-test-results/ || echo "Directory is empty"
         
       - name: Upload Smoke Test Results
         if: always()
@@ -136,8 +134,6 @@ jobs:
             echo "✓ Copying test-results directory"
             cp -r test-results artifacts/boost-io-test-results/
           fi
-          echo "Final artifacts/boost-io-test-results contents:"
-          ls -la artifacts/boost-io-test-results/ || echo "Directory is empty"
         
       - name: Upload Boost.io Test Results
         if: always()
@@ -196,8 +192,6 @@ jobs:
             echo "✓ Copying test-results directory"
             cp -r test-results artifacts/version-test-results/
           fi
-          echo "Final artifacts/version-test-results contents:"
-          ls -la artifacts/version-test-results/ || echo "Directory is empty"
         
       - name: Upload Version Test Results
         if: always()
@@ -208,7 +202,6 @@ jobs:
           retention-days: 30
           if-no-files-found: warn
 
-  # NEW: Error Handling Tests
   error-handling-tests:
     runs-on: ubuntu-latest
     timeout-minutes: 30
@@ -225,17 +218,18 @@ jobs:
         with:
           node-version: '20'
           cache: 'npm'
-          
+      
       - name: Install dependencies
         run: npm ci
-        
+      
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
-        
+      
       - name: Run Error Handling Tests
-        run: npx playwright test tests/error_handling_tests.spec.js --project=staging
+        # FORCE JSON OUTPUT
+        run: PLAYWRIGHT_JSON_OUTPUT_NAME=test-results.json npx playwright test tests/error_handling_tests.spec.js --project=staging --reporter=json
         continue-on-error: true
-        
+      
       - name: Organize results for dashboard
         if: always()
         shell: bash
@@ -243,6 +237,8 @@ jobs:
           mkdir -p artifacts/error-handling-test-results
           if [ -f "test-results.json" ]; then
             cp test-results.json artifacts/error-handling-test-results/error-handling-results.json
+          else 
+            echo "No test-results.json found!"
           fi
           if [ -d "playwright-report" ]; then
             cp -r playwright-report artifacts/error-handling-test-results/
@@ -250,7 +246,7 @@ jobs:
           if [ -d "test-results" ]; then
             cp -r test-results artifacts/error-handling-test-results/
           fi
-        
+      
       - name: Upload Error Handling Test Results
         if: always()
         uses: actions/upload-artifact@v4
@@ -260,7 +256,6 @@ jobs:
           retention-days: 30
           if-no-files-found: warn
 
-  # NEW: Download & Search Tests
   download-search-tests:
     runs-on: ubuntu-latest
     timeout-minutes: 30
@@ -277,17 +272,18 @@ jobs:
         with:
           node-version: '20'
           cache: 'npm'
-          
+      
       - name: Install dependencies
         run: npm ci
-        
+      
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
-        
+      
       - name: Run Download & Search Tests
-        run: npx playwright test tests/download_search_tests.spec.js --project=staging
+        # FORCE JSON OUTPUT
+        run: PLAYWRIGHT_JSON_OUTPUT_NAME=test-results.json npx playwright test tests/download_search_tests.spec.js --project=staging --reporter=json
         continue-on-error: true
-        
+      
       - name: Organize results for dashboard
         if: always()
         shell: bash
@@ -295,6 +291,8 @@ jobs:
           mkdir -p artifacts/download-search-test-results
           if [ -f "test-results.json" ]; then
             cp test-results.json artifacts/download-search-test-results/download-search-results.json
+          else
+            echo "No test-results.json found!"
           fi
           if [ -d "playwright-report" ]; then
             cp -r playwright-report artifacts/download-search-test-results/
@@ -302,7 +300,7 @@ jobs:
           if [ -d "test-results" ]; then
             cp -r test-results artifacts/download-search-test-results/
           fi
-        
+      
       - name: Upload Download & Search Test Results
         if: always()
         uses: actions/upload-artifact@v4
@@ -312,7 +310,6 @@ jobs:
           retention-days: 30
           if-no-files-found: warn
 
-  # NEW: Documentation Tests
   documentation-tests:
     runs-on: ubuntu-latest
     timeout-minutes: 30
@@ -329,17 +326,18 @@ jobs:
         with:
           node-version: '20'
           cache: 'npm'
-          
+      
       - name: Install dependencies
         run: npm ci
-        
+      
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
-        
+      
       - name: Run Documentation Tests
-        run: npx playwright test tests/documentation_tests.spec.js --project=staging
+        # FORCE JSON OUTPUT
+        run: PLAYWRIGHT_JSON_OUTPUT_NAME=test-results.json npx playwright test tests/documentation_tests.spec.js --project=staging --reporter=json
         continue-on-error: true
-        
+      
       - name: Organize results for dashboard
         if: always()
         shell: bash
@@ -347,6 +345,8 @@ jobs:
           mkdir -p artifacts/documentation-test-results
           if [ -f "test-results.json" ]; then
             cp test-results.json artifacts/documentation-test-results/documentation-results.json
+          else
+            echo "No test-results.json found!"
           fi
           if [ -d "playwright-report" ]; then
             cp -r playwright-report artifacts/documentation-test-results/
@@ -354,7 +354,7 @@ jobs:
           if [ -d "test-results" ]; then
             cp -r test-results artifacts/documentation-test-results/
           fi
-        
+      
       - name: Upload Documentation Test Results
         if: always()
         uses: actions/upload-artifact@v4
