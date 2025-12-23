@@ -1,64 +1,351 @@
 {
-  "timestamp": "2025-12-23T17:34:19.866Z",
+  "timestamp": "2025-12-23T17:48:12.450Z",
   "metrics": {
-    "totalTests": 6,
-    "passed": 6,
+    "totalTests": 47,
+    "passed": 47,
     "failed": 0,
     "failedTestNames": [],
     "passRate": 100,
-    "totalDuration": 23.590999999999998,
+    "totalDuration": 247.28400000000005,
     "smokeCount": 6,
-    "regressionCount": 0,
-    "versionCount": 0,
-    "functionalCount": 0,
+    "regressionCount": 14,
+    "versionCount": 2,
+    "functionalCount": 25,
     "allTestObjects": [
       {
         "name": "Homepage loads with key elements",
         "status": "passed",
-        "durationSec": 1.729,
+        "durationSec": 1.64,
         "projectName": "staging",
         "error": null
       },
       {
         "name": "Navigation menu links work correctly",
         "status": "passed",
-        "durationSec": 4.289,
+        "durationSec": 3.939,
         "projectName": "staging",
         "error": null
       },
       {
         "name": "Libraries page displays and links to documentation",
         "status": "passed",
-        "durationSec": 7.918,
+        "durationSec": 7.601,
         "projectName": "staging",
         "error": null
       },
       {
         "name": "Download section works correctly",
         "status": "passed",
-        "durationSec": 3.769,
+        "durationSec": 3.914,
         "projectName": "staging",
         "error": null
       },
       {
         "name": "Search bar works with basic query",
         "status": "passed",
-        "durationSec": 3.574,
+        "durationSec": 3.472,
         "projectName": "staging",
         "error": null
       },
       {
         "name": "Homepage is responsive on mobile",
         "status": "passed",
-        "durationSec": 2.312,
+        "durationSec": 1.209,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Homepage loads and displays key elements",
+        "status": "passed",
+        "durationSec": 4.491,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Search bar is visible and functional",
+        "status": "passed",
+        "durationSec": 3.716,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Navigation menu links work",
+        "status": "passed",
+        "durationSec": 27.801,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Responsive design adapts to mobile viewport",
+        "status": "passed",
+        "durationSec": 1.479,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Logo redirects to homepage",
+        "status": "passed",
+        "durationSec": 4.355,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Footer links are accessible",
+        "status": "passed",
+        "durationSec": 1.616,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Main content loads on library page",
+        "status": "passed",
+        "durationSec": 3.432,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "External links are valid",
+        "status": "passed",
+        "durationSec": 1.776,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "GitHub links point to correct repositories",
+        "status": "passed",
+        "durationSec": 0.834,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Documentation page loads and displays content",
+        "status": "passed",
+        "durationSec": 3.6,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Release notes are accessible",
+        "status": "passed",
+        "durationSec": 1.18,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Download link for previous release works",
+        "status": "passed",
+        "durationSec": 62.953,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Download handles broken or unavailable links",
+        "status": "passed",
+        "durationSec": 4.009,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Community page links are functional",
+        "status": "passed",
+        "durationSec": 1.366,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Libraries page loads and displays version information",
+        "status": "passed",
+        "durationSec": 5.483,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Releases page loads and displays release information",
+        "status": "passed",
+        "durationSec": 2.63,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "404 page displays appropriate error message",
+        "status": "passed",
+        "durationSec": 1.526,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Broken documentation link returns appropriate error",
+        "status": "passed",
+        "durationSec": 1.399,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Invalid search query handles gracefully",
+        "status": "passed",
+        "durationSec": 1.376,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Malformed URL redirects or shows error appropriately",
+        "status": "passed",
+        "durationSec": 5.19,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Broken external links are identified",
+        "status": "passed",
+        "durationSec": 3.28,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Form validation errors display correctly",
+        "status": "passed",
+        "durationSec": 1.439,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Download links return valid HTTP status codes",
+        "status": "passed",
+        "durationSec": 3.337,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Download file names are correct format",
+        "status": "passed",
+        "durationSec": 2.565,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Version selector displays available versions",
+        "status": "passed",
+        "durationSec": 2.872,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Download page displays file sizes",
+        "status": "passed",
+        "durationSec": 2.52,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Search returns relevant results for common queries",
+        "status": "passed",
+        "durationSec": 12.81,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Search with special characters handles gracefully",
+        "status": "passed",
+        "durationSec": 11.901,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Empty search shows appropriate message",
+        "status": "passed",
+        "durationSec": 1.423,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Search result pagination works correctly",
+        "status": "passed",
+        "durationSec": 5.652,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Search autocomplete/suggestions appear",
+        "status": "passed",
+        "durationSec": 1.376,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Documentation page loads with table of contents",
+        "status": "passed",
+        "durationSec": 3.727,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Library documentation links are accessible",
+        "status": "passed",
+        "durationSec": 6.199,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Code examples are properly formatted",
+        "status": "passed",
+        "durationSec": 3.822,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Documentation breadcrumbs navigation works",
+        "status": "passed",
+        "durationSec": 3.268,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Documentation version switcher works",
+        "status": "passed",
+        "durationSec": 5.39,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Documentation search within docs works",
+        "status": "passed",
+        "durationSec": 3.4,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Documentation anchor links work correctly",
+        "status": "passed",
+        "durationSec": 3.228,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Documentation external links open correctly",
+        "status": "passed",
+        "durationSec": 3.261,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Documentation page titles are descriptive",
+        "status": "passed",
+        "durationSec": 0.623,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Documentation PDF/print versions are accessible",
+        "status": "passed",
+        "durationSec": 3.204,
         "projectName": "staging",
         "error": null
       }
     ],
-    "timestamp": "2025-12-23T17:34:19.572Z",
+    "timestamp": "2025-12-23T17:48:12.421Z",
     "environment": "staging",
-    "runId": "20467469870",
-    "runNumber": "140",
+    "runId": "20467683760",
+    "runNumber": "142",
     "branch": "main"
   },
   "testResults": {
@@ -66,48 +353,338 @@
       {
         "name": "Homepage loads with key elements",
         "status": "passed",
-        "durationSec": 1.729,
+        "durationSec": 1.64,
         "projectName": "staging",
         "error": null
       },
       {
         "name": "Navigation menu links work correctly",
         "status": "passed",
-        "durationSec": 4.289,
+        "durationSec": 3.939,
         "projectName": "staging",
         "error": null
       },
       {
         "name": "Libraries page displays and links to documentation",
         "status": "passed",
-        "durationSec": 7.918,
+        "durationSec": 7.601,
         "projectName": "staging",
         "error": null
       },
       {
         "name": "Download section works correctly",
         "status": "passed",
-        "durationSec": 3.769,
+        "durationSec": 3.914,
         "projectName": "staging",
         "error": null
       },
       {
         "name": "Search bar works with basic query",
         "status": "passed",
-        "durationSec": 3.574,
+        "durationSec": 3.472,
         "projectName": "staging",
         "error": null
       },
       {
         "name": "Homepage is responsive on mobile",
         "status": "passed",
-        "durationSec": 2.312,
+        "durationSec": 1.209,
         "projectName": "staging",
         "error": null
       }
     ],
-    "regression": [],
-    "version": [],
-    "functional": []
+    "regression": [
+      {
+        "name": "Homepage loads and displays key elements",
+        "status": "passed",
+        "durationSec": 4.491,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Search bar is visible and functional",
+        "status": "passed",
+        "durationSec": 3.716,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Navigation menu links work",
+        "status": "passed",
+        "durationSec": 27.801,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Responsive design adapts to mobile viewport",
+        "status": "passed",
+        "durationSec": 1.479,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Logo redirects to homepage",
+        "status": "passed",
+        "durationSec": 4.355,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Footer links are accessible",
+        "status": "passed",
+        "durationSec": 1.616,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Main content loads on library page",
+        "status": "passed",
+        "durationSec": 3.432,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "External links are valid",
+        "status": "passed",
+        "durationSec": 1.776,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "GitHub links point to correct repositories",
+        "status": "passed",
+        "durationSec": 0.834,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Documentation page loads and displays content",
+        "status": "passed",
+        "durationSec": 3.6,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Release notes are accessible",
+        "status": "passed",
+        "durationSec": 1.18,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Download link for previous release works",
+        "status": "passed",
+        "durationSec": 62.953,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Download handles broken or unavailable links",
+        "status": "passed",
+        "durationSec": 4.009,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Community page links are functional",
+        "status": "passed",
+        "durationSec": 1.366,
+        "projectName": "staging",
+        "error": null
+      }
+    ],
+    "version": [
+      {
+        "name": "Libraries page loads and displays version information",
+        "status": "passed",
+        "durationSec": 5.483,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Releases page loads and displays release information",
+        "status": "passed",
+        "durationSec": 2.63,
+        "projectName": "staging",
+        "error": null
+      }
+    ],
+    "functional": [
+      {
+        "name": "404 page displays appropriate error message",
+        "status": "passed",
+        "durationSec": 1.526,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Broken documentation link returns appropriate error",
+        "status": "passed",
+        "durationSec": 1.399,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Invalid search query handles gracefully",
+        "status": "passed",
+        "durationSec": 1.376,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Malformed URL redirects or shows error appropriately",
+        "status": "passed",
+        "durationSec": 5.19,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Broken external links are identified",
+        "status": "passed",
+        "durationSec": 3.28,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Form validation errors display correctly",
+        "status": "passed",
+        "durationSec": 1.439,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Download links return valid HTTP status codes",
+        "status": "passed",
+        "durationSec": 3.337,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Download file names are correct format",
+        "status": "passed",
+        "durationSec": 2.565,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Version selector displays available versions",
+        "status": "passed",
+        "durationSec": 2.872,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Download page displays file sizes",
+        "status": "passed",
+        "durationSec": 2.52,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Search returns relevant results for common queries",
+        "status": "passed",
+        "durationSec": 12.81,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Search with special characters handles gracefully",
+        "status": "passed",
+        "durationSec": 11.901,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Empty search shows appropriate message",
+        "status": "passed",
+        "durationSec": 1.423,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Search result pagination works correctly",
+        "status": "passed",
+        "durationSec": 5.652,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Search autocomplete/suggestions appear",
+        "status": "passed",
+        "durationSec": 1.376,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Documentation page loads with table of contents",
+        "status": "passed",
+        "durationSec": 3.727,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Library documentation links are accessible",
+        "status": "passed",
+        "durationSec": 6.199,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Code examples are properly formatted",
+        "status": "passed",
+        "durationSec": 3.822,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Documentation breadcrumbs navigation works",
+        "status": "passed",
+        "durationSec": 3.268,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Documentation version switcher works",
+        "status": "passed",
+        "durationSec": 5.39,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Documentation search within docs works",
+        "status": "passed",
+        "durationSec": 3.4,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Documentation anchor links work correctly",
+        "status": "passed",
+        "durationSec": 3.228,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Documentation external links open correctly",
+        "status": "passed",
+        "durationSec": 3.261,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Documentation page titles are descriptive",
+        "status": "passed",
+        "durationSec": 0.623,
+        "projectName": "staging",
+        "error": null
+      },
+      {
+        "name": "Documentation PDF/print versions are accessible",
+        "status": "passed",
+        "durationSec": 3.204,
+        "projectName": "staging",
+        "error": null
+      }
+    ]
   }
 }
