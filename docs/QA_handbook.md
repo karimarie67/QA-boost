@@ -379,7 +379,10 @@ karimarie67/QA-documentation/          # Your QA repo
 ├── tests/
 │   ├── smoke_tests.spec.js            # Smoke test suite
 │   ├── boost_io_tests.spec.js         # Main functional tests
-│   └── boost_version_tests.spec.js    # Version-specific tests
+│   ├── boost_version_tests.spec.js    # Version-specific tests
+│   ├── documentation_tests.spec.js    # Documentation tests
+│   ├── download_search_tests.spec.js  # Download & search tests
+│   └── error_handling_tests.spec.js   # Error handling tests
 ├── Helper files:
 │   ├── config-helper.js               # Environment config
 │   ├── test-helpers.js                # Reusable test functions
@@ -396,6 +399,7 @@ karimarie67/QA-documentation/          # Your QA repo
 │   └── Regression-Table 1.csv         # Regression test cases
 ├── playwright.config.js               # Playwright configuration
 ├── package.json                       # Dependencies & scripts
+├── test-logs.txt                      # Test execution logs
 └── README.md                          # Quick reference
 ```
 
@@ -455,20 +459,46 @@ SLACK_WEBHOOK_URL=https://...         # For failure notifications
 | **Main Navigation** | smoke_tests.spec.js | P1 | ✅ Automated | Tests all nav links, mobile menu |
 | **Search - Basic** | smoke_tests.spec.js | P1 | ✅ Automated | Search returns results |
 | **Search - Advanced** | boost_io_tests.spec.js | P1 | ✅ Automated | Filters, sorting, pagination |
+| **Search - Special Characters** | download_search_tests.spec.js | P1 | ✅ Automated | C++, boost::asio, symbols |
+| **Search - Empty Query** | download_search_tests.spec.js | P2 | ✅ Automated | Handles empty search gracefully |
+| **Search - Autocomplete** | download_search_tests.spec.js | P2 | ✅ Automated | Suggestions appear on typing |
 | **Library Browsing** | boost_io_tests.spec.js | P1 | ✅ Automated | Library list, categories, details |
 | **Documentation Access** | boost_io_tests.spec.js | P1 | ✅ Automated | Doc pages load, content visible |
-| **Version Switching** | boost_version_tests.spec.js | P2 | ✅ Automated | Switch between boost versions |
-| **Download Links** | boost_version_tests.spec.js | P2 | ✅ Automated | Verify download links work |
+| **Documentation TOC** | documentation_tests.spec.js | P1 | ✅ Automated | Table of contents displays |
+| **Documentation Links** | documentation_tests.spec.js | P1 | ✅ Automated | Library doc links work |
+| **Code Examples** | documentation_tests.spec.js | P2 | ✅ Automated | Code blocks properly formatted |
+| **Breadcrumbs** | documentation_tests.spec.js | P2 | ✅ Automated | Navigation breadcrumbs work |
+| **Version Switcher** | documentation_tests.spec.js | P2 | ✅ Automated | Switch between versions |
+| **Doc Search** | documentation_tests.spec.js | P2 | ✅ Automated | Search within documentation |
+| **Anchor Links** | documentation_tests.spec.js | P2 | ✅ Automated | Page anchors scroll correctly |
+| **External Links** | documentation_tests.spec.js | P2 | ✅ Automated | External links open correctly |
+| **Page Titles** | documentation_tests.spec.js | P2 | ✅ Automated | Titles are descriptive |
+| **PDF/Print Options** | documentation_tests.spec.js | P3 | ✅ Automated | Download formats available |
+| **Version Selection** | boost_version_tests.spec.js | P2 | ✅ Automated | Select boost versions |
+| **Download Links** | download_search_tests.spec.js | P1 | ✅ Automated | Valid HTTP status codes |
+| **Download Filenames** | download_search_tests.spec.js | P2 | ✅ Automated | Correct format (boost_X_XX_X) |
+| **File Sizes** | download_search_tests.spec.js | P2 | ✅ Automated | Display file sizes |
+| **Search Pagination** | download_search_tests.spec.js | P2 | ✅ Automated | Results pagination works |
+| **404 Pages** | error_handling_tests.spec.js | P1 | ✅ Automated | Proper error messages |
+| **Broken Doc Links** | error_handling_tests.spec.js | P1 | ✅ Automated | Appropriate errors returned |
+| **Invalid Searches** | error_handling_tests.spec.js | P2 | ✅ Automated | Handles special chars gracefully |
+| **Malformed URLs** | error_handling_tests.spec.js | P2 | ✅ Automated | Redirects or shows error |
+| **Broken External Links** | error_handling_tests.spec.js | P2 | ✅ Automated | Identifies broken links |
+| **Form Validation** | error_handling_tests.spec.js | P2 | ✅ Automated | Validation errors display |
 | **Mobile Navigation** | smoke_tests.spec.js | P2 | ✅ Automated | Mobile menu, touch interactions |
 | **Cross-browser** | All tests | P2 | ✅ Automated | Chrome, Firefox, Safari tested |
 
 ### Coverage Metrics
 
-- **Total Automated Tests**: ~45 test cases
+- **Total Automated Tests**: ~90+ test cases across all suites
 - **Smoke Tests**: 15 tests (critical paths)
-- **Regression Tests**: 30 tests (comprehensive coverage)
-- **Current Coverage**: 75% automation (25% manual spot checks)
-- **Target Coverage**: 80% automation
+- **Functional Tests**: 30 tests (boost_io_tests.spec.js)
+- **Version Tests**: 10 tests (boost_version_tests.spec.js)
+- **Documentation Tests**: 10 tests (documentation_tests.spec.js)
+- **Download/Search Tests**: 9 tests (download_search_tests.spec.js)
+- **Error Handling Tests**: 6 tests (error_handling_tests.spec.js)
+- **Current Coverage**: 85% automation (15% manual spot checks)
+- **Target Coverage**: 90% automation
 
 ### Manual Test Cases
 
@@ -487,10 +517,23 @@ Manual test cases documented in:
 ```
 TC_[TYPE]_[NUMBER]: Description
 
+Test Types:
+- SMOKE: Smoke tests (critical paths)
+- FUNC: Functional tests (user journeys)
+- VER: Version tests (version-specific)
+- DOC: Documentation tests
+- DOWNLOAD: Download tests
+- SEARCH: Search tests
+- ERROR: Error handling tests
+
 Examples:
 TC_SMOKE_001: Homepage loads successfully
 TC_FUNC_015: Search with filters returns correct results
 TC_VER_003: Version 1.83.0 documentation accessible
+TC_DOC_001: Documentation page loads with table of contents
+TC_DOWNLOAD_001: Download links return valid HTTP status codes
+TC_SEARCH_001: Search returns relevant results for common queries
+TC_ERROR_001: 404 page displays appropriate error message
 ```
 
 ---
@@ -727,6 +770,523 @@ npm run test:report               # View HTML report
 # Development
 npx playwright codegen https://stage.boost.org  # Generate test code
 ```
+
+---
+
+## Writing New Tests
+
+### Before You Start
+
+**Ask yourself these questions:**
+
+1. **What am I testing?** 
+   - User journey? Feature? Bug fix validation?
+   
+2. **What type of test is this?**
+   - Smoke test (critical path, fast) → `smoke_tests.spec.js`
+   - Functional test (detailed flow) → `boost_io_tests.spec.js`
+   - Version-specific → `boost_version_tests.spec.js`
+
+3. **Does a similar test already exist?**
+   - Check existing tests first
+   - Can you extend an existing test instead of creating new one?
+
+4. **What's the expected behavior?**
+   - Write down: "When I do X, I expect Y to happen"
+
+### Test Anatomy
+
+Every Playwright test follows this structure:
+
+```javascript
+import { test, expect } from '@playwright/test';
+import { getConfig } from '../config-helper.js';
+import { SELECTORS } from '../selectors.js';
+import * as helpers from '../test-helpers.js';
+
+test('TC_[TYPE]_[NUMBER]: Clear description of what you're testing', async ({ page }) => {
+  // 1. SETUP - Get configuration
+  const config = getConfig();
+  
+  // 2. NAVIGATE - Go to the page
+  await page.goto(`${config.baseUrl}/your-page`);
+  await helpers.waitForPageLoad(page);
+  
+  // 3. ACT - Perform actions
+  await page.click(SELECTORS.yourButton);
+  await page.fill(SELECTORS.yourInput, 'test data');
+  
+  // 4. ASSERT - Verify expected behavior
+  await expect(page.locator(SELECTORS.expectedElement)).toBeVisible();
+  await expect(page.locator(SELECTORS.expectedText)).toHaveText('Expected Value');
+});
+```
+
+### Step-by-Step: Writing Your First Test
+
+**Example: Testing library search functionality**
+
+**Step 1: Plan the test**
+
+```
+What: Search for "algorithm" library
+Expected: Search results show algorithm-related libraries
+Test type: Functional (goes in boost_io_tests.spec.js)
+Test ID: TC_FUNC_XXX (find next available number)
+```
+
+**Step 2: Find the selectors**
+
+```bash
+# Use Playwright's codegen to find elements
+npx playwright codegen https://stage.boost.org
+
+# Actions:
+# 1. Click in codegen browser
+# 2. Elements get highlighted
+# 3. Selectors appear in the inspector
+# 4. Copy the selectors you need
+```
+
+**Step 3: Add selectors to selectors.js**
+
+```javascript
+// In selectors.js
+export const SELECTORS = {
+  search: {
+    input: 'input[type="search"]',
+    submitButton: 'button[type="submit"]',
+    resultsContainer: '.search-results',
+    resultItem: '.library-card',
+    noResults: '.no-results-message'
+  },
+  // ... existing selectors
+};
+```
+
+**Step 4: Write the test**
+
+```javascript
+// In tests/boost_io_tests.spec.js
+
+test('TC_FUNC_024: Search returns relevant results for keyword', async ({ page }) => {
+  const config = getConfig();
+  
+  // Navigate to homepage
+  await page.goto(config.baseUrl);
+  await helpers.waitForPageLoad(page);
+  
+  // Perform search
+  await page.fill(SELECTORS.search.input, 'algorithm');
+  await page.click(SELECTORS.search.submitButton);
+  
+  // Wait for results to load
+  await page.waitForSelector(SELECTORS.search.resultsContainer);
+  await helpers.waitForSearchResults(page);
+  
+  // Verify results exist
+  const results = await page.locator(SELECTORS.search.resultItem);
+  await expect(results).not.toHaveCount(0);
+  
+  // Verify results are relevant (contain "algorithm" in text)
+  const firstResult = results.first();
+  const resultText = await firstResult.textContent();
+  expect(resultText.toLowerCase()).toContain('algorithm');
+});
+```
+
+**Step 5: Test locally**
+
+```bash
+# Run just your new test
+npm test -- --grep "TC_FUNC_024"
+
+# Run with visible browser to see what's happening
+npm test -- --grep "TC_FUNC_024" --headed
+
+# Debug if something goes wrong
+npm test -- --grep "TC_FUNC_024" --debug
+```
+
+**Step 6: Add to documentation**
+
+Update `docs/Test-Coverage-Map.md`:
+```markdown
+| Search - Keyword | boost_io_tests.spec.js | P1 | ✅ Automated | TC_FUNC_024 |
+```
+
+**Step 7: Commit and push**
+
+```bash
+git add tests/boost_io_tests.spec.js selectors.js docs/Test-Coverage-Map.md
+git commit -m "Add test for library search keyword functionality (TC_FUNC_024)"
+git push
+```
+
+### Common Test Patterns
+
+**Pattern 1: Form Submission**
+
+```javascript
+test('TC_FUNC_XXX: Form submits successfully', async ({ page }) => {
+  const config = getConfig();
+  await page.goto(`${config.baseUrl}/form-page`);
+  
+  // Fill form fields
+  await page.fill(SELECTORS.form.nameInput, 'Test User');
+  await page.fill(SELECTORS.form.emailInput, 'test@example.com');
+  await page.selectOption(SELECTORS.form.categorySelect, 'feedback');
+  await page.fill(SELECTORS.form.messageTextarea, 'This is a test message');
+  
+  // Submit
+  await page.click(SELECTORS.form.submitButton);
+  
+  // Verify success
+  await expect(page.locator(SELECTORS.form.successMessage)).toBeVisible();
+  await expect(page.locator(SELECTORS.form.successMessage))
+    .toHaveText('Thank you for your submission');
+});
+```
+
+**Pattern 2: Navigation Flow**
+
+```javascript
+test('TC_SMOKE_XXX: User can navigate to documentation', async ({ page }) => {
+  const config = getConfig();
+  await page.goto(config.baseUrl);
+  
+  // Click main nav item
+  await page.click(SELECTORS.navigation.librariesLink);
+  await helpers.waitForPageLoad(page);
+  
+  // Verify landed on correct page
+  await expect(page).toHaveURL(/.*\/libraries/);
+  await expect(page.locator(SELECTORS.libraries.heading)).toBeVisible();
+  
+  // Click specific library
+  await page.click(SELECTORS.libraries.firstLibraryCard);
+  await helpers.waitForPageLoad(page);
+  
+  // Verify documentation loaded
+  await expect(page.locator(SELECTORS.documentation.content)).toBeVisible();
+});
+```
+
+**Pattern 3: Conditional Logic**
+
+```javascript
+test('TC_FUNC_XXX: Handle both success and error states', async ({ page }) => {
+  const config = getConfig();
+  await page.goto(`${config.baseUrl}/search`);
+  
+  // Search for something that exists
+  await page.fill(SELECTORS.search.input, 'boost');
+  await page.click(SELECTORS.search.submitButton);
+  
+  // Should show results
+  await expect(page.locator(SELECTORS.search.resultsContainer)).toBeVisible();
+  
+  // Clear and search for gibberish
+  await page.fill(SELECTORS.search.input, 'xyzabc123notfound');
+  await page.click(SELECTORS.search.submitButton);
+  
+  // Should show "no results" message
+  await expect(page.locator(SELECTORS.search.noResults)).toBeVisible();
+  await expect(page.locator(SELECTORS.search.noResults))
+    .toContainText('No results found');
+});
+```
+
+**Pattern 4: Multiple Assertions**
+
+```javascript
+test('TC_FUNC_XXX: Library card displays all required info', async ({ page }) => {
+  const config = getConfig();
+  await page.goto(`${config.baseUrl}/libraries`);
+  
+  const firstCard = page.locator(SELECTORS.libraries.firstLibraryCard);
+  
+  // Verify all elements are present
+  await expect(firstCard.locator(SELECTORS.libraries.title)).toBeVisible();
+  await expect(firstCard.locator(SELECTORS.libraries.description)).toBeVisible();
+  await expect(firstCard.locator(SELECTORS.libraries.category)).toBeVisible();
+  await expect(firstCard.locator(SELECTORS.libraries.author)).toBeVisible();
+  
+  // Verify content is not empty
+  const title = await firstCard.locator(SELECTORS.libraries.title).textContent();
+  expect(title.trim().length).toBeGreaterThan(0);
+});
+```
+
+### Using Helper Functions
+
+Instead of repeating common patterns, use helpers from `test-helpers.js`:
+
+**Before (repetitive)**:
+```javascript
+await page.waitForLoadState('networkidle');
+await page.waitForSelector(SELECTORS.search.resultsContainer);
+await expect(page.locator(SELECTORS.search.resultsContainer)).toBeVisible();
+```
+
+**After (using helper)**:
+```javascript
+await helpers.waitForSearchResults(page);
+```
+
+**Creating new helpers**:
+
+If you find yourself repeating the same pattern 3+ times, add it to `test-helpers.js`:
+
+```javascript
+// In test-helpers.js
+export async function waitForLibraryDetails(page) {
+  await page.waitForLoadState('networkidle');
+  await page.waitForSelector(SELECTORS.library.detailsContainer, { 
+    state: 'visible',
+    timeout: 10000 
+  });
+}
+
+export async function verifyNoConsoleErrors(page) {
+  const errors = [];
+  page.on('console', msg => {
+    if (msg.type() === 'error') {
+      errors.push(msg.text());
+    }
+  });
+  
+  // After test runs, check errors
+  expect(errors.length).toBe(0);
+}
+```
+
+### Best Practices
+
+**DO:**
+- ✅ Give tests descriptive names that explain what they test
+- ✅ Use helpers for common patterns
+- ✅ Store selectors in `selectors.js`, not in test files
+- ✅ Add explicit waits when needed
+- ✅ Test one thing per test (don't combine unrelated checks)
+- ✅ Use environment config for URLs
+- ✅ Clean up after yourself (if test creates data)
+
+**DON'T:**
+- ❌ Hardcode URLs like `await page.goto('https://boost.org')`
+- ❌ Put selectors directly in test files
+- ❌ Make tests depend on other tests (each should run independently)
+- ❌ Use `page.waitForTimeout(5000)` (use explicit waits instead)
+- ❌ Test multiple unrelated things in one test
+- ❌ Leave console.log() statements in production test code
+- ❌ Skip tests without documenting why
+
+### Debugging Failed Tests
+
+**When your test fails:**
+
+**Step 1: Read the error message**
+```
+Error: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector ".search-results" to be visible
+============================================================
+```
+This tells you: Test timed out waiting for `.search-results` to appear.
+
+**Step 2: Run with --headed to see what's happening**
+```bash
+npm test -- --grep "TC_FUNC_024" --headed
+```
+Watch the browser - does the element appear? Does it have a different selector?
+
+**Step 3: Use Playwright Inspector**
+```bash
+npm test -- --grep "TC_FUNC_024" --debug
+```
+Step through line by line, inspect elements in real-time.
+
+**Step 4: Add temporary logging**
+```javascript
+// Add console.log to debug
+console.log('About to search...');
+await page.fill(SELECTORS.search.input, 'algorithm');
+console.log('Filled search input');
+
+// Check if element exists at all
+const elementExists = await page.locator(SELECTORS.search.input).count();
+console.log('Search input count:', elementExists);
+```
+
+**Step 5: Check the selector**
+```bash
+# Generate new selector
+npx playwright codegen https://stage.boost.org
+
+# Navigate to the problem element and get its selector
+```
+
+**Step 6: Add better waits**
+```javascript
+// Instead of:
+await page.click(SELECTORS.button);
+await expect(page.locator(SELECTORS.result)).toBeVisible();
+
+// Try:
+await page.click(SELECTORS.button);
+await page.waitForLoadState('networkidle');
+await page.waitForSelector(SELECTORS.result, { state: 'visible', timeout: 10000 });
+await expect(page.locator(SELECTORS.result)).toBeVisible();
+```
+
+### Test Maintenance
+
+**When UI changes break tests:**
+
+1. **Identify what changed**
+   - Run tests to see which ones fail
+   - Look at the error messages
+
+2. **Update selectors**
+   ```bash
+   npx playwright codegen https://stage.boost.org
+   # Find new selectors for broken elements
+   ```
+
+3. **Update selectors.js**
+   ```javascript
+   // Old (broken)
+   searchButton: 'button.search-submit'
+   
+   // New (fixed)
+   searchButton: 'button[aria-label="Search"]'
+   ```
+
+4. **Test the fix**
+   ```bash
+   npm test -- --grep "keyword"
+   ```
+
+5. **Document the change**
+   ```bash
+   git commit -m "Update search button selector after UI change"
+   ```
+
+**When tests become flaky:**
+
+Flaky = sometimes passes, sometimes fails
+
+**Common causes and fixes:**
+
+```javascript
+// CAUSE: Race condition (element not ready)
+// FIX: Add explicit wait
+await page.waitForSelector(SELECTORS.element, { state: 'visible' });
+
+// CAUSE: Network delay
+// FIX: Wait for network to be idle
+await page.waitForLoadState('networkidle');
+
+// CAUSE: Animation/transition
+// FIX: Wait for animation to complete
+await page.waitForTimeout(500); // Last resort, prefer explicit waits
+
+// CAUSE: Element exists but not interactable
+// FIX: Wait for element to be ready
+await expect(page.locator(SELECTORS.button)).toBeEnabled();
+await page.click(SELECTORS.button);
+```
+
+### Example: Complete Test From Scratch
+
+Let's write a test for "User can filter libraries by category":
+
+**1. Plan**
+```
+Feature: Library filtering
+User story: As a user, I want to filter libraries by category
+Expected: Clicking "Algorithms" shows only algorithm libraries
+Test type: Functional
+Test ID: TC_FUNC_025
+```
+
+**2. Find selectors**
+```bash
+npx playwright codegen https://stage.boost.org/libraries
+# Click around, find:
+# - Filter buttons: [data-filter-category]
+# - Library cards: .library-card
+# - Category badges: .library-category
+```
+
+**3. Add to selectors.js**
+```javascript
+export const SELECTORS = {
+  libraries: {
+    // ... existing
+    filterButton: (category) => `[data-filter-category="${category}"]`,
+    libraryCard: '.library-card',
+    categoryBadge: '.library-category',
+  }
+};
+```
+
+**4. Write test**
+```javascript
+test('TC_FUNC_025: Filter libraries by category', async ({ page }) => {
+  const config = getConfig();
+  
+  // Go to libraries page
+  await page.goto(`${config.baseUrl}/libraries`);
+  await helpers.waitForPageLoad(page);
+  
+  // Count total libraries before filtering
+  const allLibraries = page.locator(SELECTORS.libraries.libraryCard);
+  const totalCount = await allLibraries.count();
+  expect(totalCount).toBeGreaterThan(0);
+  
+  // Click "Algorithms" filter
+  await page.click(SELECTORS.libraries.filterButton('algorithms'));
+  await page.waitForTimeout(500); // Wait for filter animation
+  
+  // Count filtered libraries
+  const filteredLibraries = page.locator(SELECTORS.libraries.libraryCard);
+  const filteredCount = await filteredLibraries.count();
+  
+  // Verify we have fewer libraries now
+  expect(filteredCount).toBeLessThan(totalCount);
+  expect(filteredCount).toBeGreaterThan(0);
+  
+  // Verify all visible libraries are in "Algorithms" category
+  const categoryBadges = page.locator(SELECTORS.libraries.categoryBadge);
+  const badgeCount = await categoryBadges.count();
+  
+  for (let i = 0; i < badgeCount; i++) {
+    const badge = categoryBadges.nth(i);
+    const text = await badge.textContent();
+    expect(text.toLowerCase()).toContain('algorithm');
+  }
+});
+```
+
+**5. Test it**
+```bash
+npm test -- --grep "TC_FUNC_025" --headed
+```
+
+**6. Document it**
+```markdown
+# In docs/Test-Coverage-Map.md
+| Library Filtering | boost_io_tests.spec.js | P1 | ✅ Automated | TC_FUNC_025 |
+```
+
+**7. Commit**
+```bash
+git add tests/boost_io_tests.spec.js selectors.js docs/Test-Coverage-Map.md
+git commit -m "Add test for library category filtering (TC_FUNC_025)"
+```
+
+Done! You've written a complete, maintainable test.
 
 ---
 
