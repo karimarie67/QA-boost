@@ -3,13 +3,11 @@ const path = require('path');
 
 // --- CONFIGURATION: QUALITY GATES ---
 const QUALITY_GATES = {
-  SMOKE_TARGET: 100,      
-  REGRESSION_TARGET: 95,  
-  VERSION_TARGET: 98,
-  ERROR_HANDLING_TARGET: 95,
-  DOWNLOAD_SEARCH_TARGET: 95,
-  DOCUMENTATION_TARGET: 95,
-  MAX_DURATION_SEC: 300   
+  SMOKE_TARGET: 100,      // Must be perfect
+  REGRESSION_TARGET: 95,  // Standard regression
+  VERSION_TARGET: 98,     // Version checks
+  FUNCTIONAL_TARGET: 95,  // Target for new functional specs
+  MAX_DURATION_SEC: 600   // 10 minutes max
 };
 
 const ARTIFACTS_DIR = path.join(__dirname, '../../artifacts');
@@ -19,7 +17,7 @@ const HISTORY_FILE = path.join(RESULTS_DIR, 'history.json');
 const SLACK_FILE = path.join(RESULTS_DIR, 'slack-payload.json');
 
 function main() {
-  console.log('📄 Generating QA Dashboard (v4.0 - Enhanced Coverage)...');
+  console.log('🔄 Generating QA Dashboard (v5.0 - Chart Fixes)...');
   
   if (!fs.existsSync(RESULTS_DIR)) {
     fs.mkdirSync(RESULTS_DIR, { recursive: true });
@@ -33,7 +31,6 @@ function main() {
   
   const trends = calculateTrends(metrics, history);
   
-  // Generate Markdown with Mermaid Charts and Browser stats
   const dashboard = generateDashboardMarkdown(metrics, testResults, history, trends);
   
   fs.writeFileSync(DASHBOARD_PATH, dashboard);
@@ -66,14 +63,7 @@ function main() {
 }
 
 function collectTestResults() {
-  const results = { 
-    smoke: [], 
-    regression: [], 
-    version: [],
-    errorHandling: [],
-    downloadSearch: [],
-    documentation: []
-  };
+  const results = { smoke: [], regression: [], version: [], functional: [] };
   
   if (!fs.existsSync(ARTIFACTS_DIR)) {
     console.warn('⚠️  No artifacts directory found - Using Sample Data');
@@ -84,22 +74,18 @@ function collectTestResults() {
     smoke: path.join(ARTIFACTS_DIR, 'smoke-test-results/smoke-results.json'),
     regression: path.join(ARTIFACTS_DIR, 'boost-io-test-results/boost-io-results.json'),
     version: path.join(ARTIFACTS_DIR, 'version-test-results/version-results.json'),
-    errorHandling: path.join(ARTIFACTS_DIR, 'error-handling-test-results/error-handling-results.json'),
-    downloadSearch: path.join(ARTIFACTS_DIR, 'download-search-test-results/download-search-results.json'),
-    documentation: path.join(ARTIFACTS_DIR, 'documentation-test-results/documentation-results.json')
+    functional: path.join(ARTIFACTS_DIR, 'functional-test-results/functional-results.json')
   };
 
   for (const [key, filepath] of Object.entries(files)) {
     if (fs.existsSync(filepath)) {
       console.log(`Found ${key} results: ${filepath}`);
       results[key] = parsePlaywrightJson(filepath);
-    } else {
-      console.log(`Missing ${key} results: ${filepath}`);
     }
   }
   
-  const hasAnyResults = Object.values(results).some(arr => arr.length > 0);
-  if (!hasAnyResults) {
+  // Check if all are empty
+  if (Object.values(results).every(arr => arr.length === 0)) {
     return getSampleResults();
   }
   
@@ -145,12 +131,10 @@ function calculateMetrics(results) {
   const allTests = [
     ...results.smoke, 
     ...results.regression, 
-    ...results.version,
-    ...results.errorHandling,
-    ...results.downloadSearch,
-    ...results.documentation
+    ...results.version, 
+    ...results.functional
   ];
-  
+
   const passed = allTests.filter(t => t.status === 'passed').length;
   const failedTests = allTests.filter(t => t.status === 'failed');
   const totalDuration = allTests.reduce((acc, t) => acc + (t.durationSec || 0), 0);
@@ -165,9 +149,7 @@ function calculateMetrics(results) {
     smokeCount: results.smoke.length,
     regressionCount: results.regression.length,
     versionCount: results.version.length,
-    errorHandlingCount: results.errorHandling.length,
-    downloadSearchCount: results.downloadSearch.length,
-    documentationCount: results.documentation.length,
+    functionalCount: results.functional.length,
     allTestObjects: allTests, 
     timestamp: new Date().toISOString(),
     environment: process.env.TEST_ENV || 'staging',
@@ -201,6 +183,7 @@ function updateHistory(metrics) {
     runNumber: runNumber
   };
   
+  // Filter out exact duplicate runs if they exist
   history = history.filter(entry => entry.runNumber !== runNumber);
   history.push(newEntry);
   
@@ -243,7 +226,7 @@ function generateDashboardMarkdown(metrics, results, history, trends) {
   const env = (metrics.environment || 'staging').toUpperCase();
   const timestamp = new Date().toLocaleString('en-US', { timeZone: 'America/New_York', dateStyle: 'full', timeStyle: 'short' });
   
-  const durationSign = trends.durationDiff > 0 ? '🔺 Slower' : '⚡ Faster';
+  const durationSign = trends.durationDiff > 0 ? '🔺 Slower' : 'Hz Faster';
   const durationColor = trends.durationDiff > 5 ? '🔴' : '🟢'; 
   const durationText = `${formatDuration(metrics.totalDuration)} (${durationColor} ${Math.abs(trends.durationDiff).toFixed(1)}s ${durationSign})`;
 
@@ -264,19 +247,6 @@ function generateDashboardMarkdown(metrics, results, history, trends) {
 | **Execution Time** | **${durationText}** | ${metrics.totalDuration > QUALITY_GATES.MAX_DURATION_SEC ? '⚠️ Long Running' : '✅ Optimized'} |
 | **Total Tests** | ${metrics.totalTests} | ${metrics.passed} Passing / ${metrics.failed} Failed |
 | **Flakiness** | ${trends.flakyTests.length} Recurring Issues | ${trends.flakyTests.length > 0 ? '⚠️ Unstable' : '✅ Stable'} |
-
----
-
-## 📋 Test Suite Coverage
-
-| Test Suite | Tests Run | Pass Rate | Target | Status |
-|------------|-----------|-----------|--------|--------|
-| 🔥 **Smoke Tests** | ${metrics.smokeCount} | ${calculatePassRate(results.smoke)}% | ${QUALITY_GATES.SMOKE_TARGET}% | ${getStatusIcon(calculatePassRate(results.smoke), QUALITY_GATES.SMOKE_TARGET)} |
-| 🔄 **Regression Tests** | ${metrics.regressionCount} | ${calculatePassRate(results.regression)}% | ${QUALITY_GATES.REGRESSION_TARGET}% | ${getStatusIcon(calculatePassRate(results.regression), QUALITY_GATES.REGRESSION_TARGET)} |
-| 📦 **Version Tests** | ${metrics.versionCount} | ${calculatePassRate(results.version)}% | ${QUALITY_GATES.VERSION_TARGET}% | ${getStatusIcon(calculatePassRate(results.version), QUALITY_GATES.VERSION_TARGET)} |
-| ⚠️ **Error Handling** | ${metrics.errorHandlingCount} | ${calculatePassRate(results.errorHandling)}% | ${QUALITY_GATES.ERROR_HANDLING_TARGET}% | ${getStatusIcon(calculatePassRate(results.errorHandling), QUALITY_GATES.ERROR_HANDLING_TARGET)} |
-| 🔍 **Download & Search** | ${metrics.downloadSearchCount} | ${calculatePassRate(results.downloadSearch)}% | ${QUALITY_GATES.DOWNLOAD_SEARCH_TARGET}% | ${getStatusIcon(calculatePassRate(results.downloadSearch), QUALITY_GATES.DOWNLOAD_SEARCH_TARGET)} |
-| 📚 **Documentation** | ${metrics.documentationCount} | ${calculatePassRate(results.documentation)}% | ${QUALITY_GATES.DOCUMENTATION_TARGET}% | ${getStatusIcon(calculatePassRate(results.documentation), QUALITY_GATES.DOCUMENTATION_TARGET)} |
 
 ---
 
@@ -301,17 +271,11 @@ ${generateTestTable(results.smoke)}
 ### 🔄 Regression Tests (Target: ${QUALITY_GATES.REGRESSION_TARGET}%)
 ${generateTestTable(results.regression)}
 
+### 🧩 Functional Tests (Errors, Docs, Search) (Target: ${QUALITY_GATES.FUNCTIONAL_TARGET}%)
+${generateTestTable(results.functional)}
+
 ### 📦 Version Tests (Target: ${QUALITY_GATES.VERSION_TARGET}%)
 ${generateTestTable(results.version)}
-
-### ⚠️ Error Handling Tests (Target: ${QUALITY_GATES.ERROR_HANDLING_TARGET}%)
-${generateTestTable(results.errorHandling)}
-
-### 🔍 Download & Search Tests (Target: ${QUALITY_GATES.DOWNLOAD_SEARCH_TARGET}%)
-${generateTestTable(results.downloadSearch)}
-
-### 📚 Documentation Tests (Target: ${QUALITY_GATES.DOCUMENTATION_TARGET}%)
-${generateTestTable(results.documentation)}
 
 ---
 
@@ -321,34 +285,48 @@ ${generateTestTable(results.documentation)}
 ${generateHistoryTable(history.slice(-10))}
 
 ---
+
+## 🐛 Quality Gate Status
+
+| Gate | Current | Target | Status |
+|------|---------|--------|--------|
+| **Smoke Reliability** | ${calculatePassRate(results.smoke)}% | ${QUALITY_GATES.SMOKE_TARGET}% | ${getGateEmoji(calculatePassRate(results.smoke), QUALITY_GATES.SMOKE_TARGET)} |
+| **Regression Reliability** | ${calculatePassRate(results.regression)}% | ${QUALITY_GATES.REGRESSION_TARGET}% | ${getGateEmoji(calculatePassRate(results.regression), QUALITY_GATES.REGRESSION_TARGET)} |
+| **Functional Reliability** | ${calculatePassRate(results.functional)}% | ${QUALITY_GATES.FUNCTIONAL_TARGET}% | ${getGateEmoji(calculatePassRate(results.functional), QUALITY_GATES.FUNCTIONAL_TARGET)} |
+| **Version Compatibility** | ${calculatePassRate(results.version)}% | ${QUALITY_GATES.VERSION_TARGET}% | ${getGateEmoji(calculatePassRate(results.version), QUALITY_GATES.VERSION_TARGET)} |
+
 `;
 }
 
 // --- HELPER FUNCTIONS ---
 
-function calculatePassRate(tests) {
-  if (!tests || tests.length === 0) return 0;
-  const passed = tests.filter(t => t.status === 'passed').length;
-  return ((passed / tests.length) * 100).toFixed(1);
-}
-
-function getStatusIcon(passRate, target) {
-  const rate = parseFloat(passRate);
-  if (rate >= target) return '✅ Passing';
-  if (rate >= target - 5) return '⚠️ Warning';
-  return '❌ Failing';
-}
-
-// 1. MERMAID CHART GENERATOR
+// 1. UPDATED MERMAID CHART GENERATOR (Fixes Duplicate Labels Bug)
 function generateMermaidChart(history) {
-  if (!history || history.length < 2) return '';
+  if (!history || history.length === 0) {
+    return '\n> *Trend chart will appear here after the first test run.*\n';
+  }
 
-  const recent = history.slice(-20);
-  const labels = recent.map(h => `#${h.runNumber}`);
+  // Slice to last 20 runs
+  let recent = history.slice(-20); 
+
+  // FIX A: If we only have 1 run, duplicate it so the chart can draw a line
+  if (recent.length === 1) {
+    recent.push(recent[0]);
+  }
+
+  // FIX B: Generate unique labels to prevent "Duplicate Key" errors in Mermaid
+  const labels = recent.map((h, index) => {
+    // If runNumber is '0' (local run) or undefined, use a sequential index
+    if (h.runNumber === '0' || h.runNumber === undefined) {
+      return `Run ${index + 1}`; 
+    }
+    return `#${h.runNumber}`;
+  });
+
   const data = recent.map(h => parseFloat(h.passRate).toFixed(1));
 
   return `
-### 📉 Reliability Trend (Last 20 Runs)
+### 📉 Reliability Trend (Last ${recent.length} Runs)
 
 \`\`\`mermaid
 xychart-beta
@@ -360,7 +338,6 @@ xychart-beta
 `;
 }
 
-// 2. BROWSER BREAKDOWN GENERATOR
 function generateBrowserBreakdown(allTests) {
   if (!allTests || allTests.length === 0) return '';
 
@@ -398,6 +375,16 @@ function getPassRateStatus(passRate) {
   if (passRate >= 98) return '🟢 **Excellent**';
   if (passRate >= 90) return '🟡 **Good**';
   return '🔴 **Needs Attention**';
+}
+
+function calculatePassRate(tests) {
+  if (!tests || tests.length === 0) return 0;
+  const passed = tests.filter(t => t.status === 'passed').length;
+  return Math.round((passed / tests.length) * 100);
+}
+
+function getGateEmoji(current, target) {
+  return current >= target ? '✅' : '🔴';
 }
 
 function generateFlakyTable(flakyTests) {
@@ -443,22 +430,21 @@ function generateHistoryTable(history) {
 function getSampleResults() {
   return {
     smoke: [
-      { name: 'Homepage loads', status: 'passed', durationSec: 1.2, projectName: 'chromium' }
+      { name: 'Homepage loads', status: 'passed', durationSec: 1.2, projectName: 'chromium' },
+      { name: 'Homepage loads', status: 'passed', durationSec: 1.4, projectName: 'firefox' }
     ],
     regression: [
-      { name: 'Boost.io accessible', status: 'passed', durationSec: 1.5, projectName: 'chromium' }
+      { name: 'Boost.io accessible', status: 'passed', durationSec: 1.5, projectName: 'chromium' },
+      { name: 'Library docs load', status: 'failed', durationSec: 2.1, projectName: 'chromium' }, 
+      { name: 'Library docs load', status: 'passed', durationSec: 2.3, projectName: 'firefox' }
+    ],
+    functional: [ // NEW SAMPLE DATA
+      { name: 'Search returns results', status: 'passed', durationSec: 0.5, projectName: 'chromium' },
+      { name: '404 page checks', status: 'passed', durationSec: 0.8, projectName: 'chromium' },
+      { name: 'Documentation download', status: 'passed', durationSec: 1.2, projectName: 'chromium' }
     ],
     version: [
       { name: 'Version compatibility check', status: 'passed', durationSec: 1.0, projectName: 'Default' }
-    ],
-    errorHandling: [
-      { name: '404 page displays', status: 'passed', durationSec: 0.8, projectName: 'chromium' }
-    ],
-    downloadSearch: [
-      { name: 'Download links valid', status: 'passed', durationSec: 1.2, projectName: 'chromium' }
-    ],
-    documentation: [
-      { name: 'Doc page loads', status: 'passed', durationSec: 1.5, projectName: 'chromium' }
     ]
   };
 }
