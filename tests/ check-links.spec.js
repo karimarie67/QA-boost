@@ -281,6 +281,13 @@ function printSummary() {
 
 test.describe('Boost.org Production Link Check', () => {
   test.setTimeout(1800000); // 30 minutes for the whole test
+  
+  // Disable screenshots, videos, and traces to avoid generating thousands of files
+  test.use({
+    screenshot: 'off',
+    video: 'off',
+    trace: 'off'
+  });
 
   test.beforeEach(() => {
     // Clear state before each test run
