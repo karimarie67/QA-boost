@@ -10,9 +10,7 @@
     "grep": {},
     "grepInvert": null,
     "maxFailures": 0,
-    "metadata": {
-      "actualWorkers": 2
-    },
+    "metadata": {},
     "preserveOutput": "always",
     "reporter": [
       [
@@ -35,10 +33,8 @@
       {
         "outputDir": "/Users/kskinner/github/karimarie67/QA-documentation/test-results",
         "repeatEach": 1,
-        "retries": 0,
-        "metadata": {
-          "actualWorkers": 2
-        },
+        "retries": 1,
+        "metadata": {},
         "id": "local",
         "name": "local",
         "testDir": "/Users/kskinner/github/karimarie67/QA-documentation/tests",
@@ -51,10 +47,8 @@
       {
         "outputDir": "/Users/kskinner/github/karimarie67/QA-documentation/test-results",
         "repeatEach": 1,
-        "retries": 0,
-        "metadata": {
-          "actualWorkers": 2
-        },
+        "retries": 1,
+        "metadata": {},
         "id": "staging",
         "name": "staging",
         "testDir": "/Users/kskinner/github/karimarie67/QA-documentation/tests",
@@ -67,10 +61,8 @@
       {
         "outputDir": "/Users/kskinner/github/karimarie67/QA-documentation/test-results",
         "repeatEach": 1,
-        "retries": 0,
-        "metadata": {
-          "actualWorkers": 2
-        },
+        "retries": 1,
+        "metadata": {},
         "id": "production",
         "name": "production",
         "testDir": "/Users/kskinner/github/karimarie67/QA-documentation/tests",
@@ -83,10 +75,8 @@
       {
         "outputDir": "/Users/kskinner/github/karimarie67/QA-documentation/test-results",
         "repeatEach": 1,
-        "retries": 0,
-        "metadata": {
-          "actualWorkers": 2
-        },
+        "retries": 1,
+        "metadata": {},
         "id": "staging-mobile",
         "name": "staging-mobile",
         "testDir": "/Users/kskinner/github/karimarie67/QA-documentation/tests",
@@ -99,16 +89,42 @@
       {
         "outputDir": "/Users/kskinner/github/karimarie67/QA-documentation/test-results",
         "repeatEach": 1,
-        "retries": 0,
-        "metadata": {
-          "actualWorkers": 2
-        },
+        "retries": 1,
+        "metadata": {},
         "id": "production-mobile",
         "name": "production-mobile",
         "testDir": "/Users/kskinner/github/karimarie67/QA-documentation/tests",
         "testIgnore": [],
         "testMatch": [
           "**/*.spec.js"
+        ],
+        "timeout": 90000
+      },
+      {
+        "outputDir": "/Users/kskinner/github/karimarie67/QA-documentation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "link-checker",
+        "name": "link-checker",
+        "testDir": "/Users/kskinner/github/karimarie67/QA-documentation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/check-links.spec.js"
+        ],
+        "timeout": 1800000
+      },
+      {
+        "outputDir": "/Users/kskinner/github/karimarie67/QA-documentation/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {},
+        "id": "verify",
+        "name": "verify",
+        "testDir": "/Users/kskinner/github/karimarie67/QA-documentation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/boost-verify.spec.js"
         ],
         "timeout": 90000
       }
@@ -120,140 +136,17 @@
     "workers": 6,
     "webServer": null
   },
-  "suites": [
+  "suites": [],
+  "errors": [
     {
-      "title": "download_search_tests.spec.js",
-      "file": "download_search_tests.spec.js",
-      "column": 0,
-      "line": 0,
-      "specs": [],
-      "suites": [
-        {
-          "title": "Boost Download Tests",
-          "file": "download_search_tests.spec.js",
-          "line": 8,
-          "column": 6,
-          "specs": [
-            {
-              "title": "Version selector displays available versions",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [
-                    {
-                      "type": "test_case",
-                      "description": "TC_DOWNLOAD_003"
-                    }
-                  ],
-                  "expectedStatus": "passed",
-                  "projectId": "staging",
-                  "projectName": "staging",
-                  "results": [
-                    {
-                      "workerIndex": 4,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 8330,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-12-22T15:48:01.638Z",
-                      "annotations": [
-                        {
-                          "type": "test_case",
-                          "description": "TC_DOWNLOAD_003"
-                        }
-                      ],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/download_search_tests-Boos-9e43b-displays-available-versions-staging/test-finished-1.png"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/download_search_tests-Boos-9e43b-displays-available-versions-staging/trace.zip"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "4d1de4b4a9aebcf3c3ce-bad33b2747c94c9a5051",
-              "file": "download_search_tests.spec.js",
-              "line": 89,
-              "column": 7
-            },
-            {
-              "title": "Version selector displays available versions",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [
-                    {
-                      "type": "test_case",
-                      "description": "TC_DOWNLOAD_003"
-                    }
-                  ],
-                  "expectedStatus": "passed",
-                  "projectId": "staging-mobile",
-                  "projectName": "staging-mobile",
-                  "results": [
-                    {
-                      "workerIndex": 5,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 8014,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-12-22T15:48:01.637Z",
-                      "annotations": [
-                        {
-                          "type": "test_case",
-                          "description": "TC_DOWNLOAD_003"
-                        }
-                      ],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/download_search_tests-Boos-9e43b-displays-available-versions-staging-mobile/test-finished-1.png"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "/Users/kskinner/github/karimarie67/QA-documentation/test-results/download_search_tests-Boos-9e43b-displays-available-versions-staging-mobile/trace.zip"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "4d1de4b4a9aebcf3c3ce-622f9dd91c0106313bef",
-              "file": "download_search_tests.spec.js",
-              "line": 89,
-              "column": 7
-            }
-          ]
-        }
-      ]
+      "message": "Error: No tests found",
+      "stack": "Error: No tests found"
     }
   ],
-  "errors": [],
   "stats": {
-    "startTime": "2025-12-22T15:47:59.982Z",
-    "duration": 10775.788,
-    "expected": 2,
+    "startTime": "2025-12-30T21:41:22.024Z",
+    "duration": 11.767999999999915,
+    "expected": 0,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0
