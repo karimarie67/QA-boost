@@ -60,7 +60,7 @@ module.exports = defineConfig({
     // Special project for link checking - no traces/screenshots to avoid thousands of files
     {
       name: 'link-checker',
-      testMatch: ['**/check-links.spec.js'],
+      testMatch: /check-links\.spec\.js$/,
       use: {
         browserName: 'chromium',
         headless: true,

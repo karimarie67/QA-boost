@@ -1,0 +1,2861 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - text: 
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - link "Boost" [ref=e5] [cursor=pointer]:
+          - /url: /
+          - img "Boost" [ref=e6] [cursor=pointer]
+        - link "news" [ref=e7] [cursor=pointer]:
+          - /url: /news/
+        - link "learn" [ref=e8] [cursor=pointer]:
+          - /url: /docs/
+        - link "community" [ref=e9] [cursor=pointer]:
+          - /url: /community/
+        - link "libraries" [ref=e10] [cursor=pointer]:
+          - /url: /libraries/
+        - link "releases" [ref=e11] [cursor=pointer]:
+          - /url: /releases/
+      - generic [ref=e12]:
+        - generic [ref=e14] [cursor=pointer]: 
+        - generic [ref=e16] [cursor=pointer]: 
+        - generic [ref=e17] [cursor=pointer]: 
+        - link "Join" [ref=e20] [cursor=pointer]:
+          - /url: /accounts/signup/
+    - main [ref=e22]:
+      - generic [ref=e25]:
+        - generic [ref=e26]:
+          - generic [ref=e27]:
+            - link "" [ref=e28] [cursor=pointer]:
+              - /url: /libraries/1.72.0/list/
+              - generic [ref=e29] [cursor=pointer]: 
+            - generic [ref=e30]: List View
+          - generic [ref=e31]:
+            - link "" [ref=e32] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/
+              - generic [ref=e33] [cursor=pointer]: 
+            - generic [ref=e34]: Grid View
+          - generic [ref=e35]:
+            - link "" [ref=e36] [cursor=pointer]:
+              - /url: /libraries/1.72.0/categorized/
+              - generic [ref=e37] [cursor=pointer]: 
+            - generic [ref=e38]: Category View
+        - combobox [ref=e40] [cursor=pointer]:
+          - option "Filter by category" [selected]
+          - option "Algorithms"
+          - option "Concurrent"
+          - option "Containers"
+          - option "Correctness"
+          - option "Data"
+          - option "Data structures"
+          - option "Domain"
+          - option "Emulation"
+          - option "Error-handling"
+          - option "Function-objects"
+          - option "Generic"
+          - option "Image-processing"
+          - option "Inter-language"
+          - option "IO"
+          - option "Iterators"
+          - option "Math"
+          - option "Memory"
+          - option "Metaprogramming"
+          - option "Miscellaneous"
+          - option "Parsing"
+          - option "Patterns"
+          - option "Preprocessor"
+          - option "Programming"
+          - option "State"
+          - option "String"
+          - option "System"
+          - option "Workarounds"
+        - generic [ref=e41]:
+          - generic [ref=e42]:
+            - generic "Master Branch" [ref=e43]:
+              - generic [ref=e44]: M
+              - link "" [ref=e45] [cursor=pointer]:
+                - /url: /libraries/master/grid/
+                - generic [ref=e46] [cursor=pointer]: 
+            - generic "Develop Branch" [ref=e47]:
+              - generic [ref=e48]: D
+              - link "" [ref=e49] [cursor=pointer]:
+                - /url: /libraries/develop/grid/
+                - generic [ref=e50] [cursor=pointer]: 
+          - combobox [ref=e51] [cursor=pointer]:
+            - option "Latest (1.90.0)"
+            - option "1.90.0"
+            - option "1.89.0"
+            - option "1.88.0"
+            - option "1.87.0"
+            - option "1.86.0"
+            - option "1.85.0"
+            - option "1.84.0"
+            - option "1.83.0"
+            - option "1.82.0"
+            - option "1.81.0"
+            - option "1.80.0"
+            - option "1.79.0"
+            - option "1.78.0"
+            - option "1.77.0"
+            - option "1.76.0"
+            - option "1.75.0"
+            - option "1.74.0"
+            - option "1.73.0"
+            - option "1.72.0" [selected]
+            - option "1.71.0"
+            - option "1.70.0"
+            - option "1.69.0"
+            - option "1.68.0"
+            - option "1.67.0"
+            - option "1.66.0"
+            - option "1.65.1"
+            - option "1.65.0"
+            - option "1.64.0"
+            - option "1.63.0"
+            - option "1.62.0"
+            - option "1.61.0"
+            - option "1.60.0"
+            - option "1.59.0"
+            - option "1.58.0"
+            - option "1.57.0"
+            - option "1.56.0"
+            - option "1.55.0"
+            - option "1.54.0"
+            - option "1.53.0"
+            - option "1.52.0"
+            - option "1.51.0"
+            - option "1.50.0"
+            - option "1.49.0"
+            - option "1.48.0"
+            - option "1.47.0"
+            - option "1.46.1"
+            - option "1.46.0"
+            - option "1.45.0"
+            - option "1.44.0"
+            - option "1.43.0"
+            - option "1.42.0"
+            - option "1.41.0"
+            - option "1.40.0"
+            - option "1.39.0"
+            - option "1.38.0"
+            - option "1.37.0"
+            - option "1.36.0"
+            - option "1.35.0"
+            - option "1.34.1"
+            - option "1.34.0"
+            - option "1.33.1"
+            - option "1.33.0"
+            - option "1.32.0"
+            - option "1.31.0"
+            - option "1.30.2"
+            - option "1.30.1"
+            - option "1.30.0"
+            - option "1.29.0"
+            - option "1.28.0"
+            - option "1.27.0"
+            - option "1.26.0"
+            - option "1.25.1-Bgl"
+            - option "1.25.1"
+            - option "1.25.0"
+            - option "1.24.0"
+            - option "1.23.0"
+            - option "1.22.0"
+            - option "1.21.2"
+            - option "1.21.1"
+            - option "1.21.0"
+            - option "1.20.2"
+            - option "1.20.1"
+            - option "1.20.0"
+            - option "1.19.0"
+            - option "1.18.3"
+            - option "1.18.2"
+            - option "1.18.0"
+            - option "1.17.0"
+            - option "1.16.1"
+      - alert [ref=e52]:
+        - paragraph [ref=e53]:
+          - generic [ref=e54]: 
+          - text: This is an older version of Boost and was released in 2019. The
+          - link "current version" [ref=e55] [cursor=pointer]:
+            - /url: /libraries/latest/grid/
+          - text: is 1.90.0.
+      - generic [ref=e56]:
+        - generic [ref=e57] [cursor=pointer]:
+          - heading "Accumulators " [level=3] [ref=e59] [cursor=pointer]:
+            - generic [ref=e60] [cursor=pointer]:
+              - link "Accumulators" [ref=e61] [cursor=pointer]:
+                - /url: /library/1.72.0/accumulators/
+              - link "" [ref=e62] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/accumulators/index.html
+                - generic [ref=e63] [cursor=pointer]: 
+          - paragraph [ref=e65] [cursor=pointer]: Framework for incremental calculation, and collection of statistical accumulators.
+          - generic [ref=e66] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e68] [cursor=pointer]:
+              - generic [ref=e69] [cursor=pointer]: C++
+              - text: "03"
+            - link "Math" [ref=e71] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/math/
+        - generic [ref=e72] [cursor=pointer]:
+          - heading "Algorithm " [level=3] [ref=e74] [cursor=pointer]:
+            - generic [ref=e75] [cursor=pointer]:
+              - link "Algorithm" [ref=e76] [cursor=pointer]:
+                - /url: /library/1.72.0/algorithm/
+              - link "" [ref=e77] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/algorithm/index.html
+                - generic [ref=e78] [cursor=pointer]: 
+          - paragraph [ref=e80] [cursor=pointer]: A collection of useful generic algorithms.
+          - generic [ref=e81] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e83] [cursor=pointer]:
+              - generic [ref=e84] [cursor=pointer]: C++
+              - text: "03"
+            - link "Algorithms" [ref=e86] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/algorithms/
+        - generic [ref=e87] [cursor=pointer]:
+          - heading "Align " [level=3] [ref=e89] [cursor=pointer]:
+            - generic [ref=e90] [cursor=pointer]:
+              - link "Align" [ref=e91] [cursor=pointer]:
+                - /url: /library/1.72.0/align/
+              - link "" [ref=e92] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/align/index.html
+                - generic [ref=e93] [cursor=pointer]: 
+          - paragraph [ref=e95] [cursor=pointer]: Memory alignment functions, allocators, traits.
+          - generic [ref=e96] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e98] [cursor=pointer]:
+              - generic [ref=e99] [cursor=pointer]: C++
+              - text: "03"
+            - link "Memory" [ref=e101] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/memory/
+        - generic [ref=e102] [cursor=pointer]:
+          - heading "Any " [level=3] [ref=e104] [cursor=pointer]:
+            - generic [ref=e105] [cursor=pointer]:
+              - link "Any" [ref=e106] [cursor=pointer]:
+                - /url: /library/1.72.0/any/
+              - link "" [ref=e107] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/any/index.html
+                - generic [ref=e108] [cursor=pointer]: 
+          - paragraph [ref=e110] [cursor=pointer]: Safe, generic container for single values of different value types.
+          - generic [ref=e111] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e113] [cursor=pointer]:
+              - generic [ref=e114] [cursor=pointer]: C++
+              - text: "03"
+            - link "Data" [ref=e116] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/data/
+        - generic [ref=e117] [cursor=pointer]:
+          - heading "Array " [level=3] [ref=e119] [cursor=pointer]:
+            - generic [ref=e120] [cursor=pointer]:
+              - link "Array" [ref=e121] [cursor=pointer]:
+                - /url: /library/1.72.0/array/
+              - link "" [ref=e122] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/array/index.html
+                - generic [ref=e123] [cursor=pointer]: 
+          - paragraph [ref=e125] [cursor=pointer]: STL compliant container wrapper for arrays of constant size.
+          - generic [ref=e126] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e128] [cursor=pointer]:
+              - generic [ref=e129] [cursor=pointer]: C++
+              - text: "03"
+            - link "Containers" [ref=e131] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/containers/
+        - generic [ref=e132] [cursor=pointer]:
+          - heading "Asio " [level=3] [ref=e134] [cursor=pointer]:
+            - generic [ref=e135] [cursor=pointer]:
+              - link "Asio" [ref=e136] [cursor=pointer]:
+                - /url: /library/1.72.0/asio/
+              - link "" [ref=e137] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/asio/index.html
+                - generic [ref=e138] [cursor=pointer]: 
+          - paragraph [ref=e140] [cursor=pointer]: Portable networking and other low-level I/O, including sockets, timers, hostname resolution, socket iostreams, serial ports, file descriptors and Windows HANDLEs.
+          - generic [ref=e141] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e143] [cursor=pointer]:
+              - generic [ref=e144] [cursor=pointer]: C++
+              - text: "03"
+            - generic [ref=e145] [cursor=pointer]:
+              - link "Concurrent" [ref=e146] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/concurrent/
+              - text: ","
+              - link "IO" [ref=e147] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/io/
+        - generic [ref=e148] [cursor=pointer]:
+          - heading "Assert " [level=3] [ref=e150] [cursor=pointer]:
+            - generic [ref=e151] [cursor=pointer]:
+              - link "Assert" [ref=e152] [cursor=pointer]:
+                - /url: /library/1.72.0/assert/
+              - link "" [ref=e153] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/assert/index.html
+                - generic [ref=e154] [cursor=pointer]: 
+          - paragraph [ref=e156] [cursor=pointer]: Customizable assert macros.
+          - generic [ref=e157] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e159] [cursor=pointer]:
+              - generic [ref=e160] [cursor=pointer]: C++
+              - text: "03"
+            - generic [ref=e161] [cursor=pointer]:
+              - link "Correctness" [ref=e162] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/correctness/
+              - text: ","
+              - link "Error-handling" [ref=e163] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/error-handling/
+        - generic [ref=e164] [cursor=pointer]:
+          - heading "Assign " [level=3] [ref=e166] [cursor=pointer]:
+            - generic [ref=e167] [cursor=pointer]:
+              - link "Assign" [ref=e168] [cursor=pointer]:
+                - /url: /library/1.72.0/assign/
+              - link "" [ref=e169] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/assign/index.html
+                - generic [ref=e170] [cursor=pointer]: 
+          - paragraph [ref=e172] [cursor=pointer]: Filling containers with constant or generated data has never been easier.
+          - generic [ref=e173] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e175] [cursor=pointer]:
+              - generic [ref=e176] [cursor=pointer]: C++
+              - text: "03"
+            - link "IO" [ref=e178] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/io/
+        - generic [ref=e179] [cursor=pointer]:
+          - heading "Atomic " [level=3] [ref=e181] [cursor=pointer]:
+            - generic [ref=e182] [cursor=pointer]:
+              - link "Atomic" [ref=e183] [cursor=pointer]:
+                - /url: /library/1.72.0/atomic/
+              - link "" [ref=e184] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/atomic/index.html
+                - generic [ref=e185] [cursor=pointer]: 
+          - paragraph [ref=e187] [cursor=pointer]: C++11-style atomic<>.
+          - generic [ref=e188] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e190] [cursor=pointer]:
+              - generic [ref=e191] [cursor=pointer]: C++
+              - text: "03"
+            - link "Concurrent" [ref=e193] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/concurrent/
+        - generic [ref=e194] [cursor=pointer]:
+          - heading "Beast " [level=3] [ref=e196] [cursor=pointer]:
+            - generic [ref=e197] [cursor=pointer]:
+              - link "Beast" [ref=e198] [cursor=pointer]:
+                - /url: /library/1.72.0/beast/
+              - link "" [ref=e199] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/beast/index.html
+                - generic [ref=e200] [cursor=pointer]: 
+          - paragraph [ref=e202] [cursor=pointer]: Portable HTTP, WebSocket, and network operations using only C++11 and Boost.Asio
+          - generic [ref=e203] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e205] [cursor=pointer]:
+              - generic [ref=e206] [cursor=pointer]: C++
+              - text: "03"
+            - generic [ref=e207] [cursor=pointer]:
+              - link "Concurrent" [ref=e208] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/concurrent/
+              - text: ","
+              - link "IO" [ref=e209] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/io/
+        - generic [ref=e210] [cursor=pointer]:
+          - heading "Bimap " [level=3] [ref=e212] [cursor=pointer]:
+            - generic [ref=e213] [cursor=pointer]:
+              - link "Bimap" [ref=e214] [cursor=pointer]:
+                - /url: /library/1.72.0/bimap/
+              - link "" [ref=e215] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/bimap/index.html
+                - generic [ref=e216] [cursor=pointer]: 
+          - paragraph [ref=e218] [cursor=pointer]: Bidirectional maps library for C++. With Boost.Bimap you can create associative containers in which both types can be used as key.
+          - generic [ref=e219] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e221] [cursor=pointer]:
+              - generic [ref=e222] [cursor=pointer]: C++
+              - text: "03"
+            - generic [ref=e223] [cursor=pointer]:
+              - link "Containers" [ref=e224] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/containers/
+              - text: ","
+              - link "Data" [ref=e225] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/data/
+        - generic [ref=e226] [cursor=pointer]:
+          - heading "Bind " [level=3] [ref=e228] [cursor=pointer]:
+            - generic [ref=e229] [cursor=pointer]:
+              - link "Bind" [ref=e230] [cursor=pointer]:
+                - /url: /library/1.72.0/bind/
+              - link "" [ref=e231] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/bind/index.html
+                - generic [ref=e232] [cursor=pointer]: 
+          - paragraph [ref=e234] [cursor=pointer]: boost::bind is a generalization of the standard functions std::bind1st and std::bind2nd. It supports arbitrary function objects, functions, function pointers, and member function pointers, and is able to bind any argument to a specific value or route input arguments into arbitrary positions.
+          - generic [ref=e235] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e237] [cursor=pointer]:
+              - generic [ref=e238] [cursor=pointer]: C++
+              - text: "03"
+            - link "Function-objects" [ref=e240] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/function-objects/
+        - generic [ref=e241] [cursor=pointer]:
+          - heading "CallableTraits " [level=3] [ref=e243] [cursor=pointer]:
+            - generic [ref=e244] [cursor=pointer]:
+              - link "CallableTraits" [ref=e245] [cursor=pointer]:
+                - /url: /library/1.72.0/callable_traits/
+              - link "" [ref=e246] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/callable_traits/index.html
+                - generic [ref=e247] [cursor=pointer]: 
+          - paragraph [ref=e249] [cursor=pointer]: A spiritual successor to Boost.FunctionTypes, Boost.CallableTraits is a header-only C++11 library for the compile-time inspection and manipulation of all 'callable' types. Additional support for C++17 features.
+          - generic [ref=e250] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e252] [cursor=pointer]:
+              - generic [ref=e253] [cursor=pointer]: C++
+              - text: "03"
+            - link "Metaprogramming" [ref=e255] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/metaprogramming/
+        - generic [ref=e256] [cursor=pointer]:
+          - heading "Call Traits " [level=3] [ref=e258] [cursor=pointer]:
+            - generic [ref=e259] [cursor=pointer]:
+              - link "Call Traits" [ref=e260] [cursor=pointer]:
+                - /url: /library/1.72.0/utilitycall_traits/
+              - link "" [ref=e261] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/utility/call_traits.htm
+                - generic [ref=e262] [cursor=pointer]: 
+          - paragraph [ref=e264] [cursor=pointer]: Defines types for passing parameters.
+          - generic [ref=e265] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e267] [cursor=pointer]:
+              - generic [ref=e268] [cursor=pointer]: C++
+              - text: "03"
+            - link "Generic" [ref=e270] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/generic/
+        - generic [ref=e271] [cursor=pointer]:
+          - heading "Chrono " [level=3] [ref=e273] [cursor=pointer]:
+            - generic [ref=e274] [cursor=pointer]:
+              - link "Chrono" [ref=e275] [cursor=pointer]:
+                - /url: /library/1.72.0/chrono/
+              - link "" [ref=e276] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/chrono/index.html
+                - generic [ref=e277] [cursor=pointer]: 
+          - paragraph [ref=e279] [cursor=pointer]: Useful time utilities. C++11.
+          - generic [ref=e280] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e282] [cursor=pointer]:
+              - generic [ref=e283] [cursor=pointer]: C++
+              - text: "03"
+            - generic [ref=e284] [cursor=pointer]:
+              - link "Domain" [ref=e285] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/domain/
+              - text: ","
+              - link "System" [ref=e286] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/system/
+        - generic [ref=e287] [cursor=pointer]:
+          - heading "Circular Buffer " [level=3] [ref=e289] [cursor=pointer]:
+            - generic [ref=e290] [cursor=pointer]:
+              - link "Circular Buffer" [ref=e291] [cursor=pointer]:
+                - /url: /library/1.72.0/circular_buffer/
+              - link "" [ref=e292] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/circular_buffer/index.html
+                - generic [ref=e293] [cursor=pointer]: 
+          - paragraph [ref=e295] [cursor=pointer]: A STL compliant container also known as ring or cyclic buffer.
+          - generic [ref=e296] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e298] [cursor=pointer]:
+              - generic [ref=e299] [cursor=pointer]: C++
+              - text: "03"
+            - link "Containers" [ref=e301] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/containers/
+        - generic [ref=e302] [cursor=pointer]:
+          - heading "Compatibility " [level=3] [ref=e304] [cursor=pointer]:
+            - generic [ref=e305] [cursor=pointer]:
+              - link "Compatibility" [ref=e306] [cursor=pointer]:
+                - /url: /library/1.72.0/compatibility/
+              - link "" [ref=e307] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/compatibility/index.html
+                - generic [ref=e308] [cursor=pointer]: 
+          - paragraph [ref=e310] [cursor=pointer]: Help for non-conforming standard libraries.
+          - generic [ref=e311] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e313] [cursor=pointer]:
+              - generic [ref=e314] [cursor=pointer]: C++
+              - text: "03"
+            - link "Workarounds" [ref=e316] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/workarounds/
+        - generic [ref=e317] [cursor=pointer]:
+          - heading "Compressed Pair " [level=3] [ref=e319] [cursor=pointer]:
+            - generic [ref=e320] [cursor=pointer]:
+              - link "Compressed Pair" [ref=e321] [cursor=pointer]:
+                - /url: /library/1.72.0/utilitycompressed_pair/
+              - link "" [ref=e322] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/utility/compressed_pair.htm
+                - generic [ref=e323] [cursor=pointer]: 
+          - paragraph [ref=e325] [cursor=pointer]: Empty member optimization.
+          - generic [ref=e326] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e328] [cursor=pointer]:
+              - generic [ref=e329] [cursor=pointer]: C++
+              - text: "03"
+            - generic [ref=e330] [cursor=pointer]:
+              - link "Data" [ref=e331] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/data/
+              - text: ","
+              - link "Patterns" [ref=e332] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/patterns/
+        - generic [ref=e333] [cursor=pointer]:
+          - heading "Compute " [level=3] [ref=e335] [cursor=pointer]:
+            - generic [ref=e336] [cursor=pointer]:
+              - link "Compute" [ref=e337] [cursor=pointer]:
+                - /url: /library/1.72.0/compute/
+              - link "" [ref=e338] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/compute/index.html
+                - generic [ref=e339] [cursor=pointer]: 
+          - paragraph [ref=e341] [cursor=pointer]: Parallel/GPU-computing library
+          - generic [ref=e342] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e344] [cursor=pointer]:
+              - generic [ref=e345] [cursor=pointer]: C++
+              - text: "03"
+            - link "Concurrent" [ref=e347] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/concurrent/
+        - generic [ref=e348] [cursor=pointer]:
+          - heading "Concept Check " [level=3] [ref=e350] [cursor=pointer]:
+            - generic [ref=e351] [cursor=pointer]:
+              - link "Concept Check" [ref=e352] [cursor=pointer]:
+                - /url: /library/1.72.0/concept_check/
+              - link "" [ref=e353] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/concept_check/index.html
+                - generic [ref=e354] [cursor=pointer]: 
+          - paragraph [ref=e356] [cursor=pointer]: Tools for generic programming.
+          - generic [ref=e357] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e359] [cursor=pointer]:
+              - generic [ref=e360] [cursor=pointer]: C++
+              - text: "03"
+            - generic [ref=e361] [cursor=pointer]:
+              - link "Correctness" [ref=e362] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/correctness/
+              - text: ","
+              - link "Generic" [ref=e363] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/generic/
+        - generic [ref=e364] [cursor=pointer]:
+          - heading "Config " [level=3] [ref=e366] [cursor=pointer]:
+            - generic [ref=e367] [cursor=pointer]:
+              - link "Config" [ref=e368] [cursor=pointer]:
+                - /url: /library/1.72.0/config/
+              - link "" [ref=e369] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/config/config.htm
+                - generic [ref=e370] [cursor=pointer]: 
+          - paragraph [ref=e372] [cursor=pointer]: Helps Boost library developers adapt to compiler idiosyncrasies; not intended for library users.
+          - generic [ref=e373] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e375] [cursor=pointer]:
+              - generic [ref=e376] [cursor=pointer]: C++
+              - text: "03"
+            - link "Workarounds" [ref=e378] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/workarounds/
+        - generic [ref=e379] [cursor=pointer]:
+          - heading "Container " [level=3] [ref=e381] [cursor=pointer]:
+            - generic [ref=e382] [cursor=pointer]:
+              - link "Container" [ref=e383] [cursor=pointer]:
+                - /url: /library/1.72.0/container/
+              - link "" [ref=e384] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/container/index.html
+                - generic [ref=e385] [cursor=pointer]: 
+          - paragraph [ref=e387] [cursor=pointer]: Standard library containers and extensions.
+          - generic [ref=e388] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e390] [cursor=pointer]:
+              - generic [ref=e391] [cursor=pointer]: C++
+              - text: "03"
+            - generic [ref=e392] [cursor=pointer]:
+              - link "Containers" [ref=e393] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/containers/
+              - text: ","
+              - link "Data" [ref=e394] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/data/
+        - generic [ref=e395] [cursor=pointer]:
+          - heading "Container Hash " [level=3] [ref=e397] [cursor=pointer]:
+            - generic [ref=e398] [cursor=pointer]:
+              - link "Container Hash" [ref=e399] [cursor=pointer]:
+                - /url: /library/1.72.0/functionalhash/
+              - link "" [ref=e400] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/container_hash/index.html
+                - generic [ref=e401] [cursor=pointer]: 
+          - paragraph [ref=e403] [cursor=pointer]: An STL-compatible hash function object that can be extended to hash user defined types.
+          - generic "C++ Version 03 or Later" [ref=e406] [cursor=pointer]:
+            - generic [ref=e407] [cursor=pointer]: C++
+            - text: "03"
+        - generic [ref=e409] [cursor=pointer]:
+          - heading "Context " [level=3] [ref=e411] [cursor=pointer]:
+            - generic [ref=e412] [cursor=pointer]:
+              - link "Context" [ref=e413] [cursor=pointer]:
+                - /url: /library/1.72.0/context/
+              - link "" [ref=e414] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/context/index.html
+                - generic [ref=e415] [cursor=pointer]: 
+          - paragraph [ref=e417] [cursor=pointer]: (C++11) Context switching library.
+          - generic [ref=e418] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e420] [cursor=pointer]:
+              - generic [ref=e421] [cursor=pointer]: C++
+              - text: "03"
+            - generic [ref=e422] [cursor=pointer]:
+              - link "Concurrent" [ref=e423] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/concurrent/
+              - text: ","
+              - link "System" [ref=e424] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/system/
+        - generic [ref=e425] [cursor=pointer]:
+          - heading "Contract " [level=3] [ref=e427] [cursor=pointer]:
+            - generic [ref=e428] [cursor=pointer]:
+              - link "Contract" [ref=e429] [cursor=pointer]:
+                - /url: /library/1.72.0/contract/
+              - link "" [ref=e430] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/contract/index.html
+                - generic [ref=e431] [cursor=pointer]: 
+          - paragraph [ref=e433] [cursor=pointer]: "Contract programming for C++. All contract programming features are supported: Subcontracting, class invariants, postconditions (with old and return values), preconditions, customizable actions on assertion failure (e.g., terminate or throw), optional compilation and checking of assertions, etc."
+          - generic [ref=e434] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e436] [cursor=pointer]:
+              - generic [ref=e437] [cursor=pointer]: C++
+              - text: "03"
+            - link "Correctness" [ref=e439] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/correctness/
+        - generic [ref=e440] [cursor=pointer]:
+          - heading "Conversion " [level=3] [ref=e442] [cursor=pointer]:
+            - generic [ref=e443] [cursor=pointer]:
+              - link "Conversion" [ref=e444] [cursor=pointer]:
+                - /url: /library/1.72.0/conversion/
+              - link "" [ref=e445] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/conversion/index.html
+                - generic [ref=e446] [cursor=pointer]: 
+          - paragraph [ref=e448] [cursor=pointer]: Polymorphic casts.
+          - generic [ref=e449] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e451] [cursor=pointer]:
+              - generic [ref=e452] [cursor=pointer]: C++
+              - text: "03"
+            - link "Miscellaneous" [ref=e454] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/miscellaneous/
+        - generic [ref=e455] [cursor=pointer]:
+          - heading "Convert " [level=3] [ref=e457] [cursor=pointer]:
+            - generic [ref=e458] [cursor=pointer]:
+              - link "Convert" [ref=e459] [cursor=pointer]:
+                - /url: /library/1.72.0/convert/
+              - link "" [ref=e460] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/convert/index.html
+                - generic [ref=e461] [cursor=pointer]: 
+          - paragraph [ref=e463] [cursor=pointer]: An extendible and configurable type-conversion framework.
+          - generic [ref=e464] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e466] [cursor=pointer]:
+              - generic [ref=e467] [cursor=pointer]: C++
+              - text: "03"
+            - generic [ref=e468] [cursor=pointer]:
+              - link "Miscellaneous" [ref=e469] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/miscellaneous/
+              - text: ","
+              - link "String" [ref=e470] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/string/
+        - generic [ref=e471] [cursor=pointer]:
+          - heading "Core " [level=3] [ref=e473] [cursor=pointer]:
+            - generic [ref=e474] [cursor=pointer]:
+              - link "Core" [ref=e475] [cursor=pointer]:
+                - /url: /library/1.72.0/core/
+              - link "" [ref=e476] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/core/index.html
+                - generic [ref=e477] [cursor=pointer]: 
+          - paragraph [ref=e479] [cursor=pointer]: A collection of simple core utilities with minimal dependencies.
+          - generic [ref=e480] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e482] [cursor=pointer]:
+              - generic [ref=e483] [cursor=pointer]: C++
+              - text: "03"
+            - link "Miscellaneous" [ref=e485] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/miscellaneous/
+        - generic [ref=e486] [cursor=pointer]:
+          - heading "Coroutine " [level=3] [ref=e488] [cursor=pointer]:
+            - generic [ref=e489] [cursor=pointer]:
+              - link "Coroutine" [ref=e490] [cursor=pointer]:
+                - /url: /library/1.72.0/coroutine/
+              - link "" [ref=e491] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/coroutine/index.html
+                - generic [ref=e492] [cursor=pointer]: 
+          - paragraph [ref=e494] [cursor=pointer]: Coroutine library.
+          - generic [ref=e495] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e497] [cursor=pointer]:
+              - generic [ref=e498] [cursor=pointer]: C++
+              - text: "03"
+            - link "Concurrent" [ref=e500] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/concurrent/
+        - generic [ref=e501] [cursor=pointer]:
+          - heading "Coroutine2 " [level=3] [ref=e503] [cursor=pointer]:
+            - generic [ref=e504] [cursor=pointer]:
+              - link "Coroutine2" [ref=e505] [cursor=pointer]:
+                - /url: /library/1.72.0/coroutine2/
+              - link "" [ref=e506] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/coroutine2/index.html
+                - generic [ref=e507] [cursor=pointer]: 
+          - paragraph [ref=e509] [cursor=pointer]: (C++11) Coroutine library.
+          - generic [ref=e510] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e512] [cursor=pointer]:
+              - generic [ref=e513] [cursor=pointer]: C++
+              - text: "03"
+            - link "Concurrent" [ref=e515] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/concurrent/
+        - generic [ref=e516] [cursor=pointer]:
+          - heading "CRC " [level=3] [ref=e518] [cursor=pointer]:
+            - generic [ref=e519] [cursor=pointer]:
+              - link "CRC" [ref=e520] [cursor=pointer]:
+                - /url: /library/1.72.0/crc/
+              - link "" [ref=e521] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/crc/index.html
+                - generic [ref=e522] [cursor=pointer]: 
+          - paragraph [ref=e524] [cursor=pointer]: The Boost CRC Library provides two implementations of CRC (cyclic redundancy code) computation objects and two implementations of CRC computation functions. The implementations are template-based.
+          - generic [ref=e525] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e527] [cursor=pointer]:
+              - generic [ref=e528] [cursor=pointer]: C++
+              - text: "03"
+            - link "Domain" [ref=e530] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/domain/
+        - generic [ref=e531] [cursor=pointer]:
+          - heading "Date Time " [level=3] [ref=e533] [cursor=pointer]:
+            - generic [ref=e534] [cursor=pointer]:
+              - link "Date Time" [ref=e535] [cursor=pointer]:
+                - /url: /library/1.72.0/date_time/
+              - link "" [ref=e536] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/date_time/index.html
+                - generic [ref=e537] [cursor=pointer]: 
+          - paragraph [ref=e539] [cursor=pointer]: A set of date-time libraries based on generic programming concepts.
+          - generic [ref=e540] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e542] [cursor=pointer]:
+              - generic [ref=e543] [cursor=pointer]: C++
+              - text: "03"
+            - generic [ref=e544] [cursor=pointer]:
+              - link "Domain" [ref=e545] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/domain/
+              - text: ","
+              - link "System" [ref=e546] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/system/
+        - generic [ref=e547] [cursor=pointer]:
+          - heading "Detail " [level=3] [ref=e549] [cursor=pointer]:
+            - generic [ref=e550] [cursor=pointer]:
+              - link "Detail" [ref=e551] [cursor=pointer]:
+                - /url: /library/1.72.0/detail/
+              - link "" [ref=e552] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/detail/doc/html/index.html
+                - generic [ref=e553] [cursor=pointer]: 
+          - paragraph [ref=e555] [cursor=pointer]: This library contains a set of header only utilities used internally by Boost C++ Libraries to facilitate their implementation.
+          - generic [ref=e556] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e558] [cursor=pointer]:
+              - generic [ref=e559] [cursor=pointer]: C++
+              - text: "03"
+            - link "Miscellaneous" [ref=e561] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/miscellaneous/
+        - generic [ref=e562] [cursor=pointer]:
+          - heading "DLL " [level=3] [ref=e564] [cursor=pointer]:
+            - generic [ref=e565] [cursor=pointer]:
+              - link "DLL" [ref=e566] [cursor=pointer]:
+                - /url: /library/1.72.0/dll/
+              - link "" [ref=e567] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/dll/index.html
+                - generic [ref=e568] [cursor=pointer]: 
+          - paragraph [ref=e570] [cursor=pointer]: Library for comfortable work with DLL and DSO.
+          - generic [ref=e571] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e573] [cursor=pointer]:
+              - generic [ref=e574] [cursor=pointer]: C++
+              - text: "03"
+            - link "System" [ref=e576] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/system/
+        - generic [ref=e577] [cursor=pointer]:
+          - heading "Dynamic Bitset " [level=3] [ref=e579] [cursor=pointer]:
+            - generic [ref=e580] [cursor=pointer]:
+              - link "Dynamic Bitset" [ref=e581] [cursor=pointer]:
+                - /url: /library/1.72.0/dynamic_bitset/
+              - link "" [ref=e582] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/dynamic_bitset/dynamic_bitset.html
+                - generic [ref=e583] [cursor=pointer]: 
+          - paragraph [ref=e585] [cursor=pointer]: The dynamic_bitset class represents a set of bits. It provides accesses to the value of individual bits via an operator[] and provides all of the bitwise operators that one can apply to builtin integers, such as operator& and operator<<. The number of bits in the set is specified at runtime via a parameter to the constructor of the dynamic_bitset.
+          - generic [ref=e586] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e588] [cursor=pointer]:
+              - generic [ref=e589] [cursor=pointer]: C++
+              - text: "03"
+            - link "Data structures" [ref=e591] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/data-structures/
+        - generic [ref=e592] [cursor=pointer]:
+          - heading "Enable If " [level=3] [ref=e594] [cursor=pointer]:
+            - generic [ref=e595] [cursor=pointer]:
+              - link "Enable If" [ref=e596] [cursor=pointer]:
+                - /url: /library/1.72.0/utilityenable_if/
+              - link "" [ref=e597] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/core/doc/html/core/enable_if.html
+                - generic [ref=e598] [cursor=pointer]: 
+          - paragraph [ref=e600] [cursor=pointer]: Selective inclusion of function template overloads.
+          - generic [ref=e601] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e603] [cursor=pointer]:
+              - generic [ref=e604] [cursor=pointer]: C++
+              - text: "03"
+            - link "Generic" [ref=e606] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/generic/
+        - generic [ref=e607] [cursor=pointer]:
+          - heading "Endian " [level=3] [ref=e609] [cursor=pointer]:
+            - generic [ref=e610] [cursor=pointer]:
+              - link "Endian" [ref=e611] [cursor=pointer]:
+                - /url: /library/1.72.0/endian/
+              - link "" [ref=e612] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/endian/index.html
+                - generic [ref=e613] [cursor=pointer]: 
+          - paragraph [ref=e615] [cursor=pointer]: Types and conversion functions for correct byte ordering and more regardless of processor endianness.
+          - generic [ref=e616] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e618] [cursor=pointer]:
+              - generic [ref=e619] [cursor=pointer]: C++
+              - text: "03"
+            - generic [ref=e620] [cursor=pointer]:
+              - link "IO" [ref=e621] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/io/
+              - text: ","
+              - link "Math" [ref=e622] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/math/
+              - text: ","
+              - link "Miscellaneous" [ref=e623] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/miscellaneous/
+        - generic [ref=e624] [cursor=pointer]:
+          - heading "Exception " [level=3] [ref=e626] [cursor=pointer]:
+            - generic [ref=e627] [cursor=pointer]:
+              - link "Exception" [ref=e628] [cursor=pointer]:
+                - /url: /library/1.72.0/exception/
+              - link "" [ref=e629] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/exception/doc/boost-exception.html
+                - generic [ref=e630] [cursor=pointer]: 
+          - paragraph [ref=e632] [cursor=pointer]: The Boost Exception library supports transporting of arbitrary data in exception objects, and transporting of exceptions between threads.
+          - generic [ref=e633] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e635] [cursor=pointer]:
+              - generic [ref=e636] [cursor=pointer]: C++
+              - text: "03"
+            - generic [ref=e637] [cursor=pointer]:
+              - link "Error-handling" [ref=e638] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/error-handling/
+              - text: ","
+              - link "Emulation" [ref=e639] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/emulation/
+        - generic [ref=e640] [cursor=pointer]:
+          - heading "Fiber " [level=3] [ref=e642] [cursor=pointer]:
+            - generic [ref=e643] [cursor=pointer]:
+              - link "Fiber" [ref=e644] [cursor=pointer]:
+                - /url: /library/1.72.0/fiber/
+              - link "" [ref=e645] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/fiber/index.html
+                - generic [ref=e646] [cursor=pointer]: 
+          - paragraph [ref=e648] [cursor=pointer]: (C++11) Userland threads library.
+          - generic [ref=e649] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e651] [cursor=pointer]:
+              - generic [ref=e652] [cursor=pointer]: C++
+              - text: "03"
+            - generic [ref=e653] [cursor=pointer]:
+              - link "Concurrent" [ref=e654] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/concurrent/
+              - text: ","
+              - link "System" [ref=e655] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/system/
+        - generic [ref=e656] [cursor=pointer]:
+          - heading "Filesystem " [level=3] [ref=e658] [cursor=pointer]:
+            - generic [ref=e659] [cursor=pointer]:
+              - link "Filesystem" [ref=e660] [cursor=pointer]:
+                - /url: /library/1.72.0/filesystem/
+              - link "" [ref=e661] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/filesystem/index.html
+                - generic [ref=e662] [cursor=pointer]: 
+          - paragraph [ref=e664] [cursor=pointer]: The Boost Filesystem Library provides portable facilities to query and manipulate paths, files, and directories.
+          - generic [ref=e665] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e667] [cursor=pointer]:
+              - generic [ref=e668] [cursor=pointer]: C++
+              - text: "03"
+            - link "System" [ref=e670] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/system/
+        - generic [ref=e671] [cursor=pointer]:
+          - heading "Flyweight " [level=3] [ref=e673] [cursor=pointer]:
+            - generic [ref=e674] [cursor=pointer]:
+              - link "Flyweight" [ref=e675] [cursor=pointer]:
+                - /url: /library/1.72.0/flyweight/
+              - link "" [ref=e676] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/flyweight/index.html
+                - generic [ref=e677] [cursor=pointer]: 
+          - paragraph [ref=e679] [cursor=pointer]: Design pattern to manage large quantities of highly redundant objects.
+          - generic [ref=e680] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e682] [cursor=pointer]:
+              - generic [ref=e683] [cursor=pointer]: C++
+              - text: "03"
+            - link "Patterns" [ref=e685] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/patterns/
+        - generic [ref=e686] [cursor=pointer]:
+          - heading "Foreach " [level=3] [ref=e688] [cursor=pointer]:
+            - generic [ref=e689] [cursor=pointer]:
+              - link "Foreach" [ref=e690] [cursor=pointer]:
+                - /url: /library/1.72.0/foreach/
+              - link "" [ref=e691] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/foreach/index.html
+                - generic [ref=e692] [cursor=pointer]: 
+          - paragraph [ref=e694] [cursor=pointer]: In C++, writing a loop that iterates over a sequence is tedious. We can either use iterators, which requires a considerable amount of boiler-plate, or we can use the std::for_each() algorithm and move our loop body into a predicate, which requires no less boiler-plate and forces us to move our logic far from where it will be used. In contrast, some other languages, like Perl, provide a dedicated "foreach" construct that automates this process. BOOST_FOREACH is just such a construct for C++. It iterates over sequences for us, freeing us from having to deal directly with iterators or write predicates.
+          - generic [ref=e695] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e697] [cursor=pointer]:
+              - generic [ref=e698] [cursor=pointer]: C++
+              - text: "03"
+            - generic [ref=e699] [cursor=pointer]:
+              - link "Algorithms" [ref=e700] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/algorithms/
+              - text: ","
+              - link "Emulation" [ref=e701] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/emulation/
+        - generic [ref=e702] [cursor=pointer]:
+          - heading "Format " [level=3] [ref=e704] [cursor=pointer]:
+            - generic [ref=e705] [cursor=pointer]:
+              - link "Format" [ref=e706] [cursor=pointer]:
+                - /url: /library/1.72.0/format/
+              - link "" [ref=e707] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/format/index.html
+                - generic [ref=e708] [cursor=pointer]: 
+          - paragraph [ref=e710] [cursor=pointer]: The format library provides a type-safe mechanism for formatting arguments according to a printf-like format-string.
+          - generic [ref=e711] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e713] [cursor=pointer]:
+              - generic [ref=e714] [cursor=pointer]: C++
+              - text: "03"
+            - generic [ref=e715] [cursor=pointer]:
+              - link "IO" [ref=e716] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/io/
+              - text: ","
+              - link "String" [ref=e717] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/string/
+        - generic [ref=e718] [cursor=pointer]:
+          - heading "Function " [level=3] [ref=e720] [cursor=pointer]:
+            - generic [ref=e721] [cursor=pointer]:
+              - link "Function" [ref=e722] [cursor=pointer]:
+                - /url: /library/1.72.0/function/
+              - link "" [ref=e723] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/function/index.html
+                - generic [ref=e724] [cursor=pointer]: 
+          - paragraph [ref=e726] [cursor=pointer]: Function object wrappers for deferred calls or callbacks.
+          - generic [ref=e727] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e729] [cursor=pointer]:
+              - generic [ref=e730] [cursor=pointer]: C++
+              - text: "03"
+            - generic [ref=e731] [cursor=pointer]:
+              - link "Function-objects" [ref=e732] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/function-objects/
+              - text: ","
+              - link "Programming" [ref=e733] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/programming/
+        - generic [ref=e734] [cursor=pointer]:
+          - heading "Functional " [level=3] [ref=e736] [cursor=pointer]:
+            - generic [ref=e737] [cursor=pointer]:
+              - link "Functional" [ref=e738] [cursor=pointer]:
+                - /url: /library/1.72.0/functional/
+              - link "" [ref=e739] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/functional/index.html
+                - generic [ref=e740] [cursor=pointer]: 
+          - paragraph [ref=e742] [cursor=pointer]: The Boost.Function library contains a family of class templates that are function object wrappers.
+          - generic [ref=e743] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e745] [cursor=pointer]:
+              - generic [ref=e746] [cursor=pointer]: C++
+              - text: "03"
+            - link "Function-objects" [ref=e748] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/function-objects/
+        - generic [ref=e749] [cursor=pointer]:
+          - heading "Functional/Factory " [level=3] [ref=e751] [cursor=pointer]:
+            - generic [ref=e752] [cursor=pointer]:
+              - link "Functional/Factory" [ref=e753] [cursor=pointer]:
+                - /url: /library/1.72.0/functionalfactory/
+              - link "" [ref=e754] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/functional/factory/index.html
+                - generic [ref=e755] [cursor=pointer]: 
+          - paragraph [ref=e757] [cursor=pointer]: Function object templates for dynamic and static object creation
+          - generic [ref=e758] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e760] [cursor=pointer]:
+              - generic [ref=e761] [cursor=pointer]: C++
+              - text: "03"
+            - link "Function-objects" [ref=e763] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/function-objects/
+        - generic [ref=e764] [cursor=pointer]:
+          - heading "Functional/Forward " [level=3] [ref=e766] [cursor=pointer]:
+            - generic [ref=e767] [cursor=pointer]:
+              - link "Functional/Forward" [ref=e768] [cursor=pointer]:
+                - /url: /library/1.72.0/functionalforward/
+              - link "" [ref=e769] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/functional/forward/index.html
+                - generic [ref=e770] [cursor=pointer]: 
+          - paragraph [ref=e772] [cursor=pointer]: Adapters to allow generic function objects to accept arbitrary arguments
+          - generic [ref=e773] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e775] [cursor=pointer]:
+              - generic [ref=e776] [cursor=pointer]: C++
+              - text: "03"
+            - link "Function-objects" [ref=e778] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/function-objects/
+        - generic [ref=e779] [cursor=pointer]:
+          - heading "Functional/Overloaded Function " [level=3] [ref=e781] [cursor=pointer]:
+            - generic [ref=e782] [cursor=pointer]:
+              - link "Functional/Overloaded Function" [ref=e783] [cursor=pointer]:
+                - /url: /library/1.72.0/functionaloverloaded_function/
+              - link "" [ref=e784] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/functional/overloaded_function/index.html
+                - generic [ref=e785] [cursor=pointer]: 
+          - paragraph [ref=e787] [cursor=pointer]: Overload different functions into a single function object.
+          - generic [ref=e788] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e790] [cursor=pointer]:
+              - generic [ref=e791] [cursor=pointer]: C++
+              - text: "03"
+            - link "Function-objects" [ref=e793] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/function-objects/
+        - generic [ref=e794] [cursor=pointer]:
+          - heading "Function Types " [level=3] [ref=e796] [cursor=pointer]:
+            - generic [ref=e797] [cursor=pointer]:
+              - link "Function Types" [ref=e798] [cursor=pointer]:
+                - /url: /library/1.72.0/function_types/
+              - link "" [ref=e799] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/function_types/index.html
+                - generic [ref=e800] [cursor=pointer]: 
+          - paragraph [ref=e802] [cursor=pointer]: Boost.FunctionTypes provides functionality to classify, decompose and synthesize function, function pointer, function reference and pointer to member types.
+          - generic [ref=e803] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e805] [cursor=pointer]:
+              - generic [ref=e806] [cursor=pointer]: C++
+              - text: "03"
+            - generic [ref=e807] [cursor=pointer]:
+              - link "Generic" [ref=e808] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/generic/
+              - text: ","
+              - link "Metaprogramming" [ref=e809] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/metaprogramming/
+        - generic [ref=e810] [cursor=pointer]:
+          - heading "Fusion " [level=3] [ref=e812] [cursor=pointer]:
+            - generic [ref=e813] [cursor=pointer]:
+              - link "Fusion" [ref=e814] [cursor=pointer]:
+                - /url: /library/1.72.0/fusion/
+              - link "" [ref=e815] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/fusion/doc/html/index.html
+                - generic [ref=e816] [cursor=pointer]: 
+          - paragraph [ref=e818] [cursor=pointer]: Library for working with tuples, including various containers, algorithms, etc.
+          - generic [ref=e819] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e821] [cursor=pointer]:
+              - generic [ref=e822] [cursor=pointer]: C++
+              - text: "03"
+            - generic [ref=e823] [cursor=pointer]:
+              - link "Data" [ref=e824] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/data/
+              - text: ","
+              - link "Metaprogramming" [ref=e825] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/metaprogramming/
+        - generic [ref=e826] [cursor=pointer]:
+          - heading "Geometry " [level=3] [ref=e828] [cursor=pointer]:
+            - generic [ref=e829] [cursor=pointer]:
+              - link "Geometry" [ref=e830] [cursor=pointer]:
+                - /url: /library/1.72.0/geometry/
+              - link "" [ref=e831] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/geometry/index.html
+                - generic [ref=e832] [cursor=pointer]: 
+          - paragraph [ref=e834] [cursor=pointer]: The Boost.Geometry library provides geometric algorithms, primitives and spatial index.
+          - generic [ref=e835] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e837] [cursor=pointer]:
+              - generic [ref=e838] [cursor=pointer]: C++
+              - text: "03"
+            - generic [ref=e839] [cursor=pointer]:
+              - link "Algorithms" [ref=e840] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/algorithms/
+              - text: ","
+              - link "Data" [ref=e841] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/data/
+              - text: ","
+              - link "Math" [ref=e842] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/math/
+        - generic [ref=e843] [cursor=pointer]:
+          - heading "GIL " [level=3] [ref=e845] [cursor=pointer]:
+            - generic [ref=e846] [cursor=pointer]:
+              - link "GIL" [ref=e847] [cursor=pointer]:
+                - /url: /library/1.72.0/gil/
+              - link "" [ref=e848] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/gil/index.html
+                - generic [ref=e849] [cursor=pointer]: 
+          - paragraph [ref=e851] [cursor=pointer]: (C++11) Generic Image Library
+          - generic [ref=e852] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e854] [cursor=pointer]:
+              - generic [ref=e855] [cursor=pointer]: C++
+              - text: "03"
+            - generic [ref=e856] [cursor=pointer]:
+              - link "Algorithms" [ref=e857] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/algorithms/
+              - text: ","
+              - link "Containers" [ref=e858] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/containers/
+              - text: ","
+              - link "Generic" [ref=e859] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/generic/
+              - text: ","
+              - link "Image-processing" [ref=e860] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/image-processing/
+              - text: ","
+              - link "Iterators" [ref=e861] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/iterators/
+        - generic [ref=e862] [cursor=pointer]:
+          - heading "Graph " [level=3] [ref=e864] [cursor=pointer]:
+            - generic [ref=e865] [cursor=pointer]:
+              - link "Graph" [ref=e866] [cursor=pointer]:
+                - /url: /library/1.72.0/graph/
+              - link "" [ref=e867] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/graph/index.html
+                - generic [ref=e868] [cursor=pointer]: 
+          - paragraph [ref=e870] [cursor=pointer]: The BGL graph interface and graph components are generic, in the same sense as the Standard Template Library (STL).
+          - generic [ref=e871] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e873] [cursor=pointer]:
+              - generic [ref=e874] [cursor=pointer]: C++
+              - text: "03"
+            - generic [ref=e875] [cursor=pointer]:
+              - link "Algorithms" [ref=e876] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/algorithms/
+              - text: ","
+              - link "Containers" [ref=e877] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/containers/
+              - text: ","
+              - link "Iterators" [ref=e878] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/iterators/
+        - generic [ref=e879] [cursor=pointer]:
+          - heading "GraphParallel " [level=3] [ref=e881] [cursor=pointer]:
+            - generic [ref=e882] [cursor=pointer]:
+              - link "GraphParallel" [ref=e883] [cursor=pointer]:
+                - /url: /library/1.72.0/graph_parallel/
+              - link "" [ref=e884] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/graph_parallel/index.html
+                - generic [ref=e885] [cursor=pointer]: 
+          - paragraph [ref=e887] [cursor=pointer]: The PBGL graph interface and graph components are generic, in the same sense as the the Standard Template Library (STL).
+          - generic [ref=e888] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e890] [cursor=pointer]:
+              - generic [ref=e891] [cursor=pointer]: C++
+              - text: "03"
+            - generic [ref=e892] [cursor=pointer]:
+              - link "Algorithms" [ref=e893] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/algorithms/
+              - text: ","
+              - link "Containers" [ref=e894] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/containers/
+              - text: ","
+              - link "Iterators" [ref=e895] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/iterators/
+        - generic [ref=e896] [cursor=pointer]:
+          - heading "Hana " [level=3] [ref=e898] [cursor=pointer]:
+            - generic [ref=e899] [cursor=pointer]:
+              - link "Hana" [ref=e900] [cursor=pointer]:
+                - /url: /library/1.72.0/hana/
+              - link "" [ref=e901] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/hana/index.html
+                - generic [ref=e902] [cursor=pointer]: 
+          - paragraph [ref=e904] [cursor=pointer]: A modern C++ metaprogramming library. It provides high level algorithms to manipulate heterogeneous sequences, allows writing type-level computations with a natural syntax, provides tools to introspect user-defined types and much more.
+          - generic [ref=e905] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e907] [cursor=pointer]:
+              - generic [ref=e908] [cursor=pointer]: C++
+              - text: "03"
+            - link "Metaprogramming" [ref=e910] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/metaprogramming/
+        - generic [ref=e911] [cursor=pointer]:
+          - heading "Heap " [level=3] [ref=e913] [cursor=pointer]:
+            - generic [ref=e914] [cursor=pointer]:
+              - link "Heap" [ref=e915] [cursor=pointer]:
+                - /url: /library/1.72.0/heap/
+              - link "" [ref=e916] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/heap/index.html
+                - generic [ref=e917] [cursor=pointer]: 
+          - paragraph [ref=e919] [cursor=pointer]: Priority queue data structures.
+          - generic [ref=e920] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e922] [cursor=pointer]:
+              - generic [ref=e923] [cursor=pointer]: C++
+              - text: "03"
+            - link "Data" [ref=e925] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/data/
+        - generic [ref=e926] [cursor=pointer]:
+          - heading "Histogram " [level=3] [ref=e928] [cursor=pointer]:
+            - generic [ref=e929] [cursor=pointer]:
+              - link "Histogram" [ref=e930] [cursor=pointer]:
+                - /url: /library/1.72.0/histogram/
+              - link "" [ref=e931] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/histogram/index.html
+                - generic [ref=e932] [cursor=pointer]: 
+          - paragraph [ref=e934] [cursor=pointer]: Fast multi-dimensional histogram with convenient interface for C++14
+          - generic [ref=e935] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e937] [cursor=pointer]:
+              - generic [ref=e938] [cursor=pointer]: C++
+              - text: "03"
+            - generic [ref=e939] [cursor=pointer]:
+              - link "Algorithms" [ref=e940] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/algorithms/
+              - text: ","
+              - link "Data" [ref=e941] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/data/
+              - text: ","
+              - link "Math" [ref=e942] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/math/
+        - generic [ref=e943] [cursor=pointer]:
+          - heading "HOF " [level=3] [ref=e945] [cursor=pointer]:
+            - generic [ref=e946] [cursor=pointer]:
+              - link "HOF" [ref=e947] [cursor=pointer]:
+                - /url: /library/1.72.0/hof/
+              - link "" [ref=e948] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/hof/index.html
+                - generic [ref=e949] [cursor=pointer]: 
+          - paragraph [ref=e951] [cursor=pointer]: Higher-order functions for C++
+          - generic [ref=e952] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e954] [cursor=pointer]:
+              - generic [ref=e955] [cursor=pointer]: C++
+              - text: "03"
+            - generic [ref=e956] [cursor=pointer]:
+              - link "Metaprogramming" [ref=e957] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/metaprogramming/
+              - text: ","
+              - link "Function-objects" [ref=e958] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/function-objects/
+        - generic [ref=e959] [cursor=pointer]:
+          - heading "ICL " [level=3] [ref=e961] [cursor=pointer]:
+            - generic [ref=e962] [cursor=pointer]:
+              - link "ICL" [ref=e963] [cursor=pointer]:
+                - /url: /library/1.72.0/icl/
+              - link "" [ref=e964] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/icl/index.html
+                - generic [ref=e965] [cursor=pointer]: 
+          - paragraph [ref=e967] [cursor=pointer]: Interval Container Library, interval sets and maps and aggregation of associated values
+          - generic [ref=e968] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e970] [cursor=pointer]:
+              - generic [ref=e971] [cursor=pointer]: C++
+              - text: "03"
+            - generic [ref=e972] [cursor=pointer]:
+              - link "Containers" [ref=e973] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/containers/
+              - text: ","
+              - link "Data" [ref=e974] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/data/
+        - generic [ref=e975] [cursor=pointer]:
+          - heading "Identity Type " [level=3] [ref=e977] [cursor=pointer]:
+            - generic [ref=e978] [cursor=pointer]:
+              - link "Identity Type" [ref=e979] [cursor=pointer]:
+                - /url: /library/1.72.0/utilityidentity_type/
+              - link "" [ref=e980] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/utility/identity_type/index.html
+                - generic [ref=e981] [cursor=pointer]: 
+          - paragraph [ref=e983] [cursor=pointer]: Wrap types within round parenthesis so they can always be passed as macro parameters.
+          - generic [ref=e984] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e986] [cursor=pointer]:
+              - generic [ref=e987] [cursor=pointer]: C++
+              - text: "03"
+            - link "Preprocessor" [ref=e989] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/preprocessor/
+        - generic [ref=e990] [cursor=pointer]:
+          - heading "In Place Factory, Typed In Place Factory " [level=3] [ref=e992] [cursor=pointer]:
+            - generic [ref=e993] [cursor=pointer]:
+              - link "In Place Factory, Typed In Place Factory" [ref=e994] [cursor=pointer]:
+                - /url: /library/1.72.0/utilityin_place_factories/
+              - link "" [ref=e995] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/utility/in_place_factories.html
+                - generic [ref=e996] [cursor=pointer]: 
+          - paragraph [ref=e998] [cursor=pointer]: Generic in-place construction of contained objects with a variadic argument-list.
+          - generic [ref=e999] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1001] [cursor=pointer]:
+              - generic [ref=e1002] [cursor=pointer]: C++
+              - text: "03"
+            - link "Generic" [ref=e1004] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/generic/
+        - generic [ref=e1005] [cursor=pointer]:
+          - heading "Integer " [level=3] [ref=e1007] [cursor=pointer]:
+            - generic [ref=e1008] [cursor=pointer]:
+              - link "Integer" [ref=e1009] [cursor=pointer]:
+                - /url: /library/1.72.0/integer/
+              - link "" [ref=e1010] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/integer/index.html
+                - generic [ref=e1011] [cursor=pointer]: 
+          - paragraph [ref=e1013] [cursor=pointer]: The organization of boost integer headers and classes is designed to take advantage of <stdint.h> types from the 1999 C standard without resorting to undefined behavior in terms of the 1998 C++ standard. The header <boost/cstdint.hpp> makes the standard integer types safely available in namespace boost without placing any names in namespace std.
+          - generic [ref=e1014] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1016] [cursor=pointer]:
+              - generic [ref=e1017] [cursor=pointer]: C++
+              - text: "03"
+            - link "Math" [ref=e1019] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/math/
+        - generic [ref=e1020] [cursor=pointer]:
+          - heading "Interprocess " [level=3] [ref=e1022] [cursor=pointer]:
+            - generic [ref=e1023] [cursor=pointer]:
+              - link "Interprocess" [ref=e1024] [cursor=pointer]:
+                - /url: /library/1.72.0/interprocess/
+              - link "" [ref=e1025] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/interprocess/index.html
+                - generic [ref=e1026] [cursor=pointer]: 
+          - paragraph [ref=e1028] [cursor=pointer]: Shared memory, memory mapped files, process-shared mutexes, condition variables, containers and allocators.
+          - generic [ref=e1029] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1031] [cursor=pointer]:
+              - generic [ref=e1032] [cursor=pointer]: C++
+              - text: "03"
+            - link "Concurrent" [ref=e1034] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/concurrent/
+        - generic [ref=e1035] [cursor=pointer]:
+          - heading "Interval " [level=3] [ref=e1037] [cursor=pointer]:
+            - generic [ref=e1038] [cursor=pointer]:
+              - link "Interval" [ref=e1039] [cursor=pointer]:
+                - /url: /library/1.72.0/numericinterval/
+              - link "" [ref=e1040] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/numeric/interval/doc/interval.htm
+                - generic [ref=e1041] [cursor=pointer]: 
+          - paragraph [ref=e1043] [cursor=pointer]: Extends the usual arithmetic functions to mathematical intervals.
+          - generic [ref=e1044] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1046] [cursor=pointer]:
+              - generic [ref=e1047] [cursor=pointer]: C++
+              - text: "03"
+            - link "Math" [ref=e1049] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/math/
+        - generic [ref=e1050] [cursor=pointer]:
+          - heading "Intrusive " [level=3] [ref=e1052] [cursor=pointer]:
+            - generic [ref=e1053] [cursor=pointer]:
+              - link "Intrusive" [ref=e1054] [cursor=pointer]:
+                - /url: /library/1.72.0/intrusive/
+              - link "" [ref=e1055] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/intrusive/index.html
+                - generic [ref=e1056] [cursor=pointer]: 
+          - paragraph [ref=e1058] [cursor=pointer]: Intrusive containers and algorithms.
+          - generic [ref=e1059] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1061] [cursor=pointer]:
+              - generic [ref=e1062] [cursor=pointer]: C++
+              - text: "03"
+            - link "Containers" [ref=e1064] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/containers/
+        - generic [ref=e1065] [cursor=pointer]:
+          - heading "IO " [level=3] [ref=e1067] [cursor=pointer]:
+            - generic [ref=e1068] [cursor=pointer]:
+              - link "IO" [ref=e1069] [cursor=pointer]:
+                - /url: /library/1.72.0/io/
+              - link "" [ref=e1070] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/io/doc/index.html
+                - generic [ref=e1071] [cursor=pointer]: 
+          - paragraph [ref=e1073] [cursor=pointer]: The I/O sub-library of Boost helps segregate the large number of Boost headers. This sub-library should contain various items to use with/for the standard I/O library.
+          - generic [ref=e1074] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1076] [cursor=pointer]:
+              - generic [ref=e1077] [cursor=pointer]: C++
+              - text: "03"
+            - link "IO" [ref=e1079] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/io/
+        - generic [ref=e1080] [cursor=pointer]:
+          - heading "Iostreams " [level=3] [ref=e1082] [cursor=pointer]:
+            - generic [ref=e1083] [cursor=pointer]:
+              - link "Iostreams" [ref=e1084] [cursor=pointer]:
+                - /url: /library/1.72.0/iostreams/
+              - link "" [ref=e1085] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/iostreams/index.html
+                - generic [ref=e1086] [cursor=pointer]: 
+          - paragraph [ref=e1088] [cursor=pointer]: Boost.IOStreams provides a framework for defining streams, stream buffers and i/o filters.
+          - generic [ref=e1089] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1091] [cursor=pointer]:
+              - generic [ref=e1092] [cursor=pointer]: C++
+              - text: "03"
+            - generic [ref=e1093] [cursor=pointer]:
+              - link "IO" [ref=e1094] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/io/
+              - text: ","
+              - link "String" [ref=e1095] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/string/
+        - generic [ref=e1096] [cursor=pointer]:
+          - heading "Iterator " [level=3] [ref=e1098] [cursor=pointer]:
+            - generic [ref=e1099] [cursor=pointer]:
+              - link "Iterator" [ref=e1100] [cursor=pointer]:
+                - /url: /library/1.72.0/iterator/
+              - link "" [ref=e1101] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/iterator/index.html
+                - generic [ref=e1102] [cursor=pointer]: 
+          - paragraph [ref=e1104] [cursor=pointer]: The Boost Iterator Library contains two parts. The first is a system of concepts which extend the C++ standard iterator requirements. The second is a framework of components for building iterators based on these extended concepts and includes several useful iterator adaptors.
+          - generic [ref=e1105] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1107] [cursor=pointer]:
+              - generic [ref=e1108] [cursor=pointer]: C++
+              - text: "03"
+            - link "Iterators" [ref=e1110] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/iterators/
+        - generic [ref=e1111] [cursor=pointer]:
+          - heading "Lambda " [level=3] [ref=e1113] [cursor=pointer]:
+            - generic [ref=e1114] [cursor=pointer]:
+              - link "Lambda" [ref=e1115] [cursor=pointer]:
+                - /url: /library/1.72.0/lambda/
+              - link "" [ref=e1116] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/lambda/index.html
+                - generic [ref=e1117] [cursor=pointer]: 
+          - paragraph [ref=e1119] [cursor=pointer]: Define small unnamed function objects at the actual call site, and more.
+          - generic [ref=e1120] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1122] [cursor=pointer]:
+              - generic [ref=e1123] [cursor=pointer]: C++
+              - text: "03"
+            - link "Function-objects" [ref=e1125] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/function-objects/
+        - generic [ref=e1126] [cursor=pointer]:
+          - heading "Lexical Cast " [level=3] [ref=e1128] [cursor=pointer]:
+            - generic [ref=e1129] [cursor=pointer]:
+              - link "Lexical Cast" [ref=e1130] [cursor=pointer]:
+                - /url: /library/1.72.0/lexical_cast/
+              - link "" [ref=e1131] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/lexical_cast/index.html
+                - generic [ref=e1132] [cursor=pointer]: 
+          - paragraph [ref=e1134] [cursor=pointer]: General literal text conversions, such as an int represented a string, or vice-versa.
+          - generic [ref=e1135] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1137] [cursor=pointer]:
+              - generic [ref=e1138] [cursor=pointer]: C++
+              - text: "03"
+            - generic [ref=e1139] [cursor=pointer]:
+              - link "Miscellaneous" [ref=e1140] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/miscellaneous/
+              - text: ","
+              - link "String" [ref=e1141] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/string/
+        - generic [ref=e1142] [cursor=pointer]:
+          - heading "Locale " [level=3] [ref=e1144] [cursor=pointer]:
+            - generic [ref=e1145] [cursor=pointer]:
+              - link "Locale" [ref=e1146] [cursor=pointer]:
+                - /url: /library/1.72.0/locale/
+              - link "" [ref=e1147] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/locale/index.html
+                - generic [ref=e1148] [cursor=pointer]: 
+          - paragraph [ref=e1150] [cursor=pointer]: Provide localization and Unicode handling tools for C++.
+          - generic [ref=e1151] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1153] [cursor=pointer]:
+              - generic [ref=e1154] [cursor=pointer]: C++
+              - text: "03"
+            - link "String" [ref=e1156] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/string/
+        - generic [ref=e1157] [cursor=pointer]:
+          - heading "Local Function " [level=3] [ref=e1159] [cursor=pointer]:
+            - generic [ref=e1160] [cursor=pointer]:
+              - link "Local Function" [ref=e1161] [cursor=pointer]:
+                - /url: /library/1.72.0/local_function/
+              - link "" [ref=e1162] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/local_function/index.html
+                - generic [ref=e1163] [cursor=pointer]: 
+          - paragraph [ref=e1165] [cursor=pointer]: Program functions locally, within other functions, directly within the scope where they are needed.
+          - generic [ref=e1166] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1168] [cursor=pointer]:
+              - generic [ref=e1169] [cursor=pointer]: C++
+              - text: "03"
+            - link "Function-objects" [ref=e1171] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/function-objects/
+        - generic [ref=e1172] [cursor=pointer]:
+          - heading "Lockfree " [level=3] [ref=e1174] [cursor=pointer]:
+            - generic [ref=e1175] [cursor=pointer]:
+              - link "Lockfree" [ref=e1176] [cursor=pointer]:
+                - /url: /library/1.72.0/lockfree/
+              - link "" [ref=e1177] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/lockfree/index.html
+                - generic [ref=e1178] [cursor=pointer]: 
+          - paragraph [ref=e1180] [cursor=pointer]: Lockfree data structures.
+          - generic [ref=e1181] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1183] [cursor=pointer]:
+              - generic [ref=e1184] [cursor=pointer]: C++
+              - text: "03"
+            - link "Concurrent" [ref=e1186] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/concurrent/
+        - generic [ref=e1187] [cursor=pointer]:
+          - heading "Log " [level=3] [ref=e1189] [cursor=pointer]:
+            - generic [ref=e1190] [cursor=pointer]:
+              - link "Log" [ref=e1191] [cursor=pointer]:
+                - /url: /library/1.72.0/log/
+              - link "" [ref=e1192] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/log/index.html
+                - generic [ref=e1193] [cursor=pointer]: 
+          - paragraph [ref=e1195] [cursor=pointer]: Logging library.
+          - generic [ref=e1196] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1198] [cursor=pointer]:
+              - generic [ref=e1199] [cursor=pointer]: C++
+              - text: "03"
+            - link "Miscellaneous" [ref=e1201] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/miscellaneous/
+        - generic [ref=e1202] [cursor=pointer]:
+          - heading "Math " [level=3] [ref=e1204] [cursor=pointer]:
+            - generic [ref=e1205] [cursor=pointer]:
+              - link "Math" [ref=e1206] [cursor=pointer]:
+                - /url: /library/1.72.0/math/
+              - link "" [ref=e1207] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/math/index.html
+                - generic [ref=e1208] [cursor=pointer]: 
+          - paragraph [ref=e1210] [cursor=pointer]: "Boost.Math includes several contributions in the domain of mathematics: The Greatest Common Divisor and Least Common Multiple library provides run-time and compile-time evaluation of the greatest common divisor (GCD) or least common multiple (LCM) of two integers. The Special Functions library currently provides eight templated special functions, in namespace boost. The Complex Number Inverse Trigonometric Functions are the inverses of trigonometric functions currently present in the C++ standard. Quaternions are a relative of complex numbers often used to parameterise rotations in three dimentional space. Octonions, like quaternions, are a relative of complex numbers."
+          - generic [ref=e1211] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1213] [cursor=pointer]:
+              - generic [ref=e1214] [cursor=pointer]: C++
+              - text: "03"
+            - link "Math" [ref=e1216] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/math/
+        - generic [ref=e1217] [cursor=pointer]:
+          - heading "Math Common Factor " [level=3] [ref=e1219] [cursor=pointer]:
+            - generic [ref=e1220] [cursor=pointer]:
+              - link "Math Common Factor" [ref=e1221] [cursor=pointer]:
+                - /url: /library/1.72.0/mathcommon_factor/
+              - link "" [ref=e1222] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/math/doc/html/gcd_lcm.html
+                - generic [ref=e1223] [cursor=pointer]: 
+          - paragraph [ref=e1225] [cursor=pointer]: Greatest common divisor and least common multiple.
+          - generic "C++ Version 03 or Later" [ref=e1228] [cursor=pointer]:
+            - generic [ref=e1229] [cursor=pointer]: C++
+            - text: "03"
+        - generic [ref=e1231] [cursor=pointer]:
+          - heading "Math Octonion " [level=3] [ref=e1233] [cursor=pointer]:
+            - generic [ref=e1234] [cursor=pointer]:
+              - link "Math Octonion" [ref=e1235] [cursor=pointer]:
+                - /url: /library/1.72.0/mathoctonion/
+              - link "" [ref=e1236] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/math/doc/html/octonions.html
+                - generic [ref=e1237] [cursor=pointer]: 
+          - paragraph [ref=e1239] [cursor=pointer]: Octonions.
+          - generic "C++ Version 03 or Later" [ref=e1242] [cursor=pointer]:
+            - generic [ref=e1243] [cursor=pointer]: C++
+            - text: "03"
+        - generic [ref=e1245] [cursor=pointer]:
+          - heading "Math Quaternion " [level=3] [ref=e1247] [cursor=pointer]:
+            - generic [ref=e1248] [cursor=pointer]:
+              - link "Math Quaternion" [ref=e1249] [cursor=pointer]:
+                - /url: /library/1.72.0/mathquaternion/
+              - link "" [ref=e1250] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/math/doc/html/quaternions.html
+                - generic [ref=e1251] [cursor=pointer]: 
+          - paragraph [ref=e1253] [cursor=pointer]: Quaternions.
+          - generic "C++ Version 03 or Later" [ref=e1256] [cursor=pointer]:
+            - generic [ref=e1257] [cursor=pointer]: C++
+            - text: "03"
+        - generic [ref=e1259] [cursor=pointer]:
+          - heading "Math/Special Functions " [level=3] [ref=e1261] [cursor=pointer]:
+            - generic [ref=e1262] [cursor=pointer]:
+              - link "Math/Special Functions" [ref=e1263] [cursor=pointer]:
+                - /url: /library/1.72.0/mathspecial_functions/
+              - link "" [ref=e1264] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/math/doc/html/special.html
+                - generic [ref=e1265] [cursor=pointer]: 
+          - paragraph [ref=e1267] [cursor=pointer]: A wide selection of mathematical special functions.
+          - generic "C++ Version 03 or Later" [ref=e1270] [cursor=pointer]:
+            - generic [ref=e1271] [cursor=pointer]: C++
+            - text: "03"
+        - generic [ref=e1273] [cursor=pointer]:
+          - heading "Math/Statistical Distributions " [level=3] [ref=e1275] [cursor=pointer]:
+            - generic [ref=e1276] [cursor=pointer]:
+              - link "Math/Statistical Distributions" [ref=e1277] [cursor=pointer]:
+                - /url: /library/1.72.0/mathstatistical_distributions/
+              - link "" [ref=e1278] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/math/doc/html/dist.html
+                - generic [ref=e1279] [cursor=pointer]: 
+          - paragraph [ref=e1281] [cursor=pointer]: A wide selection of univariate statistical distributions and functions that operate on them.
+          - generic "C++ Version 03 or Later" [ref=e1284] [cursor=pointer]:
+            - generic [ref=e1285] [cursor=pointer]: C++
+            - text: "03"
+        - generic [ref=e1287] [cursor=pointer]:
+          - heading "Member Function " [level=3] [ref=e1289] [cursor=pointer]:
+            - generic [ref=e1290] [cursor=pointer]:
+              - link "Member Function" [ref=e1291] [cursor=pointer]:
+                - /url: /library/1.72.0/bindmem_fn/
+              - link "" [ref=e1292] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/bind/mem_fn.html
+                - generic [ref=e1293] [cursor=pointer]: 
+          - paragraph [ref=e1295] [cursor=pointer]: Generalized binders for function/object/pointers and member functions.
+          - generic [ref=e1296] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1298] [cursor=pointer]:
+              - generic [ref=e1299] [cursor=pointer]: C++
+              - text: "03"
+            - link "Function-objects" [ref=e1301] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/function-objects/
+        - generic [ref=e1302] [cursor=pointer]:
+          - heading "Metaparse " [level=3] [ref=e1304] [cursor=pointer]:
+            - generic [ref=e1305] [cursor=pointer]:
+              - link "Metaparse" [ref=e1306] [cursor=pointer]:
+                - /url: /library/1.72.0/metaparse/
+              - link "" [ref=e1307] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/metaparse/index.html
+                - generic [ref=e1308] [cursor=pointer]: 
+          - paragraph [ref=e1310] [cursor=pointer]: A library for generating compile time parsers parsing embedded DSL code as part of the C++ compilation process
+          - generic [ref=e1311] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1313] [cursor=pointer]:
+              - generic [ref=e1314] [cursor=pointer]: C++
+              - text: "03"
+            - link "Metaprogramming" [ref=e1316] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/metaprogramming/
+        - generic [ref=e1317] [cursor=pointer]:
+          - heading "Meta State Machine " [level=3] [ref=e1319] [cursor=pointer]:
+            - generic [ref=e1320] [cursor=pointer]:
+              - link "Meta State Machine" [ref=e1321] [cursor=pointer]:
+                - /url: /library/1.72.0/msm/
+              - link "" [ref=e1322] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/msm/index.html
+                - generic [ref=e1323] [cursor=pointer]: 
+          - paragraph [ref=e1325] [cursor=pointer]: A very high-performance library for expressive UML2 finite state machines.
+          - generic [ref=e1326] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1328] [cursor=pointer]:
+              - generic [ref=e1329] [cursor=pointer]: C++
+              - text: "03"
+            - link "State" [ref=e1331] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/state/
+        - generic [ref=e1332] [cursor=pointer]:
+          - heading "Min-Max " [level=3] [ref=e1334] [cursor=pointer]:
+            - generic [ref=e1335] [cursor=pointer]:
+              - link "Min-Max" [ref=e1336] [cursor=pointer]:
+                - /url: /library/1.72.0/algorithmminmax/
+              - link "" [ref=e1337] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/algorithm/minmax/index.html
+                - generic [ref=e1338] [cursor=pointer]: 
+          - paragraph [ref=e1340] [cursor=pointer]: Standard library extensions for simultaneous min/max and min/max element computations.
+          - generic [ref=e1341] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1343] [cursor=pointer]:
+              - generic [ref=e1344] [cursor=pointer]: C++
+              - text: "03"
+            - link "Algorithms" [ref=e1346] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/algorithms/
+        - generic [ref=e1347] [cursor=pointer]:
+          - heading "Move " [level=3] [ref=e1349] [cursor=pointer]:
+            - generic [ref=e1350] [cursor=pointer]:
+              - link "Move" [ref=e1351] [cursor=pointer]:
+                - /url: /library/1.72.0/move/
+              - link "" [ref=e1352] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/move/index.html
+                - generic [ref=e1353] [cursor=pointer]: 
+          - paragraph [ref=e1355] [cursor=pointer]: Portable move semantics for C++03 and C++11 compilers.
+          - generic [ref=e1356] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1358] [cursor=pointer]:
+              - generic [ref=e1359] [cursor=pointer]: C++
+              - text: "03"
+            - link "Emulation" [ref=e1361] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/emulation/
+        - generic [ref=e1362] [cursor=pointer]:
+          - heading "Mp11 " [level=3] [ref=e1364] [cursor=pointer]:
+            - generic [ref=e1365] [cursor=pointer]:
+              - link "Mp11" [ref=e1366] [cursor=pointer]:
+                - /url: /library/1.72.0/mp11/
+              - link "" [ref=e1367] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/mp11/index.html
+                - generic [ref=e1368] [cursor=pointer]: 
+          - paragraph [ref=e1370] [cursor=pointer]: A C++11 metaprogramming library.
+          - generic [ref=e1371] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1373] [cursor=pointer]:
+              - generic [ref=e1374] [cursor=pointer]: C++
+              - text: "03"
+            - link "Metaprogramming" [ref=e1376] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/metaprogramming/
+        - generic [ref=e1377] [cursor=pointer]:
+          - heading "MPI " [level=3] [ref=e1379] [cursor=pointer]:
+            - generic [ref=e1380] [cursor=pointer]:
+              - link "MPI" [ref=e1381] [cursor=pointer]:
+                - /url: /library/1.72.0/mpi/
+              - link "" [ref=e1382] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/mpi/index.html
+                - generic [ref=e1383] [cursor=pointer]: 
+          - paragraph [ref=e1385] [cursor=pointer]: Message Passing Interface library, for use in distributed-memory parallel application programming.
+          - generic [ref=e1386] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1388] [cursor=pointer]:
+              - generic [ref=e1389] [cursor=pointer]: C++
+              - text: "03"
+            - link "Concurrent" [ref=e1391] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/concurrent/
+        - generic [ref=e1392] [cursor=pointer]:
+          - heading "MPL " [level=3] [ref=e1394] [cursor=pointer]:
+            - generic [ref=e1395] [cursor=pointer]:
+              - link "MPL" [ref=e1396] [cursor=pointer]:
+                - /url: /library/1.72.0/mpl/
+              - link "" [ref=e1397] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/mpl/index.html
+                - generic [ref=e1398] [cursor=pointer]: 
+          - paragraph [ref=e1400] [cursor=pointer]: The Boost.MPL library is a general-purpose, high-level C++ template metaprogramming framework of compile-time algorithms, sequences and metafunctions. It provides a conceptual foundation and an extensive set of powerful and coherent tools that make doing explict metaprogramming in C++ as easy and enjoyable as possible within the current language.
+          - generic [ref=e1401] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1403] [cursor=pointer]:
+              - generic [ref=e1404] [cursor=pointer]: C++
+              - text: "03"
+            - link "Metaprogramming" [ref=e1406] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/metaprogramming/
+        - generic [ref=e1407] [cursor=pointer]:
+          - heading "Multi-Array " [level=3] [ref=e1409] [cursor=pointer]:
+            - generic [ref=e1410] [cursor=pointer]:
+              - link "Multi-Array" [ref=e1411] [cursor=pointer]:
+                - /url: /library/1.72.0/multi_array/
+              - link "" [ref=e1412] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/multi_array/index.html
+                - generic [ref=e1413] [cursor=pointer]: 
+          - paragraph [ref=e1415] [cursor=pointer]: Boost.MultiArray provides a generic N-dimensional array concept definition and common implementations of that interface.
+          - generic [ref=e1416] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1418] [cursor=pointer]:
+              - generic [ref=e1419] [cursor=pointer]: C++
+              - text: "03"
+            - generic [ref=e1420] [cursor=pointer]:
+              - link "Containers" [ref=e1421] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/containers/
+              - text: ","
+              - link "Math" [ref=e1422] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/math/
+        - generic [ref=e1423] [cursor=pointer]:
+          - heading "Multi-Index " [level=3] [ref=e1425] [cursor=pointer]:
+            - generic [ref=e1426] [cursor=pointer]:
+              - link "Multi-Index" [ref=e1427] [cursor=pointer]:
+                - /url: /library/1.72.0/multi_index/
+              - link "" [ref=e1428] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/multi_index/index.html
+                - generic [ref=e1429] [cursor=pointer]: 
+          - paragraph [ref=e1431] [cursor=pointer]: The Boost Multi-index Containers Library provides a class template named multi_index_container which enables the construction of containers maintaining one or more indices with different sorting and access semantics.
+          - generic [ref=e1432] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1434] [cursor=pointer]:
+              - generic [ref=e1435] [cursor=pointer]: C++
+              - text: "03"
+            - generic [ref=e1436] [cursor=pointer]:
+              - link "Containers" [ref=e1437] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/containers/
+              - text: ","
+              - link "Data" [ref=e1438] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/data/
+        - generic [ref=e1439] [cursor=pointer]:
+          - heading "Multiprecision " [level=3] [ref=e1441] [cursor=pointer]:
+            - generic [ref=e1442] [cursor=pointer]:
+              - link "Multiprecision" [ref=e1443] [cursor=pointer]:
+                - /url: /library/1.72.0/multiprecision/
+              - link "" [ref=e1444] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/multiprecision/index.html
+                - generic [ref=e1445] [cursor=pointer]: 
+          - paragraph [ref=e1447] [cursor=pointer]: Extended precision arithmetic types for floating point, integer andrational arithmetic.
+          - generic [ref=e1448] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1450] [cursor=pointer]:
+              - generic [ref=e1451] [cursor=pointer]: C++
+              - text: "03"
+            - link "Math" [ref=e1453] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/math/
+        - generic [ref=e1454] [cursor=pointer]:
+          - heading "Numeric Conversion " [level=3] [ref=e1456] [cursor=pointer]:
+            - generic [ref=e1457] [cursor=pointer]:
+              - link "Numeric Conversion" [ref=e1458] [cursor=pointer]:
+                - /url: /library/1.72.0/numericconversion/
+              - link "" [ref=e1459] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/numeric/conversion/index.html
+                - generic [ref=e1460] [cursor=pointer]: 
+          - paragraph [ref=e1462] [cursor=pointer]: Optimized Policy-based Numeric Conversions.
+          - generic [ref=e1463] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1465] [cursor=pointer]:
+              - generic [ref=e1466] [cursor=pointer]: C++
+              - text: "03"
+            - generic [ref=e1467] [cursor=pointer]:
+              - link "Math" [ref=e1468] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/math/
+              - text: ","
+              - link "Miscellaneous" [ref=e1469] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/miscellaneous/
+        - generic [ref=e1470] [cursor=pointer]:
+          - heading "Odeint " [level=3] [ref=e1472] [cursor=pointer]:
+            - generic [ref=e1473] [cursor=pointer]:
+              - link "Odeint" [ref=e1474] [cursor=pointer]:
+                - /url: /library/1.72.0/numericodeint/
+              - link "" [ref=e1475] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/numeric/odeint/index.html
+                - generic [ref=e1476] [cursor=pointer]: 
+          - paragraph [ref=e1478] [cursor=pointer]: Solving ordinary differential equations.
+          - generic [ref=e1479] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1481] [cursor=pointer]:
+              - generic [ref=e1482] [cursor=pointer]: C++
+              - text: "03"
+            - link "Math" [ref=e1484] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/math/
+        - generic [ref=e1485] [cursor=pointer]:
+          - heading "Operators " [level=3] [ref=e1487] [cursor=pointer]:
+            - generic [ref=e1488] [cursor=pointer]:
+              - link "Operators" [ref=e1489] [cursor=pointer]:
+                - /url: /library/1.72.0/utilityoperators/
+              - link "" [ref=e1490] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/utility/operators.htm
+                - generic [ref=e1491] [cursor=pointer]: 
+          - paragraph [ref=e1493] [cursor=pointer]: Templates ease arithmetic classes and iterators.
+          - generic [ref=e1494] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1496] [cursor=pointer]:
+              - generic [ref=e1497] [cursor=pointer]: C++
+              - text: "03"
+            - generic [ref=e1498] [cursor=pointer]:
+              - link "Generic" [ref=e1499] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/generic/
+              - text: ","
+              - link "Iterators" [ref=e1500] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/iterators/
+              - text: ","
+              - link "Math" [ref=e1501] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/math/
+        - generic [ref=e1502] [cursor=pointer]:
+          - heading "Optional " [level=3] [ref=e1504] [cursor=pointer]:
+            - generic [ref=e1505] [cursor=pointer]:
+              - link "Optional" [ref=e1506] [cursor=pointer]:
+                - /url: /library/1.72.0/optional/
+              - link "" [ref=e1507] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/optional/index.html
+                - generic [ref=e1508] [cursor=pointer]: 
+          - paragraph [ref=e1510] [cursor=pointer]: A value-semantic, type-safe wrapper for representing 'optional' (or 'nullable') objects of a given type. An optional object may or may not contain a value of the underlying type.
+          - generic [ref=e1511] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1513] [cursor=pointer]:
+              - generic [ref=e1514] [cursor=pointer]: C++
+              - text: "03"
+            - link "Data" [ref=e1516] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/data/
+        - generic [ref=e1517] [cursor=pointer]:
+          - heading "ostream_string " [level=3] [ref=e1519] [cursor=pointer]:
+            - generic [ref=e1520] [cursor=pointer]:
+              - link "ostream_string" [ref=e1521] [cursor=pointer]:
+                - /url: /library/1.72.0/utilityostream_string/
+              - link "" [ref=e1522] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/utility/doc/html/ostream_string.html
+                - generic [ref=e1523] [cursor=pointer]: 
+          - paragraph [ref=e1525] [cursor=pointer]: String formatted output function.
+          - generic "C++ Version 03 or Later" [ref=e1528] [cursor=pointer]:
+            - generic [ref=e1529] [cursor=pointer]: C++
+            - text: "03"
+        - generic [ref=e1531] [cursor=pointer]:
+          - heading "Outcome " [level=3] [ref=e1533] [cursor=pointer]:
+            - generic [ref=e1534] [cursor=pointer]:
+              - link "Outcome" [ref=e1535] [cursor=pointer]:
+                - /url: /library/1.72.0/outcome/
+              - link "" [ref=e1536] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/outcome/index.html
+                - generic [ref=e1537] [cursor=pointer]: 
+          - paragraph [ref=e1539] [cursor=pointer]: A deterministic failure handling library partially simulating lightweight exceptions.
+          - generic [ref=e1540] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1542] [cursor=pointer]:
+              - generic [ref=e1543] [cursor=pointer]: C++
+              - text: "03"
+            - generic [ref=e1544] [cursor=pointer]:
+              - link "Patterns" [ref=e1545] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/patterns/
+              - text: ","
+              - link "Emulation" [ref=e1546] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/emulation/
+              - text: ","
+              - link "Programming" [ref=e1547] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/programming/
+        - generic [ref=e1548] [cursor=pointer]:
+          - heading "Parameter " [level=3] [ref=e1550] [cursor=pointer]:
+            - generic [ref=e1551] [cursor=pointer]:
+              - link "Parameter" [ref=e1552] [cursor=pointer]:
+                - /url: /library/1.72.0/parameter/
+              - link "" [ref=e1553] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/parameter/index.html
+                - generic [ref=e1554] [cursor=pointer]: 
+          - paragraph [ref=e1556] [cursor=pointer]: Boost.Parameter Library - Write functions that accept arguments by name.
+          - generic [ref=e1557] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1559] [cursor=pointer]:
+              - generic [ref=e1560] [cursor=pointer]: C++
+              - text: "03"
+            - generic [ref=e1561] [cursor=pointer]:
+              - link "Emulation" [ref=e1562] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/emulation/
+              - text: ","
+              - link "Programming" [ref=e1563] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/programming/
+        - generic [ref=e1564] [cursor=pointer]:
+          - heading "Parameter Python Bindings " [level=3] [ref=e1566] [cursor=pointer]:
+            - generic [ref=e1567] [cursor=pointer]:
+              - link "Parameter Python Bindings" [ref=e1568] [cursor=pointer]:
+                - /url: /library/1.72.0/parameter_python/
+              - link "" [ref=e1569] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/parameter_python/index.html
+                - generic [ref=e1570] [cursor=pointer]: 
+          - paragraph [ref=e1572] [cursor=pointer]: Boost.Parameter Library Python bindings.
+          - generic [ref=e1573] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1575] [cursor=pointer]:
+              - generic [ref=e1576] [cursor=pointer]: C++
+              - text: "03"
+            - generic [ref=e1577] [cursor=pointer]:
+              - link "Emulation" [ref=e1578] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/emulation/
+              - text: ","
+              - link "Programming" [ref=e1579] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/programming/
+        - generic [ref=e1580] [cursor=pointer]:
+          - heading "Phoenix " [level=3] [ref=e1582] [cursor=pointer]:
+            - generic [ref=e1583] [cursor=pointer]:
+              - link "Phoenix" [ref=e1584] [cursor=pointer]:
+                - /url: /library/1.72.0/phoenix/
+              - link "" [ref=e1585] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/phoenix/index.html
+                - generic [ref=e1586] [cursor=pointer]: 
+          - paragraph [ref=e1588] [cursor=pointer]: Define small unnamed function objects at the actual call site, and more.
+          - generic [ref=e1589] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1591] [cursor=pointer]:
+              - generic [ref=e1592] [cursor=pointer]: C++
+              - text: "03"
+            - link "Function-objects" [ref=e1594] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/function-objects/
+        - generic [ref=e1595] [cursor=pointer]:
+          - heading "Pointer Container " [level=3] [ref=e1597] [cursor=pointer]:
+            - generic [ref=e1598] [cursor=pointer]:
+              - link "Pointer Container" [ref=e1599] [cursor=pointer]:
+                - /url: /library/1.72.0/ptr_container/
+              - link "" [ref=e1600] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/ptr_container/index.html
+                - generic [ref=e1601] [cursor=pointer]: 
+          - paragraph [ref=e1603] [cursor=pointer]: Containers for storing heap-allocated polymorphic objects to ease OO-programming.
+          - generic [ref=e1604] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1606] [cursor=pointer]:
+              - generic [ref=e1607] [cursor=pointer]: C++
+              - text: "03"
+            - generic [ref=e1608] [cursor=pointer]:
+              - link "Containers" [ref=e1609] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/containers/
+              - text: ","
+              - link "Data" [ref=e1610] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/data/
+        - generic [ref=e1611] [cursor=pointer]:
+          - heading "PolyCollection " [level=3] [ref=e1613] [cursor=pointer]:
+            - generic [ref=e1614] [cursor=pointer]:
+              - link "PolyCollection" [ref=e1615] [cursor=pointer]:
+                - /url: /library/1.72.0/poly_collection/
+              - link "" [ref=e1616] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/poly_collection/index.html
+                - generic [ref=e1617] [cursor=pointer]: 
+          - paragraph [ref=e1619] [cursor=pointer]: Fast containers of polymorphic objects.
+          - generic [ref=e1620] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1622] [cursor=pointer]:
+              - generic [ref=e1623] [cursor=pointer]: C++
+              - text: "03"
+            - link "Containers" [ref=e1625] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/containers/
+        - generic [ref=e1626] [cursor=pointer]:
+          - heading "Polygon " [level=3] [ref=e1628] [cursor=pointer]:
+            - generic [ref=e1629] [cursor=pointer]:
+              - link "Polygon" [ref=e1630] [cursor=pointer]:
+                - /url: /library/1.72.0/polygon/
+              - link "" [ref=e1631] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/polygon/index.html
+                - generic [ref=e1632] [cursor=pointer]: 
+          - paragraph [ref=e1634] [cursor=pointer]: Voronoi diagram construction and booleans/clipping, resizing/offsetting and more for planar polygons with integral coordinates.
+          - generic [ref=e1635] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1637] [cursor=pointer]:
+              - generic [ref=e1638] [cursor=pointer]: C++
+              - text: "03"
+            - generic [ref=e1639] [cursor=pointer]:
+              - link "Algorithms" [ref=e1640] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/algorithms/
+              - text: ","
+              - link "Data" [ref=e1641] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/data/
+              - text: ","
+              - link "Math" [ref=e1642] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/math/
+        - generic [ref=e1643] [cursor=pointer]:
+          - heading "Pool " [level=3] [ref=e1645] [cursor=pointer]:
+            - generic [ref=e1646] [cursor=pointer]:
+              - link "Pool" [ref=e1647] [cursor=pointer]:
+                - /url: /library/1.72.0/pool/
+              - link "" [ref=e1648] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/pool/index.html
+                - generic [ref=e1649] [cursor=pointer]: 
+          - paragraph [ref=e1651] [cursor=pointer]: Memory pool management.
+          - generic [ref=e1652] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1654] [cursor=pointer]:
+              - generic [ref=e1655] [cursor=pointer]: C++
+              - text: "03"
+            - link "Memory" [ref=e1657] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/memory/
+        - generic [ref=e1658] [cursor=pointer]:
+          - heading "Predef " [level=3] [ref=e1660] [cursor=pointer]:
+            - generic [ref=e1661] [cursor=pointer]:
+              - link "Predef" [ref=e1662] [cursor=pointer]:
+                - /url: /library/1.72.0/predef/
+              - link "" [ref=e1663] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/predef/index.html
+                - generic [ref=e1664] [cursor=pointer]: 
+          - paragraph [ref=e1666] [cursor=pointer]: This library defines a set of compiler, architecture, operating system, library, and other version numbers from the information it can gather of C, C++, Objective C, and Objective C++ predefined macros or those defined in generally available headers.
+          - generic [ref=e1667] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1669] [cursor=pointer]:
+              - generic [ref=e1670] [cursor=pointer]: C++
+              - text: "03"
+            - link "Miscellaneous" [ref=e1672] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/miscellaneous/
+        - generic [ref=e1673] [cursor=pointer]:
+          - heading "Preprocessor " [level=3] [ref=e1675] [cursor=pointer]:
+            - generic [ref=e1676] [cursor=pointer]:
+              - link "Preprocessor" [ref=e1677] [cursor=pointer]:
+                - /url: /library/1.72.0/preprocessor/
+              - link "" [ref=e1678] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/preprocessor/index.html
+                - generic [ref=e1679] [cursor=pointer]: 
+          - paragraph [ref=e1681] [cursor=pointer]: Preprocessor metaprogramming tools including repetition and recursion.
+          - generic [ref=e1682] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1684] [cursor=pointer]:
+              - generic [ref=e1685] [cursor=pointer]: C++
+              - text: "03"
+            - link "Preprocessor" [ref=e1687] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/preprocessor/
+        - generic [ref=e1688] [cursor=pointer]:
+          - heading "Process " [level=3] [ref=e1690] [cursor=pointer]:
+            - generic [ref=e1691] [cursor=pointer]:
+              - link "Process" [ref=e1692] [cursor=pointer]:
+                - /url: /library/1.72.0/process/
+              - link "" [ref=e1693] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/process/index.html
+                - generic [ref=e1694] [cursor=pointer]: 
+          - paragraph [ref=e1696] [cursor=pointer]: Library to create processes in a portable way.
+          - generic [ref=e1697] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1699] [cursor=pointer]:
+              - generic [ref=e1700] [cursor=pointer]: C++
+              - text: "03"
+            - link "System" [ref=e1702] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/system/
+        - generic [ref=e1703] [cursor=pointer]:
+          - heading "Program Options " [level=3] [ref=e1705] [cursor=pointer]:
+            - generic [ref=e1706] [cursor=pointer]:
+              - link "Program Options" [ref=e1707] [cursor=pointer]:
+                - /url: /library/1.72.0/program_options/
+              - link "" [ref=e1708] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/program_options/index.html
+                - generic [ref=e1709] [cursor=pointer]: 
+          - paragraph [ref=e1711] [cursor=pointer]: The program_options library allows program developers to obtain program options, that is (name, value) pairs from the user, via conventional methods such as command line and config file.
+          - generic [ref=e1712] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1714] [cursor=pointer]:
+              - generic [ref=e1715] [cursor=pointer]: C++
+              - text: "03"
+            - generic [ref=e1716] [cursor=pointer]:
+              - link "IO" [ref=e1717] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/io/
+              - text: ","
+              - link "Miscellaneous" [ref=e1718] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/miscellaneous/
+        - generic [ref=e1719] [cursor=pointer]:
+          - heading "Property Map " [level=3] [ref=e1721] [cursor=pointer]:
+            - generic [ref=e1722] [cursor=pointer]:
+              - link "Property Map" [ref=e1723] [cursor=pointer]:
+                - /url: /library/1.72.0/property_map/
+              - link "" [ref=e1724] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/property_map/index.html
+                - generic [ref=e1725] [cursor=pointer]: 
+          - paragraph [ref=e1727] [cursor=pointer]: Concepts defining interfaces which map key objects to value objects.
+          - generic [ref=e1728] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1730] [cursor=pointer]:
+              - generic [ref=e1731] [cursor=pointer]: C++
+              - text: "03"
+            - generic [ref=e1732] [cursor=pointer]:
+              - link "Containers" [ref=e1733] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/containers/
+              - text: ","
+              - link "Generic" [ref=e1734] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/generic/
+        - generic [ref=e1735] [cursor=pointer]:
+          - heading "Property Tree " [level=3] [ref=e1737] [cursor=pointer]:
+            - generic [ref=e1738] [cursor=pointer]:
+              - link "Property Tree" [ref=e1739] [cursor=pointer]:
+                - /url: /library/1.72.0/property_tree/
+              - link "" [ref=e1740] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/property_tree/index.html
+                - generic [ref=e1741] [cursor=pointer]: 
+          - paragraph [ref=e1743] [cursor=pointer]: A tree data structure especially suited to storing configuration data.
+          - generic [ref=e1744] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1746] [cursor=pointer]:
+              - generic [ref=e1747] [cursor=pointer]: C++
+              - text: "03"
+            - generic [ref=e1748] [cursor=pointer]:
+              - link "Containers" [ref=e1749] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/containers/
+              - text: ","
+              - link "Data" [ref=e1750] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/data/
+        - generic [ref=e1751] [cursor=pointer]:
+          - heading "Proto " [level=3] [ref=e1753] [cursor=pointer]:
+            - generic [ref=e1754] [cursor=pointer]:
+              - link "Proto" [ref=e1755] [cursor=pointer]:
+                - /url: /library/1.72.0/proto/
+              - link "" [ref=e1756] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/proto/index.html
+                - generic [ref=e1757] [cursor=pointer]: 
+          - paragraph [ref=e1759] [cursor=pointer]: Expression template library and compiler construction toolkit for domain-specific embedded languages.
+          - generic [ref=e1760] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1762] [cursor=pointer]:
+              - generic [ref=e1763] [cursor=pointer]: C++
+              - text: "03"
+            - link "Metaprogramming" [ref=e1765] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/metaprogramming/
+        - generic [ref=e1766] [cursor=pointer]:
+          - heading "Python " [level=3] [ref=e1768] [cursor=pointer]:
+            - generic [ref=e1769] [cursor=pointer]:
+              - link "Python" [ref=e1770] [cursor=pointer]:
+                - /url: /library/1.72.0/python/
+              - link "" [ref=e1771] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/python/index.html
+                - generic [ref=e1772] [cursor=pointer]: 
+          - paragraph [ref=e1774] [cursor=pointer]: The Boost Python Library is a framework for interfacing Python and C++. It allows you to quickly and seamlessly expose C++ classes functions and objects to Python, and vice-versa, using no special tools -- just your C++ compiler.
+          - generic [ref=e1775] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1777] [cursor=pointer]:
+              - generic [ref=e1778] [cursor=pointer]: C++
+              - text: "03"
+            - link "Inter-language" [ref=e1780] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/inter-language/
+        - generic [ref=e1781] [cursor=pointer]:
+          - heading "QVM " [level=3] [ref=e1783] [cursor=pointer]:
+            - generic [ref=e1784] [cursor=pointer]:
+              - link "QVM" [ref=e1785] [cursor=pointer]:
+                - /url: /library/1.72.0/qvm/
+              - link "" [ref=e1786] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/qvm/index.html
+                - generic [ref=e1787] [cursor=pointer]: 
+          - paragraph [ref=e1789] [cursor=pointer]: "Generic {CPP} library for working with Quaternions Vectors and Matrices."
+          - generic [ref=e1790] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1792] [cursor=pointer]:
+              - generic [ref=e1793] [cursor=pointer]: C++
+              - text: "03"
+            - generic [ref=e1794] [cursor=pointer]:
+              - link "Generic" [ref=e1795] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/generic/
+              - text: ","
+              - link "Math" [ref=e1796] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/math/
+              - text: ","
+              - link "Algorithms" [ref=e1797] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/algorithms/
+        - generic [ref=e1798] [cursor=pointer]:
+          - heading "Random " [level=3] [ref=e1800] [cursor=pointer]:
+            - generic [ref=e1801] [cursor=pointer]:
+              - link "Random" [ref=e1802] [cursor=pointer]:
+                - /url: /library/1.72.0/random/
+              - link "" [ref=e1803] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/random/index.html
+                - generic [ref=e1804] [cursor=pointer]: 
+          - paragraph [ref=e1806] [cursor=pointer]: A complete system for random number generation.
+          - generic [ref=e1807] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1809] [cursor=pointer]:
+              - generic [ref=e1810] [cursor=pointer]: C++
+              - text: "03"
+            - link "Math" [ref=e1812] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/math/
+        - generic [ref=e1813] [cursor=pointer]:
+          - heading "Range " [level=3] [ref=e1815] [cursor=pointer]:
+            - generic [ref=e1816] [cursor=pointer]:
+              - link "Range" [ref=e1817] [cursor=pointer]:
+                - /url: /library/1.72.0/range/
+              - link "" [ref=e1818] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/range/index.html
+                - generic [ref=e1819] [cursor=pointer]: 
+          - paragraph [ref=e1821] [cursor=pointer]: A new infrastructure for generic algorithms that builds on top of the new iterator concepts.
+          - generic [ref=e1822] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1824] [cursor=pointer]:
+              - generic [ref=e1825] [cursor=pointer]: C++
+              - text: "03"
+            - link "Algorithms" [ref=e1827] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/algorithms/
+        - generic [ref=e1828] [cursor=pointer]:
+          - heading "Ratio " [level=3] [ref=e1830] [cursor=pointer]:
+            - generic [ref=e1831] [cursor=pointer]:
+              - link "Ratio" [ref=e1832] [cursor=pointer]:
+                - /url: /library/1.72.0/ratio/
+              - link "" [ref=e1833] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/ratio/index.html
+                - generic [ref=e1834] [cursor=pointer]: 
+          - paragraph [ref=e1836] [cursor=pointer]: Compile time rational arithmetic. C++11.
+          - generic [ref=e1837] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1839] [cursor=pointer]:
+              - generic [ref=e1840] [cursor=pointer]: C++
+              - text: "03"
+            - link "Math" [ref=e1842] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/math/
+        - generic [ref=e1843] [cursor=pointer]:
+          - heading "Rational " [level=3] [ref=e1845] [cursor=pointer]:
+            - generic [ref=e1846] [cursor=pointer]:
+              - link "Rational" [ref=e1847] [cursor=pointer]:
+                - /url: /library/1.72.0/rational/
+              - link "" [ref=e1848] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/rational/index.html
+                - generic [ref=e1849] [cursor=pointer]: 
+          - paragraph [ref=e1851] [cursor=pointer]: A rational number class.
+          - generic [ref=e1852] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1854] [cursor=pointer]:
+              - generic [ref=e1855] [cursor=pointer]: C++
+              - text: "03"
+            - link "Math" [ref=e1857] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/math/
+        - generic [ref=e1858] [cursor=pointer]:
+          - heading "Ref " [level=3] [ref=e1860] [cursor=pointer]:
+            - generic [ref=e1861] [cursor=pointer]:
+              - link "Ref" [ref=e1862] [cursor=pointer]:
+                - /url: /library/1.72.0/bindref/
+              - link "" [ref=e1863] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/core/ref.html
+                - generic [ref=e1864] [cursor=pointer]: 
+          - paragraph [ref=e1866] [cursor=pointer]: A utility library for passing references to generic functions.
+          - generic [ref=e1867] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1869] [cursor=pointer]:
+              - generic [ref=e1870] [cursor=pointer]: C++
+              - text: "03"
+            - link "Function-objects" [ref=e1872] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/function-objects/
+        - generic [ref=e1873] [cursor=pointer]:
+          - heading "Regex " [level=3] [ref=e1875] [cursor=pointer]:
+            - generic [ref=e1876] [cursor=pointer]:
+              - link "Regex" [ref=e1877] [cursor=pointer]:
+                - /url: /library/1.72.0/regex/
+              - link "" [ref=e1878] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/regex/index.html
+                - generic [ref=e1879] [cursor=pointer]: 
+          - paragraph [ref=e1881] [cursor=pointer]: Regular expression library.
+          - generic [ref=e1882] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1884] [cursor=pointer]:
+              - generic [ref=e1885] [cursor=pointer]: C++
+              - text: "03"
+            - link "String" [ref=e1887] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/string/
+        - generic [ref=e1888] [cursor=pointer]:
+          - heading "Result Of " [level=3] [ref=e1890] [cursor=pointer]:
+            - generic [ref=e1891] [cursor=pointer]:
+              - link "Result Of" [ref=e1892] [cursor=pointer]:
+                - /url: /library/1.72.0/utilityresult_of/
+              - link "" [ref=e1893] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/utility/utility.htm#result_of
+                - generic [ref=e1894] [cursor=pointer]: 
+          - paragraph [ref=e1896] [cursor=pointer]: Determines the type of a function call expression.
+          - generic [ref=e1897] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1899] [cursor=pointer]:
+              - generic [ref=e1900] [cursor=pointer]: C++
+              - text: "03"
+            - link "Function-objects" [ref=e1902] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/function-objects/
+        - generic [ref=e1903] [cursor=pointer]:
+          - heading "Safe Numerics " [level=3] [ref=e1905] [cursor=pointer]:
+            - generic [ref=e1906] [cursor=pointer]:
+              - link "Safe Numerics" [ref=e1907] [cursor=pointer]:
+                - /url: /library/1.72.0/safe_numerics/
+              - link "" [ref=e1908] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/safe_numerics/index.html
+                - generic [ref=e1909] [cursor=pointer]: 
+          - paragraph [ref=e1911] [cursor=pointer]: Guaranteed Correct Integer Arithmetic
+          - generic [ref=e1912] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1914] [cursor=pointer]:
+              - generic [ref=e1915] [cursor=pointer]: C++
+              - text: "03"
+            - generic [ref=e1916] [cursor=pointer]:
+              - link "Math" [ref=e1917] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/math/
+              - text: ","
+              - link "Correctness" [ref=e1918] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/correctness/
+        - generic [ref=e1919] [cursor=pointer]:
+          - heading "Scope Exit " [level=3] [ref=e1921] [cursor=pointer]:
+            - generic [ref=e1922] [cursor=pointer]:
+              - link "Scope Exit" [ref=e1923] [cursor=pointer]:
+                - /url: /library/1.72.0/scope_exit/
+              - link "" [ref=e1924] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/scope_exit/index.html
+                - generic [ref=e1925] [cursor=pointer]: 
+          - paragraph [ref=e1927] [cursor=pointer]: Execute arbitrary code at scope exit.
+          - generic [ref=e1928] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1930] [cursor=pointer]:
+              - generic [ref=e1931] [cursor=pointer]: C++
+              - text: "03"
+            - link "Emulation" [ref=e1933] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/emulation/
+        - generic [ref=e1934] [cursor=pointer]:
+          - heading "Serialization " [level=3] [ref=e1936] [cursor=pointer]:
+            - generic [ref=e1937] [cursor=pointer]:
+              - link "Serialization" [ref=e1938] [cursor=pointer]:
+                - /url: /library/1.72.0/serialization/
+              - link "" [ref=e1939] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/serialization/index.html
+                - generic [ref=e1940] [cursor=pointer]: 
+          - paragraph [ref=e1942] [cursor=pointer]: Serialization for persistence and marshalling.
+          - generic [ref=e1943] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1945] [cursor=pointer]:
+              - generic [ref=e1946] [cursor=pointer]: C++
+              - text: "03"
+            - link "IO" [ref=e1948] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/io/
+        - generic [ref=e1949] [cursor=pointer]:
+          - heading "Signals2 " [level=3] [ref=e1951] [cursor=pointer]:
+            - generic [ref=e1952] [cursor=pointer]:
+              - link "Signals2" [ref=e1953] [cursor=pointer]:
+                - /url: /library/1.72.0/signals2/
+              - link "" [ref=e1954] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/signals2/index.html
+                - generic [ref=e1955] [cursor=pointer]: 
+          - paragraph [ref=e1957] [cursor=pointer]: Managed signals & slots callback implementation (thread-safe version 2).
+          - generic [ref=e1958] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1960] [cursor=pointer]:
+              - generic [ref=e1961] [cursor=pointer]: C++
+              - text: "03"
+            - generic [ref=e1962] [cursor=pointer]:
+              - link "Function-objects" [ref=e1963] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/function-objects/
+              - text: ","
+              - link "Patterns" [ref=e1964] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/patterns/
+        - generic [ref=e1965] [cursor=pointer]:
+          - heading "Smart Ptr " [level=3] [ref=e1967] [cursor=pointer]:
+            - generic [ref=e1968] [cursor=pointer]:
+              - link "Smart Ptr" [ref=e1969] [cursor=pointer]:
+                - /url: /library/1.72.0/smart_ptr/
+              - link "" [ref=e1970] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/smart_ptr/index.html
+                - generic [ref=e1971] [cursor=pointer]: 
+          - paragraph [ref=e1973] [cursor=pointer]: Smart pointer class templates.
+          - generic [ref=e1974] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1976] [cursor=pointer]:
+              - generic [ref=e1977] [cursor=pointer]: C++
+              - text: "03"
+            - link "Memory" [ref=e1979] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/memory/
+        - generic [ref=e1980] [cursor=pointer]:
+          - heading "Sort " [level=3] [ref=e1982] [cursor=pointer]:
+            - generic [ref=e1983] [cursor=pointer]:
+              - link "Sort" [ref=e1984] [cursor=pointer]:
+                - /url: /library/1.72.0/sort/
+              - link "" [ref=e1985] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/sort/index.html
+                - generic [ref=e1986] [cursor=pointer]: 
+          - paragraph [ref=e1988] [cursor=pointer]: High-performance templated sort functions.
+          - generic [ref=e1989] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e1991] [cursor=pointer]:
+              - generic [ref=e1992] [cursor=pointer]: C++
+              - text: "03"
+            - link "Algorithms" [ref=e1994] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/algorithms/
+        - generic [ref=e1995] [cursor=pointer]:
+          - heading "Spirit " [level=3] [ref=e1997] [cursor=pointer]:
+            - generic [ref=e1998] [cursor=pointer]:
+              - link "Spirit" [ref=e1999] [cursor=pointer]:
+                - /url: /library/1.72.0/spirit/
+              - link "" [ref=e2000] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/spirit/index.html
+                - generic [ref=e2001] [cursor=pointer]: 
+          - paragraph [ref=e2003] [cursor=pointer]: LL parser framework represents parsers directly as EBNF grammars in inlined C++.
+          - generic [ref=e2004] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e2006] [cursor=pointer]:
+              - generic [ref=e2007] [cursor=pointer]: C++
+              - text: "03"
+            - generic [ref=e2008] [cursor=pointer]:
+              - link "Parsing" [ref=e2009] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/parsing/
+              - text: ","
+              - link "String" [ref=e2010] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/string/
+        - generic [ref=e2011] [cursor=pointer]:
+          - heading "Stacktrace " [level=3] [ref=e2013] [cursor=pointer]:
+            - generic [ref=e2014] [cursor=pointer]:
+              - link "Stacktrace" [ref=e2015] [cursor=pointer]:
+                - /url: /library/1.72.0/stacktrace/
+              - link "" [ref=e2016] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/stacktrace/index.html
+                - generic [ref=e2017] [cursor=pointer]: 
+          - paragraph [ref=e2019] [cursor=pointer]: Gather, store, copy and print backtraces.
+          - generic [ref=e2020] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e2022] [cursor=pointer]:
+              - generic [ref=e2023] [cursor=pointer]: C++
+              - text: "03"
+            - generic [ref=e2024] [cursor=pointer]:
+              - link "System" [ref=e2025] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/system/
+              - text: ","
+              - link "Correctness" [ref=e2026] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/correctness/
+        - generic [ref=e2027] [cursor=pointer]:
+          - heading "Statechart " [level=3] [ref=e2029] [cursor=pointer]:
+            - generic [ref=e2030] [cursor=pointer]:
+              - link "Statechart" [ref=e2031] [cursor=pointer]:
+                - /url: /library/1.72.0/statechart/
+              - link "" [ref=e2032] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/statechart/index.html
+                - generic [ref=e2033] [cursor=pointer]: 
+          - paragraph [ref=e2035] [cursor=pointer]: Boost.Statechart - Arbitrarily complex finite state machines can be implemented in easily readable and maintainable C++ code.
+          - generic [ref=e2036] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e2038] [cursor=pointer]:
+              - generic [ref=e2039] [cursor=pointer]: C++
+              - text: "03"
+            - link "State" [ref=e2041] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/state/
+        - generic [ref=e2042] [cursor=pointer]:
+          - heading "Static Assert " [level=3] [ref=e2044] [cursor=pointer]:
+            - generic [ref=e2045] [cursor=pointer]:
+              - link "Static Assert" [ref=e2046] [cursor=pointer]:
+                - /url: /library/1.72.0/static_assert/
+              - link "" [ref=e2047] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/static_assert/index.html
+                - generic [ref=e2048] [cursor=pointer]: 
+          - paragraph [ref=e2050] [cursor=pointer]: Static assertions (compile time assertions).
+          - generic [ref=e2051] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e2053] [cursor=pointer]:
+              - generic [ref=e2054] [cursor=pointer]: C++
+              - text: "03"
+            - generic [ref=e2055] [cursor=pointer]:
+              - link "Correctness" [ref=e2056] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/correctness/
+              - text: ","
+              - link "Generic" [ref=e2057] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/generic/
+              - text: ","
+              - link "Metaprogramming" [ref=e2058] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/metaprogramming/
+        - generic [ref=e2059] [cursor=pointer]:
+          - heading "String Algo " [level=3] [ref=e2061] [cursor=pointer]:
+            - generic [ref=e2062] [cursor=pointer]:
+              - link "String Algo" [ref=e2063] [cursor=pointer]:
+                - /url: /library/1.72.0/algorithmstring/
+              - link "" [ref=e2064] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/algorithm/string/index.html
+                - generic [ref=e2065] [cursor=pointer]: 
+          - paragraph [ref=e2067] [cursor=pointer]: String algorithms library.
+          - generic [ref=e2068] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e2070] [cursor=pointer]:
+              - generic [ref=e2071] [cursor=pointer]: C++
+              - text: "03"
+            - generic [ref=e2072] [cursor=pointer]:
+              - link "Algorithms" [ref=e2073] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/algorithms/
+              - text: ","
+              - link "String" [ref=e2074] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/string/
+        - generic [ref=e2075] [cursor=pointer]:
+          - heading "String Ref " [level=3] [ref=e2077] [cursor=pointer]:
+            - generic [ref=e2078] [cursor=pointer]:
+              - link "String Ref" [ref=e2079] [cursor=pointer]:
+                - /url: /library/1.72.0/utilitystring_ref/
+              - link "" [ref=e2080] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/utility/doc/html/string_ref.html
+                - generic [ref=e2081] [cursor=pointer]: 
+          - paragraph [ref=e2083] [cursor=pointer]: String view templates.
+          - generic "C++ Version 03 or Later" [ref=e2086] [cursor=pointer]:
+            - generic [ref=e2087] [cursor=pointer]: C++
+            - text: "03"
+        - generic [ref=e2089] [cursor=pointer]:
+          - heading "Swap " [level=3] [ref=e2091] [cursor=pointer]:
+            - generic [ref=e2092] [cursor=pointer]:
+              - link "Swap" [ref=e2093] [cursor=pointer]:
+                - /url: /library/1.72.0/utilityswap/
+              - link "" [ref=e2094] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/core/swap.html
+                - generic [ref=e2095] [cursor=pointer]: 
+          - paragraph [ref=e2097] [cursor=pointer]: Enhanced generic swap function.
+          - generic [ref=e2098] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e2100] [cursor=pointer]:
+              - generic [ref=e2101] [cursor=pointer]: C++
+              - text: "03"
+            - link "Miscellaneous" [ref=e2103] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/miscellaneous/
+        - generic [ref=e2104] [cursor=pointer]:
+          - heading "System " [level=3] [ref=e2106] [cursor=pointer]:
+            - generic [ref=e2107] [cursor=pointer]:
+              - link "System" [ref=e2108] [cursor=pointer]:
+                - /url: /library/1.72.0/system/
+              - link "" [ref=e2109] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/system/index.html
+                - generic [ref=e2110] [cursor=pointer]: 
+          - paragraph [ref=e2112] [cursor=pointer]: Operating system support, including the diagnostics support that will be part of the C++0x standard library.
+          - generic [ref=e2113] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e2115] [cursor=pointer]:
+              - generic [ref=e2116] [cursor=pointer]: C++
+              - text: "03"
+            - generic [ref=e2117] [cursor=pointer]:
+              - link "System" [ref=e2118] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/system/
+              - text: ","
+              - link "Error-handling" [ref=e2119] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/error-handling/
+              - text: ","
+              - link "Programming" [ref=e2120] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/programming/
+        - generic [ref=e2121] [cursor=pointer]:
+          - heading "Test " [level=3] [ref=e2123] [cursor=pointer]:
+            - generic [ref=e2124] [cursor=pointer]:
+              - link "Test" [ref=e2125] [cursor=pointer]:
+                - /url: /library/1.72.0/test/
+              - link "" [ref=e2126] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/test/index.html
+                - generic [ref=e2127] [cursor=pointer]: 
+          - paragraph [ref=e2129] [cursor=pointer]: Support for simple program testing, full unit testing, and for program execution monitoring.
+          - generic [ref=e2130] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e2132] [cursor=pointer]:
+              - generic [ref=e2133] [cursor=pointer]: C++
+              - text: "03"
+            - link "Correctness" [ref=e2135] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/correctness/
+        - generic [ref=e2136] [cursor=pointer]:
+          - heading "Thread " [level=3] [ref=e2138] [cursor=pointer]:
+            - generic [ref=e2139] [cursor=pointer]:
+              - link "Thread" [ref=e2140] [cursor=pointer]:
+                - /url: /library/1.72.0/thread/
+              - link "" [ref=e2141] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/thread/index.html
+                - generic [ref=e2142] [cursor=pointer]: 
+          - paragraph [ref=e2144] [cursor=pointer]: Portable C++ multi-threading. C++03, C++11, C++14, C++17.
+          - generic [ref=e2145] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e2147] [cursor=pointer]:
+              - generic [ref=e2148] [cursor=pointer]: C++
+              - text: "03"
+            - generic [ref=e2149] [cursor=pointer]:
+              - link "Concurrent" [ref=e2150] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/concurrent/
+              - text: ","
+              - link "System" [ref=e2151] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/system/
+        - generic [ref=e2152] [cursor=pointer]:
+          - heading "ThrowException " [level=3] [ref=e2154] [cursor=pointer]:
+            - generic [ref=e2155] [cursor=pointer]:
+              - link "ThrowException" [ref=e2156] [cursor=pointer]:
+                - /url: /library/1.72.0/throw_exception/
+              - link "" [ref=e2157] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/throw_exception/index.html
+                - generic [ref=e2158] [cursor=pointer]: 
+          - paragraph [ref=e2160] [cursor=pointer]: A common infrastructure for throwing exceptions from Boost libraries.
+          - generic [ref=e2161] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e2163] [cursor=pointer]:
+              - generic [ref=e2164] [cursor=pointer]: C++
+              - text: "03"
+            - generic [ref=e2165] [cursor=pointer]:
+              - link "Emulation" [ref=e2166] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/emulation/
+              - text: ","
+              - link "Error-handling" [ref=e2167] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/error-handling/
+        - generic [ref=e2168] [cursor=pointer]:
+          - heading "Timer " [level=3] [ref=e2170] [cursor=pointer]:
+            - generic [ref=e2171] [cursor=pointer]:
+              - link "Timer" [ref=e2172] [cursor=pointer]:
+                - /url: /library/1.72.0/timer/
+              - link "" [ref=e2173] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/timer/index.html
+                - generic [ref=e2174] [cursor=pointer]: 
+          - paragraph [ref=e2176] [cursor=pointer]: Event timer, progress timer, and progress display classes.
+          - generic [ref=e2177] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e2179] [cursor=pointer]:
+              - generic [ref=e2180] [cursor=pointer]: C++
+              - text: "03"
+            - link "Miscellaneous" [ref=e2182] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/miscellaneous/
+        - generic [ref=e2183] [cursor=pointer]:
+          - heading "Tokenizer " [level=3] [ref=e2185] [cursor=pointer]:
+            - generic [ref=e2186] [cursor=pointer]:
+              - link "Tokenizer" [ref=e2187] [cursor=pointer]:
+                - /url: /library/1.72.0/tokenizer/
+              - link "" [ref=e2188] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/tokenizer/index.html
+                - generic [ref=e2189] [cursor=pointer]: 
+          - paragraph [ref=e2191] [cursor=pointer]: Break of a string or other character sequence into a series of tokens.
+          - generic [ref=e2192] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e2194] [cursor=pointer]:
+              - generic [ref=e2195] [cursor=pointer]: C++
+              - text: "03"
+            - generic [ref=e2196] [cursor=pointer]:
+              - link "Iterators" [ref=e2197] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/iterators/
+              - text: ","
+              - link "String" [ref=e2198] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/string/
+        - generic [ref=e2199] [cursor=pointer]:
+          - heading "Tribool " [level=3] [ref=e2201] [cursor=pointer]:
+            - generic [ref=e2202] [cursor=pointer]:
+              - link "Tribool" [ref=e2203] [cursor=pointer]:
+                - /url: /library/1.72.0/logictribool/
+              - link "" [ref=e2204] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/../doc/html/tribool.html
+                - generic [ref=e2205] [cursor=pointer]: 
+          - paragraph [ref=e2207] [cursor=pointer]: 3-state boolean type library.
+          - generic [ref=e2208] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e2210] [cursor=pointer]:
+              - generic [ref=e2211] [cursor=pointer]: C++
+              - text: "03"
+            - link "Miscellaneous" [ref=e2213] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/miscellaneous/
+        - generic [ref=e2214] [cursor=pointer]:
+          - heading "TTI " [level=3] [ref=e2216] [cursor=pointer]:
+            - generic [ref=e2217] [cursor=pointer]:
+              - link "TTI" [ref=e2218] [cursor=pointer]:
+                - /url: /library/1.72.0/tti/
+              - link "" [ref=e2219] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/tti/index.html
+                - generic [ref=e2220] [cursor=pointer]: 
+          - paragraph [ref=e2222] [cursor=pointer]: Type Traits Introspection library.
+          - generic [ref=e2223] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e2225] [cursor=pointer]:
+              - generic [ref=e2226] [cursor=pointer]: C++
+              - text: "03"
+            - generic [ref=e2227] [cursor=pointer]:
+              - link "Generic" [ref=e2228] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/generic/
+              - text: ","
+              - link "Metaprogramming" [ref=e2229] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/metaprogramming/
+        - generic [ref=e2230] [cursor=pointer]:
+          - heading "Tuple " [level=3] [ref=e2232] [cursor=pointer]:
+            - generic [ref=e2233] [cursor=pointer]:
+              - link "Tuple" [ref=e2234] [cursor=pointer]:
+                - /url: /library/1.72.0/tuple/
+              - link "" [ref=e2235] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/tuple/index.html
+                - generic [ref=e2236] [cursor=pointer]: 
+          - paragraph [ref=e2238] [cursor=pointer]: Ease definition of functions returning multiple values, and more.
+          - generic [ref=e2239] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e2241] [cursor=pointer]:
+              - generic [ref=e2242] [cursor=pointer]: C++
+              - text: "03"
+            - link "Data" [ref=e2244] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/data/
+        - generic [ref=e2245] [cursor=pointer]:
+          - heading "Type Erasure " [level=3] [ref=e2247] [cursor=pointer]:
+            - generic [ref=e2248] [cursor=pointer]:
+              - link "Type Erasure" [ref=e2249] [cursor=pointer]:
+                - /url: /library/1.72.0/type_erasure/
+              - link "" [ref=e2250] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/type_erasure/index.html
+                - generic [ref=e2251] [cursor=pointer]: 
+          - paragraph [ref=e2253] [cursor=pointer]: Runtime polymorphism based on concepts.
+          - generic [ref=e2254] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e2256] [cursor=pointer]:
+              - generic [ref=e2257] [cursor=pointer]: C++
+              - text: "03"
+            - link "Data" [ref=e2259] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/data/
+        - generic [ref=e2260] [cursor=pointer]:
+          - heading "Type Index " [level=3] [ref=e2262] [cursor=pointer]:
+            - generic [ref=e2263] [cursor=pointer]:
+              - link "Type Index" [ref=e2264] [cursor=pointer]:
+                - /url: /library/1.72.0/type_index/
+              - link "" [ref=e2265] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/type_index/index.html
+                - generic [ref=e2266] [cursor=pointer]: 
+          - paragraph [ref=e2268] [cursor=pointer]: Runtime/Compile time copyable type info.
+          - generic [ref=e2269] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e2271] [cursor=pointer]:
+              - generic [ref=e2272] [cursor=pointer]: C++
+              - text: "03"
+            - link "Emulation" [ref=e2274] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/emulation/
+        - generic [ref=e2275] [cursor=pointer]:
+          - heading "Typeof " [level=3] [ref=e2277] [cursor=pointer]:
+            - generic [ref=e2278] [cursor=pointer]:
+              - link "Typeof" [ref=e2279] [cursor=pointer]:
+                - /url: /library/1.72.0/typeof/
+              - link "" [ref=e2280] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/typeof/index.html
+                - generic [ref=e2281] [cursor=pointer]: 
+          - paragraph [ref=e2283] [cursor=pointer]: Typeof operator emulation.
+          - generic [ref=e2284] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e2286] [cursor=pointer]:
+              - generic [ref=e2287] [cursor=pointer]: C++
+              - text: "03"
+            - link "Emulation" [ref=e2289] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/emulation/
+        - generic [ref=e2290] [cursor=pointer]:
+          - heading "Type Traits " [level=3] [ref=e2292] [cursor=pointer]:
+            - generic [ref=e2293] [cursor=pointer]:
+              - link "Type Traits" [ref=e2294] [cursor=pointer]:
+                - /url: /library/1.72.0/type_traits/
+              - link "" [ref=e2295] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/type_traits/index.html
+                - generic [ref=e2296] [cursor=pointer]: 
+          - paragraph [ref=e2298] [cursor=pointer]: Templates for fundamental properties of types.
+          - generic [ref=e2299] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e2301] [cursor=pointer]:
+              - generic [ref=e2302] [cursor=pointer]: C++
+              - text: "03"
+            - generic [ref=e2303] [cursor=pointer]:
+              - link "Generic" [ref=e2304] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/generic/
+              - text: ","
+              - link "Metaprogramming" [ref=e2305] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/metaprogramming/
+        - generic [ref=e2306] [cursor=pointer]:
+          - heading "uBLAS " [level=3] [ref=e2308] [cursor=pointer]:
+            - generic [ref=e2309] [cursor=pointer]:
+              - link "uBLAS" [ref=e2310] [cursor=pointer]:
+                - /url: /library/1.72.0/numericublas/
+              - link "" [ref=e2311] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/numeric/ublas/index.html
+                - generic [ref=e2312] [cursor=pointer]: 
+          - paragraph [ref=e2314] [cursor=pointer]: uBLAS provides tensor, matrix, and vector classes as well as basic linear algebra routines. Several dense, packed and sparse storage schemes are supported.
+          - generic [ref=e2315] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e2317] [cursor=pointer]:
+              - generic [ref=e2318] [cursor=pointer]: C++
+              - text: "03"
+            - link "Math" [ref=e2320] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/math/
+        - generic [ref=e2321] [cursor=pointer]:
+          - heading "Units " [level=3] [ref=e2323] [cursor=pointer]:
+            - generic [ref=e2324] [cursor=pointer]:
+              - link "Units" [ref=e2325] [cursor=pointer]:
+                - /url: /library/1.72.0/units/
+              - link "" [ref=e2326] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/units/index.html
+                - generic [ref=e2327] [cursor=pointer]: 
+          - paragraph [ref=e2329] [cursor=pointer]: Zero-overhead dimensional analysis and unit/quantity manipulation and conversion.
+          - generic [ref=e2330] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e2332] [cursor=pointer]:
+              - generic [ref=e2333] [cursor=pointer]: C++
+              - text: "03"
+            - link "Domain" [ref=e2335] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/domain/
+        - generic [ref=e2336] [cursor=pointer]:
+          - heading "Unordered " [level=3] [ref=e2338] [cursor=pointer]:
+            - generic [ref=e2339] [cursor=pointer]:
+              - link "Unordered" [ref=e2340] [cursor=pointer]:
+                - /url: /library/1.72.0/unordered/
+              - link "" [ref=e2341] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/unordered/index.html
+                - generic [ref=e2342] [cursor=pointer]: 
+          - paragraph [ref=e2344] [cursor=pointer]: Unordered associative containers.
+          - generic [ref=e2345] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e2347] [cursor=pointer]:
+              - generic [ref=e2348] [cursor=pointer]: C++
+              - text: "03"
+            - link "Containers" [ref=e2350] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/containers/
+        - generic [ref=e2351] [cursor=pointer]:
+          - heading "Utility " [level=3] [ref=e2353] [cursor=pointer]:
+            - generic [ref=e2354] [cursor=pointer]:
+              - link "Utility" [ref=e2355] [cursor=pointer]:
+                - /url: /library/1.72.0/utility/
+              - link "" [ref=e2356] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/utility/utility.htm
+                - generic [ref=e2357] [cursor=pointer]: 
+          - paragraph [ref=e2359] [cursor=pointer]: Class noncopyable plus checked_delete(), checked_array_delete(), next(), prior() function templates, plus base-from-member idiom.
+          - generic [ref=e2360] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e2362] [cursor=pointer]:
+              - generic [ref=e2363] [cursor=pointer]: C++
+              - text: "03"
+            - generic [ref=e2364] [cursor=pointer]:
+              - link "Miscellaneous" [ref=e2365] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/miscellaneous/
+              - text: ","
+              - link "Patterns" [ref=e2366] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/patterns/
+        - generic [ref=e2367] [cursor=pointer]:
+          - heading "Uuid " [level=3] [ref=e2369] [cursor=pointer]:
+            - generic [ref=e2370] [cursor=pointer]:
+              - link "Uuid" [ref=e2371] [cursor=pointer]:
+                - /url: /library/1.72.0/uuid/
+              - link "" [ref=e2372] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/uuid/index.html
+                - generic [ref=e2373] [cursor=pointer]: 
+          - paragraph [ref=e2375] [cursor=pointer]: A universally unique identifier.
+          - generic [ref=e2376] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e2378] [cursor=pointer]:
+              - generic [ref=e2379] [cursor=pointer]: C++
+              - text: "03"
+            - generic [ref=e2380] [cursor=pointer]:
+              - link "Data" [ref=e2381] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/data/
+              - text: ","
+              - link "Domain" [ref=e2382] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/domain/
+        - generic [ref=e2383] [cursor=pointer]:
+          - heading "Value Initialized " [level=3] [ref=e2385] [cursor=pointer]:
+            - generic [ref=e2386] [cursor=pointer]:
+              - link "Value Initialized" [ref=e2387] [cursor=pointer]:
+                - /url: /library/1.72.0/utilityvalue_initialized/
+              - link "" [ref=e2388] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/utility/value_init.htm
+                - generic [ref=e2389] [cursor=pointer]: 
+          - paragraph [ref=e2391] [cursor=pointer]: Wrapper for uniform-syntax value initialization, based on the original idea of David Abrahams.
+          - generic [ref=e2392] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e2394] [cursor=pointer]:
+              - generic [ref=e2395] [cursor=pointer]: C++
+              - text: "03"
+            - link "Miscellaneous" [ref=e2397] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/miscellaneous/
+        - generic [ref=e2398] [cursor=pointer]:
+          - heading "Variant " [level=3] [ref=e2400] [cursor=pointer]:
+            - generic [ref=e2401] [cursor=pointer]:
+              - link "Variant" [ref=e2402] [cursor=pointer]:
+                - /url: /library/1.72.0/variant/
+              - link "" [ref=e2403] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/variant/index.html
+                - generic [ref=e2404] [cursor=pointer]: 
+          - paragraph [ref=e2406] [cursor=pointer]: Safe, generic, stack-based discriminated union container.
+          - generic [ref=e2407] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e2409] [cursor=pointer]:
+              - generic [ref=e2410] [cursor=pointer]: C++
+              - text: "03"
+            - generic [ref=e2411] [cursor=pointer]:
+              - link "Containers" [ref=e2412] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/containers/
+              - text: ","
+              - link "Data" [ref=e2413] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/data/
+        - generic [ref=e2414] [cursor=pointer]:
+          - heading "Variant2 " [level=3] [ref=e2416] [cursor=pointer]:
+            - generic [ref=e2417] [cursor=pointer]:
+              - link "Variant2" [ref=e2418] [cursor=pointer]:
+                - /url: /library/1.72.0/variant2/
+              - link "" [ref=e2419] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/variant2/index.html
+                - generic [ref=e2420] [cursor=pointer]: 
+          - paragraph [ref=e2422] [cursor=pointer]: A never-valueless, strong guarantee implementation of std::variant.
+          - generic [ref=e2423] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e2425] [cursor=pointer]:
+              - generic [ref=e2426] [cursor=pointer]: C++
+              - text: "03"
+            - generic [ref=e2427] [cursor=pointer]:
+              - link "Containers" [ref=e2428] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/containers/
+              - text: ","
+              - link "Data" [ref=e2429] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/data/
+        - generic [ref=e2430] [cursor=pointer]:
+          - heading "VMD " [level=3] [ref=e2432] [cursor=pointer]:
+            - generic [ref=e2433] [cursor=pointer]:
+              - link "VMD" [ref=e2434] [cursor=pointer]:
+                - /url: /library/1.72.0/vmd/
+              - link "" [ref=e2435] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/vmd/index.html
+                - generic [ref=e2436] [cursor=pointer]: 
+          - paragraph [ref=e2438] [cursor=pointer]: Variadic Macro Data library.
+          - generic [ref=e2439] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e2441] [cursor=pointer]:
+              - generic [ref=e2442] [cursor=pointer]: C++
+              - text: "03"
+            - link "Preprocessor" [ref=e2444] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/preprocessor/
+        - generic [ref=e2445] [cursor=pointer]:
+          - heading "Wave " [level=3] [ref=e2447] [cursor=pointer]:
+            - generic [ref=e2448] [cursor=pointer]:
+              - link "Wave" [ref=e2449] [cursor=pointer]:
+                - /url: /library/1.72.0/wave/
+              - link "" [ref=e2450] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/wave/index.html
+                - generic [ref=e2451] [cursor=pointer]: 
+          - paragraph [ref=e2453] [cursor=pointer]: The Boost.Wave library is a Standards conformant, and highly configurable implementation of the mandated C99/C++ preprocessor functionality packed behind an easy to use iterator interface.
+          - generic [ref=e2454] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e2456] [cursor=pointer]:
+              - generic [ref=e2457] [cursor=pointer]: C++
+              - text: "03"
+            - link "String" [ref=e2459] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/string/
+        - generic [ref=e2460] [cursor=pointer]:
+          - heading "WinAPI " [level=3] [ref=e2462] [cursor=pointer]:
+            - generic [ref=e2463] [cursor=pointer]:
+              - link "WinAPI" [ref=e2464] [cursor=pointer]:
+                - /url: /library/1.72.0/winapi/
+              - link "" [ref=e2465] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/winapi/doc/html/index.html
+                - generic [ref=e2466] [cursor=pointer]: 
+          - paragraph [ref=e2468] [cursor=pointer]: Windows API abstraction layer.
+          - generic [ref=e2469] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e2471] [cursor=pointer]:
+              - generic [ref=e2472] [cursor=pointer]: C++
+              - text: "03"
+            - link "Miscellaneous" [ref=e2474] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/miscellaneous/
+        - generic [ref=e2475] [cursor=pointer]:
+          - heading "Xpressive " [level=3] [ref=e2477] [cursor=pointer]:
+            - generic [ref=e2478] [cursor=pointer]:
+              - link "Xpressive" [ref=e2479] [cursor=pointer]:
+                - /url: /library/1.72.0/xpressive/
+              - link "" [ref=e2480] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/xpressive/index.html
+                - generic [ref=e2481] [cursor=pointer]: 
+          - paragraph [ref=e2483] [cursor=pointer]: Regular expressions that can be written as strings or as expression templates, and which can refer to each other and themselves recursively with the power of context-free grammars.
+          - generic [ref=e2484] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e2486] [cursor=pointer]:
+              - generic [ref=e2487] [cursor=pointer]: C++
+              - text: "03"
+            - link "String" [ref=e2489] [cursor=pointer]:
+              - /url: /libraries/1.72.0/grid/string/
+        - generic [ref=e2490] [cursor=pointer]:
+          - heading "YAP " [level=3] [ref=e2492] [cursor=pointer]:
+            - generic [ref=e2493] [cursor=pointer]:
+              - link "YAP" [ref=e2494] [cursor=pointer]:
+                - /url: /library/1.72.0/yap/
+              - link "" [ref=e2495] [cursor=pointer]:
+                - /url: /doc/libs/1_72_0/libs/yap/index.html
+                - generic [ref=e2496] [cursor=pointer]: 
+          - paragraph [ref=e2498] [cursor=pointer]: An expression template library for C++14 and later.
+          - generic [ref=e2499] [cursor=pointer]:
+            - generic "C++ Version 03 or Later" [ref=e2501] [cursor=pointer]:
+              - generic [ref=e2502] [cursor=pointer]: C++
+              - text: "03"
+            - generic [ref=e2503] [cursor=pointer]:
+              - link "Generic" [ref=e2504] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/generic/
+              - text: ","
+              - link "Metaprogramming" [ref=e2505] [cursor=pointer]:
+                - /url: /libraries/1.72.0/grid/metaprogramming/
+    - contentinfo [ref=e2506]:
+      - generic [ref=e2507]:
+        - generic [ref=e2508]:
+          - link "Contact" [ref=e2509] [cursor=pointer]:
+            - /url: https://lists.boost.org/mailman3/lists/boost-users.lists.boost.org/
+          - link "Privacy Policy" [ref=e2510] [cursor=pointer]:
+            - /url: /privacy/
+          - link "Terms of Use" [ref=e2511] [cursor=pointer]:
+            - /url: /terms-of-use/
+          - link "Report Bug" [ref=e2512] [cursor=pointer]:
+            - /url: /doc/user-guide/reporting-issues.html
+          - generic [ref=e2513]:
+            - link "" [ref=e2514] [cursor=pointer]:
+              - /url: https://x.com/boost_libraries
+              - generic [ref=e2515] [cursor=pointer]: 
+            - link "" [ref=e2516] [cursor=pointer]:
+              - /url: https://bsky.app/profile/boost.org
+              - generic [ref=e2517] [cursor=pointer]: 
+            - link "" [ref=e2518] [cursor=pointer]:
+              - /url: https://mastodon.social/@boostlibs
+              - generic [ref=e2519] [cursor=pointer]: 
+            - link "" [ref=e2520] [cursor=pointer]:
+              - /url: https://www.reddit.com/user/boostlibs/
+              - generic [ref=e2521] [cursor=pointer]: 
+            - link "" [ref=e2522] [cursor=pointer]:
+              - /url: https://github.com/boostorg
+              - generic [ref=e2523] [cursor=pointer]: 
+            - link "" [ref=e2524] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/cppalliance/
+              - generic [ref=e2525] [cursor=pointer]: 
+        - generic [ref=e2527]:
+          - text: Website supported by grants from
+          - link "The C++ Alliance" [ref=e2528] [cursor=pointer]:
+            - /url: https://cppalliance.org/
+          - text: .
+        - generic [ref=e2530]:
+          - text: Distributed under the
+          - link "Boost Software License, Version 1.0" [ref=e2531] [cursor=pointer]:
+            - /url: /LICENSE_1_0.txt
+          - text: .
+```
