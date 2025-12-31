@@ -2,8 +2,8 @@
 
 > **Automated Quality Gate Report**
 
-**Last Updated:** Tuesday, December 30, 2025 at 4:47 PM | **Env:** STAGING | **Branch:** main
-**Run:** [#151](https://github.com/karimarie67/QA-documentation/actions/runs/20606591959)
+**Last Updated:** Wednesday, December 31, 2025 at 8:18 AM | **Env:** STAGING | **Branch:** main
+**Run:** [#152](https://github.com/karimarie67/QA-documentation/actions/runs/20619776960)
 
 ---
 
@@ -12,7 +12,7 @@
 | Metric | Current Value | Status |
 |--------|---------------|----------------|
 | **Pass Rate** | **100.0%** | 🟢 Excellent |
-| **Duration** | **19.3s** | ✅ Good |
+| **Duration** | **21.4s** | ✅ Good |
 | **Total Tests** | 6 | 6 Pass / 0 Fail |
 | **Functional** | 0 Tests | ❌ Missing |
 
@@ -32,11 +32,11 @@
 ### 🔥 Smoke Tests
 | Test Name | Status | Duration | Project |
 |-----------|--------|----------|---------|
-| Homepage loads with key elements | ✅ passed | 1.5s | staging |
-| Navigation menu links work correctly | ✅ passed | 3.1s | staging |
-| Libraries page displays and links to documentation | ✅ passed | 7.4s | staging |
-| Download section works correctly | ✅ passed | 2.6s | staging |
-| Search bar works with basic query | ✅ passed | 3.5s | staging |
+| Homepage loads with key elements | ✅ passed | 1.7s | staging |
+| Navigation menu links work correctly | ✅ passed | 4.0s | staging |
+| Libraries page displays and links to documentation | ✅ passed | 7.5s | staging |
+| Download section works correctly | ✅ passed | 3.7s | staging |
+| Search bar works with basic query | ✅ passed | 3.4s | staging |
 | Homepage is responsive on mobile | ✅ passed | 1.2s | staging |
 
 
@@ -57,6 +57,7 @@
 ## 📈 History (Last 10 Runs)
 | Date | Pass Rate | Duration | Failures |
 |------|-----------|----------|----------|
+| Dec 31 | 100.0% | 21.4s | 0 |
 | Dec 30 | 100.0% | 19.3s | 0 |
 | Dec 30 | 100.0% | 23.3s | 0 |
 | Dec 30 | 100.0% | 22.0s | 0 |
@@ -66,6 +67,5 @@
 | Dec 23 | 100.0% | 4m 8s | 0 |
 | Dec 23 | 100.0% | 22.4s | 0 |
 | Dec 23 | 100.0% | 4m 7s | 0 |
-| Dec 23 | 100.0% | 23.6s | 0 |
 
 ---
