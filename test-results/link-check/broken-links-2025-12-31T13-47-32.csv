@@ -1,21 +1,6 @@
 source,url,status,type
-"https://www.boost.org/users/history/version_1_72_0.html","https://www.boost.org/patches/1_72_0/0001-revert-cease-dependence-on-range.patch",error,page.goto: net::ERR_ABORTED; maybe frame was detached?
-Call log:
-[2m  - navigating to "https://www.boost.org/patches/1_72_0/0001-revert-cease-dependence-on-range.patch", waiting until "domcontentloaded"[22m
-
-"https://www.boost.org/users/history/version_1_72_0.html","https://www.boost.org/doc/libs/1_72_0/doc/html/boost_asio/history.html",error,page.waitForTimeout: Target page, context or browser has been closed
-"https://www.boost.org/review/past/","https://www.boost.org/users/history/version_1_71_0.html",error,page.waitForTimeout: Target page, context or browser has been closed
-"https://www.boost.org/review/past/","https://www.boost.org/users/history/version_1_70_0.html",error,page.waitForTimeout: Target page, context or browser has been closed
-"https://www.boost.org/review/past/","https://www.boost.org/users/history/version_1_69_0.html",error,page.waitForTimeout: Target page, context or browser has been closed
-"https://www.boost.org/review/past/","https://www.boost.org/users/history/version_1_68_0.html",error,page.waitForTimeout: Target page, context or browser has been closed
-"https://www.boost.org/review/past/","https://www.boost.org/users/history/version_1_67_0.html",error,page.waitForTimeout: Target page, context or browser has been closed
-"https://www.boost.org/review/past/","https://www.boost.org/users/history/version_1_66_0.html",error,page.waitForTimeout: Target page, context or browser has been closed
-"https://www.boost.org/review/past/","https://www.boost.org/users/history/version_1_65_1.html",error,page.waitForTimeout: Target page, context or browser has been closed
-"https://www.boost.org/review/past/","https://www.boost.org/users/history/version_1_65_0.html",error,page.waitForTimeout: Target page, context or browser has been closed
-"https://www.boost.org/review/past/","https://www.boost.org/users/history/version_1_64_0.html",error,page.waitForTimeout: Target page, context or browser has been closed
-"https://www.boost.org/review/past/","https://www.boost.org/users/history/version_1_63_0.html",error,page.waitForTimeout: Target page, context or browser has been closed
-"https://www.boost.org/review/past/","https://www.boost.org/users/history/version_1_62_0.html",error,page.waitForTimeout: Target page, context or browser has been closed
-"https://www.boost.org/review/past/","https://www.boost.org/users/history/version_1_61_0.html",error,page.waitForTimeout: Target page, context or browser has been closed
+"https://www.boost.org/users/history/version_1_61_0.html","https://www.boost.org/users/download/signatures/boost_1_61_0.sums.asc",error,page.waitForTimeout: Test timeout of 1800000ms exceeded.
+"https://www.boost.org/users/history/version_1_61_0.html","https://www.boost.org/doc/libs/1_61_0/libs/test/doc/html/boost_test/change_log.html",error,page.waitForTimeout: Target page, context or browser has been closed
 "https://www.boost.org/review/past/","https://www.boost.org/users/news/version_1_60_0",error,page.waitForTimeout: Target page, context or browser has been closed
 "https://www.boost.org/review/past/","https://www.boost.org/users/news/version_1_59_0",error,page.waitForTimeout: Target page, context or browser has been closed
 "https://www.boost.org/review/past/","https://www.boost.org/users/news/version_1_58_0",error,page.waitForTimeout: Target page, context or browser has been closed

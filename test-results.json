@@ -182,7 +182,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "timedOut",
-                      "duration": 1801277,
+                      "duration": 1800081,
                       "error": {
                         "message": "\u001b[31mTest timeout of 1800000ms exceeded.\u001b[39m",
                         "stack": "\u001b[31mTest timeout of 1800000ms exceeded.\u001b[39m"
@@ -209,7 +209,7 @@
                           "text": "⚠️  Using respectful delays (0.3s between requests)\n"
                         },
                         {
-                          "text": "Started at 12/30/2025, 4:48:05 PM\n"
+                          "text": "Started at 12/31/2025, 8:17:32 AM\n"
                         },
                         {
                           "text": "Strategy: Deep check Django pages, spot-check library docs\n"
@@ -734,12 +734,6 @@
                           "text": "✓ Checked 1825 pages (607 doc pages)...\n"
                         },
                         {
-                          "text": "✗ Error on https://www.boost.org/patches/1_72_0/0001-revert-cease-dependence-on-range.patch: page.goto: net::ERR_ABORTED; maybe frame was detached?\nCall log:\n\u001b[2m  - navigating to \"https://www.boost.org/patches/1_72_0/0001-revert-cease-dependence-on-range.patch\", waiting until \"domcontentloaded\"\u001b[22m\n\n"
-                        },
-                        {
-                          "text": "✗ Error on https://www.boost.org/doc/libs/1_72_0/doc/html/boost_asio/history.html: page.waitForTimeout: Target page, context or browser has been closed\n"
-                        },
-                        {
                           "text": "⚠ Malformed path: https://www.boost.org/libs/circular_buffer/\n"
                         },
                         {
@@ -758,40 +752,250 @@
                           "text": "⚠ Malformed path: https://www.boost.org/libs/vmd/\n"
                         },
                         {
-                          "text": "✗ Error on https://www.boost.org/users/history/version_1_71_0.html: page.waitForTimeout: Target page, context or browser has been closed\n"
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/fiber/\n"
                         },
                         {
-                          "text": "✗ Error on https://www.boost.org/users/history/version_1_70_0.html: page.waitForTimeout: Target page, context or browser has been closed\n"
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/histogram/index.html\n"
                         },
                         {
-                          "text": "✗ Error on https://www.boost.org/users/history/version_1_69_0.html: page.waitForTimeout: Target page, context or browser has been closed\n"
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/iostreams/\n"
                         },
                         {
-                          "text": "✗ Error on https://www.boost.org/users/history/version_1_68_0.html: page.waitForTimeout: Target page, context or browser has been closed\n"
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/intrusive/\n"
                         },
                         {
-                          "text": "✗ Error on https://www.boost.org/users/history/version_1_67_0.html: page.waitForTimeout: Target page, context or browser has been closed\n"
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/metaparse/\n"
                         },
                         {
-                          "text": "✗ Error on https://www.boost.org/users/history/version_1_66_0.html: page.waitForTimeout: Target page, context or browser has been closed\n"
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/move/\n"
                         },
                         {
-                          "text": "✗ Error on https://www.boost.org/users/history/version_1_65_1.html: page.waitForTimeout: Target page, context or browser has been closed\n"
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/multi_array/\n"
                         },
                         {
-                          "text": "✗ Error on https://www.boost.org/users/history/version_1_65_0.html: page.waitForTimeout: Target page, context or browser has been closed\n"
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/multi_index/doc/tutorial/key_extraction.html#x_mem_fun\n"
                         },
                         {
-                          "text": "✗ Error on https://www.boost.org/users/history/version_1_64_0.html: page.waitForTimeout: Target page, context or browser has been closed\n"
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/multi_index/doc/reference/key_extraction.html#key\n"
                         },
                         {
-                          "text": "✗ Error on https://www.boost.org/users/history/version_1_63_0.html: page.waitForTimeout: Target page, context or browser has been closed\n"
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/parameter/doc/html/index.html\n"
                         },
                         {
-                          "text": "✗ Error on https://www.boost.org/users/history/version_1_62_0.html: page.waitForTimeout: Target page, context or browser has been closed\n"
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/accumulators/doc/html/index.html\n"
                         },
                         {
-                          "text": "✗ Error on https://www.boost.org/users/history/version_1_61_0.html: page.waitForTimeout: Target page, context or browser has been closed\n"
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/mp11/doc/html/mp11.html\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/ptr_container/\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/releases/1.71.0/libs/test/doc/html/boost_test/change_log.html\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/yap/\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/beast/doc/html/beast/quickref.html\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/beast/doc/html/beast/using_io/asio_refresher.html\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/beast/doc/html/beast/using_io/writing_composed_operations/echo.html\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/beast/doc/html/beast/using_io/writing_composed_operations/detect_ssl.html\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/beast/example/websocket/server/chat-multi\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/beast/example/websocket/server/chat-multi/chat_client.html\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/beast/doc/html/beast/ref/boost__beast__basic_stream.html\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/beast/doc/html/beast/ref/boost__beast__tcp_stream.html\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/beast/doc/html/beast/ref/boost__beast__error.html\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/beast/doc/html/beast/ref/boost__beast__simple_rate_policy.html\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/beast/doc/html/beast/ref/boost__beast__unlimited_rate_policy.html\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/beast/doc/html/beast/concepts/RatePolicy.html\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/beast/doc/html/beast/ref/boost__beast__async_base.html\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/beast/doc/html/beast/ref/boost__beast__stable_async_base.html\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/beast/doc/html/beast/ref/boost__beast__ssl_stream.html\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/coroutine2/\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/dll/BOOST_DLL_USE_STD_FS.html\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/integer/\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/spirit/\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/type_traits/\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/numeric/ublas/\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/safe_numerics/\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/assign/\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/concept_check/\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/function/\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/logic/\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/multi_index/doc/tutorial/key_extraction.html#key\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/pool/\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/rational/\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/releases/1.69.0/libs/test/doc/html/boost_test/change_log.html\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/fusion/\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/graph/\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/multi_index/index.html\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/multiprecision\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/optional/\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/predef/\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/program_options/\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/python/\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/signals/\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/releases/1.68.0/libs/test/doc/html/boost_test/change_log.html\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/contract/\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/hof/\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/math/index.html\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/utility/operators.htm#deref\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/multiprecision/index.html\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/optional/index.html\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/phoenix/\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/units/\n"
+                        },
+                        {
+                          "text": "✓ Checked 1925 pages (623 doc pages)...\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/callable_traits/\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/format/\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/regex/\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/thread/\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/config/\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/functional/hash/\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/typeof/\n"
+                        },
+                        {
+                          "text": "✓ Checked 1950 pages (632 doc pages)...\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/geometry\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/functional/hash\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/qvm/doc/index.html\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/chrono/\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/coroutine/\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/functional/forward/\n"
+                        },
+                        {
+                          "text": "✗ Error on https://www.boost.org/users/download/signatures/boost_1_61_0.sums.asc: page.waitForTimeout: Test timeout of 1800000ms exceeded.\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/compute/\n"
+                        },
+                        {
+                          "text": "⚠ Malformed path: https://www.boost.org/libs/hana/\n"
+                        },
+                        {
+                          "text": "✗ Error on https://www.boost.org/doc/libs/1_61_0/libs/test/doc/html/boost_test/change_log.html: page.waitForTimeout: Target page, context or browser has been closed\n"
                         },
                         {
                           "text": "✗ Error on https://www.boost.org/users/news/version_1_60_0: page.waitForTimeout: Target page, context or browser has been closed\n"
@@ -1068,11 +1272,185 @@
                         },
                         {
                           "text": "✗ Error on https://www.boost.org/doc/libs/1_90_0/libs/filesystem/: page.waitForTimeout: Target page, context or browser has been closed\n"
+                        },
+                        {
+                          "text": "✗ Error on https://www.boost.org/doc/libs/1_90_0/libs/test/: page.waitForTimeout: Target page, context or browser has been closed\n"
+                        },
+                        {
+                          "text": "✗ Error on https://www.boost.org/doc/libs/1_90_0/libs/thread/: page.waitForTimeout: Target page, context or browser has been closed\n"
+                        },
+                        {
+                          "text": "✗ Error on https://www.boost.org/doc/libs/1_90_0/libs/regex/: page.waitForTimeout: Target page, context or browser has been closed\n"
+                        },
+                        {
+                          "text": "\n  Checking version latest...\n"
+                        },
+                        {
+                          "text": "✗ Error on https://www.boost.org/doc/libs/latest/: page.waitForTimeout: Target page, context or browser has been closed\n"
+                        },
+                        {
+                          "text": "✗ Error on https://www.boost.org/doc/libs/latest/libs/asio/: page.waitForTimeout: Target page, context or browser has been closed\n"
+                        },
+                        {
+                          "text": "✗ Error on https://www.boost.org/doc/libs/latest/libs/beast/: page.waitForTimeout: Target page, context or browser has been closed\n"
+                        },
+                        {
+                          "text": "✗ Error on https://www.boost.org/doc/libs/latest/libs/filesystem/: page.waitForTimeout: Target page, context or browser has been closed\n"
+                        },
+                        {
+                          "text": "✗ Error on https://www.boost.org/doc/libs/latest/libs/test/: page.waitForTimeout: Target page, context or browser has been closed\n"
+                        },
+                        {
+                          "text": "✗ Error on https://www.boost.org/doc/libs/latest/libs/thread/: page.waitForTimeout: Target page, context or browser has been closed\n"
+                        },
+                        {
+                          "text": "✗ Error on https://www.boost.org/doc/libs/latest/libs/regex/: page.waitForTimeout: Target page, context or browser has been closed\n"
+                        },
+                        {
+                          "text": "\n❌ Broken links saved to: /Users/kskinner/github/karimarie67/QA-documentation/test-results/link-check/broken-links-2025-12-31T13-47-32.csv\n"
+                        },
+                        {
+                          "text": "⚠ Malformed paths saved to: /Users/kskinner/github/karimarie67/QA-documentation/test-results/link-check/malformed-paths-2025-12-31T13-47-32.csv\n"
+                        },
+                        {
+                          "text": "\n================================================================================\n"
+                        },
+                        {
+                          "text": "SUMMARY - PRODUCTION CHECK\n"
+                        },
+                        {
+                          "text": "================================================================================\n"
+                        },
+                        {
+                          "text": "✓ Total unique pages checked: 2071\n"
+                        },
+                        {
+                          "text": "📚 Documentation pages checked: 683\n"
+                        },
+                        {
+                          "text": "⊘ Skipped (OAuth, external, etc.): 0\n"
+                        },
+                        {
+                          "text": "⚠ Malformed paths (/libs/ instead of /doc/libs/): 190\n"
+                        },
+                        {
+                          "text": "✗ Total broken links: 96\n"
+                        },
+                        {
+                          "text": "  - Site pages (Django): 0\n"
+                        },
+                        {
+                          "text": "  - Doc pages (libraries): 0\n"
+                        },
+                        {
+                          "text": "↪ Redirects: 0\n"
+                        },
+                        {
+                          "text": "\n⚠ MALFORMED PATHS (Fix in Django templates):\n"
+                        },
+                        {
+                          "text": "  1. https://www.boost.org/libs/openmethod\n"
+                        },
+                        {
+                          "text": "      Found on: https://www.boost.org/releases/\n"
+                        },
+                        {
+                          "text": "      Should be: https://www.boost.org/doc/libs/latest/libs/openmethod\n"
+                        },
+                        {
+                          "text": "  2. https://www.boost.org/libs/asio/\n"
+                        },
+                        {
+                          "text": "      Found on: https://www.boost.org/releases/\n"
+                        },
+                        {
+                          "text": "      Should be: https://www.boost.org/doc/libs/latest/libs/asio/\n"
+                        },
+                        {
+                          "text": "  3. https://www.boost.org/libs/beast/\n"
+                        },
+                        {
+                          "text": "      Found on: https://www.boost.org/releases/\n"
+                        },
+                        {
+                          "text": "      Should be: https://www.boost.org/doc/libs/latest/libs/beast/\n"
+                        },
+                        {
+                          "text": "  4. https://www.boost.org/libs/bloom/\n"
+                        },
+                        {
+                          "text": "      Found on: https://www.boost.org/releases/\n"
+                        },
+                        {
+                          "text": "      Should be: https://www.boost.org/doc/libs/latest/libs/bloom/\n"
+                        },
+                        {
+                          "text": "  5. https://www.boost.org/libs/charconv/\n"
+                        },
+                        {
+                          "text": "      Found on: https://www.boost.org/releases/\n"
+                        },
+                        {
+                          "text": "      Should be: https://www.boost.org/doc/libs/latest/libs/charconv/\n"
+                        },
+                        {
+                          "text": "  6. https://www.boost.org/libs/compat/\n"
+                        },
+                        {
+                          "text": "      Found on: https://www.boost.org/releases/\n"
+                        },
+                        {
+                          "text": "      Should be: https://www.boost.org/doc/libs/latest/libs/compat/\n"
+                        },
+                        {
+                          "text": "  7. https://www.boost.org/libs/container/\n"
+                        },
+                        {
+                          "text": "      Found on: https://www.boost.org/releases/\n"
+                        },
+                        {
+                          "text": "      Should be: https://www.boost.org/doc/libs/latest/libs/container/\n"
+                        },
+                        {
+                          "text": "  8. https://www.boost.org/libs/conversion/\n"
+                        },
+                        {
+                          "text": "      Found on: https://www.boost.org/releases/\n"
+                        },
+                        {
+                          "text": "      Should be: https://www.boost.org/doc/libs/latest/libs/conversion/\n"
+                        },
+                        {
+                          "text": "  9. https://www.boost.org/libs/core/\n"
+                        },
+                        {
+                          "text": "      Found on: https://www.boost.org/releases/\n"
+                        },
+                        {
+                          "text": "      Should be: https://www.boost.org/doc/libs/latest/libs/core/\n"
+                        },
+                        {
+                          "text": "  10. https://www.boost.org/libs/dll/\n"
+                        },
+                        {
+                          "text": "      Found on: https://www.boost.org/releases/\n"
+                        },
+                        {
+                          "text": "      Should be: https://www.boost.org/doc/libs/latest/libs/dll/\n"
+                        },
+                        {
+                          "text": "\nBroken links by status:\n"
+                        },
+                        {
+                          "text": "  error: 96\n"
+                        },
+                        {
+                          "text": "\nCompleted at 12/31/2025, 8:47:32 AM\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-30T21:48:05.039Z",
+                      "startTime": "2025-12-31T13:17:31.348Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -1098,8 +1476,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-12-30T21:48:04.310Z",
-    "duration": 1802785.017,
+    "startTime": "2025-12-31T13:17:30.518Z",
+    "duration": 1801761.065,
     "expected": 0,
     "skipped": 0,
     "unexpected": 1,
