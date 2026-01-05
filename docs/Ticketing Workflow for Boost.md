@@ -1,4 +1,4 @@
-# Ticketing Workflow for Boost.io
+# Ticketing Workflow for Boost.org
 
 ## 1. Objective
 
