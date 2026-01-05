@@ -2,8 +2,8 @@
 
 > **Automated Quality Gate Report**
 
-**Last Updated:** Monday, January 5, 2026 at 2:32 PM | **Env:** STAGING | **Branch:** main
-**Run:** [#159](https://github.com/karimarie67/QA-documentation/actions/runs/20726833765)
+**Last Updated:** Monday, January 5, 2026 at 2:35 PM | **Env:** STAGING | **Branch:** main
+**Run:** [#161](https://github.com/karimarie67/QA-documentation/actions/runs/20726893844)
 
 ---
 
@@ -12,7 +12,7 @@
 | Metric | Current Value | Status |
 |--------|---------------|----------------|
 | **Pass Rate** | **100.0%** | 🟢 Excellent |
-| **Duration** | **20.1s** | ✅ Good |
+| **Duration** | **20.3s** | ✅ Good |
 | **Total Tests** | 6 | 6 Pass / 0 Fail |
 | **Functional** | 0 Tests | ❌ Missing |
 
@@ -32,12 +32,12 @@
 ### 🔥 Smoke Tests
 | Test Name | Status | Duration | Project |
 |-----------|--------|----------|---------|
-| Homepage loads with key elements | ✅ passed | 1.7s | staging |
-| Navigation menu links work correctly | ✅ passed | 3.6s | staging |
-| Libraries page displays and links to documentation | ✅ passed | 7.3s | staging |
-| Download section works correctly | ✅ passed | 2.7s | staging |
-| Search bar works with basic query | ✅ passed | 3.6s | staging |
-| Homepage is responsive on mobile | ✅ passed | 1.3s | staging |
+| Homepage loads with key elements | ✅ passed | 1.6s | staging |
+| Navigation menu links work correctly | ✅ passed | 3.4s | staging |
+| Libraries page displays and links to documentation | ✅ passed | 7.5s | staging |
+| Download section works correctly | ✅ passed | 2.8s | staging |
+| Search bar works with basic query | ✅ passed | 3.8s | staging |
+| Homepage is responsive on mobile | ✅ passed | 1.2s | staging |
 
 
 ### 🧩 Functional Tests (Errors, Docs, Search)
@@ -57,6 +57,7 @@
 ## 📈 History (Last 10 Runs)
 | Date | Pass Rate | Duration | Failures |
 |------|-----------|----------|----------|
+| Jan 5 | 100.0% | 20.3s | 0 |
 | Jan 5 | 100.0% | 20.1s | 0 |
 | Jan 5 | 100.0% | 20.3s | 0 |
 | Jan 5 | 100.0% | 19.6s | 0 |
@@ -66,6 +67,5 @@
 | Dec 30 | 100.0% | 19.3s | 0 |
 | Dec 30 | 100.0% | 23.3s | 0 |
 | Dec 30 | 100.0% | 22.0s | 0 |
-| Dec 30 | 100.0% | 23.8s | 0 |
 
 ---
