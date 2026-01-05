@@ -2,8 +2,8 @@
 
 > **Automated Quality Gate Report**
 
-**Last Updated:** Monday, January 5, 2026 at 1:46 PM | **Env:** STAGING | **Branch:** main
-**Run:** [#154](https://github.com/karimarie67/QA-documentation/actions/runs/20725628335)
+**Last Updated:** Monday, January 5, 2026 at 2:24 PM | **Env:** STAGING | **Branch:** main
+**Run:** [#156](https://github.com/karimarie67/QA-documentation/actions/runs/20726617175)
 
 ---
 
@@ -12,7 +12,7 @@
 | Metric | Current Value | Status |
 |--------|---------------|----------------|
 | **Pass Rate** | **100.0%** | 🟢 Excellent |
-| **Duration** | **21.4s** | ✅ Good |
+| **Duration** | **19.6s** | ✅ Good |
 | **Total Tests** | 6 | 6 Pass / 0 Fail |
 | **Functional** | 0 Tests | ❌ Missing |
 
@@ -32,12 +32,12 @@
 ### 🔥 Smoke Tests
 | Test Name | Status | Duration | Project |
 |-----------|--------|----------|---------|
-| Homepage loads with key elements | ✅ passed | 1.9s | staging |
-| Navigation menu links work correctly | ✅ passed | 3.9s | staging |
+| Homepage loads with key elements | ✅ passed | 1.7s | staging |
+| Navigation menu links work correctly | ✅ passed | 3.3s | staging |
 | Libraries page displays and links to documentation | ✅ passed | 7.1s | staging |
-| Download section works correctly | ✅ passed | 3.6s | staging |
+| Download section works correctly | ✅ passed | 2.6s | staging |
 | Search bar works with basic query | ✅ passed | 3.6s | staging |
-| Homepage is responsive on mobile | ✅ passed | 1.4s | staging |
+| Homepage is responsive on mobile | ✅ passed | 1.3s | staging |
 
 
 ### 🧩 Functional Tests (Errors, Docs, Search)
@@ -57,6 +57,7 @@
 ## 📈 History (Last 10 Runs)
 | Date | Pass Rate | Duration | Failures |
 |------|-----------|----------|----------|
+| Jan 5 | 100.0% | 19.6s | 0 |
 | Jan 5 | 100.0% | 21.4s | 0 |
 | Jan 5 | 100.0% | 4m 11s | 0 |
 | Dec 31 | 100.0% | 21.4s | 0 |
@@ -66,6 +67,5 @@
 | Dec 30 | 100.0% | 23.8s | 0 |
 | Dec 30 | 100.0% | 22.4s | 0 |
 | Dec 24 | 100.0% | 4m 3s | 0 |
-| Dec 23 | 100.0% | 4m 8s | 0 |
 
 ---
