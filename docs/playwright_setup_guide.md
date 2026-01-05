@@ -1,7 +1,5 @@
 # Boost.org QA Automation Framework - Onboarding Guide
 
-> **Welcome!** This guide will get you from zero to running automated tests on Boost.org in a single day. Since you're already familiar with the codebase as a frontend dev, we'll focus on the QA-specific setup and workflow.
-
 ---
 
 ## 📋 Table of Contents
