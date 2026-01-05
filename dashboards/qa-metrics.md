@@ -2,8 +2,8 @@
 
 > **Automated Quality Gate Report**
 
-**Last Updated:** Monday, January 5, 2026 at 3:16 PM | **Env:** STAGING | **Branch:** main
-**Run:** [#163](https://github.com/karimarie67/QA-documentation/actions/runs/20727838541)
+**Last Updated:** Monday, January 5, 2026 at 3:43 PM | **Env:** STAGING | **Branch:** main
+**Run:** [#164](https://github.com/karimarie67/QA-documentation/actions/runs/20728552077)
 
 ---
 
@@ -12,9 +12,9 @@
 | Metric | Current Value | Status |
 |--------|---------------|----------------|
 | **Pass Rate** | **100.0%** | 🟢 Excellent |
-| **Duration** | **4m 8s** | ✅ Good |
-| **Total Tests** | 47 | 47 Pass / 0 Fail |
-| **Functional** | 25 Tests | ✅ Active |
+| **Duration** | **22.2s** | ✅ Good |
+| **Total Tests** | 6 | 6 Pass / 0 Fail |
+| **Functional** | 0 Tests | ❌ Missing |
 
 ---
 
@@ -32,53 +32,24 @@
 ### 🔥 Smoke Tests
 | Test Name | Status | Duration | Project |
 |-----------|--------|----------|---------|
-| Homepage loads with key elements | ✅ passed | 2.3s | staging |
-| Navigation menu links work correctly | ✅ passed | 4.1s | staging |
+| Homepage loads with key elements | ✅ passed | 1.8s | staging |
+| Navigation menu links work correctly | ✅ passed | 4.0s | staging |
 | Libraries page displays and links to documentation | ✅ passed | 7.6s | staging |
-| Download section works correctly | ✅ passed | 3.5s | staging |
+| Download section works correctly | ✅ passed | 4.0s | staging |
 | Search bar works with basic query | ✅ passed | 3.6s | staging |
-| Homepage is responsive on mobile | ✅ passed | 1.4s | staging |
+| Homepage is responsive on mobile | ✅ passed | 1.2s | staging |
 
 
 ### 🧩 Functional Tests (Errors, Docs, Search)
-| Test Name | Status | Duration | Project |
-|-----------|--------|----------|---------|
-| 404 page displays appropriate error message | ✅ passed | 1.3s | staging |
-| Broken documentation link returns appropriate error | ✅ passed | 1.1s | staging |
-| Invalid search query handles gracefully | ✅ passed | 1.3s | staging |
-| Malformed URL redirects or shows error appropriately | ✅ passed | 4.7s | staging |
-| Broken external links are identified | ✅ passed | 2.6s | staging |
-| Form validation errors display correctly | ✅ passed | 1.3s | staging |
-| Download links return valid HTTP status codes | ✅ passed | 3.0s | staging |
-| Download file names are correct format | ✅ passed | 2.5s | staging |
-| Version selector displays available versions | ✅ passed | 2.8s | staging |
-| Download page displays file sizes | ✅ passed | 2.5s | staging |
-
-*... and 15 more tests*
+> *No tests found in this category* 
 
 
 ### 🔄 Regression Tests
-| Test Name | Status | Duration | Project |
-|-----------|--------|----------|---------|
-| Homepage loads and displays key elements | ✅ passed | 4.2s | staging |
-| Search bar is visible and functional | ✅ passed | 3.6s | staging |
-| Navigation menu links work | ✅ passed | 27.7s | staging |
-| Responsive design adapts to mobile viewport | ✅ passed | 2.7s | staging |
-| Logo redirects to homepage | ✅ passed | 4.4s | staging |
-| Footer links are accessible | ✅ passed | 1.6s | staging |
-| Main content loads on library page | ✅ passed | 3.6s | staging |
-| External links are valid | ✅ passed | 1.8s | staging |
-| GitHub links point to correct repositories | ✅ passed | <1s | staging |
-| Documentation page loads and displays content | ✅ passed | 3.5s | staging |
-
-*... and 4 more tests*
+> *No tests found in this category* 
 
 
 ### 📦 Version Tests
-| Test Name | Status | Duration | Project |
-|-----------|--------|----------|---------|
-| Libraries page loads and displays version information | ✅ passed | 6.2s | staging |
-| Releases page loads and displays release information | ✅ passed | 2.9s | staging |
+> *No tests found in this category* 
 
 
 ---
@@ -86,6 +57,7 @@
 ## 📈 History (Last 10 Runs)
 | Date | Pass Rate | Duration | Failures |
 |------|-----------|----------|----------|
+| Jan 5 | 100.0% | 22.2s | 0 |
 | Jan 5 | 100.0% | 4m 8s | 0 |
 | Jan 5 | 100.0% | 21.5s | 0 |
 | Jan 5 | 100.0% | 20.3s | 0 |
@@ -95,6 +67,5 @@
 | Jan 5 | 100.0% | 21.4s | 0 |
 | Jan 5 | 100.0% | 4m 11s | 0 |
 | Dec 31 | 100.0% | 21.4s | 0 |
-| Dec 30 | 100.0% | 19.3s | 0 |
 
 ---
