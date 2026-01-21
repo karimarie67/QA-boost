@@ -1,113 +1,92 @@
 {
-  "timestamp": "2026-01-21T18:20:27.603Z",
+  "timestamp": "2026-01-21T18:24:30.278Z",
   "metrics": {
-    "totalTests": 6,
-    "passed": 6,
+    "totalTests": 5,
+    "passed": 5,
     "failed": 0,
     "failedTestNames": [],
     "passRate": 100,
-    "totalDuration": 21.863,
-    "smokeCount": 6,
-    "regressionCount": 0,
-    "versionCount": 0,
-    "functionalCount": 0,
+    "totalDuration": 5,
+    "smokeCount": 1,
+    "regressionCount": 1,
+    "versionCount": 1,
+    "functionalCount": 2,
     "allTestObjects": [
       {
-        "name": "Homepage loads with key elements",
+        "name": "Homepage loads",
         "status": "passed",
-        "durationSec": 1.774,
-        "projectName": "staging",
-        "error": null
+        "durationSec": 1.2,
+        "projectName": "chromium"
       },
       {
-        "name": "Navigation menu links work correctly",
+        "name": "Boost.io accessible",
         "status": "passed",
-        "durationSec": 4.006,
-        "projectName": "staging",
-        "error": null
+        "durationSec": 1.5,
+        "projectName": "chromium"
       },
       {
-        "name": "Libraries page displays and links to documentation",
+        "name": "Version compatibility check",
         "status": "passed",
-        "durationSec": 7.632,
-        "projectName": "staging",
-        "error": null
+        "durationSec": 1,
+        "projectName": "Default"
       },
       {
-        "name": "Download section works correctly",
+        "name": "Search returns results",
         "status": "passed",
-        "durationSec": 3.337,
-        "projectName": "staging",
-        "error": null
+        "durationSec": 0.5,
+        "projectName": "chromium"
       },
       {
-        "name": "Search bar works with basic query",
+        "name": "404 page checks",
         "status": "passed",
-        "durationSec": 3.885,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Homepage is responsive on mobile",
-        "status": "passed",
-        "durationSec": 1.229,
-        "projectName": "staging",
-        "error": null
+        "durationSec": 0.8,
+        "projectName": "chromium"
       }
     ],
-    "timestamp": "2026-01-21T18:20:27.303Z",
+    "timestamp": "2026-01-21T18:24:30.245Z",
     "environment": "staging",
-    "runId": "21220814611",
-    "runNumber": "165",
+    "runId": "21220990368",
+    "runNumber": "166",
     "branch": "main"
   },
   "testResults": {
     "smoke": [
       {
-        "name": "Homepage loads with key elements",
+        "name": "Homepage loads",
         "status": "passed",
-        "durationSec": 1.774,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Navigation menu links work correctly",
-        "status": "passed",
-        "durationSec": 4.006,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Libraries page displays and links to documentation",
-        "status": "passed",
-        "durationSec": 7.632,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Download section works correctly",
-        "status": "passed",
-        "durationSec": 3.337,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Search bar works with basic query",
-        "status": "passed",
-        "durationSec": 3.885,
-        "projectName": "staging",
-        "error": null
-      },
-      {
-        "name": "Homepage is responsive on mobile",
-        "status": "passed",
-        "durationSec": 1.229,
-        "projectName": "staging",
-        "error": null
+        "durationSec": 1.2,
+        "projectName": "chromium"
       }
     ],
-    "regression": [],
-    "version": [],
-    "functional": []
+    "regression": [
+      {
+        "name": "Boost.io accessible",
+        "status": "passed",
+        "durationSec": 1.5,
+        "projectName": "chromium"
+      }
+    ],
+    "functional": [
+      {
+        "name": "Search returns results",
+        "status": "passed",
+        "durationSec": 0.5,
+        "projectName": "chromium"
+      },
+      {
+        "name": "404 page checks",
+        "status": "passed",
+        "durationSec": 0.8,
+        "projectName": "chromium"
+      }
+    ],
+    "version": [
+      {
+        "name": "Version compatibility check",
+        "status": "passed",
+        "durationSec": 1,
+        "projectName": "Default"
+      }
+    ]
   }
 }
