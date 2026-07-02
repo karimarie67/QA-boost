@@ -1,17 +1,6 @@
 [
   {
     "date": "2025-12-09",
-    "time": "2025-12-09T15:39:03.480Z",
-    "total": 6,
-    "passed": 6,
-    "failed": 0,
-    "passRate": 100,
-    "duration": 19.382,
-    "failedTestNames": [],
-    "runNumber": "113"
-  },
-  {
-    "date": "2025-12-09",
     "time": "2025-12-09T15:43:40.498Z",
     "total": 22,
     "passed": 22,
@@ -556,5 +545,18 @@
       "should check all main site pages and spot-check documentation"
     ],
     "runNumber": "169"
+  },
+  {
+    "date": "2026-07-02",
+    "time": "2026-07-02T13:23:36.417Z",
+    "total": 47,
+    "passed": 46,
+    "failed": 1,
+    "passRate": 97.87234042553192,
+    "duration": 261.39599999999996,
+    "failedTestNames": [
+      "External links are valid"
+    ],
+    "runNumber": "170"
   }
 ]
