@@ -1,17 +1,6 @@
 [
   {
     "date": "2025-12-09",
-    "time": "2025-12-09T15:43:40.498Z",
-    "total": 22,
-    "passed": 22,
-    "failed": 0,
-    "passRate": 100,
-    "duration": 150.27999999999997,
-    "failedTestNames": [],
-    "runNumber": "114"
-  },
-  {
-    "date": "2025-12-09",
     "time": "2025-12-09T16:05:02.995Z",
     "total": 6,
     "passed": 6,
@@ -558,5 +547,16 @@
       "External links are valid"
     ],
     "runNumber": "170"
+  },
+  {
+    "date": "2026-09-23",
+    "time": "2026-09-23T17:41:24.437Z",
+    "total": 6,
+    "passed": 6,
+    "failed": 0,
+    "passRate": 100,
+    "duration": 29.08,
+    "failedTestNames": [],
+    "runNumber": "1"
   }
 ]
