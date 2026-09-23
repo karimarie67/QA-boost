@@ -290,8 +290,11 @@ test.describe('Boost Functional Tests', () => {
     const homepageUrl = buildURL(testInfo, urlPatterns.homepage, { cachebust: true });
     await testPatterns.loadAndValidatePage(page, testInfo, homepageUrl, testId);
 
-    const externalLinks = await selectors.externalLinks(page).all();
-    fs.appendFileSync('test-logs.txt', `${testId} Found ${externalLinks.length} external links\n`);
+    // Only links a visitor can see: the homepage keeps rotating testimonial
+    // content (with its own external links) in display:none blocks.
+    const externalLinks = await selectors.externalLinks(page).filter({ visible: true }).all();
+    fs.appendFileSync('test-logs.txt', `${testId} Found ${externalLinks.length} visible external links\n`);
+    expect(externalLinks.length).toBeGreaterThan(0);
 
     for (const [index, link] of externalLinks.entries()) {
       await validateElementDetails(link, `External link ${index}`, testId);

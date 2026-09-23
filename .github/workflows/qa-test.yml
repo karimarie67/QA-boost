@@ -367,7 +367,9 @@ jobs:
   update-dashboard:
     runs-on: ubuntu-latest
     needs: [smoke-tests, regression-tests, version-regression-tests, error-handling-tests, download-search-tests, documentation-tests]
-    if: always()
+    # A PR checkout is a detached merge ref, so the commit step cannot push;
+    # publish the dashboard only from pushes and manual runs.
+    if: always() && github.event_name != 'pull_request'
     name: Update QA Dashboard
     permissions:
       contents: write
